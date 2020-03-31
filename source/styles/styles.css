@@ -78,7 +78,7 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 }
 
 #content h2 {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border-bottom: 2px solid #808080;
 }
@@ -86,6 +86,10 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 #content p {
     margin-bottom: 10px;
     margin-top: 10px;
+}
+
+#content blockquote {
+    margin-left: 40px;
 }
 
 #content blockquote.submission-example {

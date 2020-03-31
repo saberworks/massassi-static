@@ -1,0 +1,395 @@
+<HTML>
+<HEAD>
+<! This page was authored and designed by Paul Magyar. e-mail: idoru@telefragged.com !>
+<TITLE>TerraFusion</TITLE>
+<META NAME="AUTHOR" CONTENT="Paul Magyar">
+<META NAME="description" CONTENT="TerraFusion">
+<META NAME="keywords" CONTENT="TerraFusion terrafusion terra Terra quake Quake Quake2 QuakeII quake2 quakeII deathmatch Deathmatch CTF ctf id software idsoftware telefragged Telefragged map maps editor texture
+TerraFusion terrafusion terra Terra quake Quake Quake2 QuakeII quake2 quakeII deathmatch Deathmatch CTF ctf id software idsoftware telefragged Telefragged map maps editor texture">
+
+<STYLE TYPE="text/css"><!-- A:link {text-decoration: none} A:visited {text-decoroation: none} A:active {text-decoration: none} A:hover {text-decoration: none; color: #FFFF00} --></STYLE>
+</HEAD>
+
+<BODY BACKGROUND="graphics/back.gif" BGCOLOR="#524239" TEXT="#FFFFFF" LINK="#FFFF00" VLINK="#FFFF00" ALINK="#FF0000">
+<FONT COLOR="#FFFFFF" FACE="Arial" SIZE="2">
+For previous Question/Answers go <a href="question.html">here</a>.<BR><BR>
+
+<FONT COLOR="#FFFF00" FACE="Arial" SIZE="3">The Question:</FONT><BR><BR>
+<BR>
+"Last time I asked a question to various professional level designers about the process
+ of map design most had one thing in commen in their answer,  'Keep the framerates up'. 
+ How do you go about trading visual impact for playable speed?  
+ What process do you use to determine what is playable and what is too damn slow? 
+ What benchmark, test, or magic rock do you use to determine this?"
+<BR><BR>
+-Idoru
+<BR><BR>
+<FONT COLOR="#FFFF00" FACE="Arial" SIZE="3">The Answers:</FONT><BR><BR>
+<BR>
+"I think that frame rate is very important in level design and,
+unless your goal is to design SPECIFICALLY for high end machines, you
+should try to keep your map as simple as possible while still
+maintaining nice visuals so everyone can get the most enjoyment out of
+your map regardless of their machine speed.  Generally when we start a
+project, we determine a "target number" of polys that can be in view to
+get optimum performance on our minimum machine.  I try to always stay
+below that number and I know that Raven's Eric Biessman generally tries
+to stay fifty to one hundred polys below the target number!  Amazing...
+But, his maps are always visually aesthetic, fast, and fun and the
+effort to keep it simple is very much appreciated by internet gamers.
+Poly count isn't the only important thing to remember when designing a
+map for speed...CLIPPING BRUSHES are crucial to a map's success...
+Nothing is more annoying than getting stuck in a corner or on a door
+frame and having someone frag you because you couldn't get off of it.
+So, to make a long story short...YES, frame rate is very important to
+me.  To balance aesthetics with speed, just ask yourself the question
+"Do I really need this?" about your architecture and if the answer is
+"no," pull it out...  The net players will love you for life! =)  Just
+sit back and let your textures do the work..."
+<BR><BR>
+-Kenn Hoekstra, Level Designer at <a href="http://www.ravensoft.com">Raven Software</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"Block off entrances and exits with either zig-zagging corridors or with
+area portals inside doors. Make areas of high detail small or put less
+monsters in them.
+<BR><BR>
+Don't do your design testing with GL.  Test in software mode.  Also, test
+on a "slow" machine. If it seems slow there, then it is slow.  Use the
+R_speed indicator (I keep mine bound to F7 for on F6 for off) to watch the
+milliseconds (same as Quake). When you've got monsters in your map, try to
+keep it below the magic number of 100 milliseconds.  When building geometry
+try to keep the central number in the string  (in view count of polygons)
+below 500.  Lower is better."
+<BR><BR>
+-Paul Jaquays,  Level Designer/Occasional Artist at <a href="http://www.idsoftware.com">id Software</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"Before creating a map, you need to have a certain minimum or average
+framerate in mind.  This should be determined by what the map is intended
+to be used for, as well as who its intended audience is.  This means that
+if you're releasing a single player map on the net, you may not need to
+design for a p150 with 32 megs, since most of the people downloading your
+map will have a better machine.  On the other hand, the type of map is
+important too.  If you're designing a deathmatch map for 4 players, then
+you need to test your map with 4 animating and firing player models in
+every scene.  If you're designing a 64 player deathmatch map, then be
+careful of big rooms, even if they have low world polys.  As far as the
+actual benchmark, we all have the trusty 'r_speeds 1' to check our ms
+between frames.  For Sin, we have the convenience of using 'fps 1', which
+is the same thing in an easier to read form.  During a single player
+experience, a player will be happy getting 15 frames per second, and maybe
+10 in the far corners.  (Remember, I'm not talking about your p2 300 w/riva
++ voodoo2 super user here.)
+<BR><BR>
+The process of trading visual impact for playable speed is a whole other
+issue.  The easiest way to make a scene look better is to add another trim,
+or put another level of detail in the architecture.  Before adding too many
+polys to your scenes though, mess around with more basic shapes, and find
+something that looks good in a simple form.  All of the best levels out
+there aren't a complex mess of architecture, rather they are often a few
+simple shapes used right, and used consistently.  Lastly, let the textures
+do the work.. but not all of it, or the artists will get too much credit. :-)"
+<BR><BR>
+-Michael Wardwell, Level Designer at <a href="http://www.ritual.com">Ritual Entertainment</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"For the professional, the benchmark is usually a budget and target frame rate
+determined at the onset of a project that's roughly related to the game's
+target system.  For us, the minimum speed on the base system we're targeting
+is about 18 frames per second.  Of course, it's our hope that the base system
+is the low end of what people will be playing our game on and the much higher
+frame rates will be the norm.
+<BR><BR>
+Sometimes, something is just too cool to reduce to an optimal frame rate so
+as a general rule, I never let a scene drop below 15 frames per second.  When
+I used to work at 3dRealms, the technique for determining scene frame rate
+was to check fps with the view looking at the most complex scene possible
+(worse case) for any area of the map. This is the frame rate we'd try to keep
+above our benchmark.
+<BR><BR>
+Technique for keep frame rate high depends on personal style, the visual goal
+of the area and the game play that will be taking place there.  Here are some
+general rules I think about when optimizing frame rate and planning for level
+geometry detail:
+<BR><BR>
+1)  Consider the game play complexity of the scene:  Areas that won't contain
+many actors or expensive special effects can afford more geometry and broader
+views.  If you want to create a crazy gun fight with a dozen guys in an area,
+don't crank up the detail in the wall and ceiling geometry.  In fight situations,
+generic level geometry is transparent anyway.  Players will be focusing on the enemy
+and the fight and will probably not even notice your steel truss ceiling
+structure.
+<BR><BR>
+2)  Give the impression of realism:  Often, I notice amateur designers trying
+to imitate reality more closely than they need to. When you need to give the
+impression of more than one thing (like chairs in a movie theatre), use three
+to five, or build them in pews as Allan Blum III did in level 1 of Duke Nukem3d.
+Don't actually build the more realistic dozens of chairs. It's expensive and
+it's no fun to navigate. Always think about how simple you can get to give the
+impression of where you are without burning your budget imitating reality.
+<BR><BR>
+3)  Use detail to attract attention, less detail to avoid it:  The player will
+focus on things that are interesting.  If you want the player to look at
+something (hopefully something integral to the current challenge or overall plot) make
+it very detailed and save your budget else where.  Detail can be used to
+misdirect a player's attention while a trap is sprung or direct a player's
+attention when something important will happen there.
+<BR><BR>
+4)  Conversely, use less detail where there's nothing to be interested in:  If
+a certain wall or floor should be of no interest to the player, don't make it
+interesting.  You don't want the player always focused intently upon your
+pipes and mounting geometry below a Plexiglas floor when a key or
+important puzzle element is nearby unnoticed.  Unless your hope is to
+frustrate a player.  Detail is a clue...use it as such.
+<BR><BR>
+5)  Use occluders:  A large complex area can be effectively divided into two
+areas with a set of geometry designed to block and limit view of complicated
+things in either section.  Occluders often affect pace and game play, so plan
+for built in occlusion when outlining your map.  No designer wants to ruin a
+large visually striking scene by erecting a wall the blocks the view of the
+most interesting parts.  Planning for occlusion before you burn your detail budget
+can eliminate the pain of optimizing later.  Also, when using Quake tech, know 
+that BSP cuts when compiling your level will take a simple rectangle occluder
+and use it to cut floor, wall and ceiling polygons into geometry significantly
+more complex than it appears on the surface lowering frame rate.
+<BR><BR>
+6)  Beware of overdraw:  This isn't that important with Quake tech, but with
+engines that allow mapper use of multiple passes for special effects and no
+automated cuts of simple intersecting geometry, over draw can be a problem
+especially when developing for early 3d accelerator cards.  Fill rate is the
+ultimate limiting factor and must be accounted for when designing your level.
+<BR><BR>
+7)  Plan ahead:  Freestyling is cool, but can often lead to headaches and
+problems down the road.  Careful planning of area budgets, visual goals
+and rules per scene will allow the designer to achieve what he wants
+without having to drop some things that the designer has grown attached
+to.
+<BR><BR>
+8)  Leave it and come back:  When working on a map 12 hours a day for
+a month, it's easy to become to personally attached to the work.  Put the
+level aside for a couple of weeks and work on something else.  When you
+come back to the level, it'll be easy to more objectively decide what rules,
+and what sucks about the map.  You know how you look at your old work
+and think how some things you did were really cool and some stuff was
+just plain dumb.  Use the conversely related  values of time and preciousness
+to your advantage.  It'll make it easier to drop unneccessary detail and get
+the speed where you want it.  You'll know where you get pissed off
+about game speed when your mind is open.
+<BR><BR>
+9)  Cut, Cut, Cut:  Don't be afraid to cut out some of your work in the
+name of frame rate.  Make sure you save the stuff off, though, as you
+may wish to use it for something else later.  Never make anything
+unless you're willing to cut it all when it just doesn't work for the
+overall goal.
+<BR><BR>
+10)  Focus on the fun:  The only real requirement for a level is fun.  While
+visually striking geometry can impress, complexity doesn't always equate
+to entertainment.  Never potentially risk the fun of an area by erecting
+occlusion geometry that slows down the player to keep your detailed light
+fixture you spent six hours building.  You get the idea...
+<BR><BR>
+-Randy Pitchford,  Chief Game Architect at <a href="http://www.rebelboatrocker.com">Rebel Boat Rocker, Inc</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"This is definitely something that level designers wrestle with every day. I
+can guarantee you there's not a level designer alive who wants to trade
+visual impact for speed, but it's a necessity in many cases. One way of
+doing this without losing a lot of the visual impact is with textures that
+give you the same feel you were going for (a very simple example is a rim
+around a walkway - if you can get a texture made that includes that rim
+texture and the walkway texture, you haven't lost any detail and you have
+the same visual effect you wanted). There's a definite advantage to having
+artists available who can create textures that you want.
+<BR><BR>
+Short of having a new texture created, you can do things like flushing
+light textures to the walls or ceilings they're attached to. Although this
+means cutting up a brush or two to embed the light, it still hides faces
+and I have seen it make a dramatic difference. You do lose a little bit of
+the visual impact but the texture gives basically that same picture. The
+whole process is a balancing act and can take a lot of experimenting and
+redoing to get the framerate where you need it.
+<BR><BR>
+Determining what is playable is really based on your target machine and
+your hardware requirements for the game you're developing. Every company
+has an "old" P100 or P133 with 16 megs of RAM sitting around for testing
+purposes. Running your level on your target machine is an excellent way to
+see if areas will be playable, but it's not always practical. In the
+Quake/Quake2 engine, we can look at r_speeds. Using r_speeds as an absolute
+measure of speed doesn't work, but it can give you a very good idea of
+where things are. It gives us a general idea of how "fast" the level is
+running and allows us to spot problem areas early. Understanding the engine
+and how monsters affect r_speeds is also critical in the overall picture of
+framerate. A room that's running relatively decent according to r_speeds
+might just bog down after adding a half dozen monsters for the player to
+fight.
+<BR><BR>
+All of us look forward to the hardware only engines that will make this
+issue a lot less important. Framerate will always be an issue, but someday
+soon, it could become a much smaller one.
+<BR><BR>
+-Steve Thoms, Level Designer at <a href="http://rogue.stomped.com/">Rogue Entertainment</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"Well, simply enough, a FPS (Frames per second) counter is God when it comes to tweaking for playability.
+In the mission pack we mainly stuck to r_speeds as the final benchmark of speed on a level, but there are other factors that
+can choke down framerate.  Thats why a FPS counter is more essential than just a poly
+counter.  If you want a room to be more complex than others, you may just need to 
+keep the number of visible monsters lower to lend to a higher r_speed.  The only real
+way to test that is with a Framerate counter.  There is really no leeway when it comes to
+framerate, we usually pick a target framerate on a target machine (usually the minimum required machine for a product), and make all efforts to never go below that
+targeted framerate.  Its all a balancing act, keeping everything in mind when creating a level, the
+speed of the progs, the poly count on monsters and guns, the hit of blinking or dynamic lights,
+the amount of visible textures, and everything else under the sun. 
+<BR><BR>
+-Tom Mustaine, Level Designer at <a href="http://www.ritual.com">Ritual Entertainment</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"some of my previous maps are quite famous for having areas with really high r_speeds, and i still end up
+reducing areas because they are too slow today, so maybe you shouldn't listen to my advise ;)
+<BR><BR>
+framerate is important in every level, but also depending on the type of level you're building: a
+deathmatch level should of course have a high and (more important) consistant framerate, don't build
+areas where the framerate is suddenly going down drastically. since DM maps don't have to be too
+detailed (still try to make them as beautifull and cool as possible, though ;)) reducing an area that is
+too slow isn't such a big problem though, i think.
+<BR><BR>
+framerate in singler player levels can usually be lower, even if you are designing it with DM support.
+i consider 10-15 frames on the low-end machine as ok - if you are showing some cool scenery that doesn't
+include fighting the framerate may be a bit lower - but since you're showing eye-candy (hopefully still important to the gameplay) and the player doesn't have to move fast it is imho ok.
+<BR><BR>
+i guess r_speeds are used most often to determine if an area runs fast enough - in SiN we don't care
+so much about r_speeds only, though. if all your areas have r_speeds under 600 you're great - if they
+go over 1000 you should really think about reducing. but as long as the framerate is ok r_speeds don't
+matter. we have a fps counter in SiN that should show at least 15-20 fps on our target machine
+(P150/32MB) AFTER the level is lighted and the monsters have been placed.
+<BR><BR>
+you can determine the fps in quake and quake2 as well by looking at how many milliseconds a gamecircle takes to complete, 50ms are of course 20fps, for example.
+the problem for many ppl who are really into editing is probably that their CPU is a bit above the
+average and that levels that run ok for them may be too slow for a normal player. so looking at the
+r_speeds becomes important again - i think 600 should be the guideline, 800 is ok, and you can go
+even over 800 if there is something cool going on AND the player doesn't have to fight monsters.
+<BR><BR>
+-Matthias Worch, Level Designer at <a href="http://www.ritual.com">Ritual Entertainment</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"...the first thing that you have to keep in mind is that
+you should never give up visual impact for speed.  You may have to
+rework your ideas to have both, but visual impact is just as important
+as speed.  As with all things, there are a couple tricks and tips that
+can really be lifesavers when it comes to this.
+<BR><BR>
+1.	Let the textures do the work.  This may sound obvious, but a lot
+of people ignore this.  If you are looking to make a super complex
+level, try and figure out things that could be pulled off with textures
+instead of architecture.  You should also take care not to have too many
+textures as that will really slow things down on an accelerated map due
+to memory constraints on the cards.  Not usually a problem, but
+something that should be kept in mind anyway.  Look to Quake II for some
+beautiful textures that really helped to make the world come alive.
+Good lighting will also help out incredibly when it comes to visual
+impact.
+<BR><BR>
+2.	Think before you make.  This is pretty damn important.  You need
+to make sure that what you are working on won't be too expensive.
+Sounds pretty obvious and stupid, right?  Here's what I mean.  Make sure
+that you keep in mind what the game is going to be rendering at every
+given area in your map.  Just because something is around a corner or
+behind you does not mean that it won't be rendered.  The game has to
+consider everything that has the possibility of being rendered.  To make
+it short, try to think up different ways to break up the visibility
+check.  Bent hallways and differences in heights (floors above floors)
+are very good at doing this.  Try to keep rooms and hallways from being
+in straight lines, that way, it won't have to render as much.
+<BR><BR>
+3.	Finally, the question of r_speeds.  It all comes down to what
+you want your minimum machine to be and what sort of map you are trying
+to portray.  If you want a fast map on even a slower machine (like a
+P90) then you should aim low... say 250 to 350.  If you want to push it,
+then try for something around 350 to 450.  Again, this is something that
+you need to experiment with.  You also need to take into account how
+many monsters you want to have in a room.  They will eat up processor
+time too.  Try to make your level never drop below 10 frames per second
+on your slowest machine.  
+<BR><BR>
+-Eric Biessman, Level Designer at <a href="http://www.ravensoft.com">Raven Software</a> and Prime Minister!?!
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"o figure out what your optimum speed should be the first thing you do
+is get a machine that runs at your baseline audience's speed, say an
+Intel P166.  Then, you make a decision as to what the lowest acceptable
+framerate should be, say 15fps minimum.  Make a map with areas that have
+lots of polygon faces and make sure you have "R_SPEEDS 1" set so you can
+see the number of polys you're drawing.  When your framerate drops down
+to 15fps (you can tell by using TIMEREFRESH), look at the amount of
+polys you have on the screen at that point and that is your "maximum
+visible polys" setting.  Make sure that no scene in your map goes over
+that amount unless it's a very special area that won't see too much
+action.
+<BR><BR>
+The resulting "magic number" is definitely going to be a frustrating
+limit to design toward, but you must make sure that you adhere to it.
+The best way to get a better looking scene with a low number of polygons
+is to increase your texture complexity to make it appear to have more
+structure.  Instead of having a plain concrete texture on a wall, make a
+concrete texture with support drawn in.  This works wonders on walls
+that the player will never be able to reach but looks cheesy close up
+although in some instances the art can look rather good close up but
+it's rare."
+<BR><BR>
+-John Romero, Game Designer, Chairman & CEO of <a href="http://www.ionstorm.com">Ion Storm</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"...it's always a tough call and the dreaded Dragon of Framerate ALWAYS wins!
+I often rip out alot of cool visual stuff at the end of a level's
+development.  It hurts, but it has to be done.  Alot of time is spent on
+balancing eye candy such that often three brushes can in fact flesh out a
+mountainside when first thoughts were it would talk a dozen.  Any view must
+run at 15-20 frames per second.  The human eye sees at about 24 fps, BTW.  In
+a month or so, the June issue of Computer Gaming World will have a very cool
+article on framerate-related topics like Minimalism, Ikebana (Japanese Flower
+Arranging), Occlusion, and the Parallax Phenomenon."
+<BR><BR>
+-Richard 'Levelord' Gray, Level Designer at <a href="http://www.ritual.com">Ritual Entertainment</a>
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+
+"There are several different strategies I take when when dealing with framerate
+vs. cool architecture.  First, keep in mind that more polygons doesn't
+necessarily mean an area is going to look better.  Having good textures and
+lighting on top of simple geometry can go a lot further than you may think.
+Let the textures add the detail to the scene as much as possible in order to
+extend your polygon budget.
+<BR><BR>
+Second, when designing for BSP-based tech (i.e. Quake/Quake2) keep in mind
+that the BSP can really cut apart a level and unnecessarily increase the
+number of polys in a scene.  Find the sections of geometry that may be causing
+problems and rework those.  I sometimes will manually put in my own cuts in
+order to deter the BSP from going too crazy in some places.  Also be very
+careful of CSG operations.  CSG can be a real time-saver, but cutting
+complicated shapes out of brushes can really start to add to you poly counts.
+<BR><BR>
+Finally, take into account everything that will be happening in the area
+you're working on.  For single-player maps, if you plan on very little action
+and only a few or no enemies in an area, you can probably get away with a few
+more polys.  In places with more action and enemies, though, make sure you
+stick to your budget, because you don't want the game to slow down when the
+player is in the heat of battle.  For multi-player maps, always assume that
+the maximum number of guys can be in any area at any time, so the number of
+polys in the geometry is very critical.
+<BR><BR>
+As far as benchmarks go, when doing Quake maps I always used the r_speeds,
+r_draworder, and r_drawflat commands.  R_speeds for checking framerate and
+poly counts, r_draworder for visibility, and r_drawflat to see where the BSP
+may be cutting things up too much.  I haven't really done any Q2 editing, but
+I'm sure there are equivalent commands to help you get benchmarks.
+<BR><BR>
+-Rob Heironimus,  Chief Game Architect at <a href="http://www.rebelboatrocker.com">Rebel Boat Rocker, Inc</a>
+
+
+
+ <BR><BR><HR ALIGN=left WIDTH=300><BR>
+<FONT COLOR="#FFFF00" FACE="Arial" SIZE="1">Note: Answers are in the order I received them.  I would also like to thank each individual that took the time to share their knowledge.</FONT>
+<BR><BR>
+
+</BODY>
+</HTML>

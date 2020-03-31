@@ -55,7 +55,9 @@ def process_file(path, file_type):
     template_vars = extract_vars_from_file(path)
 
     if file_type == 'md':
-        template_vars['body'] = markdown.markdown(template_vars['body'], extensions=['extra'])
+        template_vars['body'] = markdown.markdown(
+            template_vars['body'], extensions=['extra', 'toc']
+        )
 
     tpl = get_template(outer_template)
 

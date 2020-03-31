@@ -1,0 +1,135 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Interview with the AotC TC Project's IIS_Sithlord</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="article_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Interview with the AotC TC Project's IIS_Sithlord</font>
+<br clear="all">
+<hr>
+Date: November 9, 2002<br>
+<br>
+
+<p><i>The following is a transcript of an interview that took place over ICQ with IIS_Sithlord, Head of Cinematics for the </i><a href="http://www.aotctc.com/index.shtml" target="_blank">Attack of the Clones Total Conversion</a><i> project. Edits were made to this transcript for grammar and spelling.</i></p>
+
+<p><b>Massassi: For those out there who will be reading about this project for the very first time, can you give us a quick description of the TC from your perspective?</b></p>
+
+<p><b>IIS_Sithlord:</b> Well, the TC is basically hoping to bring people the EP2 experience to the PC. The Gamecube and PS2 get a Clones game or two, and as of yet, us PC owners haven't had much. Sure we've had Clone Campaigns and Jedi Star Fighter, but I think what the fans want to see is an involving and challenging plot which tells the Episode 2 story.</p>
+
+<p><b>Massassi:  How/when did you join the AotC TC crew? Are you flying solo with the cinematics, or are there other folks in the crew you'd like to give a shout out to?</b></p>
+
+<p><b>IIS_Sithlord:</b> Big shout out to everyone on the TC, and especially to the IIS and IIS_Snake1 who lent us his forums while ours were down. Well, I joined up the TC by just mailing Anakin a pic of my work, and he loved it. I got the "head of cinematics" role. At the moment, it's just me doing all the cinematics, but a few of 'em want to learn how to do what I do, and they can also learn how to do those 72-hour renders.  :P</p>
+
+<p><table border="0" width="240" align="right"><tr><td><a href="/cgi-bin/screenshot.cgi?articles/aotctc_cinematics/naboo_lakes.jpg"><img src="naboo_lakes_sm.jpg" width="240" height="160" border="0" hspace="4" alt=""></a></td></tr><tr><td align="center"><font face="verdana,arial,helvetica" size="1"><i>Render of Naboo. Click to enlarge.</i></font></td></tr></table>[sends render of the lakes of Naboo]</p>
+ 
+<p><b>Massassi: That's pretty amazing.</b></p>
+
+<p><b>IS_Sithlord:</b> That took like half an hour to render... when I have to do the animation... the PC's on for days.</p>
+
+<p><b>Massassi: Okay, next question. What programs have you been using to create these great looking cutscenes, and what experience have you had with them before?</b></p>
+
+<p><b>IIS_Sithlord:</b> Well, I picked up 3D Studio Max 3 when I was in high school, about two years ago. I just messed about with it, and from messing about I slowly learned it bit by bit. I still don't know the program, but I learned how to put together scenes, build the terrains, add video post effects and ray traces etc, and the more you practice the better you get, Now, I managed to get hold of a copy of Max 4 and Vue D'Esprit, and again I just taught myself. Before this I've done a few special FX for a few amateur films, but other than that, just again  just teaching myself. I hope that I can pursue a career in this field. <i>*hint Mr. Lucas, ILM got any vacancies?*</i></p>
+
+<p><b>Massassi: How about the sequences themselves: what's your project slate look like for this TC?</b></p>
+
+<p><b>IIS_Sithlord:</b> Well, I'm doing a FMV for each major part of the story, as well as transitions from certain places to others. At the moment there will be:</p>
+
+<blockquote>Padme arriving at Coruscant<br>
+Clip at the end of the Zam chase level<br>
+Transport leaving and arriving at Naboo<br>
+<br>
+Obi-Wan exiting Coruscant in Jedi Star Fighter<br>
+Obi-Wan landing in Kamino<br>
+Jango exiting Kamino<br>
+<br>
+Obi-Wan in asteroid field (we're deciding whether this is going to be a playable level)<br>
+Obi-Wan landing on Geonosis<br>
+<br>
+Anakin and Padme at Naboo leaving for Tatooine<br>
+Everyones favorite, the bike chase, longer with more DOTF :P<br>
+Anakin arriving on Geonosis<br>
+<br>
+Clone Army Arriving<br>
+Start of Battle<br>
+<br>
+Chasing Dooku<br>
+Dooku going to Coruscant<br>
+Loads of the Star Destroyer things flying away<br>
+<br>
+Outtake (like for a Bugs Life)<br></blockquote>
+
+<p><b>Massassi: No wonder this might take a while :P</b></p>
+
+<p><b>IIS_Sithlord:</b> Lol. Don't worry, I'm used to staying up all night.</p>
+
+<p><b>Massassi: How much of an impact has RavenSoft been in the production of these cinematic sequences and the TC itself?</b></p>
+
+<p><b>IIS_Sithlord:</b> Well, RavenSoft started out being really helpful, but since June, they have not replied to a single mail until recently. From being really helpful, they have been totally useless, and they have no intention of releasing the SP Source. All they have done is produce a slightly modified Q3 SDK, so to be totally honest, no help at all. Oh yeah, another thing. I would like everyone to sign our petition for RavenSoft to release the SP Source Code. <a href="http://www.petitiononline.com/SPcode/petition.html" target="_blank">http://www.petitiononline.com/SPcode/petition.html</a></p>
+
+<p><b>Massassi: Alrighty then, onwards with the questions. Do you guys plan on producing teasers or trailers for this TC? If so, what kind of contributions will you be making to that?</b></p>
+
+<p><b>IIS_Sithlord:</b> Well, we will have something for you really soon, a real treat, which the whole TC is working like mad to produce for you. You will see clip of cutscenes, in-games, and much more...that's all I can say on that. I'm putting it together, and on top of that, we will have a really big announcement very soon...BIG...but I can't say yet so stay tuned!</p>
+
+<p><b>Massassi: Oh c'mon, I won't tell anybody :P</b></p>
+
+<p><b>IIS_Sithlord:</b> I bet you won't :P</p>
+
+<p><b>Massassi: Moving on. How intense has your level of participation been in the project so far? Are things moving at a steady clip, or have you seen the pace pick up or slow down along the way?</b></p>
+
+<p><b>IS_Sithlord:</b> Well, because of the problems with our site for the past month or two, to be honest, things slowed down a bit. But, we never have stopped working. We have all been working like crazy. Darth has been great with the mapping, and MeLon churns out models of the highest standard in a few hours. Our texture artists have been there when ever we need them, the same with our sound editors. There are too many names to mention, but we are now all putting our heads down and getting on with it. This is also has to do with the fact that most of us have school in the day, so we can't spend as much time as we would like.</p>
+
+<p><table border="0" width="240" align="left"><tr><td><a href="/cgi-bin/screenshot.cgi?articles/aotctc_cinematics/aotc_screengrab.jpg"><img src="aotc_screengrab_sm.jpg" width="240" height="180" border="0" hspace="4" alt=""></a></td></tr><tr><td align="center"><font face="verdana,arial,helvetica" size="1"><i>Screengrab from video clip.<br>
+Click to enlarge.<br></i></font></td></tr></table><b>Massassi: Can you describe any specific sequences you're working on at the moment?</b></p>
+
+<p><b>IS_Sithlord:</b> At the moment, I'm working on some Geonosis. I have to animate all the battle droids and clonetroopers, which are taking me forever. I set up one basic animation for all of them and clone them, and then modify each one. Depending on how many are in a frame, I have to change each movement or they look like robots. Also, I have to animate every laser shot as well as the dust when the DCS ship crashed back down to the surface. I'm also trying to model those star destroyer predecessors. The engine details are amazing, and it's taking a lot of time to do. So, at the moment, basically Geonosis, all day long.</p>
+
+<p><b>Massassi: Ok, almost last question. When this TC is finally slated for beta testing, will the cinematic sequences (cutscenes) be included in the build, or will they be inserted as finishing touches?</b></p>
+
+<p><b>IIS_Sithlord:</b> I'm not sure yet, but I think we will throw in a couple, just to see if they load up right and if the music is correctly timed.</p>
+
+<p><b>Massassi: So...even after our long interview, you don't even have the smallest intention to hint us on what the big news is :P?</b></p>
+
+<p><b>IIS_Sithlord:</b> Nope, sorry. I can't yet because it has to be kept secret until we finalize the details. But I'll have something for you since you have been kind enough to take the time to interview me.</p>
+
+<p><b>Massassi: Major w00tage!</b></p>
+
+<p>[sends <a href="http://files.massassi.net/misc/aotctc_test2.avi">video clip</a>]</p>
+
+<p><b>Massassi: Wow. I'll have that up on Massassi as soon as I can. Well, thank you for all the questions you've answered for us!</b></p>
+
+<p><b>IIS_Sithlord:</b> No problem. Thank you for sparing the time to interview me.</p>
+
+<p><b>Massassi: And thank you for giving us that exclusive picture and video!</b></p>
+
+<p><b>IIS_Sithlord:</b> No problem.</p>
+
+<ul>
+ <li><b><a href="http://files.massassi.net/misc/aotctc_test2.avi">Download the Video Clip</a></b> - Windows AVI Format (2.34 MB)</li>
+</ul>
+
+
+
+
+
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

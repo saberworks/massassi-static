@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>A Force Of Your Own</title>
+</head>
+<body BACKGROUND="smblue_r.gif" TEXT="#FFFFFF" LINK="#00FF00" VLINK="grey" ALINK="#645800">
+<center>
+<img src="force.gif" ALT="A Force Of Your Own" WIDTH="361" HEIGHT="238">
+<br><br>
+
+Written by <a href="mailto:%22net_jedi@geocities.com%22">Brian Taylor</a></i> </center><p>
+<p>
+
+<dd>It was made to be edited.  Created by Yves Borckmans, who knew how tough it could be to figure out a programming language, Cog is simple, yet complex, elegant, yet simple, similar to C, yet simple, and did I mention that it is simple?  How simple?  Uhm, like, so simple, even a child can do it! (Cliche, no?)<p>
+
+<table border="0" align="right" cellpadding="3"><tr>
+<td><img src="bow3.jpg" WIDTH="167" HEIGHT="382"></td>
+</tr></table>
+
+<dd>Wasn't that nice?  Didn't it grab your attention?  (I think I should start the article now)  Cog is the language which almost everything in Jedi Knight is controlled by.  Want to make that Dark Jedi have no Force powers and be saberless? Want to throw your lightsaber at six enemies 
+scattered across the room?  Want to drive a vehicle?  It's possible. Anything and everything can be done with Cog. Cog has been compared to C+, Duke .Con files, and something else, probably.  So if you have experience editing these, you WILL be able to edit Cog.  You WILL NOT try.  You WILL do. I have made patches that rip off arms, make the bowcaster shoot lightning bolts (a personal favorite), throw the saber (Although somewhat buggy), and knock all your enemies away from you (Force Repel).<p>
+
+<dd>To get started editing Cogs, you'll need a Gob extractor (Such as ConMan or JKGob, from <a href="http://www.darkjedi.com">www.darkjedi.com</a>), a text editor (Notepad or Wordpad will work), and time.  A copy of the Cog Specs
+(Yes, that was a pathetic self-promotion) would help too. You can find a copy at <a href="http://www.inside3d.com">Inside3D</a>.   Assuming you have all of this, it's time to start.<p>
+<dd> First, let's look at the types of cogs you'll find in res2.gob :-<p>
+
+<ol>
+<li><b>xx_  -</b> These cogs, starting with a two digit numeral code, control happenings in a level.  
+(Conveyor Belts, Elevators, doors).  Basically, the level's INF.  The numbers apply to the level
+it will be used in.
+<li><b>actor_ -</b> Doesn't control what an enemy does in the game (AI's do that).  Rather, it controls what 
+happens when certain events occur.
+<li><b>class_ - </b>Turrets and sequencer charges are the only things that use class_ cogs.
+<li><b>ctf_itemkeycolor -</b> The Capture the flag key.  The color is either red or gold.
+<li><b>darkjedi_ - </b>Hmm? What are these for?  They control the Force abilities, saber colors, and damage 
+reactions.
+<li><b>force_</b> - Force powers.
+<li><b>item_ -</b> The things in your inventory.  (These cogs usually just control what happens when you 
+select something (It shows the name), but with things such as fieldlight and the Goggles, it also
+controls what happens when you activate them.)
+<li><b>kyle.cog - </b>Controls what happens when you die, start a level, block things with your saber, etc.
+<li><b>pow_ -</b> Controls what happens when you get an item.
+<li><b>weap_ -</b> Weapons.  What they shoot, what ammo they use, if they kick backwards, etc.
+</ol>
+
+<dd>If you want to learn more about the code than I cover here, check out my cog specs (Another shameless self-promotion)<p>
+<dd>Editing time!!!!  YAY!<p>
+
+<dd>Ok. First up, something really easy:  Making the crossbow shoot lightning bolts.  First, extract weap_crossbow.cog from the Res2 gob (In the Resource directory of either your JK folder, or the CD, depending on the install), and open it in a text editor. Look at the top part, where everything has a # before it: this is the header.  Everything with a # before it is ignored by the game.  The next part is the symbol section, where everything is defined. See the lines that say -<p>
+<table border="0" align="right" cellpadding="3"><tr>
+<td><img src="bow2.jpg" WIDTH="512" HEIGHT="384"></td>
+</tr></table>
+<table>
+<tr><td><b>template</b></td><td><b>projectile=+crossbowbolt</b></td><td><b>local</b></tr>
+<tr><td><b>template</b></td><td><b>projectile2=+crossbowbolt2</b></td><td><b>local</b></tr>
+<tr><td><b>template</b></td><td><b>projectile3=+crossbowbolt3</b></td><td><b>local</b> </tr>
+</table><br>
+ - change crossbowbolt, crossbowbolt2, and crossbowbolt3 to force_lightning, so it now says - <p>
+<table>
+<tr><td><b>template</b></td><td><b>projectile=+force_lightning</b></td><td><b>local</b></tr>
+<tr><td><b>template</b></td><td><b>projectile2=+force_lightning</b></td><td><b>local</b></tr>
+<tr><td><b>template</b></td><td><b>projectile3=+force_lightning</b></td><td><b>local </b></tr>
+</table><br>
+
+
+<dd>Save the cog, put it in your resource\cog folder, and play!  (Remember - Cog patches <i>don't</i> work on saved games)  When you charge the bow, it will shoot five lightning bolts at once, like it used to shoot five bolts before.<p>
+
+<dd>I know that was short, but you have to start simple.  I would advise that you read over the Cog Specs (Three times now!) code section to get a better feel for the code.  This next one is a little more advanced.  (Note: I said a LITTLE.  This is really basic stuff.)<p>
+
+<dd>Don't think Force Speed gives you enough of a speed boost?  Want to go faster?  I mean, so fast that if you ran into a wall, you would lose half your health? (Not really)  If you modify this, it will make CTF games easier (remember: EVERYONE playing must have the same modified files).  Extract and open force_speed.cog and scroll down to the code section.  Look for the line that says -<p> <p>
+
+<b>SetActorExtraSpeed(player, 0.5 + rank / 2);</b><p>  
+
+<dd>This means, basically, so set your speed to normal plus 1/2 of normal plus half the rank.  Change the 0.5 to either make yourself go faster or slower (Give everyone in the game a modified patch that slows them WAY down (Don't tell them).  But only if you want to be a bad sport.  (I've never done this.  ;] *innocent look*)  Are you done?  Go test it!<p>
+<hr><center>
+</body>
+</html>

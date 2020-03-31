@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>The Enemy Within</title>
+</head>
+<body bgcolor="black" text="white" link="00ff00" vlink="moave">
+
+<center><img src="enemy.gif" WIDTH="493" HEIGHT="51"><br>
+<tt><b><font color="beige">Taking JK's enemies.....to the next level</font></b><br>
+<h3><font color="beige">Part 1</font></h3></tt>
+Written by <a href="mailto:val_burnett@bc.sympatico.ca">Adam 'Rage' Burnett</a></center><p>
+
+<font color="silver">
+<dd>In Dark Forces, the component that made a level very original and unique were the Wax files, this may be the same with Jedi Knight, but with Cog's, Pup's and AI, you can do alot more. For part 1 of this article, we will make a Mandalor with a rail detonator. You will need Conman (available from <a href="http://www.darkjedi.com">DarkJedi.com</a>) for this.<p></font>
+
+<center><h3><font color="beige">WEAPONS<br>********************</font></h3>
+
+<table cellspacing="3">
+<tr><td><b>Weapon</b></td><td><b>3DO</b></td><td><b>Template</b></td></tr>
+<tr><td><b>1.</b><tt> Bryar Pistol</tt></td><td><tt>Bryg.3do</tt></td><td><tt>+ebolt</tt></tr>
+<tr><td><b>2.</b><tt> Rifle</tt></td><td><tt>strg.3do</tt></td><td><tt>+elaser</tt></tr> 
+<tr><td><b>3.</b><tt> Thermal Det.</tt></td><td><tt>detg_1.3do</tt></td><td><tt>+actor_grenade</tt></tr> 
+<tr><td><b>4.</b><tt> Bow Caster</tt></td><td><tt>bowg.3do</tt></td><td><tt>+ebow, +ebowplusm</tt></tr> 
+<tr><td><b>5.</b><tt> Repeater</tt></td><td><tt>rptg.3do</tt></td><td><tt>+eball</tt></tr> 
+<tr><td><b>6.</b><tt> Rail Det</tt></td><td><tt>rldg.3do</tt></td><td><tt>+eraildet, +smack</tt></tr>
+<tr><td><b>7.</b><tt> Sequencer Charge</tt></td><td><tt>seqg_1.3do</tt></td><td><tt>NOT USED AS WEAPON</tt></tr>
+<tr><td><b>8.</b><tt> Concussion Rifle</tt></td><td><tt>cong.3do</tt></td><td><tt>+econcbullet, +bosskswipe</tt></tr>
+<tr><td><b>9.</b><tt> Light Saber</tt></td><td><tt>sabg.3do</tt></td><td><tt>+gamaxe</tt></tr>
+</table></center><p>
+
+<h3>Jedi Knight Weapon Information</h3>
+
+<font color="silver">
+
+<dd>First, using Conman, extract the files &quot;kyH4.3do&quot; and &quot;rldg.3do&quot; from Res2.gob and place it into your JED or Force Builder/Project/Level name director. Open &quot;kyH4.3do&quot; with a text editor and copy the information from &quot;rldg.3do&quot; into it replacing the information for the mesh &quot;K_rhand&quot; (Refer to the article on 3do editing in the October Issue of Darkness Falls). Save the file as &quot;Mandalor.3do&quot;. Now, you have a 3do of a Mandalor with a Rail Det. <p>
+
+<dd>Next, extract &quot;ky.pup&quot; from Res2.gob in the misc/pup folder and place it into your JED or FB director with the new 3do file. There is no need to extract a SND file, there is already one for a Mandalor &quot;KyBobaFett.Snd&quot;.  For future models, you will need to make an SND file of your own. Other files that can control the way an enemy acts are in the &quot;actor_xx.cog&quot; and &quot;xxxx.ai&quot; files. Unless your experienced with Cog editing and desire a more unique character, I don't recommend editing these.<p>
+
+<dd>The .Pup file controls how the model moves, fires, jumps etc. Edit ky.pup, the layout is pretty simple.<p>
+
+<tt><font color="white">
+# Puppet control file for player character<br>
+# submode &nbsp; &nbsp;keyframe &nbsp;  &nbsp; &nbsp; &nbsp;flags&nbsp;&nbsp;lopri&nbsp;hipri<p>
+
+Mode=0 &nbsp; &nbsp; &nbsp; # Default mode<br>
+stand &nbsp; &nbsp; &nbsp; &nbsp;kystand0.key &nbsp; &nbsp;0x00 &nbsp; &nbsp;	0 &nbsp; &nbsp;0<br>
+walk &nbsp; &nbsp; &nbsp; &nbsp; kywalkF.key &nbsp; &nbsp; 0x01 &nbsp; &nbsp; 2 &nbsp; &nbsp;2 &nbsp; &nbsp;	# submode 1 = walk<br>
+run &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;kyrun0.key &nbsp; &nbsp; &nbsp;0x01 &nbsp; &nbsp;  2 &nbsp; &nbsp;2 &nbsp; &nbsp;	# submode 2 = run<br>
+walkback &nbsp; &nbsp; kybackp0.key &nbsp; &nbsp;0x01 &nbsp; &nbsp;	2 &nbsp; &nbsp;2 &nbsp; &nbsp;	# submode 3 = walk backwards<br>
+strafeleft &nbsp; kystrafl.key &nbsp; &nbsp;0x01 &nbsp; &nbsp;	2 &nbsp; &nbsp;2 &nbsp; &nbsp;	# submode 4 = strafe left<br>
+straferight &nbsp;kystrafr.key &nbsp; &nbsp;0x01 &nbsp; &nbsp;	2 &nbsp; &nbsp;2 &nbsp; &nbsp;	# submode 5 = strafe right<br>
+death &nbsp; &nbsp; &nbsp; &nbsp;kyftdeth.key &nbsp; &nbsp;0x14 &nbsp; &nbsp;	5 &nbsp; &nbsp;5 &nbsp; &nbsp;	# submode 6 = small death<br>
+death2 &nbsp; &nbsp; &nbsp; kyexdth0.key &nbsp; &nbsp;0x14 &nbsp; &nbsp;	5 &nbsp; &nbsp;5 &nbsp; &nbsp;	# submode 7 = big death<br>
+fire &nbsp; &nbsp; &nbsp; &nbsp; kypnchl0.key &nbsp; &nbsp;0x28 &nbsp; &nbsp;	1 &nbsp; &nbsp;3 &nbsp; &nbsp;	# submode 8 = fire (left punch)<br>
+fire2 &nbsp; &nbsp; &nbsp; &nbsp;kypnchr0.key &nbsp; &nbsp;0x28 &nbsp; &nbsp;	1 &nbsp; &nbsp;3 &nbsp; &nbsp;	# submode 18 = alt. fire (punch)<br>
+hit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;kyhit0.key &nbsp; &nbsp; &nbsp;0x28 &nbsp; &nbsp;	1 &nbsp; &nbsp;4 &nbsp; &nbsp;	# mixin 9 = hit<br>
+rising &nbsp; &nbsp; &nbsp; kyjump.key &nbsp; &nbsp; &nbsp;0x00 &nbsp; &nbsp;     3 &nbsp; &nbsp;3 &nbsp; &nbsp;   	# submode 10 = jumping<br>
+drop &nbsp; &nbsp; &nbsp; &nbsp; kydrop.key &nbsp; &nbsp; &nbsp;0x00 &nbsp; &nbsp; 	2 &nbsp; &nbsp;2 &nbsp; &nbsp;          # submode 11 = dropping<br>
+fall &nbsp; &nbsp; &nbsp; &nbsp; kyfall.key &nbsp; &nbsp; &nbsp;0x00 &nbsp; &nbsp; 	2 &nbsp; &nbsp;2 &nbsp; &nbsp;          # submode 12 = falling<br>
+land &nbsp; &nbsp; &nbsp; &nbsp; kyland.key &nbsp; &nbsp; &nbsp;0x38 &nbsp; &nbsp; 	3 &nbsp; &nbsp;3 &nbsp; &nbsp;	# landing<br>
+activate &nbsp; &nbsp; kyusew0.key &nbsp; &nbsp; 0x28 &nbsp; &nbsp; 	1 &nbsp; &nbsp;3 &nbsp; &nbsp;	# submode 13 = activate<br>
+</font></tt>
+
+<p>
+
+
+<dd>First, we will need to change the fire and activate submode. Change &quot;Kypnch10.key&quot; to &quot;kyfire.key&quot;. Save this as &quot;Mandalor.pup&quot;<p>
+
+<dd>Finally, we get to the last file to edit. In your JED/JEDDATA or Force Builder/Templates there should be a file called &quot;Master.tpl&quot; or &quot;Jk1.tpl&quot;, Open this file in a text editor. At the bottom, you will need to create a new line like this:<p>
+
+<b><tt><font color="white">Mandalor  &nbsp; &nbsp;         _humanactor  &nbsp; &nbsp;       thingflags=0x20000400<br>
+ model3d=Mandalor.3do puppet=mandalor.pup soundclass=kybobafett.snd cog=actor_s3.cog maxvel=0.250000 weapon=+eraildet weapon2=+eraildet health=70.00 maxhealth=70.00 maxthrust=0.90 maxrotthrust=90.00 typeflags=0x20001 fireoffset=(0.014000/0.053200/0.013000) aiclass=straildefault.ai</b><p></tt></font>
+
+<dd>Like the pup file, the Template File is easy to understand. The word &quot;Mandalor&quot; at the beginning is the name that will come up in the resource picker of JED or ForceBuilder. On this line, you can classify the health, weapons, AI, pup, SND, and everything else.<p>
+
+<dd>When you make your own characters, be sure to use a PUP file that works with the model or else this might happen:<p>
+
+<center><img src="badpup.gif" WIDTH="320" HEIGHT="240"><br> 
+<b><font color="beige">Incorrect Use of Pup File</font></b></center><p>
+
+<dd>Save this file and load up your JK editor.<p>
+
+<dd>Place a object in a sector, scroll through the resource picker to the end and click on &quot;Mandalor&quot;. Gob the project and run it in JK. When you play your level, there will a Mandalor with a Rail Detonator.<p>
+
+<strong><dd>In the next issue of Darkness Falls, I will have part 2 of this article and wrap up this area of Jedi Knight editing.<p></strong>
+
+<p><hr><center>
+</body>
+</html>
