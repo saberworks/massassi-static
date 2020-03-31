@@ -1,0 +1,295 @@
+title: Submission Instructions
+body:
+
+<a name="top" id="top"></a>
+
+<p>Welcome to the Massassi Temple submission instruction page.
+Please do not e-mail the staff with editing questions; use the
+<a href="https://forums.massassi.net/">forums</a> for
+that. We try to get everything posted and/or responded to within
+one week. If your submission hasn't been posted, and you haven't
+heard from us within one week, please email the staff (more on that
+at the <a href="#finally">bottom of the page</a>).</p>
+
+<p>Use the links below to find information on what you'd like to
+submit:</p>
+
+<ul>
+<li><a href="#news">News</a></li>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#sotd">Screenshot of the Day</a></li>
+<li><a href="#art">Artwork / Banners</a></li>
+<li>Levels, Maps and Modifications
+<ul>
+    <li><a href="#levels">For Jedi Knight / Mysteries of the Sith</a></li>
+    <li><a href="#maps">For Jedi Outcast</a></li>
+    <li><a href="#jamaps">For Jedi Academy</a></li>
+</ul></li>
+<li>Skins
+<ul>
+    <li><a href="#skins">For Jedi Outcast</a></li>
+    <li><a href="#jaskins">For Jedi Academy</a></li>
+</ul></li>
+<li>3D Objects and Models
+<ul>
+    <li><a href="#3do">For Jedi Knight / Mysteries of the Sith</a></li>
+    <li><a href="#models">For Jedi Outcast/Jedi Academy</a></li>
+</ul></li>
+    <li><a href="#cogs">COGs</a></li>
+    <li>MATs and Textures
+<ul>
+    <li><a href="#mats">MATs for Jedi Knight / Mysteries of the Sith</a></li>
+    <li><a href="#textures">Textures for Jedi Outcast/Jedi Academy</a></li>
+</ul></li>
+<li><a href="#finally">Some last words...</a></li>
+</ul>
+
+<h2>Questions/Comments/Problems</h2>
+
+<p>As you can probably tell this site isn't updated very often anymore.  Your 
+best bet to contact "the staff" (which is just Brian anymore) is to post a 
+message on the forums.  If you can't get onto the forums for some reason you 
+can email me.  My first name.  I gave it to you just a moment ago.  At massassi 
+dot com.  Not dot net.  It's really dot com.  I promise.</p>
+
+<h2><a name="news" id="news"></a>News</h2>
+
+<p>Know something interesting that should be posted on the main
+page? Contact us! Please include source URLs so we can link back to
+responsible site.</p>
+
+<h2><a name="tutorials" id="tutorials"></a>Tutorials</h2>
+
+<p>We welcome any tutorial submissions! If you spend the time to
+write up a tutorial on any subject of interest to our audience
+(editing, how to use mods, walkthroughs, strategy tips, etc.) we
+will most likely post it.</p>
+
+<h2><a name="sotd" id="sotd"></a>Screenshot of the Day</h2>
+
+<p>All the images we post as Screenshot of the Day (SotD, for
+short) come from our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase">Showcase
+Forum</a>. Create a new topic there and post your shots!</p>
+
+<h2><a name="art" id="art"></a>Artwork/Banners</h2>
+
+<p>Feel free to submit original artwork or banners at any time. We
+will not necessarily use it, but we usually find a place for it. As
+always, the artwork belongs to you, and if you wish us to stop
+using it, we will.</p>
+
+<h2><a name="levels" id="levels"></a>Levels and Mods for Jedi
+Knight / Mysteries of the Sith</h2>
+
+<p>All levels and mods should be submitted in GOB format, and they
+should also come with the required readme file, as stipulated by
+LucasArts. We've got a sample readme file you can download, modify and
+use: <a href="sample_readme.txt">sample_readme.txt</a>.</p>
+
+<p>Every submission should have the following:</p>
+
+<ul>
+<li>The level/modification in GOB format</li>
+
+<li>The accompanying readme file</li>
+
+<li>At least two screenshots of your level or mod in action</li>
+</ul>
+
+<p>All of this should be zipped together into one file. There are
+several archive programs out there that let you do this, the most
+popular being <a href="http://www.winzip.com" target=
+"_top">WinZip</a>. (at the time this was written... some time in the late 90s)</p>
+
+<p>Attach this ZIP file to an e-mail whose body should have all the
+following information:</p>
+
+<ul>
+<li>The type of file you're submitting (JK/MotS Single- or
+Multiplayer Level or Modification)</li>
+<li>The name of the level/mod</li>
+<li>The author's name</li>
+<li>The author's e-mail address (tell us if you don't want it
+posted directly on the site)</li>
+<li>A nice description of the level or the purpose of the mod</li>
+</ul>
+
+<p>Here is a small example for your viewing pleasure:</p>
+
+<blockquote class="submission-example">Subject: Level/Mod Submission for
+Massassi<br>
+<br>
+Type: JK Multiplayer Level<br>
+Name: 5600 Block<br>
+Author: Brian Lozier<br>
+<br>
+Description:<br>
+This is a small multiplayer level set on a remote and abandoned
+planet. It consists of 4 main buildings surrounding a pool of
+water. There is a tower coming up from the pool that is designed
+for saber dueling. This level is intended for 2-4 players. Being so
+small, this level should provide for some fast and furious
+gameplay.</blockquote>
+
+<p>Email it all.  Address up towards the top.</p>
+
+<h2><a name="maps" id="maps"></a>Maps and Modifications for Jedi
+Outcast</h2>
+
+<p>All maps and mods should be submitted in PK3 format, and they
+should also come with the required readme file, as stipulated by
+LucasArts. We've got a sample readme file you can download and use:
+<a href="sample_readme_jk2.txt" target=
+"_blank">sample_readme_jk2.txt</a>.</p>
+
+<p>Every submission should have the following:</p>
+
+<ul>
+<li>The level/modification in PK3 format</li>
+<li>The accompanying readme file with all the necessary
+information</li>
+<li>At least two screenshots of your level or mod in action</li>
+</ul>
+
+<p>Place everything listed above in a ZIP file and attach it to an
+e-mail whose body should have all the following information:</p>
+
+<ul>
+<li>The type of file you're submitting (JO SP, FFA, CTF, Jedi Duel,
+or Modification)</li>
+<li>The name of the map/mod</li>
+<li>The author's name</li>
+<li>The author's e-mail address (tell us if you don't want it
+posted directly on the site)</li>
+<li>A proper description of the level or the purpose of the
+mod</li>
+</ul>
+
+<p>Email it all.  Address up towards the top.</p>
+
+<h2><a name="jamaps" id="jamaps"></a>Maps and Modifications for
+Jedi Academy</h2>
+
+<p><em>Note: This is just like JO maps, except there are additional
+multiplayer categories.</em>
+</p>
+
+<p>All maps and mods should be submitted in PK3 format, and they
+should also come with the required readme file, as stipulated by
+LucasArts. We've got a sample readme file you can download and use:
+<a href="sample_readme_jk2.txt" target=
+"_blank">sample_readme_jk2.txt</a>.</p>
+
+<p>Every submission should have the following:</p>
+
+<ul>
+<li>The level/modification in PK3 format</li>
+
+<li>The accompanying readme file with all the necessary
+information</li>
+
+<li>At least two screenshots of your level or mod in action</li>
+</ul>
+
+<p>Place everything listed above in a ZIP file and attach it to an
+e-mail whose body should have all the following information:</p>
+
+<ul>
+<li>The type of file you're submitting (Single Player, MP Duel, MP
+CTF, MP FFA, MP Siege, or Modification)</li>
+<li>The name of the map/mod</li>
+<li>The author's name</li>
+<li>The author's e-mail address</li>
+<li>A proper description of the level or the purpose of the
+mod</li>
+</ul>
+
+<p>Email it all.  Address up towards the top.</p>
+
+<h2><a name="skins" id="skins"></a>Skins for Jedi Outcast</h2>
+
+<p>Skin submissions should be sent in ZIP format and should include
+all of the following:</p>
+
+<ul>
+<li>All the skin-related files in a PK3 file</li>
+<li>A readme file with a description and the necessary info
+(<a href="sample_jk2_skin_readme.txt" target="_blank">download a
+sample file here</a>)</li>
+<li>Two screenshots of your skin in action</li>
+</ul>
+
+<p>Screenshots should be in JPG format. If you're going to use
+someone else's skin as the base for yours, <strong>please get their
+permission first</strong>.</p>
+
+<p>Email it all.  Address up towards the top.</p>
+
+<h2><a name="jaskins" id="jaskins"></a>Skins for Jedi Academy</h2>
+
+<p>Skin submissions should be sent in ZIP format and should include
+all of the following:</p>
+
+<ul>
+<li>All the skin-related files in a PK3 file</li>
+<li>A readme file with a description and the necessary info
+(<a href="sample_jk2_skin_readme.txt" target="_blank">download a
+sample file here</a>)</li>
+<li>Two screenshots of your skin in action</li>
+</ul>
+
+<p>Screenshots should be in JPG format. If you're going to use
+someone else's skin as the base for yours, <strong>please get their
+permission first</strong>.</p>
+
+<p>Email it all.  Address up towards the top.</p>
+
+<h2><a name="3do" id="3do"></a>3DOs</h2>
+
+<p>Our 3do section doesn't get much use and it's difficult to
+update. If you want to share a 3do please visit our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase"
+target="_top">Showcase Forum</a>. Post some screenshots and attach
+your zipped 3do to the thread.</p>
+
+<h2><a name="models" id="models"></a>3D Objects and Models for Jedi
+Outcast/Jedi Academy</h2>
+
+<p>Our models section doesn't get much use and it's difficult to
+update. If you want to share a model please visit our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase"
+target="_top">Showcase Forum</a>. Post some screenshots and attach
+your zipped model to the thread.</p>
+
+<h2><a name="cogs" id="cogs"></a>COGs</h2>
+
+<p>Our cog section is difficult to update and isn't used very
+often. If you want to share cogs please visit our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase"
+target="_top">Showcase forum</a>. Post a description of your cog,
+scome screenshots, and attach it to the thread.</p>
+
+<h2><a name="mats" id="mats"></a>MATs for Jedi Knight and Mysteries
+of the Sith:</h2>
+
+<p>Our MATs section doesn't get much use and it's difficult to
+update. If you want to share a mat please visit our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase"
+target="_top">Showcase Forum</a>. Post some screenshots and attach
+your mat to the thread.</p>
+
+<h2><a name="textures" id="textures"></a>Textures for Jedi
+Outcast/Jedi Academy:</h2>
+
+<p>Our textures section doesn't get much use and it's difficult to
+update. If you want to share a texture please visit our <a href=
+"https://forums.massassi.net/vb3/forumdisplay.php?12-Showcase"
+target="_top">Showcase Forum</a>. Post some screenshots and attach
+your texture to the thread.</p>
+
+<h2><a name="finally" id="finally"></a>Some Last Words...</h2>
+
+<p>If your file/news don't appear on our site within a week, please
+contact us.</p>
+
