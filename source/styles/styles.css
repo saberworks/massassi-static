@@ -73,6 +73,7 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 }
 
 #content h1 {
+    margin-top: 20px;
     margin-bottom: 10px;
     border-bottom: 3px solid #808080;
 }
