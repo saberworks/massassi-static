@@ -4,6 +4,15 @@ body:
 Note that many of these articles are decades old and were written when we were 
 teenagers!
 
+[TOC]
+
+# TODO TODO TODO the .htm in-house article links below still need to be 
+# converted to md, but check if there are any incoming links and fix them; 
+# actually there will be incoming links in the news section (but does it 
+# matter?) so probably work to keep the extension even if I ultimately convert 
+# the source to markdown.  Maybe have a header var: called ext: to specify the 
+# extension?
+
 ## In-house Articles
 
 The following articles were written by the Massassi Temple Staff, and are 
@@ -14,21 +23,21 @@ The following articles were written by the Massassi Temple Staff, and are
 > performance/image quality out of their computer, along with providing some 
 > basic tuning tips for the actual gameplay.
 
-**[Single Player Levels](sp.html)** by Brian Lozier
+**[Single Player Levels](sp.htm)** by Brian Lozier
 > This article discusses different aspects of
 > Single Player levels, giving suggestions on what authors can do to
 > make them better.
 
-**[Teachings: Cleaving and Deleting](teach1.html)** by Brian Lozier
+**[Teachings: Cleaving and Deleting](teach1.htm)** by Brian Lozier
 > This article discusses the importance of
 > learning how to use sector cleaving and deleting to create complex
 > and interesting architecture.
 
-**[Thoughts on Editing](general.html)** by Rishka and Brian Lozier
+**[Thoughts on Editing](general.htm)** by Rishka and Brian Lozier
 > General editing information written by a
 > couple of members of the Massassi Staff.
 
-**[The Version Conspiracy](version.html)** by 8t88
+**[The Version Conspiracy](version.htm)** by 8t88
 > Discusses the trend of releasing multiple
 > unfinished versions of addons rather than beta testing and
 > releasing only a final version.

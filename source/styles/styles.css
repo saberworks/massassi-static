@@ -98,6 +98,18 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
     font-family: monospace;
 }
 
+.chat-table td {
+    padding: 10px;
+}
+
+.cheat-table td {
+    padding: 5px;
+}
+
+#content kbd {
+    font-size: 110%;
+}
+
 #footer {
     grid-column-start: 2;
 }

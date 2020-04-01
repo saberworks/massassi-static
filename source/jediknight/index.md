@@ -66,23 +66,27 @@ just want to fool around, there are quite a few cheat codes that
 you can use. All you do to use them is hit the 't' key, then type
 the code, and press [Enter].
 
-Effect                | Code
-----------------------|-----
-God Mode | jediwannabe
-Flymode | eriamjh
-All Weapons | red5
-All Items | wamprat
-All Map | 5858lvr
-Full Healing | bactame
-Full Mana | yodajammies
-Skip to Next Level | thereisnotry
-Level warp (x = level # 1 to 21) | pinotnoir x
-Jedi Experience Level Up | deeznuts
-Light Jedi Master | imayoda
-Dark Jedi Master | sithlord
-Uber Jedi (All Dark and Light Force Powers) | raccoonking
-Turns on/off AI (monsters dont move) | whiteflag
-Slow Motion | slowmo
+<div class="cheat-table" markdown=1>
+
+Effect                   | Code
+-------------------------|-----
+God Mode                 | <kbd>jediwannabe</kbd>
+Flymode                  | <kbd>eriamjh</kbd>
+All Weapons              | <kbd>red5</kbd>
+All Items                | <kbd>wamprat</kbd>
+All Map                  | <kbd>5858lvr</kbd>
+Full Healing             | <kbd>bactame</kbd>
+Full Mana                | <kbd>yodajammies</kbd>
+Skip to Next Level       | <kbd>thereisnotry</kbd>
+Level warp (x = 1 to 21) | <kbd>pinotnoir x</kbd>
+Jedi Experience Level Up | <kbd>deeznuts</kbd>
+Light Jedi Master        | <kbd>imayoda</kbd>
+Dark Jedi Master         | <kbd>sithlord</kbd>
+Uber Jedi (All Dark and Light Force Powers) | <kbd>raccoonking</kbd>
+Turns on/off AI (monsters dont move)        | <kbd>whiteflag</kbd>
+Slow Motion                                 | <kbd>slowmo</kbd>
+
+</div>
 
 ## Console Commands
 

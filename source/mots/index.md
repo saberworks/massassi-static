@@ -47,20 +47,23 @@ just want to fool around, there are quite a few cheat codes that
 you can use. All you do to use them is hit the [t] key, then type
 the code, and press [Enter].
 
+<div class="cheat-table" markdown=1>
+
 Effect                | Code
 ----------------------|-----
-All Weapons           | diediedie
-Disable AI            | statuesque 0
-Enable AI             | statuesque 1
-Invincibility         | boinga 1
-Disable Invincibility | boinga 0
-Fly                   | freebird
-Full Force Powers     | iamagod
-Full Inventory        | gimmestuff
-Full Mana             | trixie
-Full Map              | cartograph
-Increase Force Level  | trainme
-Level Skip            | gameover
-Slow Motion           | gospeedgo 1
-Normal Speed          | gospeedgo 0
+All Weapons           | <kbd>diediedie</kbd>
+Disable AI            | <kbd>statuesque 0</kbd>
+Enable AI             | <kbd>statuesque 1</kbd>
+Invincibility         | <kbd>boinga 1</kbd>
+Disable Invincibility | <kbd>boinga 0</kbd>
+Fly                   | <kbd>freebird</kbd>
+Full Force Powers     | <kbd>iamagod</kbd>
+Full Inventory        | <kbd>gimmestuff</kbd>
+Full Mana             | <kbd>trixie</kbd>
+Full Map              | <kbd>cartograph</kbd>
+Increase Force Level  | <kbd>trainme</kbd>
+Level Skip            | <kbd>gameover</kbd>
+Slow Motion           | <kbd>gospeedgo 1</kbd>
+Normal Speed          | <kbd>gospeedgo 0</kbd>
 
+</div>
