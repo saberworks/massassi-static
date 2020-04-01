@@ -5,7 +5,12 @@
         <link rel="stylesheet" type="text/css" href="/styles/styles.css">
         <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="/styles/smallstyles.css">
 
-        <title>{{ title }} - The Massassi Temple</title>
+        <title>
+        {% if title %}
+            {{ title }} -
+        {% endif %}
+        The Massassi Temple
+        </title>
 
         <meta name="description" content="{{ description }}"> 
         <link rel="shortcut icon" href="/favicon.ico">
@@ -64,7 +69,9 @@
             </nav>
 
             <div id="content">
-                <h1>{{ title }}</h1>
+                {% if title %}
+                    <h1>{{ title }}</h1>
+                {% endif %}
 
                 {{ body }}
 

@@ -26,24 +26,49 @@ def main():
         print('processing directory: {}'.format(dir_name))
 
         for file_name in files:
-            path = "{}/{}".format(dir_name, file_name)
+            source_path = "{}/{}".format(dir_name, file_name)
 
-            if should_process(path):
-                print(f"    processing {path}")
-                content = process_file(path);
+            if should_process(source_path):
+                print(f"    processing {source_path}")
+                template_vars = extract_vars_from_file(source_path)
 
-                output_file(content, path, source_dir, output_dir)
+                if source_path.endswith('.md'):
+                    template_vars['body'] = markdown.markdown(
+                        template_vars['body'], extensions=['extra', 'toc']
+                    )
+
+                tpl = get_template(outer_template)
+
+                content = tpl.render(template_vars)
+
+                ext = template_vars.get('ext', '')
+
+                output_path = get_output_path(
+                    source_path, source_dir, output_dir, ext
+                )
+
+                output_file(content, output_path)
             else:
-                print(f"    copying {path}")
-                copy_file(path, source_dir, output_dir)
+                print(f"    copying {source_path}")
+                copy_file(source_path, source_dir, output_dir)
+
+#
+# Given source path & dir, output dir, and optional extension (only taken into 
+# account if source file is markdown), generate and return the output path.
+#
+def get_output_path(source_path, source_dir, output_dir, ext):
+    # If source path has .md extension, change it to whatever is in ext.
+    source_path = re.sub(r'\.md$', '.' + ext, source_path);
+
+    return re.sub(source_dir, output_dir, source_path);
 
 #
 # File should be processed if:
 #   * it ends in a support extension _and_
 #   * it contains at least one var (like title: or body:)
 #
-def should_process(path):
-    if has_supported_ext(path) and has_tags(path):
+def should_process(source_path):
+    if has_supported_ext(source_path) and has_tags(source_path):
         return True
 
     return False
@@ -72,36 +97,14 @@ def has_tags(path):
     return pattern.match(line)
 
 #
-# Process an individual file.
+# Write content.
 #
-# Processing means to read the file from filesystem, interpolate the template 
-# vars, and return the page content.
-#
-def process_file(path):
-    template_vars = extract_vars_from_file(path)
-
-    if path.endswith('.md'):
-        template_vars['body'] = markdown.markdown(
-            template_vars['body'], extensions=['extra', 'toc']
-        )
-
-    tpl = get_template(outer_template)
-
-    return tpl.render(template_vars)
-
-#
-# Write content to the same path in output_dir as it is in source_dir.
-#
-def output_file(content, path, source_dir, output_dir):
-    # If source content has .md extension, change it to .html :-|
-    path = re.sub(r'\.md$', '.html', path);
-
-    output_path = re.sub(source_dir, output_dir, path);
-    output_dir = os.path.dirname(output_path)
+def output_file(content, path):
+    output_dir = os.path.dirname(path)
 
     os.makedirs(output_dir, exist_ok=True)
 
-    f = open(output_path, 'w')
+    f = open(path, 'w')
     f.write(content)
     f.close()
 
@@ -121,7 +124,7 @@ def copy_file(path, source_dir, output_dir):
 # Read the content file, extract the vars from the top and the body/content 
 # from the `_body:` line to the end of the file.
 #
-def extract_vars_from_file(path):
+def extract_vars_from_file(source_path):
     # look for _body variable; anything after this is part of the body
     body_pattern = re.compile('body:')
 
@@ -131,7 +134,7 @@ def extract_vars_from_file(path):
     template_vars = {}
     body = ''
 
-    with open(path) as f:
+    with open(source_path) as f:
         in_body = False
 
         for line in f:
@@ -152,6 +155,11 @@ def extract_vars_from_file(path):
                     in_body = True
 
     template_vars['body'] = body
+
+    # If source is a markdown file, and desired output extension isn't 
+    # specified, use .html.
+    if source_path.endswith('.md'):
+        template_vars.setdefault('ext', 'html')
 
     return template_vars
 

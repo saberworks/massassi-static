@@ -6,13 +6,6 @@ teenagers!
 
 [TOC]
 
-# TODO TODO TODO the .htm in-house article links below still need to be 
-# converted to md, but check if there are any incoming links and fix them; 
-# actually there will be incoming links in the news section (but does it 
-# matter?) so probably work to keep the extension even if I ultimately convert 
-# the source to markdown.  Maybe have a header var: called ext: to specify the 
-# extension?
-
 ## In-house Articles
 
 The following articles were written by the Massassi Temple Staff, and are 

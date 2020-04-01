@@ -7,8 +7,9 @@ Author: Brian Lozier
 This article is based on my experiences working on a single-player mod. It has 
 been under construction for months now, and will be released within a couple of
 months.  
-  
-**Story:**  
+
+## Story
+
 The Single Player storyline is what set Jedi Knight apart from the rest
 of the First Person Shooters. When making addons, therefore, it is
 important to realize what people wanted from the original game. Take
@@ -54,7 +55,8 @@ There are TONS of ideas that have not yet been done, please don't
 attempt to re-hash or re-do what LucasFilm or Lucasarts has already
 done.  
   
-**Architecture:**  
+## Architecture
+
 Rule of thumb: Be realistic and true to Star Wars. Have you ever seen a
 platform suspended in thin air? Niether have I. Remember in Star Wars
 they used thrusters - cogs that spit smoke, steam and thrust are not
@@ -81,8 +83,9 @@ the elevator 3do (look at its bottom as it goes up, there are normally
 supports there). There are other mechanisms, of course, but an elevator
 going up a solid rock shaft, or going up the side of some crates, just
 does not make sense.  
-  
-**Skies:**  
+ 
+## Skies
+
 There are far too many levels with sky problems. It is not realistic, or
 fun, for that matter, when you Force Jump and hit your head on the sky.
 It makes no sense. Please plan for your sky, and make it high enough
@@ -92,7 +95,8 @@ Also try not to use the sky as an outside boundry. Make a cliff with a
 dropoff, or a fence, or a forcefield. Nobody likes being stopped by
 plain sky.  
   
-**Water:**  
+## Water
+
 Deciding on whether to make the surface of the water see-through or not
 is pretty difficult. One rule I can suggest is to make it consistent. If
 you have see-though water in one place, do the same for the rest of your
@@ -101,7 +105,8 @@ level.
 It Single-Player, it is generally okay to make see-though water. Just be
 careful to keep in mind the framerate when doing so.  
   
-**Length:**  
+## Length
+
 Try to make levels long enough to keep the player occupied. Make them at
 least as long as the LEC levels. This may sound hard, but remember,
 strive for the stars and you will achieve them. Keep in mind, however,
@@ -109,7 +114,8 @@ that most LEC levels are under 1000 sectors. If you go beyond that, you
 are likely to up the system requirements. If your level gets too big,
 consider splitting it into two.  
   
-**Beta Testing:**  
+## Beta Testing
+
 I cannot stress enough how important it is to get a good set of
 beta-testers. What is beta testing? It is when you feel your level is
 complete, and rather than releasing it to the public, you release it to
