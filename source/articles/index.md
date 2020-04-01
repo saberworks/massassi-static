@@ -40,7 +40,7 @@ Massassi Temple Staff. They are re-posted with the orginal authors
 permission, and are &copy; Copyright the original authors. Please
 contact the original authors with any questions/comments.
 
-These links open in a new window and open with the original design.
+These links open in a new window and open with their original designs.
 
 **[General Thoughts on Level Design](leveldesign.html){target="_blank"}** by Jipe
 > Discusses the various aspects of both
@@ -59,98 +59,23 @@ These links open in a new window and open with the original design.
 > This article discusses what exactly separates the &quot;Great&quot; 
 > deathmatch levels from the &quot;okay&quot; ones.
 
-TODO TODO TODO: SOME ARTICLES/PAGES (like question1.htm) and all these 3rd 
-party articles, SHOULD NOT be put into the template system.  Probably need a 
-modification to build.py to see if the first few lines don't contain vars/body, 
-_don't_ try to interpolate at all, just pass through/copy.
+**[Build Your Own Character](df/make3do.htm){target="_blank"}** by Jeff Walters (October 1997)
+> Learn how to create your own skin/character.
 
-<tr>
-<td><span class="c6"><a href="df/make3do.htm" target="frame2">Build
-Your Own Character</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-October 1997
-</td>
-<td><span class="c6">Learn how to create your own
-skin/character.
-</td>
-<td><span class="c6"><a href=
-"mailto:n9707022@scholar.nepean.uws.edu.au">Jeff Walters</a>
-</td>
-</tr>
+**[A Force Of Your Own](df/makeforc.htm){target="_blank"}** by Brian Taylor (November 1997)
+> A basic introduction to the COG language used in Jedi Knight.
 
-<tr>
-<td><span class="c6"><a href="df/makeforc.htm" target="frame2">A
-Force Of Your Own</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-November 1997
-</td>
-<td><span class="c6">A basic introduction to the COG language used
-in Jedi Knight.
-</td>
-<td><span class="c6"><a href="mailto:net_jedi@geocities.com">Brian
-Taylor</a>
-</td>
-</tr>
+**[MAT Editing Tutorial](df/tutorial.htm){target="_blank"}** by The Tynar (December 1997)
+> Learn how to edit .MAT (texture) files.
 
-<tr>
-<td><span class="c6"><a href="df/tutorial.htm" target="frame2">MAT
-Editing Tutorial</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-December 1997
-</td>
-<td><span class="c6">Learn how to edit .MAT (texture) files.
-</td>
-<td><span class="c6"><a href="mailto:AJGREENLEE@aol.com">The
-Tynar</a>
-</td>
-</tr>
+**[Learning the Ways of Jed](df/jedtut.htm){target="_blank"}** by Jeff Walters (January 1998)
+> Basic info on editing with Jed. Includes
+> cleaving, water, briefing text, and slashable grates.
 
-<tr>
-<td><span class="c6"><a href="df/jedtut.htm" target=
-"frame2">Learning the Ways of Jed</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-January 1998
-</td>
-<td><span class="c6">Basic info on editing with Jed. Includes
-cleaving, water, briefing text, and slashable grates.
-</td>
-<td><span class="c6"><a href=
-"mailto:n9707022@scholar.nepean.uws.edu.au">Jeff Walters</a>
-</td>
-</tr>
+**[Level Editing Oasis](df/tutor.htm){target="_blank"}** by Jeff Walters (February 1998)
+> Learn how to make traps, sector thrusts,
+> cameras, <em>local</em> Cogs, breakable glass, and stairs.
 
-<tr>
-<td><span class="c6"><a href="df/tutor.htm" target="frame2">Level
-Editing Oasis</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-February 1998
-</td>
-<td><span class="c6">Learn how to make traps, sector thrusts,
-cameras, <em>local</em> Cogs, breakable glass, and stairs.
-</td>
-<td><span class="c6"><a href=
-"mailto:n9707022@scholar.nepean.uws.edu.au">Jeff Walters</a>
-</td>
-</tr>
+**[The Enemy Within](df/enemy.htm){target="_blank"}** by Adam 'Rage' Burnett (February 1998)
+> Learn how to edit which weapon Single Player enemies have.
 
-<tr>
-<td><span class="c6"><a href="df/enemy.htm" target="frame2">The
-Enemy Within</a><br>
-From: <a href="http://www.jediknight.net/bespin/darkfall.html"
-target="_top">Darkness Falls</a> -<br>
-February 1998
-</td>
-<td><span class="c6">Learn how to edit which weapon Single Player
-enemies have.
-</td>
-<td><span class="c6"><a href=
-"mailto:val_burnett@bc.sympatico.ca">Adam 'Rage' Burnett</a>
-</td>
-</tr>
-</table>
-</div>

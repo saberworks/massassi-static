@@ -28,17 +28,9 @@ def main():
         for file_name in files:
             path = "{}/{}".format(dir_name, file_name)
 
-            should_process = 0;
-            file_type = ''
-
-            for ext in extensions:
-                if file_name.endswith('.' + ext):
-                    should_process = 1;
-                    file_type = ext
-
-            if should_process:
+            if should_process(path):
                 print(f"    processing {path}")
-                content = process_file(path, file_type);
+                content = process_file(path);
 
                 output_file(content, path, source_dir, output_dir)
             else:
@@ -46,15 +38,49 @@ def main():
                 copy_file(path, source_dir, output_dir)
 
 #
+# File should be processed if:
+#   * it ends in a support extension _and_
+#   * it contains at least one var (like title: or body:)
+#
+def should_process(path):
+    if has_supported_ext(path) and has_tags(path):
+        return True
+
+    return False
+
+#
+# True if the file has a supported extension (list at top), False otherwise.
+#
+def has_supported_ext(path):
+    for ext in extensions:
+        if path.endswith('.' + ext):
+            return True
+    
+    return False
+
+#
+# For performance, don't parse the entire file; just look at the first line; 
+# first line should always have a tag if it wants to be parsed.
+#
+def has_tags(path):
+    f = open(path)
+    line = f.readline()
+    f.close()
+
+    pattern = re.compile('^\w+:')
+
+    return pattern.match(line)
+
+#
 # Process an individual file.
 #
 # Processing means to read the file from filesystem, interpolate the template 
 # vars, and return the page content.
 #
-def process_file(path, file_type):
+def process_file(path):
     template_vars = extract_vars_from_file(path)
 
-    if file_type == 'md':
+    if path.endswith('.md'):
         template_vars['body'] = markdown.markdown(
             template_vars['body'], extensions=['extra', 'toc']
         )
