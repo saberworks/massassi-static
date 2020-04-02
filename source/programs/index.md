@@ -52,11 +52,11 @@ they share the same file formats).
 > available](https://www.massassi.net/jedplugs/index.htm).  Note: Jed filenames 
 > always include the word "beta", this is normal.
 
-Older versions (don't bother with these):
+> Older versions (don't bother with these):
 
-**[JED v.94](jed/jed_beta94.zip)** by Code Alliance
+> [JED v.94](jed/jed_beta94.zip) by Code Alliance
 
-**[JED v.92](jed/jed_beta92.zip)** by Code Alliance
+> [JED v.92](jed/jed_beta92.zip) by Code Alliance
 
 ### GOB
 
