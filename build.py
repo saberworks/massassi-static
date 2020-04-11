@@ -1,7 +1,9 @@
 # core modules
 import os
+import pathlib
 import re
 import shutil
+import sys
 
 # installed via pip
 import jinja2
@@ -17,11 +19,22 @@ outer_template = 'outer.html';
 # files ending in these extensions will be processed
 extensions = ['md', 'html', 'shtml', 'htm'];
 
+# directories containing "collections"
+# at this point I need a config file :-|
+# relative to `source` directory
+collections = {
+    'tutorials': 'tutorials/*/*',
+};
+
 #
 # Loop through all files in source_dir, process the ones that need processing, 
 # and copy to output_dir.
 #
 def main():
+    collection_data = process_collections(collections)
+    print(collection_data)
+    sys.exit()
+
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
 
@@ -68,6 +81,8 @@ def get_output_path(source_path, source_dir, output_dir, ext):
 #   * it contains at least one var (like title: or body:)
 #
 def should_process(source_path):
+    #print(f"    checking {source_path}")
+
     if has_supported_ext(source_path) and has_tags(source_path):
         return True
 
@@ -121,10 +136,53 @@ def copy_file(path, source_dir, output_dir):
     shutil.copyfile(path, output_path)
 
 #
+# Look in the collections configuration for any directories (relative to 
+# source) that hold collections.  A "collection" is a bunch of metadata pulled 
+# from source files and collected into a dict.  This information is then 
+# available to templates via the "collections" key.
+#
+# This is useful if you have a directory of files (or a directory of 
+# subdirectories, each containing a file) that contain related data.  Our first 
+# use case is the tutorials/ directory; each tutorial can contain its own 
+# metadata (author, description, pub date, etc.) and it will be collected into 
+# list that can be used to automatically generate a tutorials index page.
+#
+def process_collections(collections):
+    if(len(collections) == 0):
+        return [];
+
+    # will contain keys that match the collections key, values are lists of 
+    # vars parsed out of the matching files (minus the body)
+    collection_data = {}
+
+    print("PROCESSING COLLECTIONS!!!!!!");
+
+    for name, pattern in collections.items():
+        collection_data[name] = []
+
+        # there are probably other things that can be put into the path vars to 
+        # cause this to glob files it shouldn't, make it clear to the next 
+        # person :(
+        maybe_safe_path = re.sub(r'\.\.', '', pattern)
+
+        print(maybe_safe_path)
+
+        for file_path in pathlib.Path(source_dir).glob(maybe_safe_path):
+            if not should_process(str(file_path)):
+                continue;
+            
+            template_vars = extract_vars_from_file(str(file_path), False)
+            template_vars['_path'] = str(file_path)
+        
+            collection_data[name].append(template_vars)
+
+    return collection_data
+
+#
 # Read the content file, extract the vars from the top and the body/content 
 # from the `_body:` line to the end of the file.
 #
-def extract_vars_from_file(source_path):
+def extract_vars_from_file(source_path, include_body=True):
     # look for _body variable; anything after this is part of the body
     body_pattern = re.compile('body:')
 
@@ -160,6 +218,12 @@ def extract_vars_from_file(source_path):
     # specified, use .html.
     if source_path.endswith('.md'):
         template_vars.setdefault('ext', 'html')
+
+    if not include_body:
+        try:
+            del template_vars['body']
+        except KeyError:
+            pass; # really don't care
 
     return template_vars
 
