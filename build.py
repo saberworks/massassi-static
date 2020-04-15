@@ -1,4 +1,5 @@
 # core modules
+import operator
 import os
 import pathlib
 import re
@@ -195,6 +196,11 @@ def process_collections(collections):
             )
         
             collection_data[name].append(template_vars)
+
+    # sort all the keys :-|  by document title I guess
+    # TODO: allow specifying key to sort by in collection definition?
+    for key, collection in collection_data.items():
+        collection_data[key] = sorted(collection, key=operator.itemgetter('title'))
 
     return collection_data
 
