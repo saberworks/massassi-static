@@ -1,6 +1,7 @@
+---
 title: Texture Alignment
 ext: htm
-body:
+---
 
 Author: 8t88
 

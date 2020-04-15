@@ -1,6 +1,7 @@
+---
 title: Insane List
 ext: shtml
-body:
+---
 
 * Ponda Boba
 * Espo

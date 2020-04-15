@@ -1,6 +1,7 @@
+---
 title: Party List
 ext: shtml
-body:
+---
 
 * Death Star Officer
 * Death Star Commando

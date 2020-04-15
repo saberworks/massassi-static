@@ -1,5 +1,7 @@
+---
+title: the version conspiracy
 ext: htm
-body:
+---
 
 ![the version conspiracy](version.gif)  
 by 8t88

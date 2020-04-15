@@ -1,6 +1,7 @@
+---
 title: Thoughts on Editing
 ext: htm
-body:
+---
 
 
 First off, it is absolutely necessary to draw a sketch and plan out

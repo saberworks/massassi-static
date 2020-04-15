@@ -1,7 +1,8 @@
-title: Teachings: Cleaving and Deleting  
+---
+title: "Teachings: Cleaving and Deleting"
 ext: htm
-body:
-  
+---
+
 Welcome to the first installment of
 *Teachings*. This column won't address specific topics like our
 tutorials do, but will be more of a tips repository, to share things

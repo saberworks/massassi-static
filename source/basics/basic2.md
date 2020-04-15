@@ -1,6 +1,7 @@
-title: The Basics: Lesson 2
+---
+title: "The Basics: Lesson 2"
 ext: htm
-body:
+---
 
 Okay, now we are going to get just a little bit more involved in some of
 the level editing features.  

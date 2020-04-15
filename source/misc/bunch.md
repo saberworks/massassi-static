@@ -1,6 +1,7 @@
+---
 title: Bunch List
 ext: shtml
-body:
+---
 
 * Snow Trooper 2
 * Imperial Gunner

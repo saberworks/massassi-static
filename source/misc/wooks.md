@@ -1,6 +1,7 @@
+---
 title: Wookies List
 ext: shtml
-body:
+---
 
 * Brown Wookie
 * Brown Wookie w/Repeater

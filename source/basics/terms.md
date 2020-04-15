@@ -1,6 +1,7 @@
+---
 title: Terms
 ext: htm
-body:
+---
 
 Author: 8t88
 

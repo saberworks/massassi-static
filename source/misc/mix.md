@@ -1,6 +1,7 @@
+---
 title: Mix List
 ext: shtml
-body:
+---
 
 * Barada
 * Dengar

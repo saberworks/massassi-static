@@ -1,6 +1,7 @@
+---
 title: Allies List
 ext: shtml
-body:
+---
 
 These are actually allies, not enemies  
   

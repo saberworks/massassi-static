@@ -1,5 +1,6 @@
+---
 title: Jedi Knight Basic Editing Information
-body:
+---
 
 There are many things a person must
 learn about before they undertake the task of creating a whole level. By

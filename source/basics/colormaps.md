@@ -1,6 +1,7 @@
+---
 title: Colormaps
 ext: htm
-body:
+---
 
 Author: Brian Lozier
 

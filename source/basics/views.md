@@ -1,6 +1,7 @@
+---
 title: Views/The Grid
 ext: htm
-body:
+---
 
 Author: 8t88
 

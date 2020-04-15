@@ -1,6 +1,7 @@
-title: The Basics: Lesson 1
+---
+title: "The Basics: Lesson 1"
 ext: htm
-body:
+---
 
 Okay, we're going to go BASIC here. I'm talking, as basic as it gets. If
 you have any idea about JK Editing, you might want to stop here, but who

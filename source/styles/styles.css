@@ -7,6 +7,10 @@ ul {
     padding-left: 20px;
 }
 
+ol {
+    padding-left: 20px;
+}
+
 html {
     font-size: 100%;
 }
@@ -61,7 +65,7 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 #menu ul {
     list-style-type: none;
     margin-bottom: 10px;
-	padding-left: 5px;
+    padding-left: 5px;
 }
 
 #menu li {
@@ -81,7 +85,17 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 #content h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #808080;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 50%;  /* or 100px */
+    background-image: linear-gradient(to right, #808080, #000000); 
 }
 
 #content p {
@@ -144,8 +158,8 @@ div#logo {
     grid-template-columns: repeat(3, 1fr);;
     grid-template-rows: auto;
     grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	padding-bottom: 10px;
+    grid-row-gap: 10px;
+    padding-bottom: 10px;
     max-width: 100%;
 }
 
@@ -162,8 +176,8 @@ div#logo {
 }
 
 #features-grid div#feature-button {
-	align-self: center;
-	justify-self: center;
+    align-self: center;
+    justify-self: center;
 }
 
 #features-grid div#feature-lotw {
@@ -183,23 +197,23 @@ div#logo {
 }
 
 #feature-lotw {
-	text-align: right;
+    text-align: right;
 }
 
 .sotdimage {
-	float: left;
-	border: 1px solid #52A54E;
+    float: left;
+    border: 1px solid #52A54E;
 }
 
 .lotwimage {
-	float: right;
-	border: 1px solid #52A54E;
+    float: right;
+    border: 1px solid #52A54E;
 }
 
 p#testimonial {
     display: block;
-	text-align: center;
-	padding-bottom: 0px;
+    text-align: center;
+    padding-bottom: 0px;
     margin-bottom: 0px;
 }
 
@@ -239,7 +253,7 @@ span.news-author {
 }
 
 .news-level-screenshot {
-	border: 1px solid #52A54E;
+    border: 1px solid #52A54E;
     margin: 10px 0px;
 }
 
@@ -252,3 +266,19 @@ span.news-author {
     padding: 0px 5px;
     overflow: auto;
 }
+
+/*
+ * Tutorials
+ */
+
+span.tutorial-author {
+    font-weight: normal;
+    color: gray;
+}
+
+span.tutorial-date {
+    font-weight: normal;
+    font-size: .75em;
+    color: gray;
+}
+

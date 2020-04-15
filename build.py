@@ -6,6 +6,7 @@ import shutil
 import sys
 
 # installed via pip
+import frontmatter
 import jinja2
 import markdown
 
@@ -30,11 +31,12 @@ collections = {
 # Loop through all files in source_dir, process the ones that need processing, 
 # and copy to output_dir.
 #
+# TODO: is it wise to make _all collections_ available to all files?  Or should
+# files specify that they want a collection?
 def main():
     collection_data = process_collections(collections)
     print(collection_data)
-    sys.exit()
-
+    
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
 
@@ -44,11 +46,17 @@ def main():
             if should_process(source_path):
                 print(f"    processing {source_path}")
                 template_vars = extract_vars_from_file(source_path)
+                template_vars['collections'] = collection_data
 
                 if source_path.endswith('.md'):
                     template_vars['body'] = markdown.markdown(
                         template_vars['body'], extensions=['extra', 'toc']
                     )
+                else:
+                    inner_tpl = get_template_from_memory(
+                        template_vars.pop('body', '')
+                    )
+                    template_vars['body'] = inner_tpl.render(template_vars);
 
                 tpl = get_template(outer_template)
 
@@ -74,6 +82,14 @@ def get_output_path(source_path, source_dir, output_dir, ext):
     source_path = re.sub(r'\.md$', '.' + ext, source_path);
 
     return re.sub(source_dir, output_dir, source_path);
+
+#
+#
+def get_href(source_path, source_dir, ext):
+    # If source path has .md extension, change it to whatever is in ext.
+    source_path = re.sub(r'\.md$', '.' + ext, source_path);
+
+    return re.sub(source_dir, '', source_path)
 
 #
 # File should be processed if:
@@ -107,7 +123,7 @@ def has_tags(path):
     line = f.readline()
     f.close()
 
-    pattern = re.compile('^\w+:')
+    pattern = re.compile('^---')
 
     return pattern.match(line)
 
@@ -165,54 +181,32 @@ def process_collections(collections):
         # person :(
         maybe_safe_path = re.sub(r'\.\.', '', pattern)
 
-        print(maybe_safe_path)
-
         for file_path in pathlib.Path(source_dir).glob(maybe_safe_path):
             if not should_process(str(file_path)):
                 continue;
             
             template_vars = extract_vars_from_file(str(file_path), False)
+            
+            ext = template_vars.get('ext', '')
+
             template_vars['_path'] = str(file_path)
+            template_vars['_href'] = get_href(
+                "./" + str(file_path), source_dir, ext
+            )
         
             collection_data[name].append(template_vars)
 
     return collection_data
 
 #
-# Read the content file, extract the vars from the top and the body/content 
-# from the `_body:` line to the end of the file.
+# Read the content file, extract the vars from the top ("front matter") and the 
+# body/content from the rest.
 #
 def extract_vars_from_file(source_path, include_body=True):
-    # look for _body variable; anything after this is part of the body
-    body_pattern = re.compile('body:')
+    data = frontmatter.load(source_path)
 
-    # look for defined variables at the beginning of the file
-    pattern = re.compile('(\w+): (.*)')
-
-    template_vars = {}
-    body = ''
-
-    with open(source_path) as f:
-        in_body = False
-
-        for line in f:
-            if in_body:
-                body += line
-                continue
-
-            m = pattern.match(line)
-            if m:
-                name = m.group(1)
-                value = m.group(2)
-
-                template_vars[name] = value
-            else:
-                bm = body_pattern.match(line)
-
-                if bm:
-                    in_body = True
-
-    template_vars['body'] = body
+    template_vars = data.metadata
+    template_vars['body'] = data.content
 
     # If source is a markdown file, and desired output extension isn't 
     # specified, use .html.
@@ -231,10 +225,14 @@ def extract_vars_from_file(source_path, include_body=True):
 # Returns a jinja2 template object with the filesystem loader enabled (set to 
 # look for templates in `templates_dir`).
 #
-def get_template(template):
+def get_template(template_file_name):
     tpl_loader = jinja2.FileSystemLoader(searchpath=templates_dir)
-    tpl_env = jinja2.Environment(loader=tpl_loader)
-    return tpl_env.get_template(template)
+    tpl_env = jinja2.Environment(loader=tpl_loader, extensions=['jinja2.ext.loopcontrols'])
+    return tpl_env.get_template(template_file_name)
+
+def get_template_from_memory(template):
+    tpl_env = jinja2.Environment(extensions=['jinja2.ext.loopcontrols'])
+    return tpl_env.from_string(template);
 
 main()
 

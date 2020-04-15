@@ -1,5 +1,6 @@
+---
 title: Editing Programs
-body:
+---
 
 **Update 2016:** If you can't find what you're looking for here, or if
 there are broken links, try the [tools

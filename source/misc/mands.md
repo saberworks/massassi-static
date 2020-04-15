@@ -1,6 +1,7 @@
+---
 title: Mandalorians List
 ext: shtml
-body:
+---
 
 * Red Mandalore
 * Blue Mandalore

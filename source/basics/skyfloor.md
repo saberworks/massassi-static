@@ -1,6 +1,7 @@
+---
 title: Skies and Floors
 ext: htm
-body:
+---
 
 Author: Brian Lozier
 

@@ -1,9 +1,12 @@
+---
 title: Creating Outdoor Buildings I
 category: jk
 description: Basic tutorial on creating the &quot;sector in sector&quot; illusion.
 date: 1998-03-19
 author: Brian Lozier
-body:
+---
+
+Author: [Brian Lozier](mailto:brian@massassi.net)
 
 First of all, you need to know that you can not have a sector inside a
 sector. "What's this?" you ask, "But Lucasarts did it in level \*put

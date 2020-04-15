@@ -1,5 +1,6 @@
+---
 title: Mysteries of the Sith (MotS) Info &amp; Cheats
-body:
+---
 
 [TOC]
 

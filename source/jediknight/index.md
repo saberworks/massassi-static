@@ -1,5 +1,6 @@
-title: Dark Forces II: Jedi Knight Information &amp; Cheats
-body:
+---
+title: "Dark Forces II: Jedi Knight Information &amp; Cheats"
+---
 
 [TOC]
 

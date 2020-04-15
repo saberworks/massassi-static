@@ -1,5 +1,6 @@
+---
 title: IRC Chat
-body:
+---
 
 ## Chat Room Rules
 

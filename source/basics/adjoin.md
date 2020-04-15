@@ -1,6 +1,7 @@
+---
 title: Adjoining/Unadjoining
 ext: htm
-body:
+---
 
 Author: 8t88
 

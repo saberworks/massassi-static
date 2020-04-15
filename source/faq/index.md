@@ -1,5 +1,6 @@
+---
 title: Jedi Knight Editing Frequently Asked Questions (FAQ)
-body:
+---
 
 [TOC]
 

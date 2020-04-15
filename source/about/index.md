@@ -1,5 +1,6 @@
+---
 title: About Us
-body:
+---
 
 Note: this was written a long time ago in a galaxy far, far away.
 
@@ -62,7 +63,7 @@ hard work contributed by a lot of very dedicated and talented
 people. We have gone through a couple of re-designs, but have
 settled on a design that is very similar to our original design,
 with a little bit of new artwork and a different font. A new design
-isn't in the plans until Obi-Wan comes out.
+isn't in the plans;
 
 That's pretty much the story, we outgrew Jedi
 Nights and are now at our own server, hosting sites and generally

@@ -1,6 +1,7 @@
+---
 title: Texturing
 ext: htm
-body:
+---
 
 Author: Brian Lozier
 

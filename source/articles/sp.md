@@ -1,6 +1,7 @@
+---
 title: Single Player Levels
 ext: htm
-body:
+---
 
 Author: Brian Lozier
   

@@ -1,6 +1,7 @@
+---
 title: Coolguys List
 ext: shtml
-body:
+---
 
 * 4-Lom Bounty Hunter
 * Crimson Empire Stormtrooper

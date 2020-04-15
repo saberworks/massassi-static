@@ -1,6 +1,7 @@
-title: The Basics: Lesson 3
+---
+title: "The Basics: Lesson 3"
 ext: htm
-body:
+---
 
 First of all, don't worry if you don't fully understand the previous 2
 lessons. There was a lot of information covered, and you will be exposed

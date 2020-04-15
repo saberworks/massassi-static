@@ -1,9 +1,10 @@
+---
 title: Creating Outdoor Buildings II
 category: jk
 description: This tutorial teaches you how to create the &quot;insides&quot; of buildings built using the technique outlined in the previous Outdoor Tutorial.
 date: 1998-03-25
 author: Brian Lozier
-body:
+---
 
 Author: [Brian Lozier](mailto:brian@massassi.net)
 

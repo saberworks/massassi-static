@@ -1,8 +1,8 @@
+---
 title: Editing Articles
-body:
+---
 
-Note that many of these articles are decades old and were written when we were 
-teenagers!
+Note that many of these articles are decades old!
 
 [TOC]
 
