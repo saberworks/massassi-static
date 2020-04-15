@@ -282,3 +282,25 @@ span.tutorial-date {
     color: gray;
 }
 
+div.tutorial-table table {
+    border-collapse: collapse;
+}
+
+div.tutorial-table td {
+    padding: 10px;
+}
+
+div.tutorial-table table,
+div.tutorial-table th,
+div.tutorial-table td {
+    border: 1px solid #000000;
+}
+
+div.tutorial-table tr:nth-child(even) {
+    background-color: #101010;
+}
+
+div.tutorial-table th {
+    font-size: 1em;
+    background-color: #202020;
+}
