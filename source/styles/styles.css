@@ -271,6 +271,10 @@ span.news-author {
  * Tutorials
  */
 
+p.tutorial-list-item {
+    padding-bottom: 10px;
+}
+
 span.tutorial-author {
     font-weight: normal;
     color: gray;
