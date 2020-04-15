@@ -304,3 +304,17 @@ div.tutorial-table th {
     font-size: 1em;
     background-color: #202020;
 }
+
+.tutorial-blue {
+    color: deepskyblue;
+}
+
+.tutorial-red {
+    color: red;
+}
+
+.note {
+    border: 1px solid #101010;
+    margin: 1em;
+    padding: 1em;
+}

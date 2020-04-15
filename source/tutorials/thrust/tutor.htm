@@ -1,0 +1,169 @@
+<HTML><HEAD>
+<TITLE>Massassi Temple Sector Thrust and Vector Tutorial</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT=52A54E LINK=A6BA45 VLINK=457E67>
+<center><font size="6"><b>Sector Thrusts and Vectors</b></font></center>
+<center>Author: <a href="mailto:Mangore_Kiraman@geocities.com">Mangore Kiraman</a></center>
+<BR><hr><br>
+	Sector Thrust is one of the most fun things you can put in a level for Jedi Knight.  However, at times they can be a little mind boggling!!!  Especially for those of you who haven't dealt with vectors in math classes before.  I will write this tutorial in a way that people who haven't taken calculus and trigonometry can understand.  However, along the way, text written in <FONT COLOR=0000FF>blue</FONT> is for those of you who do know about vector addition and subtraction.
+<BR><BR>
+	Here we go.
+<BR><BR>
+	First off, you make the sector that will have thrust.  You also need to make sure that "Used in COG" and "Has Thrust" are checked in the Sector Flags.  Now it is time to work with cogs and math.  In the tools menu, select "Placed Cogs" in order to bring up the cog window.  Then click "Add Cog...", scroll through the list until you see "00_sectorthrust.cog" and add it.
+<BR><BR>
+	The Cog window will now look like this...
+<BR><BR>
+<CENTER><img src="1.GIF"></CENTER>
+<BR><BR>
+	Along the right side of the window is a list of values that you must define for the cog.  You will see:
+<BR><BR>
+<table border="1" cellpadding="2">
+<tr><td>Vec0</td><td>This is the vector that designates the direction of the thrust</td></tr>
+<tr><td>Speed</td><td>This is how fast the thrust moves things.</td></tr>
+<tr><td>SectorX</td><td>This is the thrusting sector.</td></tr>
+</table><BR>
+	
+	You can have up to eight sectors in one cog, though they all must move with the same dirrection and speed.
+<BR><BR>
+	First off, enter the Sector # from the Item Editor into the sector0 value (do this for all the sectors you want to have thrust).  Now on to the vector... this is where it gets tricky.  You'll have to pay attention, and you will need some scratch paper and a calculator (unless you can do sqaure roots in you're head).  The Windows Calculator is fine for this.
+<BR><BR>
+	Note: You can avoid all the complicated math if your thrust is moving along just one axis.  Meaning only in the X, OR Y, OR Z direction.  Below is a list of easy directions.  If you don't understand the chart... don't worry, just continue on through the following steps.
+<BR><BR>
+<table border="1" cellpadding="2">
+<tr><td bgcolor="505050"><FONT COLOR=48BFB0>DIRECTION</font></td><td bgcolor="505050"><FONT COLOR=48BFB0>VALUE</font></td></tr>
+
+	<tr><td>Straight Up (+Z)</td><td>(0/0/1)</td></tr>
+	<tr><td>Straight Down (-Z)</td><td>(0/0/-1)</td></tr>
+	<tr><td>Along +X direction</td><td>(1/0/0)</td></tr>
+	<tr><td>Along -X direction</td><td>(-1/0/0)</td></tr>
+	<tr><td>Along +Y direction</td><td>(0/1/0)</td></tr>
+	<tr><td>Along -Y direction</td><td>(0/-1/0)</td></tr>
+</table><BR>
+	If you're sector is a simple as this, enter the appropriate value above for the Vec0 value, and skip down to the section titled "Speed."
+	Most cases however, involve movement in a 2 or all 3 of these directions at once.  If that is the case you must carry out the following steps:
+<BR><BR>
+
+<CENTER><font size="+1">DETERMINING THE DIRECTION OF THRUST</font></CENTER>
+<BR><BR>
+<u>STEP 1:</u>  <i>Placing reference things.</i>
+<BR><BR>
+	In JED, you must create two Things in your sector.  We will call the first thing, "Thing A," and the second thing, "Thing B."  It doesn't matter what they are, because you will delete them when you are done.  These things must be placed so that IF YOU DREW AN ARROW FROM Thing A TO Thing B, IT WOULD POINT IN THE DIRECTION OF THE THRUST!!!  This placement can be tricky because we are working in three dimensions.  One of the easiest ways to do it is the following:
+<BR><BR>
+	This will only work if you have a surface in the sector that is parellel to the thrust.  You would snap the grid to that surface and position your veiw so you are looking down at the surface.  Then insert a thing along the line of the thrust, as i have show here..
+<BR><BR>
+<CENTER><img src="2.GIF"><BR><BR><img src="3.GIF"></CENTER>
+<BR><BR>
+<U>STEP 2:</U>  <I>Get Reference Thing's Coordinates  (Position Vectors)</I>
+<BR><BR>
+	Now select Thing A and open the Item Editor.  Write down its coordinates.  These are the X, Y, Z values.  Then do the same for Thing B.  (Don't get them mixed up, or you're thrust will point backwards!!!)  It is alright to round to 2 decimal places... you don't need to have numbers 10 didgets long.
+<BR><BR>
+<CENTER><img src="4.GIF"></CENTER>
+<BR><BR>
+<U>STEP 3: </U> <I>Find coordinates of direction vector.</I>
+<BR><BR>
+Subtract the X Coordinate of Thing A from the X Coordinate of Thing B  (Call this value X)<BR>
+Subtract the Y Coordinate of Thing A from the Y Coordinate of Thing B   (Call this value Y)<BR>
+Subtract the Z Coordinate of Thing A from the Z Coordinate of Thing B   (Call this value Z)<BR>
+<BR>
+	so
+<BR><BR><pre>
+	X = (X of Thing B) - (X of Thing A)
+	Y = (Y of Thing B) - (Y of Thing A)
+	Z = (Z of Thing B) - (Z of Thing A)
+</pre><BR>
+	For example.  I got these values from my Item Editor:
+<BR><BR>
+<table border="1" width="35%" cellpadding="2">
+<tr><td colspan="2" bgcolor="505050"><FONT COLOR=48BFB0>Thing A</font></td></tr>
+<tr><td>X</td><td>0.6</td></tr>
+<tr><td>Y</td><td>0.61</td></tr>
+<tr><td>Z</td><td>0.71</td></tr>
+<tr><td colspan="2" bgcolor="505050"><FONT COLOR=48BFB0>Thing B</font></td></tr>
+<tr><td>X</td><td>0.6</td></tr>
+<tr><td>Y</td><td>1.26</td></tr>
+<tr><td>Z</td><td>1.19</td></tr>
+</table><BR>
+
+		So, after I do the subtraction I get:
+<BR><BR><pre>
+		X  =  0.6 - 0.6  =  0
+		Y  =  1.26 - 0.61  =  0.65
+		Z  =  1.19 - 0.71  =  0.48
+</pre><br>
+	So once you have your new X, Y, and Z values, you may move on.  
+(Note: If two of these numbers are zero, you are done with your math.
+From there, in the "Vec0" space, enter your numbers in the following
+format: (X/Y/Z).  If your number ends up something like this: (.67/0/0)
+you would replace the ".67" with a "1."  If it turned out like that, but
+with the non-zero number being negative, you would replace the negative number
+with a "-1."  After that, skip down to the "Speed" section.)  Again, 
+if you have at least two numbers that are NOT Zero, you must move on to
+step 4.
+<BR><BR>
+	<FONT COLOR=0000FF>What we just carried out was vector subtraction.  We subtracted the position vector of Thing A from the position vector of Thing B.  This gave us the displacement vector between the two.  This new vector points in the same direction as the thrust vector, though the magnitude may be different.</FONT>
+<BR><BR>
+<U>STEP 4:</U> <I>Calculate magnitude of direction vector.</I>
+<BR><BR>
+Now, take the number you have for X, and multiply it times itself.  Write this number down.  Now, do the same thing
+with both Y and Z.  Now, take those 3 numbers, add them together, and take the square root of the result.
+<BR><BR>
+To get the square root, just enter the number you got from the last calculation into the calculator, and hit
+the "sqrt" button.  This result we will call "L."
+<BR><BR>
+For example: Mine would be:
+<BR><BR>
+(0 * 0) + (0.65 * 0.65) + (0.48 * 0.48)
+<BR><BR>
+<font color="red">Remember to do the multiplication BEFORE the addition, or it will not work
+correctly</font>
+<BR><BR>
+Then, as stated above, I take the result of the above calculations, 0.65, and
+enter it into my calculator.  Then I press the "sqrt" button, and end up with the
+following number: 0.81 (again, remember to round to the the nearest 2 decimal places).
+Now, I take this number, designate it as "L," and move on to the next step.
+<BR><BR>
+<U>STEP 5:</U>  <I>Find coordinates of thrust vector.  (Divide coordinates by magnitude to find unit vector)</I>
+<BR><BR>
+	Now divide X, Y, Z by L.
+<BR><pre>
+		X coordinate of thrust vector  =  X / L
+		Y coordinate of thrust vector  =  Y / L
+		Z coordinate of thrust vector  =  Z / L
+</pre>
+	For example:  Mine would be.<BR>
+<pre>
+		X coordinate of vector  =  0 / 0.81  =  0
+		Y coordinate of vector  =  0.65 / 0.81  =  0.8
+		Z coordinate of vector  =  0.48 / 0.81  =  0.5
+</pre>
+	Those three numbers are the ones you need to tell JED, so write them down where you wont lose them.  
+<BR><BR>
+<FONT COLOR=0000FF>What we just did in the last two steps was turn our displacement vector into a unit vector (a vector with no length, only a direction).  In the first part we found the magnitude of the displacement vector by taking the sqaure root of the sum of it's square componets.  Then in the second step we divided each component by the displacement vectors magnitude.  The new coordinates are those of the unit vector of magnitude 1.  You will see if you add up the squares of the unit vector coordinates and take the sqaure root, that the magnitude is very close to one.  Though not exact because of the rounding we have done.</FONT>
+<BR><BR>
+	Rejoice!!!  The math is done.  (You almost forgot you were learning how to edit, and thought you were in math class didn't you???)  I hope you made it through that ok.  We now have the numbers we need to enter for the Vec0 value in the cog!  You must write them like this:  "(X/Y/Z)" where X, Y, and Z are the cooridinates the numbers you calculated at the end of the math section.  So I would write:  "(0/0.8/0.5)" for Vec0.  
+<FONT COLOR="red">(remember NOT to use the "quotes")</FONT> The hard part is done.
+<BR><BR>
+<font color="red">NOTE:  NONE of those three numbers should be LESS than -1 or greater than 1.  if they are, you did something wrong.  Go back and check you're work.</font>
+<BR><BR>
+
+<CENTER><font size="+1">SPEED</font></CENTER>
+<BR><BR>
+	Only one thing left.  Determine the Speed.  At the moment it will be set at 1.  This means that it will move things at a rate of 1 JKU every second.  1 JKU is equal to 1 large Grid square in JED.  So the default speed is by no means slow.  If you wish to move things at a rate of 0.2 JKU / second, then you would change the speed to 0.2.  Or if you wanted it to move at 2 JKU / second then you would put it at 2.  In the end you might want to experiment with different settings to get the speed you want.  You also have to remember that gravity still pulls on things, so if your thrust is upwards, take that into acount.
+<BR><BR>
+	Now you are done... hit refresh in the cog window to make sure your values saved correctly.  It will now look like this:
+<BR><BR>
+<CENTER><img src="5.GIF"></CENTER>
+<BR><BR>
+	And finally don't forget to erase the two things you added!  Start up Jedi Knight and see if it works!  If not you should do the following things:<BR><BR>
+	1)  CHECK YOUR MATH.   Most of the time that is the problem.<BR>
+	2)  MAKE SURE YOU HAVE the two flags checked ("Used in COG" and "Has Thrust").<BR>
+	3)  And finally, if all else fails, you can write to me at the e-mail address below.<BR>
+<BR>
+	Happy Editing!!!
+<BR><BR>
+<A HREF="mailto:mangore_kiramin@geocities.com">Mangore Kiramin</A><BR>
+mangore_kiramin@geocities.com<BR><BR>
+<FONT COLOR=0000FF>The vector you enter for your thrust doesn't have to be a unit vector.  But it is just harder to figure out how fast things will move if it isn't.  Jedi Knight multiplies the magnitude of the vector by the speed value you give.  So both control how powerful the thrust is.  If the magnitude of  the vector is 1, you just end up with the power of the thrust being equal to the speed.</FONT>
+<BR><BR><BR>
+</body>
+</html>

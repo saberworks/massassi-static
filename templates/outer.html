@@ -73,6 +73,10 @@
                     <h1>{{ title }}</h1>
                 {% endif %}
 
+                {% if original %}
+                    <p class="note">Note: This is an old page that has been updated/formatted, you can view the original <a href="{{ original }}">here</a>.
+                {% endif %}
+
                 {{ body }}
 
                 <div id="footer">
