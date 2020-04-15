@@ -1,5 +1,5 @@
 ---
-title: Adjoining (connecting rooms)
+title: Adjoining (connecting rooms) (old, possibly outdated)
 description: >
     Creating two rooms, connected by a small hallway.
 author: Brian Lozier
@@ -8,8 +8,7 @@ category: jk
 ---
 
 Author: Brian Lozier
-](mailto:lozier@bigfoot.com)  
-  
+
 Adjoining is used for a multitude of
 things. The first, and easiest to explain, is creating hallways from one
 sector to another. As a brief overview, we will present a simple adjoin
