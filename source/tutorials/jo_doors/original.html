@@ -1,0 +1,214 @@
+<html>
+<head>
+<style type="text/css">
+<!--
+p { font-size: 10pt; font-family: verdana, arial, helvetica; color: white; margin-top: 1em; margin-bottom: 1em }
+ul { font-size: 10pt; font-family: verdana, arial, helvetica; color: white; margin-top: 0em; margin-bottom: 0em }
+table { font-size: 10pt; font-family: verdana, arial, helvetica; color: white; margin-top: 1em; margin-bottom: 1em }
+caption { font-size: 10pt; font-family: verdana, arial, helvetica; color: white; }
+td { font-size: 10pt; font-family: verdana, arial, helvetica; color: white; }
+a:link { text-decoration: none; color: #52A54E }
+a:visited { text-decoration: none; color: #52A54E }
+a:active { text-decoration: none; color: #FFFFFF }
+a:hover { text-decoration: none; color: #A6BA45 }
+-->
+</style>
+ <title>The Massassi Temple: Jedi Outcast Doors Tutorial</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Jedi Outcast Doors Tutorial</font>
+<br clear="all">
+<hr>
+<p>Author: <a href="mailto:ugg_boot@yahoo.com">Craig "UGG" Urquhart</a></p>
+<p>Example: <a href="door_tutorial.zip">door_tutorial.zip</a></p>
+
+<br>
+
+<p><b>Sliding Door</b></p>
+<p>1. Create the door entity using one of these methods:</p>
+<ul type=disc>
+<li>In the popup entity menu, select func_door from the func group to create a default door.
+<li>Select a brush and convert it to a door by selecting func_door.
+</ul>
+<p>2. Press "N" to popup the door's properties.<br>
+3. Add an angle key, or just press one of the direction buttons. The door will not move unless it has a valid opening angle.<br>
+4. Add a soundset key to hear sounds when the door moves. The names of Jedi Outcast's door soundsets are listed below.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="650" align="center">
+<tr align="center"><td><img src="single1.gif" alt="Top View"></td><td><img src="single2.gif" alt="Door Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Door Properties</td></tr>
+</table>
+
+<p><b>Double Sliding Doors</b></p>
+<p>1. Make two sliding doors and change the opening angle of one so that it moves in the opposite direction.<br>
+2. Add a team key to both doors. The name must be the same for each door if they are to move together.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="double1.gif" alt="Top View"></td><td><img src="double2.gif" 
+alt="Upper Door Properties"></td><td><img src="double3.gif" alt="Lower Door Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Upper Door Properties</td><td>
+Lower Door Properties</td></tr>
+</table>
+
+<p><b>Rotating Door</b></p>
+<p>This is only possible in Return To Castle Wolfenstein, and in mods that have added a func_rotating_door entity to the game code, like Urban Terror. Also, it's unlikely that a rotating door can be made using func_pendulum or func_rotating because those entities can not be triggered.</p>
+
+<p><b>Trigger Activation</b></p>
+<p>1. Create the trigger entity using one of these methods:</p>
+<ul type=disc>
+<li>In the popup entity menu, select trigger_multiple from the trigger group to create a default trigger.
+<li>Select a brush and convert it to a trigger by selecting trigger_multiple.
+</ul>
+<p>2. Resize the trigger to fit inside the walls. Make sure it's large enough for the player or npc to walk through.<br>
+3. Create an activation link from the trigger to the door by using one of these methods:</p>
+<ul type=disc>
+<li>Select the trigger and the door, in that order. Press CTRL+K to create a default link. 
+<li>Add a target key to the trigger, and a targetname key with the same name to the door.
+</ul>
+<p>4. Add a wait key to the trigger and make it slightly longer than the door's wait time. This stops the trigger activating while the door is open.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="trigger1.gif" alt="Top View"></td><td><img src="trigger2.gif" 
+alt="Door Properties"></td><td><img src="trigger3.gif" alt="Trigger Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Door Properties</td><td>
+Trigger Properties</td></tr>
+</table>
+
+<p><b>Push Button Activation</b></p>
+<p>1. Create a button entity using one of these methods:</p>
+<ul type=disc>
+<li>In the popup entity menu, select func_button from the func group to create a default button.
+<li>Select a brush and convert it to a button by selecting func_button.
+</ul>
+<p>2. Position the button so that is does not go all the way through the wall when activated. Increase its lip property to prevent this.<br>
+3. Set the button's moving angle so that it moves into the wall when activated.<br>
+4. Create an activation link from the button to the door, like in the example above.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="push1.gif" alt="Top View"></td><td><img src="push2.gif" alt="Door Properties"></td><td>
+<img src="push3.gif" alt="Button Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Door Properties</td><td>
+Button Properties</td></tr>
+</table>
+
+<p><b>Switch Panel Activation</b></p>
+<p>1. Create a trigger entity that the player can stand in while touching the switch.<br>
+2. Create an activation link between the trigger and the door, like in the example above.<br>
+3. Check the trigger's PLAYERONLY, FACING, and USE_BUTTON spawn flags. Also, make the trigger's angle point towards the switch.<br>
+4. Create two panels for the switch using one of these methods:</p>
+<ul type=disc>
+<li>In the popup entity menu, select func_usable from the func group to create a default panel.
+<li>Select a brush and convert it to a panel by selecting func_usable.
+</ul>
+<p>5. Add a targetname key to each panel, using the same name as the trigger's target key.<br>
+6. Check the STARTOFF spawn flag for one panel so that it remains hidden until the other panel is activated. This will be the "on" panel.<br>
+7. Position both panels over each other so that they can change while appearing to be a single switch.<br>
+8. Add a brush behind the switch to ensure that the level won't leak if both panels are hidden.<br> 
+9. This switch, like most in Jedi Outcast, does not change back after the door closes. That type is better handled by a script.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="panel1.gif" alt="Top View"></td><td><img src="panel2.gif" alt="Panels Separated"></td><td>
+<img src="push2.gif" alt="Door Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Panels Separated</td><td>Door Properties</td></tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="panel3.gif" alt="Trigger Properties"></td><td><img src="panel4.gif"
+alt="Off Panel Properties"></td><td><img src="panel5.gif" alt="On Panel Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Trigger Properties</td><td>"Off" Panel Properties</td><td>
+"On" Panel Properties</td></tr>
+</table>
+
+<p><b>Security Panel Activation</b></p>
+<p>1. Check the door's LOCKED spawn flag. The door will only open once if it isn't locked first.<br>
+2. In the entity menu, select misc_security_panel from the misc group to create the panel.<br>
+3. Also, select item_security_key from the items group to create the key. It has to be a security key because a supply key does not work.<br>
+4. Create an activation link from the panel to the door, like in the example above.<br>
+5. Set the panel's front facing direction so that its back is aligned with the wall.<br>
+6. Add a message key to the panel and security key. The names must be the same for the key to work.</p>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="security1.gif" alt="Top View"></td><td><img src="security2.gif" 
+alt="Door Properties"></td><td><img src="security3.gif" alt="Security Panel Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Top View</td><td>Door Properties</td><td>
+Security Panel Properties</td></tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="5" width="970" align="center">
+<tr align="center"><td><img src="security4.gif" alt="Security Key Properties"></td></tr>
+<tr align="center" valign="bottom"><td>Security Key Properties</td></tr>
+</table>
+
+<p><b>Door Properties</b></p>
+<table border="1" cellspacing="0" cellpadding="5" width="80%" align="center">
+<caption>Spawn Flags</caption>
+<tr><td width="20%">START_OPEN</td><td>Moves to its destination when spawned, and operates in reverse.</td></tr> 
+<tr><td>FORCE_ACTIVATE</td><td>Can only be activated by a force push or pull.</td></tr> 
+<tr><td>CRUSHER</td><td>Does not reopen if blocked.</td></tr> 
+<tr><td>TOGGLE</td><td>Waits in both the start and end states for a trigger event.</td></tr> 
+<tr><td>LOCKED</td><td>	Starts locked, with the shader animmap at the first frame and inactive.</td></tr> 
+<tr><td>GOODIE</td><td>Only opens if activator has a "goodie" supply key in his inventory.</td></tr> 
+<tr><td>PLAYER_USE</td><td>Player can use it with the use button.</td></tr> 
+<tr><td>INACTIVE</td><td>Must be used by a target_activate before it can be used.</td></tr> 
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5" width="80%" align="center">
+<caption>Keys</caption>
+<tr><td width="20%">target</td><td>Fires when door starts moving from its closed position to its open position.</td></tr> 
+<tr><td>opentarget</td><td>Fires after door reaches its open position.</td></tr> 
+<tr><td>target2</td><td>Fires when door starts moving from its open position to its closed position.</td></tr> 
+<tr><td>closetarget</td><td>Fires after door reaches its closed position.</td></tr> 
+<tr><td>model2</td><td>MD3 model to also draw.</td></tr> 
+<tr><td>angle</td><td>Determines the opening direction.</td></tr> 
+<tr><td>targetname</td><td>Name of the remote button or trigger field which activates the door.</td></tr> 
+<tr><td>speed</td><td>Movement speed (default is 100).</td></tr> 
+<tr><td>wait</td><td>Seconds to wait before returning (default is 3, never return is -1).</td></tr> 
+<tr><td>delay</td><td>Seconds to wait before moving (default is 0).</td></tr> 
+<tr><td>lip</td><td>Lip remaining at end of move (default is 8).</td></tr> 
+<tr><td>dmg</td><td>Damage to inflict when blocked (default is 2, set to negative for no damage).</td></tr> 
+<tr><td>color</td><td>Color of light emitted by door.</td></tr> 
+<tr><td>light</td><td>Radius of light emitted by door.</td></tr> 
+<tr><td>health</td><td>Amount of damage to door before it will open.</td></tr> 
+<tr><td>soundset</td><td>Sound set to play when door moves.</td></tr> 
+<tr><td>linear</td><td>Set to 1 for the door to move linearly rather than with acceleration (default is 0).</td></tr> 
+</table>
+
+<p><b>Door Sound Sets</b></p>
+<table border="0" cellspacing="0" cellpadding="1" width="80%" align="center">
+<tr><td>impdoor1</td><td>impdoor2</td><td>droid_door</td><td>door1</td><td>door2</td><td>door3</td></tr>
+<tr><td>door4</td><td>door5</td><td>door6</td><td>door7</td><td>door8</td><td>door_large1</td></tr>
+<tr><td>door_large2</td><td>door_large3</td><td>door_large4</td><td>door_medium1</td><td>door_medium2</td><td>
+door_medium3</td></tr>
+<tr><td>door_medium4</td><td>door_medium5</td><td>door_small1</td><td>door_small2</td><td>door_small3</td><td>
+door_small4</td></tr>
+<tr><td>door_small5</td><td>door_small6</td><td>stone_door</td><td>huge_door</td><td>large_door</td><td></td></tr>
+</table>
+
+<p><b>Troubleshooting</b></p>
+<p>1. Door does not move.<br>Set an opening angle in the door's properties. There should be an arrow in the center of the door.</p>
+<p>2. No sounds play when the door moves.<br>Add a soundset to the door's properties.</p>
+<p>3. Only one of the double doors opens.<br>Check that both doors have the same name for their team key.</p>
+<p>4. Trigger does not work.<br>Check its size. Make sure the player or npc can touch it.</p>
+<p>5. Push button slides along wall.<br>It's using the default moving angle because none was given in its properties.</p>
+<p>6. Switch panel does not work.<br>Check that the trigger has an arrow facing the switch. Also check the spawnflags and targetnames.</p>
+<p>7. Switch panel flickers when activated.<br>The trigger needs a wait time greater than it's default of 0.</p>
+<p>8. Key does not unlock door.<br>Check that it's a security key with the same message name as the panel.</p>
+<p>9. Door will not open again after using the security panel.<br>The door must be locked first. The purpose of the security panel is to unlock it, not open it.</p>
+
+
+<p><b>Other Door Tutorials</b></p>
+<p><a href="http://www.planetquake.com/gothic/tutorials/door.html">Gothic's Double Doors Tutorial</a><br>
+<a href="http://planetquake.com/bubba/door1.html">Bubba's Double Doors Tutorial</a><br>
+<a href="http://planetquake.com/bubba/butt1.html">Bubba's Door Button Tutorial</a><br>
+<a href="http://fnf.20m.com/q3rtut4.html">FNF's Door Tutorial</a><br>
+<a href="http://members.iomartdsl.com/~paul.rich/kev/mapping/door.htm">Kev's Door Tutorial</a><br>
+<a href="http://www.planetquake.com/q3empire/data/tutorials/q3r/basics_doors/door.htm">Q3Empire's Door Tutorial</a><br>
+<a href="http://www.planetwolfenstein.com/surface/tutorials/sliding_doors.html">Surface's Door Tutorial</a><br>
+<a href="http://planetquake.com/qworkshop3/tutorials/trap_door_floor/index.html">Q3Workshop's Trap Door Tutorial</a><br></p>
+<br>
+
+<center>
+<p>Copyright &copy 2002 Craig Urquhart.<br><br></p>
+</center>
+
+
+</font>
+</body>
+
+</html>
