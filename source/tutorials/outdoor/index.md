@@ -1,9 +1,11 @@
 ---
 title: Creating Outdoor Buildings I
 category: jk
-description: Basic tutorial on creating the &quot;sector in sector&quot; illusion.
+description: >
+    Basic tutorial on creating the &quot;sector in sector&quot; illusion.
 date: 1998-03-19
 author: Brian Lozier
+email: massassi.temple@gmail.com
 ---
 
 Author: [Brian Lozier](mailto:brian@massassi.net)

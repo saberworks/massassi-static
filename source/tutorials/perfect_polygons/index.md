@@ -1,6 +1,7 @@
 ---
 title: Perfect Polygons
 author: Brian, Josh, and Dave
+email: massassi.temple@gmail.com
 description: >
     This is what I (Mangore) like to call the pinwheel process. It describes
     how to make perfect 8 and 16 sided polygons.

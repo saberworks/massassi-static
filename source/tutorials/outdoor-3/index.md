@@ -1,6 +1,7 @@
 ---
 title: A New Twist on Sectors within Sectors
 author: Dino Delucchi
+email: dino@giant.bnc.com.au
 description: >
     This is awesome. It describes an ingenious way of creating outdoor
     buildings.

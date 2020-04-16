@@ -3,6 +3,7 @@ title: Adjoining (connecting rooms) (old, possibly outdated)
 description: >
     Creating two rooms, connected by a small hallway.
 author: Brian Lozier
+email: massassi.temple@gmail.com
 date: 1998-03-20
 category: jk
 ---

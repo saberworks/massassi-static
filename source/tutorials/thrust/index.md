@@ -1,6 +1,7 @@
 ---
 title: Sector Thrusts and Vectors
 author: Mangore Kiramin
+email: mangore_kiramin@geocities.com
 description: >
     This tutorial will show you how to create sector thrust, which is used in
     many levels, a good example of which would be Bespin Mining Station. It

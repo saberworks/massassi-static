@@ -1,6 +1,7 @@
 ---
 title: "Adjoining Part 1: Connecting Rooms"
 author: Brian Lozier
+email: massassi.temple@gmail.com
 date: 1999-05-10
 description: >
     Creating two rooms, connected by a small hallway.

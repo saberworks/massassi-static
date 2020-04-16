@@ -3,6 +3,7 @@ title: "Adjoning: Part 2"
 description: >
     Creating two rooms, one taller than the other, connected together.
 author: Brian Lozier
+email: massassi.temple@gmail.com
 date: 1998-03-20
 category: jk
 ---

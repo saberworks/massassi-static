@@ -5,6 +5,7 @@ description: >
     covering various activation schemes, properties, sound sets and general 
     troubleshooting. Download includes example map.
 author: Craig "UGG" Urquhart
+email: ugg_boot@yahoo.com
 date: 2002-09-21
 category: jo
 original: original.html

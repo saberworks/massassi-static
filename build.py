@@ -16,17 +16,17 @@ output_dir = './output'
 
 # outer template to use; actually maybe this is the only template?
 templates_dir = './templates'
-outer_template = 'outer.html';
+outer_template = 'outer.html'
 
 # files ending in these extensions will be processed
-extensions = ['md', 'html', 'shtml', 'htm'];
+extensions = ['md', 'html', 'shtml', 'htm']
 
 # directories containing "collections"
 # at this point I need a config file :-|
 # relative to `source` directory
 collections = {
     'tutorials': 'tutorials/*/*',
-};
+}
 
 #
 # Loop through all files in source_dir, process the ones that need processing, 
@@ -36,8 +36,7 @@ collections = {
 # files specify that they want a collection?
 def main():
     collection_data = process_collections(collections)
-    print(collection_data)
-    
+
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
 
@@ -57,7 +56,7 @@ def main():
                     inner_tpl = get_template_from_memory(
                         template_vars.pop('body', '')
                     )
-                    template_vars['body'] = inner_tpl.render(template_vars);
+                    template_vars['body'] = inner_tpl.render(template_vars)
 
                 tpl = get_template(outer_template)
 
@@ -80,17 +79,25 @@ def main():
 #
 def get_output_path(source_path, source_dir, output_dir, ext):
     # If source path has .md extension, change it to whatever is in ext.
-    source_path = re.sub(r'\.md$', '.' + ext, source_path);
+    source_path = re.sub(r'\.md$', '.' + ext, source_path)
 
-    return re.sub(source_dir, output_dir, source_path);
+    return re.sub(source_dir, output_dir, source_path)
 
 #
+# Determine proper public-facing web path for the resource.  If extension is 
+# .md, look use the extension provided in the `ext` argument.  If the filename 
+# is `index.html` just leave off the filename (prefer to link to something like 
+# /tutorials/foo/ than /tutorials/foo/index.html).
 #
 def get_href(source_path, source_dir, ext):
     # If source path has .md extension, change it to whatever is in ext.
-    source_path = re.sub(r'\.md$', '.' + ext, source_path);
+    source_path = re.sub(r'\.md$', '.' + ext, source_path)
 
-    return re.sub(source_dir, '', source_path)
+    href = re.sub(source_dir, '', source_path)
+
+    # replacing the '/' in '/index.html' ensures we're only messing with 
+    # `index.html` and not `tutorial_index.html`, for example
+    return re.sub(r'/index.html$', '/', href)
 
 #
 # File should be processed if:
@@ -145,7 +152,7 @@ def output_file(content, path):
 # being processed)
 #
 def copy_file(path, source_dir, output_dir):
-    output_path = re.sub(source_dir, output_dir, path);
+    output_path = re.sub(source_dir, output_dir, path)
     output_dir = os.path.dirname(output_path)
 
     os.makedirs(output_dir, exist_ok=True)
@@ -166,13 +173,11 @@ def copy_file(path, source_dir, output_dir):
 #
 def process_collections(collections):
     if(len(collections) == 0):
-        return [];
+        return []
 
     # will contain keys that match the collections key, values are lists of 
     # vars parsed out of the matching files (minus the body)
     collection_data = {}
-
-    print("PROCESSING COLLECTIONS!!!!!!");
 
     for name, pattern in collections.items():
         collection_data[name] = []
@@ -184,7 +189,7 @@ def process_collections(collections):
 
         for file_path in pathlib.Path(source_dir).glob(maybe_safe_path):
             if not should_process(str(file_path)):
-                continue;
+                continue
             
             template_vars = extract_vars_from_file(str(file_path), False)
             
@@ -223,7 +228,7 @@ def extract_vars_from_file(source_path, include_body=True):
         try:
             del template_vars['body']
         except KeyError:
-            pass; # really don't care
+            pass # really don't care
 
     return template_vars
 
@@ -238,7 +243,7 @@ def get_template(template_file_name):
 
 def get_template_from_memory(template):
     tpl_env = jinja2.Environment(extensions=['jinja2.ext.loopcontrols'])
-    return tpl_env.from_string(template);
+    return tpl_env.from_string(template)
 
 main()
 

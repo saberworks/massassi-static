@@ -1,6 +1,7 @@
 ---
 title: Advanced Architecture Techniques
 author: Brian Lozier
+email: massassi.temple@gmail.com
 date: 1999-05-03
 description: >
     Learn how to create an advanced pipe junction. This tutorial focuses on 

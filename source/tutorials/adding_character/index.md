@@ -1,6 +1,7 @@
 ---
 title: Adding Character to Your Levels
 author: Daft\_Vader
+email: wondermog@bellsouth.net
 date: 2003-07-19
 description: >
     Demonstrates methods for cleaving that will drastically improve the visual 

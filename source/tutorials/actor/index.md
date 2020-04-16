@@ -1,6 +1,7 @@
 ---
 title: Friendly Baddies and Faithful Companions
 author: Fourwood
+email: fourwood@ix.netcom.com
 date: 1998-08-09
 description: >
     Learn how to make any enemy turn into a friendly player and help you rather 

@@ -1,6 +1,7 @@
 ---
 title: 3do Construction in JED
 author: Brian Lozier
+email: massassi.temple@gmail.com
 description: >
     Learn how to create a custom 3do, texture it, then implement it into your 
     level.

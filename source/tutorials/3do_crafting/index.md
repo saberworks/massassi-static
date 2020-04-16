@@ -1,6 +1,7 @@
 ---
 title: 3do Crafting in JED
 author: "Ventrue_Vanula/Andrew"
+email: ayork@acadia.net
 description: >
     Learn how to create custom 3dos in JED. The author uses a complex looking 
     weapon for an example.
