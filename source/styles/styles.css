@@ -322,3 +322,10 @@ div.tutorial-table th {
     margin: 1em;
     padding: 1em;
 }
+
+code.plain {
+    color: #808080;
+    font-size: 1.2em;
+    margin-left: 20px;
+    display: block;
+}
