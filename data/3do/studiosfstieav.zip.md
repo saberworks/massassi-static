@@ -6,5 +6,5 @@ type: both
 description: >
     The TIE Advanced.
 date: 10/24/99
-screenshot: studiosfstieav.gif
+screenshot:
 ---

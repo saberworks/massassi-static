@@ -5,6 +5,7 @@ import pathlib
 import re
 import shutil
 import sys
+import warnings
 
 # installed via pip
 import frontmatter
@@ -18,7 +19,8 @@ output_dir = './output'
 templates_dir = './templates'
 outer_template = 'outer.html'
 
-# files ending in these extensions will be processed
+# files ending in these extensions will be processed, anything else will be 
+# copied directly
 extensions = ['md', 'html', 'shtml', 'htm']
 
 # directories containing "collections"
@@ -46,15 +48,10 @@ data_dir = './data'
 # Loop through all files in source_dir, process the ones that need processing, 
 # and copy to output_dir.
 #
-# TODO: is it wise to make _all collections_ available to all files?  Or should
-# files specify that they want a collection?
 def main():
     collection_data = process_collections(collections)
     data = process_data(data_dir)
-
-    print(data)
-    #sys.exit()
-
+    
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
 
@@ -234,9 +231,11 @@ def process_collections(collections):
 # Deal with `data` directories.
 #
 def process_data(data_dir):
-    # TODO: if not exist dir, print error & return
-
     data = {}
+
+    if not os.path.isdir(data_dir):
+        print("data_dir specified but present:", data_dir, file=sys.stderr);
+        return data
 
     for entry in os.listdir(data_dir):
         path = data_dir + '/' + entry
@@ -246,7 +245,7 @@ def process_data(data_dir):
 
         data[entry] = []
 
-        for file in os.listdir(path):
+        for file in sorted(os.listdir(path), key=str.casefold):
             file_path = path + '/' + file
 
             if not os.path.isfile(file_path):

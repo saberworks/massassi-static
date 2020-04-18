@@ -1,5 +1,5 @@
 ---
-title: 3d Objects
+title: Jedi Knight 3d Objects
 description: 3d objects for use in your levels/maps/mods.
 ---
 
@@ -13,3 +13,22 @@ description: 3d objects for use in your levels/maps/mods.
 <p>These are 3d objects you can download and include in your level/map/mod.</p>
 <p><strong>Note:</strong> We don't take submissions for this section anymore.  If you want to share your 3do maybe try the <a href="https://forums.massassi.net/">forums</a>.</p>
 
+<div class="tutorial-table">
+<table>
+{% for o in data['3do'] %}
+    {% if o.type != 'jk' %}
+        {% continue %}
+    {% endif %}
+
+    <tr>
+        <td>
+            {% if o.screenshot %}
+                <a href="screenshots/{{ o.screenshot }}"><img src="screenshots/{{ o.screenshot }}" width="100"></a>
+            {% endif %}
+            </td>
+        <td><a href="/files/3do/{{ o.file }}">{{ o.file }}</a> by {{ o.author }}<br>
+        {{ o.description }}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
