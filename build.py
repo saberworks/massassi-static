@@ -22,11 +22,25 @@ outer_template = 'outer.html'
 extensions = ['md', 'html', 'shtml', 'htm']
 
 # directories containing "collections"
-# at this point I need a config file :-|
+#
 # relative to `source` directory
 collections = {
     'tutorials': 'tutorials/*/*',
 }
+
+# directory containing "data"
+#
+# Data directories should contain a bunch of markdown files.  These will be 
+# parsed (front matter and body included) and placed in the "data" dict 
+# available to templates.  However, _pages_ for these files will not be 
+# created.  These are similar to collections but don't generate pages, useful 
+# for generating pages that contain a list of the data.  In my case I'm using 
+# this for 3dos, md3s, mats, etc.  (things that used to reside in the database 
+# but I don't want to maintain anymore)
+#
+# relative to the root project directory
+#
+data_dir = './data'
 
 #
 # Loop through all files in source_dir, process the ones that need processing, 
@@ -36,6 +50,10 @@ collections = {
 # files specify that they want a collection?
 def main():
     collection_data = process_collections(collections)
+    data = process_data(data_dir)
+
+    print(data)
+    #sys.exit()
 
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
@@ -46,17 +64,20 @@ def main():
             if should_process(source_path):
                 print(f"    processing {source_path}")
                 template_vars = extract_vars_from_file(source_path)
+
                 template_vars['collections'] = collection_data
+                template_vars['data'] = data
+
+                inner_tpl = get_template_from_memory(
+                    template_vars.pop('body', '')
+                )
+
+                template_vars['body'] = inner_tpl.render(template_vars)
 
                 if source_path.endswith('.md'):
                     template_vars['body'] = markdown.markdown(
                         template_vars['body'], extensions=['extra', 'toc']
                     )
-                else:
-                    inner_tpl = get_template_from_memory(
-                        template_vars.pop('body', '')
-                    )
-                    template_vars['body'] = inner_tpl.render(template_vars)
 
                 tpl = get_template(outer_template)
 
@@ -208,6 +229,32 @@ def process_collections(collections):
         collection_data[key] = sorted(collection, key=operator.itemgetter('title'))
 
     return collection_data
+
+#
+# Deal with `data` directories.
+#
+def process_data(data_dir):
+    # TODO: if not exist dir, print error & return
+
+    data = {}
+
+    for entry in os.listdir(data_dir):
+        path = data_dir + '/' + entry
+
+        if not os.path.isdir(path):
+            continue
+
+        data[entry] = []
+
+        for file in os.listdir(path):
+            file_path = path + '/' + file
+
+            if not os.path.isfile(file_path):
+                continue
+
+            data[entry].append(extract_vars_from_file(file_path))
+
+    return data
 
 #
 # Read the content file, extract the vars from the top ("front matter") and the 

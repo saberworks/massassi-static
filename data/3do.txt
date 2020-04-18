@@ -1,0 +1,290 @@
+file	author	email	screenshot	description	type	date
+n1_zy.zip	Zymotico	kgkwan@ucla.edu	n1_zy.jpg	An N-1 Starfighter.	jk	10/24/99
+wbridge.zip	BoShek	julian_mckinlay@hotmail.com	wbridge1.jpg	An old wooden bridge commonly seen hanging precariously over canyons in Indian Jones movies (06baron.cmp).	mots	10/24/99
+flag.zip	REZ	noreply@massassi.net	flag.jpg	An American Flag.	both	10/24/99
+compcenter.zip	FlyDuDe	FlyGuyRy69@hotmail.com	compcenter.jpg	This is exactly what the name sounds like, a computer center. Another 3do I made for The Rock project. Has some decent detail to it.	jk	10/24/99
+jaildoor.zip	FlyDuDe	FlyGuyRy69@hotmail.com	jaildoor.gif	A jail door with bars - Made for The Rock, which is the level I'm currently working on.	jk	10/24/99
+kellman.zip	NJF_PolyMorph	frag@colba.net	kellman2.jpg	This is skin of what a kell dragon/human hybrid would look like.	jk	10/24/99
+well.zip	REZ	noreply@massassi.net	well.gif	An earth wishing well, released by popular demand. Uses 03house.cmp	jk	10/24/99
+kydsab.zip	Hell Raiser	Hell_Raiser64@softhome.net	dsaber.gif	A new double-bladed saber handle. It can work with a double bladed saber pack because that's what it's based off of.	jk	10/24/99
+smb.zip	SavageX	savagex@sprynet.com	smb.jpg	Here is an updated missile boat that now works for JK basic. It features new textures and has two engines on the back. I added the engines because the TIE Fighter game has two engines on the back.	jk	10/24/99
+domehut.zip	SavageX	savagex@sprynet.com	domehut.jpg	A small hut. Uses 06baron.cmp	jk	10/24/99
+drazn3do1.zip	Jeff W.	thecat@zip.com.au	drazen02.jpg	A collection of the principal new 3dos that were created for Drazen Isle.	jk	10/24/99
+PatrolBoat.zip	Milhouse	jeffreym@one.net.au	patrol_boat1.jpg	These are two 3dos of Imperial Patrol Boats, like the ones in Rogue Squadron. One has a rear turret and the other one doesn't.	jk	10/24/99
+escortshuttle.zip	SavageX	savagex@sprynet.com	escortshuttle.gif	Escort Shuttlecraft	jk	10/24/99
+sw_doorjam.zip	Brian Lozier	lozier@bigfoot.com	sw_doorjam.gif	A doorjam 3do similar to the one already in JK, but with new textures and a back, unlike the old one.	jk	10/24/99
+df3dos.zip	DarthFader	Andy_Raposo@hotmail.com	df3dos.jpg	14 3dos of everyday office items	jk	10/24/99
+conference.zip	Home_Slice	thompsnd@purdue.edu	conftable.jpg	This is a conference-like table with computer screens	jk	10/24/99
+sav-tiei.zip	SavageX	savagex@sprynet.com	sav_tiei.jpg	TIE Interceptor	jk	10/24/99
+launcharm.zip	GOD_Tazman_GOD	Dizzied1@aol.com	launcharm.gif	A launch arm for TIEs	jk	10/24/99
+atct.zip	The Vertigo	The_Vertigo37@hotmail.com	atct.gif	An All Terrain Cargo Transport - Like an AT-AT, but you can walk around inside it	jk	10/24/99
+hwing.zip	Blair Aires	matttodd@discoverynet.com	hwing.gif	An H-Wing. Uses 01narsh.cmp	jk	10/24/99
+kaarde.zip	Warzone Team	tomsm@airmail.net	kaarde.gif	The Wild Card, Talon Kaarde's personal ship	jk	10/24/99
+xp38.zip	Tim "Slug" Hayes	slug@massassi.net	xp38.jpg	The XP-38, a newer model from the same series as Luke's X-34	jk	10/24/99
+sbob_3dos.zip	Safari_Bob	knud@raex.com	sbob_3dos2.gif	A pack of 3dos containing a hover apc, The Evader, and a landspeeder	jk	10/24/99
+bigtower.zip	Farrax	webmaster@logdesign.com	01.gif	The tower looks something like the Empire State Building with a radio tower on top. Don't hold me to the rendering of it, because I've never been there, and didn't have a picture handy when I made this.	jk	10/24/99
+speederbikes.zip	The Jedi Assassin	peachking@xoommail.com	speedert.jpg	Two speeder bikes	jk	10/24/99
+consoles_1.zip	The Jedi Assassin	peachking@xoommail.com	consoles_1.jpg	A pack of assorted consoles	jk	10/24/99
+starfighter.zip	Dylan	dylan_555@hotmail.com	starfighter.gif	A fighter similar to the X-Wing	jk	10/24/99
+temple.zip	fj_jediboy13	ANTjedi56@aol.com	temple.jpg	A large temple	jk	10/24/99
+control.zip	JKior	LBear11@aol.com	console.gif	Two circular control consoles	jk	10/24/99
+comchair.zip	ZebaZxant@aol.com	ZebaZxant@aol.com	comchair.gif	It's a simple arm chair with a high back and arm rests	jk	10/24/99
+mturret.zip	Achilles	design@cwia.com	turret.jpg	A small barrier with a repeater - Kind of like a pill-box.	jk	10/24/99
+toilet.zip	Achilles	design@cwia.com	toilet.gif	A nice little homely prison toilet	jk	10/24/99
+toilet2.zip	Pengun	lackeybr@stn.net	toilet2.gif	Another toilet	jk	10/24/99
+hovertrain.zip	Nightmare	knud@raex.com	engine.jpg	A hovertrain with 8 different cars	jk	10/24/99
+Medtrans.zip	Ryan Bickhart	greedo_rodian@hotmail.com	Medtrans.gif	A medium rebel transport	jk	10/24/99
+openbox.zip	Dylan	dylan_555@hotmail.com	openbox.gif	An empty crate	jk	10/24/99
+tree001.3do	Andrew	ayork@acadia.net	tree001.gif	A tree. Uses 03house.cmp	jk	10/24/99
+ramptower.zip	SLJ_Ghost	slj_ghost@email.com	ramptower.jpg	A tower of crisscrossing ramps	jk	10/24/99
+gargoyl.zip	Andrew	ayork@acadia.net	gargoyl.gif	A gargoyle statue	jk	10/24/99
+bigdeadtree.zip	Boshek	julian_mckinlay@hotmail.com	bigdeadtree.jpg	A big dead tree (03house.cmp)	mots	10/24/99
+sith.zip	Matthew Pate	pate@minopher.net.au	sith1.gif	A Sith Interceptor.	mots	10/24/99
+flash.zip	Matthew Pate	pate@minopher.net.au	flash1.gif	A Flash Speeder.	mots	10/24/99
+xwingnogear.zip	Luke Thomas	thomasluke@hotmail.com	xwingnogear.jpg	An X-Wing with no landing gear and closed s-foils.	mots	10/24/99
+corusctrans.zip	TSE_ctsketch	ctsketch@hotmail.com	corusctrans.jpg	Looks more like one of the prequel transports, but shaped differently and bus-sized.	mots	10/24/99
+Frigate.zip	Milhouse	jeffreym@one.net.au	Frigate.gif	A Nebulon Frigate 3do. Originally David McHale's, it's been resized and retextured with his consent.	mots	10/24/99
+reactor.zip	TSE_ctsketch	ctsketch@hotmail.com	reactor.gif	A massive Death Star reactor for decoration.	mots	10/24/99
+stalactite.zip	Taalo	jgh@iafrica.com	stalactite.gif	A stalactite (01narsh.cmp).	mots	10/24/99
+waveskimmer.zip	Buck_Mulligan	midtown@the-wire.com	waveskimmer.gif	A waveskimmer: a vehicle used as a transport on water fronts.	mots	10/24/99
+mechtimberwolf.zip	SavageX	savagex@sprynet.com	mechtimberwolf.jpg	The Timberwolf from Mechwarrior 2.	mots	10/24/99
+goldsword.zip	Kalen	kalen_ad@hotmail.com	goldsword.jpg	A golden sword.	mots	10/24/99
+speederbike.zip	Mika	master.max@sympatico.ca	speederbike.gif	A speeder bike like the ones from RotJ.	mots	10/24/99
+dfwelder.zip	Jedi Anubis	jedi@mosweb.com	dfwelder.gif	The welder arm from Dark Forces.	mots	10/24/99
+holotabl.zip	Fourwood	fourwood@ix.netcom.com	holo.gif	A Briefing Room Holo-Table like in RotJ.	mots	10/24/99
+bigscrntv.zip	JeDi BoY	jedi_boy_tj@hotmail.com	bigscrntv.jpg	A big-screen TV.	mots	10/24/99
+sdes.zip	David Erlenbusch	pmpknkng@idirect.com	sdes.gif	An Imperial Class Star Destroyer (retextured from the MotS CD).	mots	10/24/99
+slave1.zip	Mika Hurley	JediAdamF@Geocities.com	slave1.gif	The Slave 1, Boba Fett's personal ship.	mots	10/24/99
+blacklamp.zip	Kenobi	uandme@earthlink.net	blacklamp.gif	An old fashioned street light (01narsh.cmp).	mots	10/24/99
+sandcrawler.zip	HothRebel	hothrebel@hotmail.com	sandcrawler.jpg	A Jawa Sandcrawler.	mots	10/24/99
+thunderbolt.zip	Number Six	number_six@hotmail.com	thunderbolt.jpg	A Thunderbolt Fighter from Babylon 5.	mots	10/24/99
+moncal.zip	Admiral Thrawn	thrawn_18@hotmail.com	moncal.jpg	A Mon Calamari Cruiser.	mots	10/24/99
+tent.zip	JM	XXWP39C@prodigy.com	tent.gif	A medieval tent.	mots	10/24/99
+ugly.zip	Snootle	eggenletus@yahoo.com	ugly1.jpg	Three ships called "uglies" because they're made from scraps of other ships.	mots	10/24/99
+yt1900.zip	Number Six	number_six@hotmail.com	yt1900.jpg	The YT-1900, a ship from the same series as the Millenium Falcon (YT-1300) and the Outrider (YT-2400).	mots	10/24/99
+tiea.zip	SavageX	savagex@sprynet.com	tiea.jpg	A TIE Advanced Fighter.	mots	10/24/99
+mre3dos.zip	OrBitR_MrE	mretg@email.msn.com	mre3dos3.jpg	A bunch of rock 3dos.	mots	10/24/99
+sav3do.zip	SavageX	savagex@sprynet.com	atct.jpg	A pack of 3dos: includes a tank, a ladder, a table with a console on it, a console, and a wooden door.	mots	10/24/99
+snub.zip	Nightmare	knud@raex.com	snub.gif	A small fighter.	mots	10/24/99
+ds.zip	SavageX	savagex@sprynet.com	ds.jpg	A large war droid for decoration purposes.	mots	10/24/99
+trees.zip	Nahaku	nbar@mt.arias.net	trees.gif	A collection of tree 3dos.	mots	10/24/99
+speeders.zip	Mark Suave	saum@videotron.ca	speeder1.jpg	A collection of different speeders.	mots	10/24/99
+Klnbridge.zip	Kalen	kalen@cearras.demon.co.uk	Klnbridge.gif	A neat-looking bridge.	mots	10/24/99
+new3dos.zip	Scott Brisken	sbrisken@gardner-webb.edu	speeder.jpg	A speeder like Luke's and a computer console.	mots	10/24/99
+throne.zip	Nightmare	knud@raex.com	throne.gif	A throne.	mots	10/24/99
+sword.zip	Koensayr	kalen@cearras.demon.co.uk	sword.gif	A sword.	mots	10/24/99
+hshuttle.zip	Hemlos	hemlos@gate.net	hshuttle.gif	An Imperial transport that you can walk into.	mots	10/24/99
+e-wing.zip	Markus Friebe	salaciuscrumb@gmx.net	e-wing.jpg	An E-Wing Fighter.	mots	10/24/99
+koenship.zip	Koensayr	ethereal14@hotmail.com	koenship.jpg	A pirate fighter made of scraps from other ships.	mots	10/24/99
+v38.zip	Markus Friebe	salaciuscrumb@gmx.net	v38.jpg	The V-38 Phantom from Rebel Assault II.	mots	10/24/99
+shotgun.zip	Ironman	ironman3000@hotmail.com	shotgun.gif	A shotgun.	mots	10/24/99
+monkey.zip	The Masked Monkey	MICHAELMELANDER@worldnet.att.n	monkey.gif	A giant monkey.	mots	10/24/99
+mwing.zip	Mika	caviair@earthlink.net	mwing.jpg	An M-Wing Fighter.	mots	10/24/99
+lamp.zip	FLC_Jibba	jibba@xtcity.demon.co.uk	lamp.gif	A desk lamp.	mots	10/24/99
+sizzler.zip	FLC_Jibba	jibba@xtcity.demon.co.uk	sizzler.gif	An electric chair (06baron.cmp).	mots	10/24/99
+tieint.zip	GoZ Studios	thespaceboy@geocities.com	tieint.gif	A TIE Interceptor.	both	10/24/99
+ewing.zip	GoZ Studios	thespaceboy@geocities.com	ewing.gif	An E-Wing Fighter.	both	10/24/99
+ywing.zip	GoZ Studios	thespaceboy@geocities.com	ywing.gif	Two Y-Wings: one landed, one in flight.	both	10/24/99
+jkdbigbar1.zip	IRN_Baker_JKD	frostfreeze@yahoo.com	jkdbigbar_ss01.jpg	An extremely big bar.	both	10/24/99
+studiosfsxwing.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsxwing.gif	Two X-Wings: one landed, one in flight.	both	10/24/99
+jkdpillar.zip	IRN_Baker_JKD	frostfreeze@yahoo.com	jkpillar_ss01.jpg	A circular pillar.	both	10/24/99
+studiosfsawing.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsawing.gif	Two A-Wings: one landed, one in flight.	both	10/24/99
+studiosfsslave1.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsslave1.gif	Boba Fett's infamous ship, The Slave 1. Two 3dos: one landed, one in flight.	both	10/24/99
+studiosfsfalconesb.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsfalconesb.gif	The Millennium Falcon from ESB and RotJ.	both	10/24/99
+studiosfsfalconanh.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsfalconanh.jpg	The Millennium Falcon from Episode IV, A New Hope.	both	10/24/99
+palm.zip	EbE	ebe_jk@hotmail.com	palm.gif	A palm tree with new textures.	both	10/24/99
+fdf_3do.zip	BoBo Fett	bermshot@hotmail.com	fdf_3do.jpg	A Trade Federation Droid Fighter.	both	10/24/99
+turbolaser.zip	Taalo	jgh@iafrica.com	turbolaser.gif	A turbolaser battery.	both	10/24/99
+tv.zip	DC_HunterX	felber@intcon.net	tv.gif	A TV.	both	10/24/99
+skiff1.zip	Ventrue_Vannula	ayork@acadia.net	skiff1.jpg	A skiff, as seen at the Battle of Carkoon.	both	10/24/99
+xwing.zip	Ventrue_Vannula	ayork@acadia.net	xwing.gif	An X-Wing Fighter.	both	10/24/99
+shuttle.zip	Felber	felber@intcon.net	shuttle.gif	A shuttle.	both	10/24/99
+mirr.zip	Ventrue_Vannula	ayork@acadia.net	mirr.gif	A Mirr ship.	both	10/24/99
+vwing.zip	SavageX	savagex@sprynet.com	vwing.jpg	A V-Wing Airspeeder.	both	10/24/99
+n1_3do.zip	BoBo Fett	bermshot@hotmail.com	n1_3do.jpg	A Naboo Royal N-1 Starfighter.	both	10/24/99
+rocket.zip	Vader130	Vader130@aol.com	rocket.gif	A rocket.	both	10/24/99
+cdoor.zip	J.Z.S.	Zen8@email.msn.com	cdoor.gif	A cage door (01narsh.cmp).	both	10/24/99
+watertower.zip	DC_HunterX	felber@intcon.net	watertower.gif	A water tower.	both	10/24/99
+plane.zip	Room 112	room_112@usa.net	plane.jpg	A plane.	both	10/24/99
+studiosfstiefighter.zip	GoZ Studios	thespaceboy@geocities.com	studiosfstiefighter.gif	A TIE Fighter.	both	10/24/99
+studiosfscorvette.zip	GoZ Studios	thespaceboy@geocities.com	studiosfscorvette.gif	A Corellian Corvette.	both	10/24/99
+studiosfsbwing.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsbwing.gif	Two B-Wings: one landed, one in flight.	both	10/24/99
+studiosfstiex1.zip	GoZ Studios	thespaceboy@geocities.com	studiosfstiex1.gif	The TIE X1: the TIE Advanced prototype flown by Vader in the trench run.	both	10/24/99
+studiosfstieav.zip	GoZ Studios	thespaceboy@geocities.com	studiosfstieav.gif	The TIE Advanced.	both	10/24/99
+studiosfstierapt.zip	GoZ Studios	thespaceboy@geocities.com	studiosfstierapt.gif	The TIE Raptor.	both	10/24/99
+studiosfstied.zip	GoZ Studios	thespaceboy@geocities.com	studiosfstied.gif	The TIE Defender.	both	10/24/99
+studiosfsoutrider.zip	GoZ Studios	thespaceboy@geocities.com	studiosfsoutrider.gif	The Outrider, Dash Rendar's famous ship.	both	10/24/99
+studiosfstiedrone.zip	GoZ Studios	thespaceboy@geocities.com	tiedrone2.gif	A TIE Drone fighter.	both	10/24/99
+atpt.zip	SavageX	savagex@sprynet.com	atpt.jpg	An All-Terrain Personal Transport.	both	10/24/99
+tspeeder.zip	SavageX	savagex@sprynet.com	tspeeder.jpg	A Landspeeder.	both	10/24/99
+ComCenter.zip	PC_McCloud	COOKTG@vtc.net	COMCEN~1.JPG	A large, three-sided "ComCenter."	both	10/24/99
+markii.zip	Pax	pmulnix@hotmail.com	markii.gif	A large battle tank.	both	10/24/99
+dak_dfb.zip	Jason "Dak" Burton	dak@qx.net	dak_dfb.gif	Destructable barrels, much like those in Dark Forces.	both	10/24/99
+dak_grate.zip	Jason "Dak" Burton	dak@qx.net	dak_grate.gif	Destructible grates as seen in Siege At Vol Kanst.	both	10/24/99
+statues.zip	Snootle	eggenletus@yahoo.com	reeyee.jpg	Two statues.	both	10/24/99
+wire.zip	John Troxell	jtroxell@chollian.net	barbwire.gif	A barb-wire fence.	both	10/24/99
+camera3do.zip	009(HOV)	oo9@geocities.com	camera.jpg	A new type of camera, for use with the camera cog or for decoration.	both	10/24/99
+sksnows.zip	Skinners	noreply@massassi.net	sksnows.jpg	A Snowspeeder like the ones from Hoth.	both	10/24/99
+snowspdr.zip	Evan C and Earl Dalton	ev@wave.co.nz	snowspdr.jpg	A Snowspeeder.	both	10/24/99
+skiff.zip	Andrew	ayork@acadia.net	skiff.jpg	One of Jabba's skiffs.	both	10/24/99
+fence3do.zip	REZ	noreply@massassi.net	fence3do.gif	A wooden fence.	both	10/24/99
+stop.zip	REZ	noreply@massassi.net	stop.gif	A stop sign.	both	10/24/99
+pitdroid3do.zip	BoBo Fett	bermshot@hotmail.com	pitdroid.jpg	A multi-meshed character 3do resource using the dflt.cmp for Jedi Knight/MotS Editors. All the pivot points are set and l also included a few keys to get you started.	both	10/25/99
+stoners.zip	Loka Hask	mrijean@mail.island.net	stoners.jpg	9 statue 3dos in different poses. The statues either have a spear, a sword, or two swords.	both	10/25/99
+jabba.zip	Anthony Piggott	akpiggott@hotmail.com	jabba.jpg	A Jabba the Hutt 3do for editors to use in their levels, it works with Ka'Pa the Hutt .KEY files, so you can animate it for cutscenes	mots	10/25/99
+briefcase.zip	SoM_Zuljin	darrenrw@free.midcoast.com	briefcase.jpg	A small 3do that may be used in the upcoming mod from Mad Cow Productions, War is Hayl.	jk	10/25/99
+moncalcruiser.zip	Snootle	eggenletus@yahoo.com	moncalcruiser.jpg	A Mon-Calamari Star Cruiser	both	10/25/99
+teen1.zip	Tee	terrancehansen@hotmail.com	teen1.jpg	N1 Starfighter	both	10/25/99
+bookshelf.zip	Chemelion	chemelion26@hotmail.com	bookshelf.jpg	A book shelf, and a candle, and books, and other such stuff that you would have on it.	mots	10/25/99
+celphi.zip	Dante	schmoyboy@hotmail.com	celphi.jpg	The Corellian Engineering Corporation's Y-1800 was an attempt to create a inexpensive quickly produced personal cargo transport. The "Celphi" is the personal ship of Maria Corren, who along with her brother Jace explore the galaxy searching for ancient treasures.	mots	10/25/99
+dagger.zip	Thuroly3D	THUROLY3D@aol.com	dagger.jpg	A dagger.	jk	10/25/99
+seguard.zip	Pierrick Brouillet	pierrick@bdway.com	seguard.jpg	Replaces the Rebel commando with the Senate Guard from TPM.	mots	10/25/99
+truck.zip	DrkJedi82	drkjedi82@netzero.net	truck.jpg	This is a big truck modeled after my own.	jk	10/25/99
+sfsotona.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsotona.gif	The Correllian Engineering Corporation's YT-2000 Stock Light Freighter, the Otona, from X-Wing Alliance.	both	10/29/99
+sfsnella342.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsnella342.gif	From the Star Wars RPG, the SorroSuub Nella 342 Stock Light Freighter, an old design still used in the outer rim.	both	10/29/99
+sfsisd.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsisd.gif	The Imperial Class Star Detroyer, the Empire's most common warship. Included are 8 different scaled 3dos.	both	10/29/99
+sfsexecutor.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsexecutor.gif	Darth Vader's Executor-Class Command ship. Included are 8 different scaled 3dos.	both	10/29/99
+sfsinterdictor.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsinterdictor.gif	The 630 meter Sienar Fleet Systems Immobilizer-418 Intedictor Cruiser. Its gravity well projectors can prevent ships from entering hyperspace, and pull ships from hyperspace into realspace. Included are 8 different scaled 3dos.	both	10/29/99
+sfsgunboat.zip	GoZ Studios	goz_spaceboy@hotmail.com	sfsgunboat.gif	The Cygnus Spaceworks Alpha Class Xg-1 Star Wing, a common Imperial Fighters that is equipped with both shields, a hyperdrive, as well as ion cannons and a strong hull. However, it is relatively slow and unmanueverable.	both	10/29/99
+bongo.zip	Tee	terrancehansen@hotmail.com	bongo.jpg	A Bongo sub, as seen in episode 1.	both	11/01/99
+mostable.zip	Light  Staff	commander_7@yahoo.com	mostable.jpg	This is a small table I made for a Mos Eiesly house that I am using in my level.	mots	11/17/99
+dodfighter.zip	DrkJedi82	drkjedi82@aol.com	dodfighter.jpg	This is a Dodonna RZ-1101 starfighter. It is a similar model to the A-wing but never released for military use.	both	11/17/99
+chemswords.zip	Chemelion	chemelion26@hotmail.com	chemswords.jpg	I was just playing around in JED, and constructed a few 3dos of ancient middle-aged type swords.	both	11/17/99
+jkcd.zip	Joey Turcio	jturcio@us.ibm.com	jkcdfront.jpg	The JK CD's front and back on a 3do.	both	01/17/00
+jkcd2.zip	Joey Turcio	Jturcio@us.ibm.com		The second JK disc.  Thats all there is to it.	both	01/20/00
+ap_mwch1.zip	KOP_blujay	blujay@massassi.net	ap_mwch1.jpg	A modern-day wood chair.  Would look good in any office, restaurant, house, etc. setting.  Detailed legs and armrests, well-textured, and perfectly scaled to fit Kyle (see screenshot).  Uses standard mats and the dflt.cmp colormap.  Version 2 chops the legs down to size so that Kyle's feet touch the floor, and completely re-textures it to look 100 percent better.  Note that Kyle is not included with the chair 3do, that's just Kyle placed in the chair in the screenshot.	both	02/01/00
+markpillar.zip	mark728	mark728@cobweb.net	markpillar.jpg	This is a pillar 3do I made, but never used, so I figured I'd release it. It uses 06baron.cmp.	both	02/01/00
+ap_bench.zip	KOP_blujay	blujay@massassi.net	ap_bench.jpg	A bench, wood with upholstered seat.  Perfectly scaled to fit Kyle.  Well textured.  Uses dflt.cmp colormap and default JK textures.  Note that Kyle is not included as part of the 3do, he's just there in the screenshot.	both	02/05/00
+compconsole.zip	Boneio	Vampire.Lord@btinternet.com	compconsole.jpg	A large computer console 3DO for JK.	jk	03/04/00
+support.zip	Elyas Machera	elyas2k@hotmail.com	support.jpg	A pillar.	jk	04/04/00
+plazabooth.zip	Elyas Machera	elyas2k@hotmail.com	plazabooth.jpg	A booth you can use in a restaurant, complete with table and 2 benches.	jk	04/04/00
+parkbench.zip	Elyas Machera	elyas2k@hotmail.com	parkbench.jpg	A park bench, for use in a park.	jk	04/04/00
+microphone.zip	Elyas Machera	elyas2k@hotmail.com	microphone.jpg	A microphone, right now set to be placed at Kyle's chest level (you can edit it in JED if you need it at a different height).	jk	04/04/00
+guitar.zip	Elyas Machera	elyas2k@hotmail.com	guitar.jpg	A wooden acoustic guitar.	jk	04/04/00
+fountainplaza.zip	Elyas Machera	elyas2k@hotmail.com	fountainplaza.jpg	A fountain for use in a fancy hotel or restaurant.	jk	04/04/00
+dumpster.zip	Elyas Machera	elyas2k@hotmail.com	dumpster.jpg	A dumpster you can use in a city level.	jk	04/04/00
+cornerplaza.zip	Elyas Machera	elyas2k@hotmail.com	cornerplaza.jpg	A street light.	jk	04/04/00
+bench.zip	Elyas Machera	elyas2k@hotmail.com	bench.jpg	A bench you could use in a subway.	jk	04/04/00
+altar.zip	Elyas Machera	elyas2k@hotmail.com	altar.jpg	A small table-like altar that you could use in some sort of church.	jk	04/04/00
+bush.zip	Prince_Ocarina	ocarina@massassi.com	bush.jpg	A nice looking bush 3do with a low surface count.	jk	05/11/00
+corusca_f_b.zip	Element_Greven	topace@flash.net	corusca_f_b.jpg	A Corusca-class Fighter/Bomber. 2 Medium Laser Cannons, 2 Medium Ion Cannons, 2 Warhead Launchers. Rivals an X-Wing in atmospheric flight.  In space, it's comparable to an Assault Gunboat.	jk	09/01/00
+besban.zip	Johan "Chromis" Harrison	johanharrison@hotmail.com	besban.jpg	This is the same type of ship as the "Bespin Bandit", Uz Bonearm's fast and agile corellian craft. Appeared in Dark Empire II.	mots	09/01/00
+enforcer.zip	Johan "Chromis" Harrison	johanharrison@hotmail.com	enforcer.jpg	Cygnus Space Works EX-2 Enforcer-class customs & police cruiser. A pretty new ship, designed to compete with Sienar's Blastboat and Mandal Motor's Pursuer, and to be a supplement to Cygnus own Assault transports.  More info in ReadMe file.	mots	09/01/00
+vshape.zip	Johan "Chromis" Harrison	johanharrison@hotmail.com	vshape.jpg	The V-Shape pinnace from Kuat-Systems has been around for a while and is no longer among the most modern in operation.  It was designed to be a long-range patrol & escort ship with the safety and comfort of the two-man crew in mind.  More info in ReadMe file.	mots	09/01/00
+parkbench_2.zip	Whiskey359	Whiskey359@uswest.net	parkbench_2.jpg	Realistic wooden park bench.	jk	09/01/00
+theplaneofdoom.zip	¥oda	Y0DA@massassi.net	theplaneofdoom.jpg	This is a 3do of a plane. It was developed to be a combat plane, and it is. I adjusted some of the mats so it seems to look like camoflauge.	jk	09/13/00
+tree.zip	huyd_n20	huyd_n20@hotmail.com	tree_3do.jpg	A tree 3do for the baron CMP.  Please see the included readme file for more information.	both	09/13/00
+JKTV.zip	Magi_Cabaalis	BigDaveRules84@aol.com	JKTV.jpg	A television set.	jk	09/20/00
+boeing757.zip	Magi_Cabaalis	BigDaveRules84@aol.com	boeing757.jpg	A Boeing 757.	both	09/20/00
+pine_tree.zip	¥oda	Y0DA@massassi.com	pine_tree.jpg	This is a  pine tree for use in levels. It uses the baron CMP.	jk	09/20/00
+rcrpt.zip	MikeC	chastant@wans.net	rcrpt.jpg	This is a rebel commando with repeater enemy.	mots	09/20/00
+EP1enemy.zip	Zymotico	kgkwan@ucla.edu	EP1enemy.jpg	Jedicore.net has closed and The Realm of Zymotico is no more.  So that my 3dos will live on without the Jedicore website, I'm uploading most of the completed work to Massassi.  So Enjoy!  This pack contains Episode 1 moveable/attackable enemies (see screenshot).	both	09/24/00
+EP1_3dos.zip	Zymotico	kgkwan@ucla.edu	EP1_3dos.jpg	Jedicore.net has closed and The Realm of Zymotico is no more.  So that my 3dos will live on without the Jedicore website, I'm uploading most of the completed work to Massassi.  So Enjoy!  This pack contains Episode 1 background objects for player maps (see screenshot).	both	09/24/00
+mech.zip	Blue_Bot	Dark_Arcon@usa.net	mech.jpg	A mech (not based off any other mechs).	jk	09/26/00
+volfountain.zip	Duo Maxwell	duomaxwell@massassi.com	volfountain.gif	A fountian that is a volcano. This is designed so that the player should not touch it. If the player is allowed to jump on the lava area it will look stupid and screw up the moment.	both	10/12/00
+mechpk1.zip	Blue_Bot	Dark_Arcon@usa.net	mechpk1.jpg	6 custom mechs are included in this pack: the Owens, Strider, Catapult, Vulture, Cauldrenborn, and last be not least, the Timber Wolf.	both	10/17/00
+aq_anim.zip	GuNbOy	gunboy@massassi.com	aq_anim.jpg	This is a 3DO pack consisting of 2 3dos (a shark and a trout), .AI, .pup and some .keys I whipped up for them. Enjoy!	both	10/17/00
+madaventors_trees.zip	MaDaVentor	MaDaVentor@aol.com	madatrees.jpg	This is a pack of 10 tree 3dos for use in your JK levels.  There are five tree variations, with two different heights.	jk	10/25/00
+4x6door.zip	Blue_Bot	Blue_Bot@massassi.com	4x6door.jpg	A metal door, 0.4 by 0.6 JKU's.	jk	10/26/00
+seaquest.zip	Cave_Demon	Cave_Demon@massassi.com	seaquest.jpg	This is a SeaQuest 3DO. Good for cutscenes, bad for levels.	both	11/07/00
+ywings.zip	MikeC	chastant@wans.net	mcywings.jpg	Y-Wings using the alternate textures.	mots	11/07/00
+barrel.zip	Schming	Papa_johnz@hotmail.com	barrel.gif	Rusty old barrel full of sludge.	jk	11/09/00
+itemchest.zip	ApoK_DragonPhinn	DragonPhinn@apok.org	chest.jpg	A wooden item chest.  Large enough to fit items inside.	jk	11/09/00
+mikec_shistavanen_pack.zip	MikeC	chastant@wans.net	shistavanen.jpg	This is a pack of Shistavanen Wolfmen enemies armed with different weapons (stormtrooper rifle, repeater, rail detonator, and a punching enemy). It uses Al McDonald's Lak skin and some great new sounds by Slug.	mots	11/12/00
+hoth.zip	moneyobie	moneyob@massassi.com	generator.jpg	A set of Hoth 3DOs for MotS.	mots	11/20/00
+awings.zip	MikeC (with lots of credit to	chastant@wans.net	awings.jpg	An A-Wing fighter retextured with the unused textures in MotS.	mots	11/20/00
+twings.zip	MikeC (with lots of credit to	chastant@wans.net	twings.jpg	A T-Wing fighter retextured with the unused textures in MotS.	mots	11/20/00
+z95s.zip	MikeC (with lots of credit to	chastant@wans.net	z95s.jpg	A Z-95 fighter retextured with the unused textures in MotS.	mots	11/20/00
+speederbeige.zip	ctsketch	ctsketch@hotmail.com	speederbeige.jpg	Luke beige landspeeder, with custom mats.	mots	01/10/01
+light3dopack.zip	NHS_corey	corey3d@hotmail.com	light3dopack.jpg	A pack of 2 light 3dos for use in a Jedi Knight level.  They are meant to be placed on a ceiling.	jk	01/13/01
+atatbarge.zip	jarethk	jarethk@optonline.net	atatbarge.jpg	An AT-AT transport 3do for MotS.  Stick an active AT-AT under it, make the barge launch, and voila... prepare for ground assault!!!	mots	01/14/01
+drunk.zip	Elyas Machera/Wolfy	elyas2k@hotmail.com	drunk.jpg	We've all seen those notorious bar rooms in both SP and MP levels alike.  But how come there aren't any passed out inhabitants?  What's realistic about THAT?  So, to compliment these areas, I created four drunk people.	jk	01/20/01
+dj82catwalk.zip	DarkJedi82	DrkJedi82@aol.com	dj82catwalk.jpg	This 3do is made for JK but I'm sure it will work with both.	jk	01/26/01
+darkguard.zip	Bobafett765	bobafett765@juno.com	darkguard.jpg	This is basically a re-textured version of SavageX's war droid. It's used for decoration purposes, unless you know how to use it otherwise.	mots	01/27/01
+missleturret.zip	Brad	bradsuderman@hotmail.com	missleturret.jpg	This is an A Big Missle Launcher for Jedi Knight editors to use in their levels.	both	03/22/01
+signs.zip	Gilneas	falco0818@aol.com	signs.jpg	This file contains Imperial and Rebel sign 3dos.  This is for BOTH JK and MOTS.	both	03/22/01
+valbwall.zip	Val Langley	valchez@hotmail.com	valbwall.jpg	This is a wall with a hole for shooting though and a fence for seeing through. The fence will guard you while the hole below it is in just the right height for your gun. I'll warn that I don't know how to make the fence part see-through in software mode, and I doubt there is a way, so prepare for software users to find it useless. It's good for defense, especially in a CTF level, for instance.	jk	03/24/01
+bird.zip	LaSeR	res03peq@gte.net	bird.jpg	Two 3dos meant to look like birds.	both	04/07/01
+ilp.zip	Rogue15	Rogue15@tiefighter.org	ilp.jpg	A medium-sized imperial landing pad, can fit half a squad of tie fighters on it.	mots	04/07/01
+speakers.zip	dksaber	k2nride@hotmail.com	speakers.jpg	A speaker box with two subwoofers in it.	both	04/08/01
+eyeplant.zip	Flexor	Dark_Flexor@hotmail.com	eyeplant.jpg	A small, three foot tall plant with an eyeball as a flower.	both	04/21/01
+bigtree.zip	Joshua	joshroxby@yahoo.com	bigtree.jpg	This is a realistic tree 3do for JK levels.  Enjoy!	jk	04/27/01
+dgpack.zip	Bobafett765	bobafett765@juno.com	dgpack.jpg	This pack contains a group of re-textured 3DOs. The original model was designed by SavageX, but I just re-textured them. So, if you like the design, thank SavageX. If you like the textures, thank me.	mots	05/17/01
+hancarb.zip	fleepz	fleep@metallica.com	hancarb.jpg	Han Solo in carbonite.	jk	05/25/01
+fan_ss.zip	Emon	emon@massassi.net	fan_ss.jpg	A set of 3dos (includes the base, blades and shadow of blades) for this great fan setup. Includes a how-to file.	jk	06/18/01
+clock.zip	Brad S	bradsuderman@hotmail.com	clock.jpg	A clock.	both	06/19/01
+coffeetable.zip	Brad S	bradsuderman@hotmail.com	coffeetable.jpg	A coffee table.	both	06/19/01
+endtable.zip	Brad S	bradsuderman@hotmail.com	endtable.jpg	An end table.	both	06/19/01
+largecouch.zip	Brad S	bradsuderman@hotmail.com	largecouch.jpg	A large couch.	both	06/19/01
+mediumcouch.zip	Brad S	bradsuderman@hotmail.com	mediumcouch.jpg	A medium sized couch.	both	06/19/01
+ptoilet.zip	Pengun	lackeybr@sympatico.ca	ptoilet.jpg	This is my second toilet 3do.  Much improved over the other one, it uses 16-bit mats and a high-detail model.	jk	06/24/01
+rs3dopack.zip	The_Lost_One	saber2@turok.com	rs3dopack.jpg	3dos that I made using screenshots I took from the game Rogue Squadron 3D.  I believe they're all to scale.	mots	06/24/01
+rsse3dopak.zip	The_Lost_One	saber2@turok.com	rsse3dopak.jpg	I am releasing a much improved 3do pack. This one includes about 3 new 3dos.  Pack includes: convoy vehicle, imperial garrison, atst factory (which fits an atst inside), and an imperial garrison.	mots	06/26/01
+trashbin.zip	Cave_Demon	cavedemon@artic.net	trashbin.jpg	It's a trash bin... Fast and furious gameplay! ;)	both	07/01/01
+barrelpack.zip	NHS_corey	corey579@hotmail.com	barrelpack.jpg	A pair of rusty metal barrels. One has a lid the other does not and has some type of sludge in it.	both	08/21/01
+couch.zip	Myr992	Myr992@cs.com	couch.jpg	This is a couch 3do that I spent a while making. I have had some people say its good, but I'll let you be the judge of that.	both	08/23/01
+handgun.zip	Joel	the_maw@hotmail.com	handgun.jpg	A 3do of a pistol. Uses dflt.cmp. Enjoy.	both	09/02/01
+r15atpt.zip	The_Lost_One	Saber2@turok.com	r15atpt.jpg	2 ATPTs included for MotS, one with extended legs and one with both legs side by side.	mots	09/06/01
+t2jabba.zip	Lou Graziani	graz73@hotmail.com	t2jabba.jpg	An unused Jabba the Hutt 3DO that was made for ToaM2. Jabba can be animated with Ka'pa the Hutt's KEY frames for use in cutscenes.	mots	09/20/01
+bessolo.zip	naeS	xwingx@earthlink.net	bessolo.gif	Han Solo in his Bespin outfit.	mots	10/25/01
+westsolo.zip	naeS	xwingx@earthlink.net	westsolo.gif	Han Solo in his Western outfit.	mots	10/25/01
+landojedi.zip	longsaber	xwingx@earthlink.net	landojedi.gif	Lando as a Jedi.	mots	10/27/01
+propane.zip	Stormtrooper	lukeklaus@yahoo.com	propane.jpg	A propane tank, can be blown up, feel free to change the textures, just give me credit for the original 3do.	mots	10/29/01
+bountysmuggler.zip	SuperNerd_IJ	cyberknight_00@hotmail.com	bountysmuggler.jpg	Two more new enemies to add to levels: a Bounty hunter Gran, and a Smuggler.	mots	11/04/01
+tv3do.zip	Rebel Commando	the_maw@hotmail.com	tv3do.jpg	An average size TV with very simple textures. A nice addon for any home.	both	11/06/01
+zellsoda.zip	Zell	MacRodel@aol.com	zellsoda.jpg	A Zell's Soda dispenser.	jk	11/08/01
+contable.zip	Seifer	seifer@teenagedirtbag.com	contable.jpg	A conference table with some laptops on it.	both	11/10/01
+vendmach.zip	Seifer	seifer@teenagedirtbag.com	vendmach.jpg	Three different pop machines for your enjoyment. A Pepsi machine, a random cola machine, and a cold milk dispenser.	both	11/10/01
+snipetower.zip	Rebel Commando	the_maw@hotmail.com	snipetower.jpg	This is a small sniper tower.	both	11/11/01
+ap_jkoc.zip	KOP_blujay	blujay@knightsofpride.org	ap_jkoc.jpg	A modern-day office chair.  Would look good in any  office, restaurant, house, etc.  Scaled to fit the Kyle 3do.  Detailed model, well-textured with custom and default mats, using the dflt.cmp.  Fifteen versions are included: three different chair types and five different upholstery textures.	both	11/14/01
+e3barrel.zip	EL3CTRO	electro@stargatecommand.co.uk	e3barrel.jpg	A barrel.	both	11/14/01
+e3generator.zip	EL3CTRO	electro@stargatecommand.co.uk	e3generator.jpg	A generator.	both	11/14/01
+headlamp.zip	EL3CTRO	electro@stargatecommand.co.uk	headlamp.jpg	A lamp.	both	11/14/01
+stargate.zip	EL3CTRO	electro@stargatecommand.co.uk	stargate.jpg	A stargate.	both	11/14/01
+kky3do.zip	Pott	yadrati@hotmail.com	kky3do.jpg	I was fooling around with JK3DO and in a minute transformed him into some sort of monster.	both	11/19/01
+snowspeeder.zip	Olen Garn	jrs@gns2000.com	snowspeeder.jpg	This is a 3do of a snowspeeder, like the ones from The Empire Strikes Back, but with a better paint job.	both	11/29/01
+forklift.zip	longsaber	xwingx@sbcglobal.net	forklift.jpg	Simply that - a forklift.	mots	12/07/01
+crimescum.zip	SuperNerd_IJ	cyberknight_00@hotmail.com	crimescum.jpg	10 new retextured enemies including 2 Grans, an Ithorian, an Aqualish, a Rodian, a Wookie, 3 men and a woman.	mots	12/12/01
+js_3do.zip	BoBo Fett	Bermshot@hotmail.com	js_3do.jpg	The Jedi Starfighter Delta7 from Episode II: Attack of the Clones. Note: This 3do uses 100% 16-bit mats.	mots	12/14/01
+sonyclie.zip	compudude	michael@bradley-robbins.net	sonyclie.jpg	A Sony Clie handheld computer.	both	12/22/01
+snipertower.zip	SaBrE_WuLf_LJ	edmany2k@hotmail.com	snipertower.jpg	This is my Snipe Tower 3do.	both	12/27/01
+newmax.zip	Thrawn42689	thrawn42689@msn.com	newmax.jpg	It's max all dressed up in 16-bit red mats.	jk	12/27/01
+vader_atpt.zip	Vader013	vader013@hotmail.com	vader_atpt.jpg	This is an ATPT and, along with the 3DO, contains a usage guide, two KEY animations, and a PUP file.	both	12/31/01
+bed2.zip	shaharmal	shanterr@rapidnet.com	bed2.jpg	A somewhat fancy looking bed.	both	01/09/02
+bell.zip	shaharmal	shanterr@rapidnet.com	bell.jpg	A gold bell.	both	01/09/02
+loader.zip	shaharmal	shanterr@rapidnet.com	loader.jpg	A loader starship.	both	01/09/02
+mbot.zip	shaharmal	shanterr@rapidnet.com	mbot.jpg	A mousy looking mouse bot.	both	01/09/02
+gate3do.zip	XeN_MasTeR	chriszuidema@hotmail.com	gate3do.jpg	This is a gate 3do.	both	01/18/02
+gatedoor3do.zip	XeN_MasTeR	chriszuidema@hotmail.com	gatedoor3do.jpg	This is a gate door 3do.	both	01/18/02
+homestuff.zip	shaharmal	shanter@rapidnet.com	homestuff.jpg	This a pack of items you may find around the house.	both	01/20/02
+bdoor.zip	XeN_MasTeR	chriszuidema@hotmail.com	bdoor.jpg	A door that can be used for a bathroom.	both	01/25/02
+mailbox.zip	Thrawn42689	Thrawn42689@msn.com	mailbox.jpg	A 16-bit mailbox.	both	01/27/02
+mytable.zip	Thrawn42689	Thrawn42689@msn.com	mytable.jpg	This is a 16-bit table, loosely based on my own.	both	01/27/02
+suit3do.zip	Oberfeldwebel	Oberfeldwebel@hotmail.com	suit3do.jpg	A flat shirt and matching pants with a pair of boots.	both	01/31/02
+mummy3dos.zip	Oberfeldwebel	Oberfeldwebel@hotmail.com	mummy3dos.jpg	A family of mummies including a small child mummy.	both	02/10/02
+tank.zip	DrkJedi82/Jim7	suicide_of_angels@yahoo.com	tank.jpg	A tank.	jk	03/17/02
+gaz_crates.zip	Jedi Gazza	ffgazza@hotmail.com	gaz_crates.jpg	Four Kyle sized crates, and a larger one.  One of the crates has two variations.  One is open topped, and one is closed.	both	05/20/02
+woodrailing.zip	Dash_rendar	dashmaster30@hotmail.com	woodrailing.jpg	A wood railing 3do.	jk	06/26/02
+trophy_sofa.zip	Trophy	davies@inorbit.com	trophy_sofa.jpg	Two sofa 3dos, one decorated, one plain. Both use original JK 8-Bit mats and their textures fit well into the Jedi Knight theme.	both	06/27/02
+flatscreen.zip	Jedi Gazza	ffgazza@hotmail.com	flatscreen.jpg	A small flatscreen TV for use in your levels. It goes well on most walls in bases, cantinas etc.	both	07/01/02
+tourch.zip	Mystic0	mystic0@mail.com	tourch.jpg	Simple tourch 3do with texture.	both	07/06/02
+trainexporter.zip	SolidSnake_Jedi	Jedi_rave@hotmail.com	trainexporter.jpg	A train mostly made for hovering	both	07/14/02
+sentinel.zip	EH_AceCSF	szklarzewicz@wp.pl	sentinel.jpg	This is a sentinel class shuttle, landed.	jk	12/02/02
+storage.zip	EH_AceCSF	szklarzewicz@wp.pl	storage.jpg	A storage rack with three shelves.	both	01/23/03
+joconsoles.zip	EH_AceCSF	szklarzewicz@wp.pl	joconsoles.jpg	A console similar to the ones found in Jedi Outcast.	both	02/04/03
+mark4shuttle.zip	sskakarot51	sskakarot51@wmconnect.com	mark4shuttle.jpg	A shuttle that you can walk around in	jk	03/27/03
+chariot.zip	EH_Ace	szklarzewicz@wp.pl	chariot.jpg	An Imperial Chariot	both	03/27/03
+danpack1.zip	Dan Ellen	Danellen2989@msn.com	danpack1.jpg	A pack of many different 3dos.	mots	04/03/03
+jimbarrel1.zip	Jim7/DrkJedi82	jim7@darkforces.com	jimbarrel1.jpg	A wooden barrel.	both	06/21/03
+td.zip	GeneralRamos	AGAGnrlRamos@aol.com	td.jpg	An accurately modelled TIE Defender.	both	06/24/03
+ti.zip	GeneralRamos	AGAGnrlRamos@aol.com	ti.jpg	An accurately modelled TIE Interceptor.	both	06/24/03
+ataa.zip	GeneralRamos	AGAGnrlRamos@aol.com	ataa.jpg	An AT-AA (All Terrain Anti-Aircraft) object model.	both	06/24/03
+captchair.zip	DS-181-4	DS1814@death-star.com	captchair.jpg	A captain's chair.	both	07/12/03
+shotty.zip	DS-181-4	DS1814@death-star.com	shotty.jpg	A sawed-off shotgun.	both	07/12/03
+shuttleship.zip	DS-181-4	DS1814@death-star.com	shuttleship.jpg	A medium-sized shuttlecraft.	both	07/12/03
+coconut_tree.zip	Daft_Vader	wondermog@bellsouth.net	coconut_tree.jpg	A tropical coconut tree, complete with cute little coconuts.	both	07/19/03
+oldwoodenbarrel.zip	Daft_Vader	wondermog@bellsouth.net	oldwoodenbarrel.jpg	A medieval hogshead barrel.	both	07/19/03
+bleacher.zip	Daft_Vader	wondermog@bellsouth.net	bleacher.jpg	A sportsgame bleacher for the fans!  Seats fifteen!	jk	07/19/03
+fstv.zip	MoNoXiDe	tyrell_weick@hotmail.com	fstv.jpg	Flat panel TV 3dos, complete with alternate screens.	both	07/21/03
+subwaytrain.zip	DjDTM	djdtm_@hotmail.com	subwaytrain.jpg	A subway train for urban levels, uses dflt.cmp.	jk	08/22/03
+schoolbus.zip	Brad S	bradsuderman@hotmail.com	schoolbus1.jpg	A school bus.	both	09/14/03
