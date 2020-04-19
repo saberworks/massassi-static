@@ -9,14 +9,16 @@ the levels section I think everything can be static?  Let's do a list:
 Yes, in progress.  To make things easier, create a "collections" feature.  Each 
 tutorial will have its own embedded title, description, author, and category 
 (in the header).  This information can be harvested by the build.py script to 
-build an index.
+build an index. (collections feature done)
 
 Notes:
 
 * categories must have name, title, description (separate page? some place for 
-  "data")
+  "data") ("data" feature done, but didn't recall this bullet point when I was
+  creating it; actually created it for the 3dos section, probably can use it
+  for this, too)
 * author information and descriptions may need to be pulled from the tutorials 
-  index
+  index (this bullet point means that as tutorials are being converted to markdown or clean HTML, the tutorial files themselves don't have the author info or tutorial description in them, so I have to go back to the tutorials page on massassi and copy the author, author email, description, and creation date)
 
 ## Levels
 
@@ -33,19 +35,20 @@ https://meta.discourse.org/t/archive-an-old-forum-in-place-to-start-a-new-discou
 ## 3dos
 
 Stored in DB, but there are few enough I can generate a static page and just 
-stop taking submissions.
+stop taking submissions. (section is done)
 
 ## Mats
 
 Mats are dynamic but any category doesn't have many individual entries.  Can 
-remove search and generate a static set of files.  Search can be removed.
+remove search and generate a static set of files.  Search can be removed. (I'm
+going to handle this same was as 3dos)
 
 ## Old News
 
 The really old news is already static.  Beyond that there is a selector thing 
 that allows showing old news by date (with a really old single-day picker 
 thing).  I think it makes sense to just output static files for month/year and 
-link them.
+link them. (can use "collections" feature)
 
 ## Recent Levels
 
@@ -60,6 +63,6 @@ Level of the Week archives are small enough to generate a static page.
 The SotD archives are _huge_ and can't be distilled to single day.  However, no 
 need to be dynamic, I think I can output static pages.  Probably do bigger 
 thumbnails and 2x as many screens per page and end up with half the number of 
-pages.
+pages. Can use "collections" feature.
 
 

@@ -15,24 +15,25 @@ Most static site generators allow you to write your code in Markdown and then th
 ### Markdown example:
 
 ```
+---
 title: Adjoin Tutorial
 author: Brian
-author_email: brian@massassi.net
-
-body:
+email: brian@massassi.net
+---
 
 Here is some markdown _content_ that will make up the page body.
 
+---
 ```
 
 ### HTML example:
 
 ```
+---
 title: Adjoin Tutorial
 author: Brian
-author_email: brian@massassi.net
-
-body:
+email: brian@massassi.net
+---
 
 <p>Here is some HTML <strong>content</strong> that will make up the page body.</p>
 
@@ -50,13 +51,27 @@ The static site generator should _copy_ every file from source/ into output/, bu
 
 Put your content in the source directory.  Every file in source will be either copied directly (images, other unrecognized file types) or processed and then output to the `output/` directory.  For example, if you have `index.html` in `source/`, it will be processed (templates applied, etc.) and then placed in `output/` as `index.html`.  File extensions will not change.  This is by design!  Since Massassi has a ton of different file extensions (.html, .htm, .shtml, .phtml, .php, etc.), and since many of those pages are linked to from external sites, I don't want the URLs to change.
 
+Note: if you create a markdown file it should have the .md extension.  By default, markdown files get rendered and written as html with the .html extension.  If you want the markdown file to have a different extension, put the `ext` variable in the front matter.  Example (page named foo.md):
+
+```
+---
+title: some foo
+ext: htm
+---
+
+page body goes here
+```
+
+In above example, the foo.md will be output as `foo.htm` (instead of `foo.html`).
+
+
 ### Run a build
 
 ```
 $ python build.py
 ```
 
-By default, this will look for sources in `source/` and will output to `output/`.  Probably allow optionally setting `--source_dir` and `--output_dir` via cli.
+By default, this will look for sources in `source/` and will output to `output/`.  Probably eventually allow optionally setting `--source_dir` and `--output_dir` via cli.
 
 TODO: Consider versioning the output; for example, output to `output/YYYY-MM-DD_HH:MM:SS/` or something.
 
@@ -67,7 +82,5 @@ Upload the contents of the `output/` directory to the server.  Overwrite any fil
 ### Future Considerations/Questions
 
 At some point, I will probably want to make the system auto-thumbnail images.  This presents a problem because it will re-thumbnail every image on every build.  Makes sense to implement a build cache and only process if the source file is newer than the cached copy.
-
-One thing I hate about jinja/django templates is that I can't use the content of a block twice (this is so stupid).  However, it looks like I don't need this functionality.  It makes sense to declare the title of a page in the content file, and then use that title to populate the HTML `<title>` as well as a heading at the top of the page.  This requires some crappy hack with vanilla django/jinja.  If I implement the file format above (with metadata including title stored at the top), I can just set the title as a regular template variable instead of using blocks.  Actually all the fields will be regular template variables.
 
 

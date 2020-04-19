@@ -58,38 +58,39 @@ def main():
         for file_name in files:
             source_path = "{}/{}".format(dir_name, file_name)
 
-            if should_process(source_path):
-                print(f"    processing {source_path}")
-                template_vars = extract_vars_from_file(source_path)
-
-                template_vars['collections'] = collection_data
-                template_vars['data'] = data
-
-                inner_tpl = get_template_from_memory(
-                    template_vars.pop('body', '')
-                )
-
-                template_vars['body'] = inner_tpl.render(template_vars)
-
-                if source_path.endswith('.md'):
-                    template_vars['body'] = markdown.markdown(
-                        template_vars['body'], extensions=['extra', 'toc']
-                    )
-
-                tpl = get_template(outer_template)
-
-                content = tpl.render(template_vars)
-
-                ext = template_vars.get('ext', '')
-
-                output_path = get_output_path(
-                    source_path, source_dir, output_dir, ext
-                )
-
-                output_file(content, output_path)
-            else:
+            if not should_process(source_path):
                 print(f"    copying {source_path}")
                 copy_file(source_path, source_dir, output_dir)
+                continue
+
+            print(f"    processing {source_path}")
+            template_vars = extract_vars_from_file(source_path)
+
+            template_vars['collections'] = collection_data
+            template_vars['data'] = data
+
+            inner_tpl = get_template_from_memory(
+                template_vars.pop('body', '')
+            )
+
+            template_vars['body'] = inner_tpl.render(template_vars)
+
+            if source_path.endswith('.md'):
+                template_vars['body'] = markdown.markdown(
+                    template_vars['body'], extensions=['extra', 'toc']
+                )
+
+            tpl = get_template(outer_template)
+
+            content = tpl.render(template_vars)
+
+            ext = template_vars.get('ext', '')
+
+            output_path = get_output_path(
+                source_path, source_dir, output_dir, ext
+            )
+
+            output_file(content, output_path)
 
 #
 # Given source path & dir, output dir, and optional extension (only taken into 
@@ -97,6 +98,8 @@ def main():
 #
 def get_output_path(source_path, source_dir, output_dir, ext):
     # If source path has .md extension, change it to whatever is in ext.
+    # Note if ext was not set explicitly in front matter, .html was set as the 
+    # default in extract_vars_...()
     source_path = re.sub(r'\.md$', '.' + ext, source_path)
 
     return re.sub(source_dir, output_dir, source_path)
@@ -123,8 +126,6 @@ def get_href(source_path, source_dir, ext):
 #   * it contains at least one var (like title: or body:)
 #
 def should_process(source_path):
-    #print(f"    checking {source_path}")
-
     if has_supported_ext(source_path) and has_tags(source_path):
         return True
 
@@ -201,8 +202,7 @@ def process_collections(collections):
         collection_data[name] = []
 
         # there are probably other things that can be put into the path vars to 
-        # cause this to glob files it shouldn't, make it clear to the next 
-        # person :(
+        # cause this to glob files it shouldn't
         maybe_safe_path = re.sub(r'\.\.', '', pattern)
 
         for file_path in pathlib.Path(source_dir).glob(maybe_safe_path):
@@ -287,6 +287,9 @@ def get_template(template_file_name):
     tpl_env = jinja2.Environment(loader=tpl_loader, extensions=['jinja2.ext.loopcontrols'])
     return tpl_env.get_template(template_file_name)
 
+#
+# Returns a jinja2 template object with the passed-in template parsed.
+#
 def get_template_from_memory(template):
     tpl_env = jinja2.Environment(extensions=['jinja2.ext.loopcontrols'])
     return tpl_env.from_string(template)
