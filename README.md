@@ -26,7 +26,7 @@ The goal of this repo is:
 
 You can read more about this here:
 
-[https://forums.massassi.net/vb3/showthread.php?68160-Future-of-Massassi-(open-content-open-source)](Future of Massassi \(open content, open source\))
+https://forums.massassi.net/vb3/showthread.php?68160-Future-of-Massassi-(open-content-open-source)
 
 ## More Background
 
