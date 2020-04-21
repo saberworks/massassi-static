@@ -1,0 +1,191 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Weapons Templates</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Weapons Templates</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:rocesk8er@hotmail.com">GuNbOy</a>
+<br>
+<br>
+
+<p>In this tutorial you will learn how to make different types of weapons templates and how to make
+them work together in the static.jkl file.</p>
+
+<p><b>Things you will need are:</b>
+
+<ul>
+ <li><a href="tempref.txt">tempref.txt</a>
+ <li><a href="static.jkl">static.jkl</a>
+</ul>
+
+<p><font size="4">The Basics of Templates</font></p>
+
+<ul>
+    <li>All templates that are based on another one, have to come after the one they are based on in the jkl.<br>
+<em>Example:</em> when you have a create thing in a template, lets say an explosion has the
+creatething=+smoke or something. you would have to put +smoke in the jkl before the explosion you just made or it wont work.</p>
+    <li>All templates are either based on something unless you make a new one that will be based on <strong>none</strong></li>
+    <li><strong>ALL weapons templates (particle weapon and explosion) have to have typeflags=0x* these flags differ for each type so check the <a href="http://www.code-alliance.com/doc_jk/jk_specs/jkspecs.htm">JK specs</a> or refer to the tempref.txt file that i give you.</strong></li>
+</ul>
+
+<p><font size="4">Messages in Templates</font></p>
+
+
+<ul>
+    <li><b>orient=(0.000000/0.000000/0.000000):</b> this I'm not sure about. I think it's the position at which the template is created. I don't suggest you play around with this too much, I don't see any point in changing it.</li>
+    <li><b>type=(explosion, particle, weapon):</b>
+        <ul>
+            <li><b>weapon</b> is used for the actual weapon projectile that gets thrown, shot or
+                dropped, etc.</li>
+            <li><b>particle</b> is for making a bunch of particles appear, then disappear over time (this is how smoke is done)</li>
+            <li><b>explosion</b> is for when a weapon hits something and explodes.</p>
+            </li>
+        </ul>
+    <li><b>collide=(0,1 or 3) used for weapons</b>
+        <ul>
+            <li><b>collide=0</b> means that it won't collide with things. I'm not sure how this would be useful in a weapon template...</li>
+            <li><b>collide=1</b> means that it collides when something is within a sphere of the object (see: move size)</li>
+            <li><b>collide=3</b> means that it will collide with an object if that object touches one of its faces (this is usually used for 3do architecture, I think)</li>
+        </ul>
+    <li><b>creatething=(whatever you want)</b> means that when the thing is fired (weapon) it will create some template that you specify. If used in an explosion, it then can create stuff like smoke clouds, shockwaves, fire, clouds, etc.
+    <li><b>light=flex</b> gives your template a dynamic light value. Replace flex with a number</li>
+    <li><b>model3d=*.3do</b> gives your template a 3do so you can see it (weapons)</li>
+    <li><b>move=(none, path or physics)</b>
+        <ul>
+            <li><b>none</b> is pretty self-explanatory; it won't move.</li>
+            <li><b>path</b> means that it will move by a specific path using frames and such (usually not used for weapons... something more like an actor usually)</li>
+            <li><b>physics</b> means that it moves with physical properties like mass velocity etc.</li>
+        </ul>
+    </li>
+    <li><b>movesize=flex</b> is for how big the sphere in the collide message is. You want to make the flex in this about the same size as the 3do you have (in jku's)</li>
+    <li><b>par=*.par</b> is for particle files like the sphere in Force Protection.</li>
+    <li><b>soundclass=*.snd</b> is for things like explosions making noise and when a TD hits the ground and make that *ping* sound</li>
+    <li><b>sprite=*.spr</b> specifies the sprite file used for the template. Usually used for explosions, but can be used in a weapon in place of a 3do, like Force Destruction.</li>
+    <li><b>timer=flex</b> tells how long the thing will be in the game for. When the timer runs out it is removed; when this happens it will make its explosion. If there is none then it will simply cease to exist.</li>
+</ul>
+
+<br>
+
+<p><font size="4">Specific Messages for Weapon Types</font></p>
+
+<ul>
+    <li><b>airdrag=flex</b> is how much resistance from &quot;air&quot; there is on the weapon.</li>
+    <li><b>angvel=(x/y/z)</b> refers to angular velocity, I dunno... maybe it has something to do with a weapon spinning?</li>
+    <li><b>buoyancy=flex</b> refers to how much buoyancy the weapon has (if it floats in water)</li>
+    <li><b>maxrotvel=flex</b> refers to maximum rotational velocity; how fast it spins, possibly connected to the angvel message</li>
+    <li><b>mass=flex</b> refers to how much it weighs, so if it has gravity (if it falls) in the physics flags then it indicates how fast to fall.</li>
+    <li><b>physflags=0x*</b> is best left to checking the JK specs or the tempref file that comes with this tutorial to figure out what the flags do.</li>
+    <li><b>surfdrag=flex</b> determines how much resistance the thing gets from from a floor or wall if it has to slide along one of those surfaces.</li>
+    <li><b>vel=(x/y/z)</b> indicates how fast it moves in each direction, the &quot;Y&quot; vector being forward, I think...</li>
+    <li><b>explode=(template*)</b> is for what the weapon does when it hits a wall or just explodes.
+        <ul>
+            <li>* the template would be something like a sprite or a dust cloud (can be used with a timed sprite to make a bullet hole that stays on the walls!!!)</li>
+            <li>if the *template is an explosion, not just a bullet-hit-type thing, you do the same for it, but probably use a bigger sprite</li>
+        </ul>
+    <li><b>fleshhit=(template*)</b> this is for when your weapon hits a player or actor (non-droid)
+        <ul>
+            <li>you can do cool effects by making the *template blood or something, so that blood appears only when a player is hit</li>
+        </ul>
+    <li><b>cog=*.cog</b> is used for linking the projectile with a cog such as 00_smoketrail.cog that will leave a smoke trail behind the projectile.</li>
+    <li><b>trailthing=template</b> this is used for the force lightning template, those little pieces of &quot;electricity&quot; are 3dos trailing after the main projectile</li>
+</ul>
+
+<br>
+
+<p><font size="4">Messages for Explosions</font></p>
+
+<ul>
+    <li><b>blasttime=flex</b> is the delay between the explosion and when the damage is done (if you'll notice Force Destruction is delayed a little like this)</li>
+    <li><b>damage=flex</b> the amount of damage it does</li>
+    <li><b>damageclass=0x*</b> check the JK specs or the tempref file that comes with this tutorial to figure out what the flags do.</li>
+    <li><b>debris=template</b> flings debris out every which way if the typeflag=0x80. It can be used up to four times</li>
+    <li><b>flashrgb=(r/g/b)</b> makes a flash with the color of your choice (red/green/blue)</li>
+    <li><b>force=flex</b> the force is like how violent the explosion is, more force the farther and harder you get thrown from it.</li>
+    <li><b>maxlight=flex</b> refers to the maximum amount of light</li>
+    <li><b>range=flex</b> determines how big of an area the blast will cover</li>
+    <li><b>rate=flex</b> indicates how fast the damage will dissipate (i.e. the higher the rate the less damage it does as you get farther away from it)</li>
+</ul>
+
+<br>
+
+<p><font size="4">Particle Messages</font></p>
+
+<ul>
+    <li><b>material=*.mat</b> refers to the material of the particles</li>
+    <li><b>range=flex</b> indicates how far away the particles will go from their origin</li>
+    <li><b>minsize=flex</b> sets what size the smallest the particles can be</li>
+    <li><b>timer=flex</b> sets how long the particles will last</li>
+    <li><b>rate=flex</b> determines how fast the particles are destroyed after the timer runs out (particles per second)</li>
+    <li><b>maxthrust=flex</b> sets how fast the particles move</li>
+    <li><b>elementsize=flex</b> sets the maximum size of the particles</li>
+    <li><b>count=flex</b> determines the number of particles used</li>
+    <li><b>yawrange=flex</b> indicates the range of yaw (not sure, changes the way the particles move)</li>
+    <li><b>pitchrange=flex</b> indicates the range of pitch (not sure, same as above)</li>
+</ul>
+
+<br>
+
+<p><font size="4">How to Make the Freakin' Things Work!!!</font></p>
+
+
+<p>I hope I didn't scare you all away with that crapload of messages... anyway, first off you go get the static.jkl I included with the tutorial. Open it up in notepad, then go to the templates section. After the _gexplosion and _gweapon templates, make the templates you want. Here are some examples to show you how to compile the templates yourselves (if this wont help you, go look at the tempref document and look at a weapon similar to the one you want to create, then modify it to fit your needs. Be sure to put the weapons explosion and anything that the explosion creates BEFORE the template itself, otherwise it won't work).</p>
+
+<p><font color="#808080">+bulletcloud none orient=(0.000000/0.000000/0.000000) type=particle timer=0.150000
+typeflags=0x3f material=00gsmoke.mat range=0.006000
+rate=64.000000 maxthrust=4.000000 elementsize=0.004000 count=16</font> <i>///this
+is for when the bullet hits the wall</i></p>
+
+<p><font color="#808080">+bloodcloud +bulletcloud 
+material=bloody.mat range=0.030000 count=40</font> <i>///all I changed
+from the bullet cloud was: material so it looks like blood, range
+so its a bigger area, and count so it will be more dense. this
+will be used when a person gets hit by the bullet</i></p>
+
+<p><font color="#808080">+bulletfleshhit _gexplosion timer=0.001000
+soundclass=exp_bullet.snd creatething=+bloodcloud typeflags=0x0</font> <i>///for
+when a person is hit</i></p>
+
+<p><font color="#808080">+bullethit _gexplosion timer=0.001000
+soundclass=exp_bullet.snd creatething=+bulletcloud typeflags=0x0</font> <i>///for
+when the bullet hits something not living</i></p>
+
+<p><font color="#808080">+bullet _gweapon thingflags=0x20000001 light=0.400000
+model3d=bullet.3do size=0.001000 movesize=0.001000
+soundclass=bry.snd maxrotvel=0.000000
+vel=(0.000000/20.000000/0.000000) explode=+bullethit
+fleshhit=+bulletfleshhit damage=30.000000 mindamage=10.000000
+typeflags=0x20440d rate=15.000000</font> </p>
+
+<p><i>as you can see, i put the +bullethit under explode= and
+the +bulletfleshhit under the fleshhit= so it will do different
+things when you hit a person or a wall</i> :)</p>
+
+<p>Now you can experiment with all sorts of things. I hope that this helped a little to make people not totally confused about templates.</p>
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

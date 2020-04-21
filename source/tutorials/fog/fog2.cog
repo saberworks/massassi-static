@@ -1,0 +1,45 @@
+# Jedi Knight Cog Script
+#
+# fog2.cog
+#
+# Description
+# Cog script for fog
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+# © 1998 Massassi Temple
+
+symbols
+message      startup                                                          
+message      pulse                                                            
+int          effecthandle                       local                         
+flex         fade=1                             local                         
+thing        ghost                                                            
+thing        player                             local                         
+int          r                                                                
+int          g                                                                
+int          b                                                                
+end                                                                           
+
+# ========================================================================================
+
+code
+startup:
+player=GetLocalPlayerThing();
+Sleep(2.0);
+effecthandle=newColorEffect(0, 0, 0, 0, 0, 0, r, g, b, fade);
+SetPulse(.1);
+Sleep(1);
+return;
+pulse:
+fade=VectorDist(GetThingPos(ghost), GetThingPos(player));
+If(fade > 2) {
+FreeColorEffect(effecthandle);
+return;
+}
+FreeColorEffect(effecthandle);
+effecthandle=newColorEffect(0, 0, 0, 0, 0, 0, r, g, b, fade);
+return;
+
+end
+
+

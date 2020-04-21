@@ -1,0 +1,11 @@
+"Round Room"
+
+TYPE 1
+
+SEQ 1
+
+# <line> <cd>  <level>  <type>   <file>         <lightpow>  <darkpow>   <gotoA>  <gotoB>
+
+10:	1	1	LEVEL	round.jkl	0	0	-1	-1
+
+end

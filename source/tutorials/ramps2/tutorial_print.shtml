@@ -1,0 +1,70 @@
+<html>
+<head>
+ <title>The Massassi Temple: Intermediate Ramps (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Intermediate Ramps</font>
+<br clear="all">
+<hr>
+Author: Brian Lozier (brian@massassi.net)
+<br>
+<br>
+
+<p>It is recommended that you work through the first Ramps Tutorial (http://www.massassi.net/tutorials/ramps/).  We will begin here using the following project that I suggested saving in the last
+half:</p>
+<BR><BR>
+<center><img src="1.gif"></center>
+<center><b>Note:</b> this is before the bottom cleaved sector was deleted!</center>
+<BR><BR>
+Another thing, for this tutorial, since there are more precise cleaves required,
+I have switched the grid dots to 0.1, and the snap to 0.1.  As I just said, this
+will allow you make more precise cleaves.
+<BR><BR>
+<ol>
+<li> The first step in this tutorial is to cleave the bottom cleaved sector
+(the one selected above) just below the original cleave, like illustrated
+below.
+<BR><BR>
+<center><img src="2.gif"></center>
+<BR><BR>
+<li> Now making sure the SECTOR shown above is highlighed, switch to the top
+view using [shift+1].
+<BR><BR>
+<li> You will notice that the sector now looks square, but remember, it is
+slanted upwards, you just can't see it from this view.
+<BR><BR>
+<center><img src="3.gif"></center>
+<BR><BR>
+<li> Now it's time to make 2 cleaves, creating a ramp in the center of your
+room, going up.  Follow the diagram below to see where to make the cleaves.
+I suggest switching back and forth between side and top view to make sure
+you have the correct sectors selected before cleaving!
+<BR><BR>
+<center><img src="4.gif"></center>
+<BR><BR>
+Note: if you did it correctly, your side view should still look like this:
+<center><img src="5.gif"></center>
+<BR><BR>
+<li> Now, almost done already!  Make sure the sector below is highlighted,
+and delete it!
+<BR><BR>
+<CENTER><img src="6.gif"></CENTER>
+<BR><BR>
+<li> Below is the finished product, textured for clarity of course:
+<BR><BR>
+<center><img src="7.gif"></center>
+<BR><BR>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

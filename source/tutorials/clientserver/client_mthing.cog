@@ -1,0 +1,65 @@
+# Jedi Knight Cog Script
+# client_mthing.cog
+#
+# Moves a thing from frame 0 to 1 and vice versa when activated.  Created for the C/S Tutorial.
+#
+# -Obsidian 12-3-99
+
+flags=0x240
+
+symbols
+
+int		player		local
+
+thing		MoveThing		mask=0x405
+flex		Speed=5		nolink
+
+int		frame			local
+
+message	startup
+message	activated
+message	trigger
+
+
+end
+
+# ==========
+
+code
+
+Startup:
+
+player = GetLocalPlayerThing();
+
+return;
+
+# ..........
+
+Activated:
+
+If(IsThingMoving(movething)) return;
+
+SendTrigger(-1, 98, 0, 0, 0, 0);
+
+return;
+
+# ..........
+
+Trigger:
+
+If(GetSourceRef() == 99) Call MThing;
+
+return;
+
+# ..........
+
+MThing:
+
+frame = GetCurFrame(movething);
+
+if(frame == 0) MoveToFrame(movething, 1, speed);
+If(frame == 1) MoveToFrame(movething, 0, speed);
+
+return;
+
+end

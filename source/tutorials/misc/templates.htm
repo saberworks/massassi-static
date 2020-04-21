@@ -1,0 +1,79 @@
+<HTML><HEAD>
+<TITLE>Massassi Temple Template Tutorial</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT=52A54E LINK=A6BA45 VLINK=457E67>
+<center><font size="6"><b>Templates</b></font></center>
+<center>Author: <a href="mailto:ev@wave.co.nz">EvanC</a></center>
+<BR><hr><br>
+Before you do this I recommend backing up your master.tpl file.
+<BR><BR>
+"How do I add my own 3do to a level?" That is a pretty commonly asked question on message boards. This tutorial should answer that as well as giving you a basic understanding of the JED templates.
+<BR><BR>
+Well, how to add your own 3do. The first thing you need to do is copy the master.tpl file from the JEDDATA directory, to your project directory.  Then you open it with wordpad.  Once you have opened it, scroll down to the bottom of the file. There should be these lines:
+<BR><BR>
+
+<FONT FACE="Courier" color="white">
+# DESC:   Door 15x10 1/2 of BayDoor type door<BR>
+# BBOX: -0.75 -0.499 -0.034859 0.75 0.499 0.034859<BR>
+baydoor_b    &nbsp;    _walkstruct    &nbsp;   model3d=bayd_b.3do size=0.951508 movesize=0.951508<BR><BR>
+</FONT>
+Now, I am assuming that your 3do is a door.  If it is not a door, search for a template that best fits what your 3DO is meant to be.  What you need do is select all of the above lines. Press ctrl C to copy them to the clipboard. Put your cursor at the bottom of the text and push ctrl V(that pastes them from the clipboard).This has created a new template to work with. Get the name of your 3do. In your new template(not the old one) change this line:
+<BR><BR>
+<FONT FACE="Courier" color="white">baydoor_b    &nbsp;    _walkstruct    &nbsp;   model3d=bayd_b.3do size=0.951508 movesize=0.951508
+<BR><BR></font>
+To this:
+<BR><BR><font face="courier" color="white">
+baydoor_b    &nbsp;    _walkstruct    &nbsp;   model3d=my3do.3do size=0.951508 movesize=0.951508
+</FONT><BR><BR>
+Notice the "model3d=bayd_b.3do" part has been changed to "model3d=my3do.3do" (my3do is where you put the name of your 3do). That has made it so that the template will use my3do.3do instead of the bayd_b.3do.
+ Now, because JED does not like having two templates with the same name you have to rename it. Choose a name that will help you remember it. I try to make my names easy to understand and I try to make them so that they give me an idea of what the thing is.
+The line:
+<BR><BR>
+<FONT FACE="Courier" COLOR=FFFFFF>baydoor_b    &nbsp;    _walkstruct   &nbsp;    model3d=my3do.3do size=0.951508 movesize=0.951508
+</FONT><BR><BR>
+Should now be changed to this:
+<BR><BR>
+<FONT FACE="Courier" COLOR=FFFFFF>myname     &nbsp;   _walkstruct   &nbsp;    model3d=my3do.3do size=0.951508 movesize=0.951508
+</FONT><BR><BR>
+The "baydoor_b" was changed to "myname". Now when you look in the JED resource picker there should be a thing at the end called "myname".
+<BR><BR>
+If the size of the your 3DO is significantly different than the template you copied, you will need to change the "codes" size and movesize.  The number is the radius of the object (from the center to its edge)  in JKUs.   What I have found in dealing with structures is that it is the hieght of the object from its center.  The actual properties of these codes are unclear, and sometimes it may be neccesary to experiment with different numbers to get them right.  If you don't, you may find that you can walk right through your 3DO, or not pass under it even after the door is open.
+<BR><BR>
+ The last thing you need to do is change the description of the thing. This is the writing that comes up above the 3do preview to tell you exactly what the thing is. An example of this might be "A stormtrooper with a railgun". This description can be whatever you like. I have just used "a door" for this tutorial.
+<BR><BR>
+<FONT FACE="Courier" COLOR=FFFFFF># DESC: &nbsp;  a door<BR>
+# BBOX: -0.75 -0.499 -0.034859 0.75 0.499 0.034859<BR>
+baydoor_b     &nbsp;   _walkstruct   &nbsp;    model3d=bayd_b.3do size=0.951508 movesize=0.951508
+</FONT><BR><BR>
+All I have changed is the text after the # DESC. That is pretty simple stuff. Now I will go through my understanding of the templates.
+A template has a type.<BR><BR>
+These are some of the types you can give to a template:
+<BR><BR><table border="1">
+<tr><td><B>_walkstruct</B></td><td>#This is basically a structure that you can walk on. This might be an elevator or a   catwalk.<BR>
+</td></tr>
+<tr>
+<td><B>_structure</B></td><td>#This is a structure that you do not want to walk on. Eg: a door. Very similar to walkstruct except that if you try to walk on this one you will slide around like an ice skater (Thanks GMS_SLUG for telling me the difference:-))<BR>
+</td></tr>
+<tr><td><B>_humanactor</B></td><td>#I think this is any actor. By actor I mean something that has AI(artificial intelligence)<BR>
+</td></tr></table>
+<BR><BR>
+Those are the common ones. There are a lot more in the tpl but you can experiment with them yourself(Make sure you back up your master.tpl file first). 
+After the type you find some "code words"(I don't know the correct name for these but that's what I like to call them:-))
+here are some "code words":
+<BR><BR><table border="1">
+<tr><td><b>model3d</b></td><td>#The 3do that the template uses.</td></tr>
+<tr><td><b>soundclass</b></td><td>#The snd file it will use. </td></tr>
+<tr><td><b>timer</b></td><td>#I think this is the lifetime of the template. Not sure though.</td></tr>
+<tr><td><b>cog</b></td><td>#The cog the template uses.</td></tr>
+<tr><td><b>thingflags</b></td><td>#Flags for the thing.</td></tr>
+<tr><td><b>light</b></td><td>#The light that the thing gives off. Not to sure about this one either.</td></tr>
+<tr><td><b>sprite</b></td><td>#If the template uses a spr file this is where you put it.</td></tr>
+<tr><td><b>puppet</b></td><td>#pup file that the template will use.</td></tr></table>
+<BR>
+Again, there are more but I don't know what all of them mean. 
+With this info you should be able to make your own simple templates. I will be trying to make my own enemy actor in the near future so I will learn a lot more about templates. What I learn I will include in a tutorial.
+<BR><BR>
+Written by <A HREF="mailto:ev@wave.co.nz">EvanC</A> and <A HREF="mailto:mangore_kiramin@geocities.com">Mangore Kiramin</A><BR><BR>
+Comments/questions send to <A HREF="mailto:ev@wave.co.nz">EvanC</A>
+<BR><BR>
+

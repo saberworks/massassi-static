@@ -1,0 +1,428 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>C Elements</title>
+</head>
+
+<body bgcolor="#000000" text="#008080">
+
+<h1 align="center"><font color="#8080FF">C Elements</font></h1>
+
+<p align="center">- By <a href="mailto:mkoger@tcs.tulane.edu">Rishka</a> -</p>
+
+<hr color="#808080">
+
+<p>The COG language is a C-based language. What's that mean? Well, C is one of the most
+popular programming languages used today. Other programming languages (including Java and
+COG) are <em>based</em> on it, meaning that they work very similiar and use many of the
+same commands. In this tutorial, I'm going to discuss many of the commands that were
+carried over from C. By the time you finish this tutorial, you should have a basic
+knowledge of how to program, not just in COGs, but in any C-based language. Let's get
+started, shall we?</p>
+
+<p>&nbsp;</p>
+
+<h2><font color="#8080FF" face="Impact">OPERATORS:</font></h2>
+
+<blockquote>
+  <p><font face="Fixedsys">You're probably wondering what in the world is an operator? Well,
+  simply put, an operator is a special character that performs a specific function such as <em>multiply</em>.
+  Operators are <u>the</u> most common C element you'll see in cogs. Below is a list of all <u>known</u>
+  operators in the COG language. Most of them you will recognize. Probably the only ones
+  that need explaining are the <em>logical operators</em>.</font></p>
+  <p><font face="Fixedsys">A logical operator extends the action of <em>if-else</em>
+  statements. They let you combine two or more relational tests into a single statement (AND
+  or OR operators) or change the value returned from a relation (NOT operator). We'll
+  discuss logical operators more when we go over <em>if-else</em> statements.</font></p>
+</blockquote>
+<div align="center"><center>
+
+<table border="1" width="50%">
+  <tr>
+    <td colspan="2" width="50%"><p align="center"><font color="#FF0000">Primary Math Operators</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><p align="center">*</p>
+    <p align="center">/</p>
+    <p align="center">%</p>
+    <p align="center">+</p>
+    <p align="center">-</td>
+    <td width="50%"><p align="center">Multiplication</p>
+    <p align="center">Division</p>
+    <p align="center">Modulus (remainder)</p>
+    <p align="center">Addition</p>
+    <p align="center">Subtraction</td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="50%">
+  <tr>
+    <td colspan="2" width="100%"><p align="center"><font color="#FF0000">Relational Operators</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><p align="center">==</p>
+    <p align="center">&gt;</p>
+    <p align="center">&gt;=</p>
+    <p align="center">&lt;</p>
+    <p align="center">&lt;=</p>
+    <p align="center">!=</td>
+    <td width="50%"><p align="center">Equal to</p>
+    <p align="center">Greater than</p>
+    <p align="center">Greater than or equal to</p>
+    <p align="center">Less than</p>
+    <p align="center">Less than or equal to</p>
+    <p align="center">Not equal to</td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div align="center"><center>
+
+<table border="1" width="50%">
+  <tr>
+    <td colspan="2" width="100%"><p align="center"><font color="#FF0000">The Logical Operators</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><p align="center">&amp;&amp;</p>
+    <p align="center">| |</p>
+    <p align="center">!</td>
+    <td width="50%"><p align="center">AND</p>
+    <p align="center">OR</p>
+    <p align="center">NOT</td>
+  </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<h2><font color="#8080FF" face="Impact">COMMENTS:</font></h2>
+
+<blockquote>
+  <p><font face="Fixedsys">Comments are not COG commands. In fact, Jedi Knight/MotS ignores
+  any and all comments in your COGs. So why use comments? You should add comments in your
+  COGs that explain in plain language (not COG) what's going on. Use comments abundantly so
+  that someone reading your COG later has a clear guide to the COGs functions. Another
+  programmer might be able to trace through your code and figure out how the COG works, but
+  comments speed up the process.</font></p>
+  <p><font face="Fixedsys">In COGs, comments begin with one of two things: either a double
+  slash (//) or a pound sign (#). Comments extend to the end of the line. Anything following
+  a comment is disregarded by Jedi Knight. Also, you can put comments on a line by
+  themselves <em>or</em> at the end of a line of code (remember, anything <em>following</em>
+  that comment is disregarded). Examples of comments:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">// Increments x by 1</font><br>
+    <font color="#C0C0C0" face="Fixedsys">x = x + 1;</font><br>
+    <br>
+    <font color="#C0C0C0" face="Fixedsys">x = x + 1; // also increments x by 1</font></p>
+  </blockquote>
+  <p align="left"><font face="Fixedsys">Both of these examples do the same thing; they're
+  just layed out different. How you choose to add your comments is up to you. Using comments
+  for things like the example above is redundant, as anyone can tell that <em>x</em> is
+  being incremented by 1. I suggest using comments <em>only</em> when they help explain what
+  is going on in the code. </font></p>
+  <p>&nbsp;</p>
+</blockquote>
+
+<h2><font color="#8080FF" face="Impact">IF-ELSE STATEMENT:</font></h2>
+
+<blockquote>
+  <p><font face="Fixedsys">One of the most common C commands, the <u>if</u> statement can be
+  found in every programming language. The <u>if</u> statement tests the relational
+  operators (see above) and decides exactly which sections of code to run and which to
+  ignore. The <u>if</u> statement is a multiline programming statement. Basically, what this
+  means is that it almost always takes more than one line of code. Here is the format of the
+  <u>if</u> statement:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">if (<em>relationalTest</em>)</font><br>
+    <font color="#C0C0C0" face="Fixedsys">{ <em>A block of one or more statements</em> }</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">From the italics, you can tell that the <u>if</u> statement uses
+  a relational test that you must supply inside the parantheses. The parantheses are <em>required</em>;
+  without them, your <u>if</u> statement won't work. <em>relationalTest</em> can be the
+  comparison of any two variables.</font></p>
+  <p><font color="#FF0000" face="Fixedsys">Warning! Never put a semicolon after the closing
+  parantheses! Jedi Knight will think that the <u>if</u> statement is finished and will
+  begin executing the block of statements that follow the <u>if</u>, whether or not the
+  relational test is true or false.</font></p>
+  <p><font face="Fixedsys">OK, so let's put this into practice now. Say we want to check and
+  see if a number is greater than 0, and if it is, to print out on the screen that it is?
+  Here's how you'd do it:</font></p>
+  <blockquote>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">if (<em>x</em> &gt; 0)</font><br>
+      <font color="#C0C0C0" face="Fixedsys">{</font><br>
+      </p>
+      <blockquote>
+        <font color="#C0C0C0" face="Fixedsys"><p>Print(&quot;<em>x</em> is greater than 0!&quot;);</font><br>
+        </p>
+      </blockquote>
+      <font color="#C0C0C0" face="Fixedsys"><p>}</font></p>
+    </blockquote>
+  </blockquote>
+  <p><font face="Fixedsys">Not much to it, now is there? OK, that's all fine and dandy, but
+  what if we wanted to know if the number is between 0 and 5? We could use two <u>if</u>
+  statements:</font></p>
+  <blockquote>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">if (<em>x</em> &gt; 0)</font></p>
+      <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+      <blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">if (<em>x </em>&lt; 5)</font></p>
+      </blockquote>
+      <blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+        <blockquote>
+          <p><font color="#C0C0C0" face="Fixedsys">Print(&quot;<em>x</em> is greater than 0 and less
+          than 5!&quot;);</font></p>
+        </blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+      </blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+    </blockquote>
+  </blockquote>
+  <p><font face="Fixedsys">But that's more work than is necessary. It's much easier using
+  the <em>logical</em> operators. Here's how we'd do it using logical operators.</font></p>
+  <blockquote>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">if ((<em>x </em>&gt; 0) &amp;&amp; (<em>x </em>&lt;
+      5))</font></p>
+      <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+      <blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">Print(&quot;<em>x </em>is greater than 0 and less
+        than 5!&quot;);</font></p>
+      </blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+    </blockquote>
+  </blockquote>
+  <p><font face="Fixedsys">See how much easier that was? Logical operators are very useful
+  for <u>if</u> statements. Now, there's another side to the <u>if</u> statement... the <u>else</u>
+  statement. The <u>else</u> statement determines what happens if the relation is <em>false</em>.
+  The <u>if</u>, as you already know, determines whether or not a block of code runs, but
+  it's possible to extend the action of <u>if</u> so that it runs one block of code or
+  another depending on the result. To do this, we simply need to add the <u>else</u>
+  statement after the <u>if</u>'s closing brace. Here is the format of the <u>if-else</u>
+  statement:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">if (<em>relationalTest</em>)</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">{ <em>A block of one or more COG statements </em>}</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">else</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">{ <em>Another block of one or more COG statements</em>
+    }</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">The <u>else</u> statement runs only if <em>relationalTest</em> is
+  false. Here's an example of the <u>if-else</u> statement at work:</font></p>
+  <blockquote>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">if (<em>x</em> &gt; 0)</font></p>
+      <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+      <blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">Print(&quot;<em>x </em>is greater than 0!&quot;);</font></p>
+      </blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+      <p><font color="#C0C0C0" face="Fixedsys">else</font></p>
+      <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+      <blockquote>
+        <p><font color="#C0C0C0" face="Fixedsys">Print(&quot;<em>x </em>is not greater than
+        0!&quot;);</font></p>
+      </blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+    </blockquote>
+  </blockquote>
+  <p><font face="Fixedsys">Well, that seems to be it on the <u>if-else</u> statement. Now,
+  we'll move on to some of the other <strong>C elements</strong>.</font></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h2><font color="#8080FF" face="Impact">LOOPS:</font></h2>
+
+<blockquote>
+  <p><font color="#FF8080" face="Fixedsys">DEFINITION - A <em>loop</em> is a program's
+  repeated execution of the same set of instructions.</font></p>
+</blockquote>
+
+<blockquote>
+  <p><font face="Fixedsys">Looping is a very important concept in programming. In fact, COGs
+  (as well as C++) provide three different forms of loops: <u>while</u> and <u>do...while</u>
+  loops, which do things over and over until some condition is ture, and the <u>for</u>
+  loop, which persforms some actions a specific number of times.</font></p>
+</blockquote>
+
+<ul>
+  <li><h3><font color="#8080FF">The <em>while</em> Loop</font></h3>
+  </li>
+</ul>
+
+<blockquote>
+  <p><font face="Fixedsys">The <u>while</u> loop repeats as long as a relational test is
+  true. As soon as the relational test becomes false, the <u>while</u> loop terminates and
+  the rest of the program continues. One of the most important (and most forgotten) points
+  about loops is making sure that the loop terminates. An infinite loop can cause hang-ups
+  and/or crashes. To keep loops from executing forever, you write a controlling relational
+  test, just like the relational tests that appear inside <u>if</u> statements. Unlike an <u>if</u>
+  statement, a <u>while</u> body keeps repeating as long as the relational test is true. </font></p>
+  <p><font color="#FF0000">Warning! You <em>must</em> make sure that something inside the
+  loop eventually changes the <u>while</u>'s relational test. If the relation is true when
+  the <u>while</u> first begins, and if nothing inside the body of the <u>while</u> ever
+  changes the relational test, it executes forever. The loop will never stop, and you'll
+  lose your title of &quot;Master COG Guru Programmer.&quot; =)</font></p>
+  <p><font face="Fixedsys">Enough introduction. Here's the format of the <u>while</u> loop:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">while (<em>relationalTest</em>)</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">// Block of one or more COG statements</font></p>
+    </blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">Just like the <u>if</u>, <u>while</u> is a multiline statement.
+  Also like <u>if</u>, parantheses <em>must</em> appear around the relational expression.
+  The relational expression can contain one or more relational operators. If you use more
+  than one relational operator inside the relational expression, use logical operators
+  (&amp;&amp; and | |) to combine the relational tests.</font></p>
+  <p><font face="Fixedsys">The relational test appears at the top of the <u>while</u> loop.
+  The location of the test is important; if the <u>while</u> expression is false the first
+  time through, the loop will not even execute once! The body of the <u>while</u> loop
+  executes only if the relational expression is true, and it keeps executing as long as the
+  relational expression is true. If and when the relational expression becomes false, the
+  COG continues at the statement following the <u>while</u> loop's closing brace.</font></p>
+  <p><font face="Fixedsys">Well, now on to the next loop....</font></p>
+</blockquote>
+
+<ul>
+  <li><h3><font color="#8080FF">The other <em>while</em>: the <em>do-while </em>Loop</font></h3>
+  </li>
+</ul>
+
+<blockquote>
+  <p><font face="Fixedsys">There is a second <u>while</u> loop, called the <u>do-while</u>
+  loop, whose relational test appears at the bottom of the loop's body rather than the top.
+  Here is the format of the <u>do-while</u> loop:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">do</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys"><em>// Block of one or more COG statements</em></font></p>
+    </blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">while (<em>relationalTest</em>);</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">As with the <u>while</u> loop, you must put parantheses around
+  the relational expression. The final semicolon after the relational test is <em>required</em>
+  to terminate the <u>do-while</u> statement.</font></p>
+  <p><font face="Fixedsys">You should use a <u>do-while</u> loop instead of a <u>while</u>
+  loop when you want the body of the loop to execute at least once. The location of the <u>do-while</u>'s
+  relational test casues execution to fall through and run the body of the loop at least
+  once. Only <em>after</em> the body executes once can the <u>do</u> loop check the
+  relational test to see whether or not the loop should terminate. Only after the relational
+  test is false will the rest of the COG continue executing. The <u>while</u> loop might
+  never execute because Jedi Knight checks the relational test before the body has a chance
+  to execute. <u>do-while</u>, on the other hand, doesn't check the relation until the loop
+  executes one full time.</font></p>
+  <p><font face="Fixedsys">Simple enough, eh? On to the <u>for</u> loops....</font></p>
+</blockquote>
+
+<ul>
+  <li><h3><font color="#8080FF">The <em>for</em> Loop</font></h3>
+  </li>
+</ul>
+
+<blockquote>
+  <p><font face="Fixedsys">The <u>for</u> statement makes <u>for</u> loops look rather
+  difficult, but <u>for</u> loops really aren't that difficult to understand. The syntax of
+  the <u>for</u> statement may look a little strange but you'll get used to it. Here's the
+  format of the <u>for</u> loop:</font></p>
+  <blockquote>
+    <p><font face="Fixedsys">for (<em>startexpression</em>; <em>relationalTest</em>; <em>countExpression</em>)</font></p>
+    <p><font face="Fixedsys">{</font></p>
+    <p><font face="Fixedsys">// A block of one or more COG statements</font></p>
+    <p><font face="Fixedsys">}</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">When Jedi Knight encounters a <u>for</u> statement, it follows
+  these steps to perform a loop:</font><ol>
+    <li><font face="Fixedsys">Perform the <em>startexpression</em>, which is usually the
+      assignment of a value.</font></li>
+    <li><font face="Fixedsys">Test the relational expression for a true or false result.</font></li>
+    <li><font face="Fixedsys">Perform the body of the loop if the relation is true.</font></li>
+    <li><font face="Fixedsys">Perform the <em>countExpression</em>, which usually increments or
+      decrements the operation.</font></li>
+    <li><font face="Fixedsys">Go back to step 2.</font></li>
+  </ol>
+  <p><font face="Fixedsys">When the relation is tested and found to be false, the COG stops
+  looping and the COG continues on at the statement following the <u>for</u> loop. As with <u>while</u>,
+  never put a semicolon right after the <u>for</u> statement's parantheses. However,
+  semicolons are required <em>inside</em> the parantheses. The <u>for</u> loop is thoe only
+  statement that requires such semicolon placement.</font></p>
+  <p><font face="Fixedsys">Here is a sample <u>for</u> loop:</font></p>
+  <blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">for (i = 1; i &lt;= 10; i = i + 1)</font></p>
+    <p><font color="#C0C0C0" face="Fixedsys">{</font></p>
+    <blockquote>
+      <p><font color="#C0C0C0" face="Fixedsys">PrintInt(i);</font></p>
+    </blockquote>
+    <p><font color="#C0C0C0" face="Fixedsys">}</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">When Jedi Knight gets to this <u>for</u> loop, it prints the
+  following output to the screen:</font></p>
+  <blockquote>
+    <p><font color="#FFFFFF" face="Fixedsys">1</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">2</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">3</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">4</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">5</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">6</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">7</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">8</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">9</font></p>
+    <p><font color="#FFFFFF" face="Fixedsys">10</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">Jedi Knight automatically updates the integer <em>i</em> each
+  time the <u>for</u> loop executes. The body of this <u>for</u> loop executes exactly 10
+  times. Here are the parts of this <u>for</u> loop:</font></p>
+  <blockquote>
+    <p><font face="Fixedsys"><em>startexpression</em>: i = 1</font></p>
+    <p><font face="Fixedsys"><em>relationalTest</em>: i &lt;= 10</font></p>
+    <p><font face="Fixedsys"><em>countexpression</em>: i = i + 1</font></p>
+  </blockquote>
+  <p><font face="Fixedsys">Next are the five actions of the <u>for</u> loop applied to this
+  specific loop. Follow the actions listed here and you'll see how Jedi Knight produced the
+  numbers from 1 to 10:</font><ol>
+    <li><font face="Fixedsys">Assigns <strong>1</strong> to the variable <em>i</em>. You should
+      have a integer named <em>i</em> defined in your symbols section. Jedi Knight executes this
+      <em>startexpression</em> only once, before the loop begins.</font></li>
+    <li><font face="Fixedsys">Jedi Knight tests the relational test, <em>i &lt;= 10</em>, to see
+      whether it's true or false. The first time the loop is run, <em>i</em> is <strong>1</strong>
+      (due to the assignment just made in step 1) and the conditional is true, so the body of
+      the loop is executed.</font></li>
+    <li><font face="Fixedsys">The statement inside the loop body executes, the first time
+      printing a <strong>1</strong> for <em>i</em>.</font></li>
+    <li><font face="Fixedsys">The <em>countexpression</em> executes, adding <strong>1</strong>
+      to <em>i</em>, so that it stores a <strong>2</strong> in <em>i</em>.</font></li>
+    <li><font face="Fixedsys">Jedi Knight goes back to step 2, testing the conditional again and
+      executing the body of the loop nine more times until <em>i</em> contains <strong>11</strong>.
+      At that point, the loop is terminated and the program continues.</font></li>
+  </ol>
+  <p><font face="Fixedsys">Also, it's important to note that the <em>countexpression</em>
+  does not have to increment the value. It can also decrement the value or increase the
+  number by a value other than <strong>1</strong>.</font></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<h2><font color="#8080FF" face="Impact">IN CLOSING...</font></h2>
+
+<blockquote>
+  <p>In parting, if anyone has any questions, comments, or additional information, please
+  email me at <a href="mailto:mkoger@i-55.com">mkoger@tcs.tulane.edu</a></p>
+</blockquote>
+</body>
+</html>

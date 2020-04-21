@@ -1,0 +1,58 @@
+<html>
+<head>
+ <title>The Massassi Temple: Editing Loading and Background Screens (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Editing Loading and Background Screens</font>
+<br clear="all">
+<hr>
+Author: Shakahn (pmanuel@worldnet.att.net)
+<br>
+<br>
+
+<p>Editing JK's background screens is ridiculously easy, yet very few people  
+have done it, so I guess it is up to me to give back to the JK editing community
+and tell you how it's done. Here we go...</p>
+
+<b>Programs needed:</b> 
+<ul>
+ <li>Bmut
+ <li>Conman<br>
+     These can be downloaded for free at the JK Outpost (http://e-reality.com/JediKnight/) or the Code Alliance (http://www.darkjedi.com/)
+ <li>a BMP file editor (you can use Microsoft Paint, which is free with most PCs
+that are able to run JK)
+</ul>
+
+<b>How to do it:</b>
+
+<p>First of all, the files that control the way the loading screens look are
+called BMs. You need to go into Conman and open the Res1hi.GOB (or Res1low.GOB) in the Resource file in the JK directory. Click on bm. Extract the BM of your choice to a new directory 
+(Bkbuildload.BM, Bkmain.BM, Bkloading.BM, Bkmulti.BM, and Bksetup.BM are a 
+few good ones) and exit Conman. Then go into Bmut. Open up the BM that you 
+extracted and convert it to a BMP file. Open it up with a BMP editor, and change it 
+however you want. Then go back into Bmut and create a new BM. Click on the 
+box that says Include Palette. Insert a converted BMP file and click Create BM.
+When Bmut asks you what name to save your new BM under, type in the name of the 
+original BM. When asked if you want to write over the existing BM, click
+Yes. PRESTO! INSTANT NEW BACKGROUND SCREEN ART! But we are not quite done yet.
+Go into the Resource folder in your JK directory and create a folder called 
+ui. Inside that folder create a folder called BM. Put all your BMs in there
+and launch JK as normal. If you didn't bungle something, you should see your
+new screen art. If you don't see your new art, and you can't figure out what
+went wrong, email me at pmanuel@worldnet.att.net and I will try to help you.</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

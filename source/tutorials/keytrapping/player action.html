@@ -1,0 +1,529 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Adam Heinmiller">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win98; I) [Netscape]">
+   <title>PlayerAction - God's Gift to MotS Editors</title>
+</head>
+<body text="#000000" bgcolor="#003300" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<b><font color="#FFFFFF"><font size=+2>The
+Complete Tutorial to SetActionCog() and PlayerAction:</font></font></b>
+<br><font color="#FFFFFF">By <a href="mailto:dragons_bane@hotmail.com">Obsidian</a></font>
+<p><font color="#FFFFFF">This tutorial is meant for the more advanced cogger,
+interested in unlocking one of MotS' most powerful features.&nbsp; (what,
+you ask, there is something better then colored lighting?!)</font>
+<p><font color="#FFFFFF">PlayerAction? huh?&nbsp; Why's it Gods' gift to
+MotS editors?&nbsp; Simple:&nbsp; it allows you to use the player's existing
+buttons instead of having to make new items to act as additional buttons.&nbsp;
+Examples:&nbsp; (all in MotS) the cameras, EWeb, STRifle zooming.&nbsp;
+Anytime you ask 'how did they do that with my existing buttons?' the answer
+is undoubtedly by the use of the SetActionCog command.&nbsp; It acts very
+similar to 'key trapping', where a programmer is able to intercept a key
+stroke before it reaches its destination.</font>
+<p><font color="#FFFFFF">Now that you have been enlightened, you now need
+to know the full extent of this command.&nbsp; The following is the list
+of all the buttons i know of that can be trapped.</font>
+<p><font color="#FFFFFF">Jump Key</font>
+<br><font color="#FFFFFF">Crouch Key</font>
+<br><font color="#FFFFFF">Activate Key</font>
+<br><font color="#FFFFFF">2nd Fire Key</font>
+<br><font color="#FFFFFF">left/Right Strafe Keys</font>
+<br><font color="#FFFFFF">Left/Right Turn Keys/Mouse</font>
+<br><font color="#FFFFFF">Forward/Backward movement Keys</font>
+<br><font color="#FFFFFF">Weapon Switching Keys</font>
+<br><font color="#FFFFFF">Up/Down Pitch Keys/Mouse</font>
+<br><font color="#FFFFFF">Inventory Menu Selection Keys</font>
+<br><font color="#FFFFFF">Force Power Selection Keys</font>
+<br><font color="#FFFFFF">Inventory Use Key</font>
+<br><font color="#FFFFFF">Force Power Use Key</font>
+<br><font color="#FFFFFF">Cycle Camera Key</font>
+<br><font color="#FFFFFF">Talk Key</font>
+<br><font color="#FFFFFF">Quick Save Key</font>
+<br><font color="#FFFFFF">Screen Size Adjustment Keys</font>
+<br><font color="#FFFFFF">Gamma Level Keys</font>
+<br><font color="#FFFFFF">Score Tally Key</font>
+<br><font color="#FFFFFF">Screen Shot Key</font>
+<p><font color="#FFFFFF">Get my jist? SetActionCog is <b>VERY</b> powerful
+(and 1 key is still at large.&nbsp; More on it later).</font>
+<p><font color="#FFFFFF">Well, now that you are wetting your pants (I almost
+did when I discovered it and its potential) you are wondering 'How the
+hell do I use it!!'</font>
+<p><font color="#FFFFFF">It is very simple actually (if you know what you
+are doing).</font>
+<p><font color="#FFFFFF">SetActionCog(cog, flags);</font>
+<p><font color="#FFFFFF">This is the command used to initiate the key trapping
+and all its goodness.&nbsp; This is the command that tells what COG to
+send the trapped key messages to, and which keys to trap.&nbsp; The COG
+in the command refers to the specific cog that it sends the message to.&nbsp;
+More often then not, you will use/find GetSelfCog() in this spot (it gets
+ID of the very cog that called GetSelfCog) as it cuts down on the confusion
+of chasing down which messages go to what cog.&nbsp; In the FLAGS spot
+goes the hex flags of the keys you wish to trap.&nbsp; I will post a chart
+I made (awhile ago, back in August) at the bottom of the tutorial and include
+it with the zip that has all the parameters, IDs, flags, and anything else
+you can shake a stick at.&nbsp; To stop the trapping of keys, one mearly
+has to call SetActionCog again and use -1 for the cog and 0 for the flags
+(SetActionCog(-1, 0);)</font>
+<p><font color="#FFFFFF">PlayerAction:</font>
+<p><font color="#FFFFFF">This is the message where SetActionCog sends the
+information it traps.&nbsp; By using its Param's, you can find out everything
+you need about what button they pushed, how fast they're moving, what direction
+they're moving, what weapon they selected, their head pitch, and the list
+goes on.&nbsp; The chart below tells all of them.</font>
+<p><font color="#FFFFFF">ReturnEx(1/0);</font>
+<p><font color="#FFFFFF">This is another command used for the PlayerAction
+message.&nbsp; Returning 0 means that the action the key performs WILL
+NOT happen.&nbsp; example:</font>
+<p><font color="#C0C0C0"><font size=-1>If(GetParam(0) == 0)&nbsp;&nbsp;&nbsp;&nbsp;
+// if he presses the jump key</font></font>
+<br><font color="#C0C0C0"><font size=-1>{</font></font>
+<br><font color="#C0C0C0"><font size=-1>&nbsp;&nbsp; Print("No Jump for
+You!");</font></font>
+<br><font color="#C0C0C0"><font size=-1>&nbsp;&nbsp; ReturnEx(0);&nbsp;&nbsp;&nbsp;
+// Makes the player NOT jump, even though he pressed the jump key.</font></font>
+<br><font color="#C0C0C0"><font size=-1>&nbsp;&nbsp; return;</font></font>
+<br><font color="#C0C0C0"><font size=-1>}</font></font>
+<p><font color="#FFFFFF">That will Print "No Jump For you!" to the console,
+and the player will not jump.&nbsp; However, by replacing the 0 with a
+1 in the ReturnEx command, it will print "No Jump for You!" and the player
+will jump.</font>
+<p><font color="#FFFFFF">There are some commands, such as jump and crouch,
+that send 2 messages to PlayerAction:.&nbsp; 2 of them are Jump and Crouch.&nbsp;
+The first is sent when they press the jump key (found out by using GetParam(2),
+it will be 1 if they jump), and second when they land (found out also by
+GetParam(2), however it will be 0 if they are landing).&nbsp; Same deal
+with crouch, value of 1 is when they first crouch, value of 0 is when they
+get up.</font>
+<p><font color="#FFFFFF">Here is the chart you've heard a bit about above.&nbsp;
+There is a unique case with the misc. keys (gamma, screen size, print screen,
+ect) where they will all return a Param(0) of 14.&nbsp; They are separated
+by their Param(2), each has a different value for it.&nbsp; Enough talk,
+more chart.</font>
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER COLS=9 WIDTH="100%" >
+<tr>
+<td><b><font color="#FFFFFF">Param(0)</font></b></td>
+
+<td><b><font color="#FFFFFF">Param(1)</font></b></td>
+
+<td><b><font color="#FFFFFF">Param(2)</font></b></td>
+
+<td><b><font color="#FFFFFF">Param(3)</font></b></td>
+
+<td><b><font color="#FFFFFF">Hex Key Flag</font></b></td>
+
+<td><b><font color="#FFFFFF">Key</font></b></td>
+
+<td COLSPAN="3"><b><font color="#FFFFFF">Notes</font></b></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+
+<td COLSPAN="3"></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">0</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">1/0</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x1</font></td>
+
+<td><font color="#FFFFFF">Jump</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">1 is takeoff, 0 is landing</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">1</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">1/0</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x2</font></td>
+
+<td><font color="#FFFFFF">Crouch</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">1 is crouch, 0 is getting up</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">2</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x3</font></td>
+
+<td><font color="#FFFFFF">Activate&nbsp;</font></td>
+
+<td COLSPAN="3"></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">3</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x4</font></td>
+
+<td><font color="#FFFFFF">2nd Fire</font></td>
+
+<td COLSPAN="3"></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">4</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Speed</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x10</font></td>
+
+<td><font color="#FFFFFF">L/R Strafe</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">- speed is left, + speed is right</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">5</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Direction</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x20</font></td>
+
+<td><font color="#FFFFFF">L/R Turn</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">-1 is right, +1 is left</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">6</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Speed</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x40</font></td>
+
+<td><font color="#FFFFFF">For/Back</font>
+<br><font color="#FFFFFF">(movement)</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">- speed is left, + speed is right</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">7</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Key Num</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x80</font></td>
+
+<td><font color="#FFFFFF">Weap Keys</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">13-22 (13=1, 14=2, 15=3, ect)</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">8</font></td>
+
+<td><font color="#FFFFFF">Speed</font></td>
+
+<td><font color="#FFFFFF">Head Pitch</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x100</font></td>
+
+<td><font color="#FFFFFF">Head Pitch</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">+ is up, - is down</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">9</font></td>
+
+<td><font color="#FFFFFF">???</font></td>
+
+<td><font color="#FFFFFF">???</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x200?</font></td>
+
+<td><font color="#FFFFFF">???</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">The key i haven't found yet</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">10</font></td>
+
+<td><font color="#FFFFFF">1</font></td>
+
+<td><font color="#FFFFFF">Direction</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x400</font></td>
+
+<td><font color="#FFFFFF">Inv Menu</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">-1 for left, +1 for right (dir).</font>
+<br><font color="#FFFFFF">Param 1 is always 1.</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">11</font></td>
+
+<td><font color="#FFFFFF">1</font></td>
+
+<td><font color="#FFFFFF">Direction</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x800</font></td>
+
+<td><font color="#FFFFFF">Force Menu</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">See Inv Menu</font></td>
+
+<td COLSPAN="2"></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">12</font></td>
+
+<td><font color="#FFFFFF">&nbsp;n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x1000</font></td>
+
+<td><font color="#FFFFFF">Inv Use</font></td>
+
+<td COLSPAN="3"></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">13</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">0x2000</font></td>
+
+<td><font color="#FFFFFF">Force Use</font></td>
+
+<td COLSPAN="3"></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">14</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">SB</font></td>
+
+<td><font color="#FFFFFF">SB</font></td>
+
+<td><font color="#FFFFFF">0x4000</font></td>
+
+<td><font color="#FFFFFF">Misc Keys</font></td>
+
+<td COLSPAN="3"><font color="#FFFFFF">See Below table for params</font></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<table BORDER COLS=3 WIDTH="48%" >
+<tr>
+<td><b><font color="#FFFFFF">Param(2)</font></b></td>
+
+<td><b><font color="#FFFFFF">Param(3)</font></b></td>
+
+<td><b><font color="#FFFFFF">Key</font></b></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">0</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Cycle Camera</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">1</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Talk</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">2</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Quick Save</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">3</font></td>
+
+<td><font color="#FFFFFF">-1/+1</font></td>
+
+<td><font color="#FFFFFF">Screen Size Adjustment</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">4</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Gamma Level</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">5</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Score Tally</font></td>
+</tr>
+
+<tr>
+<td><font color="#FFFFFF">6</font></td>
+
+<td><font color="#FFFFFF">n/a</font></td>
+
+<td><font color="#FFFFFF">Screen Shot</font></td>
+</tr>
+</table>
+
+<p><font color="#FFFFFF">That's about all there is to it.&nbsp; The acute
+minded may realize that this is the key to</font>
+<br><font color="#FFFFFF">*cough*</font><font color="#003300">driveable
+vehicles</font><font color="#FFFFFF">*cough* *Obsidian walks away whistling*</font>
+<br>&nbsp;
+<p><img SRC="http://www.jediknight.net/mcp/fireobsidian.jpg" NOSAVE height=56 width=115>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+  <STYLE>
+  <!--
+        A:link 	{text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+</STYLE>
+  <TITLE>The Massassi Temple: Water Tutorial</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT="white" LINK="52A54E" VLINK=52A54E>
+<font face="verdana" SIZE="6">Water</font>
+<br>
+<hr>
+<font face="verdana" size="2">Author: Brian Lozier</font>
+<br>
+<br>
+<font face="verdana" size="2"><span style="font-family: verdana">
+
+Okay, water is VERY easy to do.  So we'll jump right in.
+<BR><BR>
+1.  Start with the default sector, select the floor (in surface mode), and cleave a square
+out of it as shown below.
+<BR><BR>
+<CENTER><img src="1.GIF"></CENTER>
+<BR><BR>
+2.  Now, extrude it.
+<BR><BR>
+<CENTER><img src="2.GIF"></CENTER>
+<BR><BR>
+3.  Okay, the extruded sector is going to be our water, but first, we want
+to cleave it a little bit so the water is below ground level.  To do this,
+switch to a side view, and making sure the correct <i>sector</i> is selected, cleave
+it like in the following diagram.  Make sure not to cleave it too deep, else the player
+may not be able to jump out of the water.
+<BR><BR>
+<CENTER><img src="3.GIF"></CENTER>
+<BR><BR>
+4.  Now, we have to set the bottom sector to be water, so select it, and press
+[enter] to invoke the Item Editor.  In the "+Flags" section, enter 2, to designate
+it "underwater."  Or, you can double click and use the "underwater" checkbox.
+<BR><BR>
+<CENTER><img src="4.GIF"></CENTER>
+<BR><BR>
+5.  Now, if we leave it like this, then the player will look into the pit, and
+it will just look like a hole, but if he walks into it, he will start swimming...
+and will wonder "what the heck?"  So, we have to add a texture to the surface
+separating the water from the air.  Select the surface shown below, and
+choose a water texture for it.
+<BR><BR>
+<CENTER><img src="5.GIF"></CENTER>
+<BR><BR>
+6.  Now, that will only take care of ONE side... remember, the person must see
+water from above the surface, but also from below the surface.  So, if you
+press [shift+f], it will automatically select the surface that the original
+surface is adjoined with.  Select a water texture for that one also.
+<BR><BR>
+7.  Now, you will have noticed that a lot of times, level editors choose to 
+make their water texture "transclucent" which means you can see through it.  There are
+positive and negative aspects to this.  Tranclucent water looks nice... but, 
+it causes a strain on the computers hardware, which can cause bad framerates.
+Generally, if you have a small pool of water, and it is a multiplayer level, 
+making it transclucent is fine, but if you have a large pool of water, and
+are making a multiplayer level, it is not a good idea.  In single player levels, where
+framerate isn't as important of a thing, feel free to do whatever you want.
+<BR><BR>
+These are just general guidelines, but it's your level, do whatever you want,
+just be sure to test it for playability.
+<BR><BR>
+That said, the way to make a surface transclucent is to select the surface,
+press [enter] to invoke the Item Editor, and set the "face flags" to 2.  Or, 
+you can double click on it, and use the checkboxes.  Remember to make both
+surfaces of the water that way if you are doing it.
+<BR><BR>
+8.  Now, when we extruded and cleaved the sectors, it automatically set the "GEO"
+to 0, meaning the surface isn't rendered at all.  The player can walk and see through
+it.  We have to change the geo so the game renders the surfaces.  This way the textures
+we inputted will show up.
+<BR><BR>
+To do this, on both surfaces, switch the "GEO" to 4, as shown below.  Once again, 
+you can also double click and use the radio buttons to select "draw textured."
+<BR><BR>
+<CENTER><img src="6.GIF"></CENTER>
+<BR><BR>
+9.  Okay, only a few more steps.  You will notice that in most levels, when you go
+underwater, everything looks blue.  Well, in Jedi Knight, this is done by tinting
+the sector a certain color.  To do this, select the sector you want to tint, 
+in our case the water sector, and double click on the "+tint" field in the
+Item Editor.  This will let you choose a color to tint your sector.
+<BR><BR>
+10.  Now, the last thing we have to do is add the sound.
+First, select the underwater sector, and invoke the Item Editor.  Then double click
+on "+Sounds," pick "00underwater.wav," and set the volume to 1.  The volume ranges between 0, 
+silent, to 1, full sound.  You can use any decimal number (.5, .6, etc) to adjust it to
+your liking.
+<BR><BR>
+On a final note, many people want their water to flow, or push you in a certain direction.  This
+is done by adding sector thrust to the water sector.  Be sure to check out our sector thrust tutorial,
+which can be found in the 
+<a href="http://www.massassi.net/tutorials.shtml">tutorials section</a>.  Once your water flows,
+you may want to make the surface scroll in the same direction -- this will make it <i>look</i> like
+the water is flowing.  Once again, check out the tutorials section for the rivers tutorial.
+<BR><BR><BR>
+<CENTER>
+    <FONT face="verdana" size="-1">&copy; 1998
+    <A href="http://www.massassi.net" target="_top">The Massassi Temple</A></FONT>
+  </CENTER>
+</body>
+</html>

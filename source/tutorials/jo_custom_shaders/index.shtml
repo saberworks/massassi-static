@@ -1,0 +1,128 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Creating Custom Shaders</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Creating Custom Shaders</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:sikarenite@hotmail.com">Sine Nomen</a>
+<br>
+<br>
+
+<p><font size="4">Part 1: Basic Light Shaders</font></p>
+
+<p>This is probably the most useful and common shader you'll come across.  The basic syntax is pretty straightforward:</p>
+
+<p><font size="3" color="gray"><pre>
+textures/tutorial/shader1
+{
+	qer_editorimage	textures/doomgiver/light1d
+    {
+        map $lightmap
+    }
+    {
+        map textures/doomgiver/light1d
+        blendFunc GL_DST_COLOR GL_ZERO
+    }
+    {
+        map textures/doomgiver/light1dglow
+        blendFunc GL_ONE GL_ONE
+    }
+}
+</pre></font></p>
+
+<p><font size="3" color="gray"><tt>textures/tutorial/shader1</tt></font>  <-- This format is standard for all shaders.  When creating your own shader, replace 'tutorial' with a folder name of your choice.  If you're using custom textures, you might want to put them in a physical folder of the same name in gamedata/base.  Replace 'shader1' with whatever you want your new shader to be called.</p>
+
+<p><font size="3" color="gray"><tt>qer_editorimage	textures/doomgiver/light1d</tt></font>  <-- This line is used only by the editor; it's not absolutely necessary, but it prevents your shader from showing up as 'texture not found' in Radiant.  You can use whatever texture you like for this; the most common is just the basic shader texture.</p>
+
+<p><font size="3" color="gray"><tt>map textures/doomgiver/light1d</tt></font>  <-- This is the basic shader texture (often used in the editorimage stage as well).  In other words, it's the texture you're plugging into the shader to make it glow.  This is the first stage.</p>
+
+
+<p><font size="3" color="gray"><tt>map textures/doomgiver/light1dglow</tt></font>  <-- This is the texture that tells JO which part of the shader will appear to glow.  The brightness and color of the light in JO is dictated by the brightness and color of this texture.  This is the second stage.</p>
+
+<hr>
+
+<p><font size="4">Part 2: Basic Shaders That Emit Light</font></p>
+
+<p><font size="3" color="gray"><pre>
+textures/nar2/window2
+{
+	q3map_lightimage	textures/doomgiver/light1dglow
+	qer_editorimage	textures/doomgiver/light1d
+	q3map_surfacelight	340
+	q3map_lightsubdivide	128
+    {
+        map $lightmap
+    }
+    {
+        map textures/doomgiver/light1d
+        blendFunc GL_DST_COLOR GL_ZERO
+    }
+    {
+        map textures/doomgiver/light1dglow
+        blendFunc GL_ONE GL_ONE
+    }
+}
+</pre></font></p>
+
+<p>A few more lines are needed to make the shader actually emit light on to the surrounding surfaces.</p>
+
+<p><font size="3" color="gray"><tt>q3map_lightimage	textures/doomgiver/light1dglow</tt></font>  <-- This texture is usually the same one used in the second stage.  An average color is drawn from this texture and used to define the color of the light it emits.  Alternatively, you can enter a numeric RGB value here:</p>
+
+<p><font size="3" color="gray"><tt>q3map_lightrgb	.9803 .9843 1</tt></font></p>
+
+<p>The value of this color on a regular 255 point RGB scale is, for example, 250, 251, 255.  Take each digit and divide it by 255 to get a normalized number for use in your shader.</p>
+
+<p><font size="3" color="gray"><tt>q3map_surfacelight	340</tt></font>  <-- This is the strength of the emitted light.  How it translates into JO depends on a number of factors, so you'll have to experiment to get it to your liking.</p>
+
+<p><font size="3" color="gray"><tt>q3map_lightsubdivide	128</tt></font>  <-- This line is necessary only if you're using Q3MAP2 to compile your map.  All light-emitting shaders do is create a series of small point lights (like the ones you'd place in Radiant) according to the values you enter.  This tells the compiler how far apart to place them.</p>
+
+<hr>
+
+<p><font size="4">Part 3: Implementing Your Shader in Radiant and JO</font></p>
+
+<p>The syntax of a shader goes in a .shader file (rename the extension of a .txt file), which in turn goes in the gamedata/base/shaders folder.  Open shaderlist.txt, found in the same folder, and add the name of your .shader file to the list.  Example:</p>
+
+<p><font size="3" color="gray"><pre>
+...
+sprites
+system
+test
+text_crawl
+<b>tutorial</b>
+ui
+yavin
+zoom
+...
+</pre></font></p>
+
+<p>...and that's it.  Open Radiant and you should see the name of your .shader in the texture menu.  Be sure to include the /shaders folder in your .pk3 (with only your custom .shader) when you release it.  Good luck.</p>
+
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

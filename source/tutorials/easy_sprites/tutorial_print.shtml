@@ -1,0 +1,122 @@
+<html>
+<head>
+ <title>The Massassi Temple: Easy Sprites (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Easy Sprites</font>
+<br clear="all">
+<hr>
+Author: Dustino (dustino@hyperaction.net)
+<br>
+<br>
+
+<p><font size="4">Before You Get Started:</font><br>
+Be sure to download the easy_sprites.zip file that contains everything you need (http://www.massassi.net/tutorials/easy_sprites/easy_sprites.zip).</p>
+
+<font size="4">Description of Each File in easy_sprite.zip:</font>
+
+<ol>
+ <li><b>tutorial.txt</b>: This is the file you're reading right now.
+ <li><b>easy_sprite.cog</b>: This COG displays up to 10 sprites at ghost positions and has the option to animate the sprite.
+ <li><b>fire_ani.mat</b>: This multi-celled fire MAT goes along with the tutorial.
+ <li><b>burn.spr</b>: This is a fire SPRITE. (Uses the <b>fire_ani.mat</b> supplied)
+</ol>
+
+
+<font size="4">Other Files Needed:</font>
+
+<ul><b>master.tpl</b> (For JK Project)   -or-   <b>mots.tpl</b> (For MOTS Project)<br>
+<br>
+ <li>The master.tpl and mots.tpl can be found in the jed/jeddata folder
+ <li>Copy the filed needed into your project directory
+</ul>
+
+<hr>
+
+<p>If you want to make your own SPRITE here is what the fire sprite used in this tutorial looks like:</p>
+
+<pre><font size="2">
+#material     type  width  height  geo  light  tex  extralight  xoff  yoff  zoff
+fire_ani.mat  0     0.12   0.12    4    0      0    0.0         0.0   0.0   0.0
+</font></pre>
+
+<hr>
+
+<p>Now you have all of the files in their correct spots in the project directory you can now begin the addition of sprites into your level.</p>
+
+<font size="4">Steps for Adding Sprites:</font>
+
+<ol>
+ <li>Open up JED and start a new JK/MOTS level.
+ <li>Save the .jed file in your project directory.
+ <li>Minimize JED and open your project directory.
+ <li>Open master.tpl or mots.tpl (depending on which you copied to the folder).
+ <li>At the very bottom (always add to the bottom of templates) of the template  add the following lines:
+<pre><font size="2">
+# DESC: 
+# BBOX: 0 0 0 0 0 0
++fire_sprite none orient=(0.000000/0.000000/0.000000) type=cog move=physics
+thingflags=0x10000000 sprite=burn.spr mass=0.050000 physflags=0x200
+vel=(0.000000/0.000000/0.000000)
+</font>
+</pre>
+
+<li>Save the template and close it.
+<li>Now maximize JED.
+<li>Now goto Commands and click RELOAD TEMPLATES. (Always hit reload templates when you have edited the template manually)
+<li>Now goto THING and insert a GHOST. (Remember the thing # of this ghost)
+<li>Now goto Tools and click PLACED COGS
+<li>Click ADD COG
+<li>In the Resource Picker click cog/
+<li>Select <b>easy_sprite.cog</b>
+<li>Click OK
+<li>Setup the COG
+<br>
+<br>
+	<b>Description of each Option:</b>
+<blockquote>
+		<b>SPRITEx</b> (thing): These are where the thing # of your ghosts go. Since you
+				  only have added 1 ghost so far place its thing # in the
+				  sprite0 (thing) box.<br>
+      <br>
+
+		<b>SPR</b> (template): This is where you select the SPRITE you will be using.
+				 double click the empty box to open the resource picker.
+				 At the end of the list should be +fire_sprite. Select it
+				 and hit OK.<br>
+     <br>
+
+	 <i><b>NOTE:</b> The two options below are for animating the sprite (if the mat used in the 
+		  sprite is multi-celled). For this tutorial they will be used.</i><br>
+    <br>
+
+		<b>MATANIM</b> (material): Here you select the MAT you wish to animate. Double-click the box. In the resource picker select mat/. Select the <b>fire_ani.mat</b>.<br>
+<br>
+
+		<b>FPS</b> (flex): This option lets you select how fast the mat gets animated.<br>
+</blockquote>
+  
+<li>Click REFRESH and then OK.
+<li>Now Save the .jed, setup the level in the Episode Editor, and save the .jkl and .gob.
+<li>Run the level.
+<li>Enjoy
+</ol>
+
+<p>If you have any questions or problems e-mail me at dustino@hyperaction.net.</p>
+
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

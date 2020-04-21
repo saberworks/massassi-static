@@ -1,0 +1,158 @@
+<html>
+<head>
+ <title>The Massassi Temple: 2D Holograms for JK/MotS (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">2D Holograms for JK/MotS</font>
+<br clear="all">
+<hr>
+Author: Sam Coulson (samcoulson@hotmail.com)
+<br>
+<br>
+
+<p>Making holograms for Jedi Knight and Mysteries of the Sith is easy and makes you look like 
+you really know your stuff when it comes to editing. It only involves setting some flags on an adjoined surface. (No cogs--yay!)</p>
+
+<dl>
+<dt>Use these links to skip around or read it all the way through:
+<dd><li><A HREF="#cleaving">Creating the Surface</A>
+<dd><li><A HREF="#texturing">Making it Show Up</A>
+<dd><li><A HREF="#flagging">Setting the Flags</A>
+<dd><li><A HREF="#troubling">Troubleshooting</A>
+</dl>
+
+<A NAME="cleaving"><H3>Creating the Surface</H3></a>
+First, we need to select a computer console to place our floating hologram above.  You don't
+need one for this to work, but it makes it look a whole lot better.  The best one to use is the 'console5'.  Just type it in the thing's name area or select it in the template 'Doors/elev etc-walkstructure'.  Place two of them facing back to back (make sure they aren't 
+sticking through the floor):
+
+<p align="center"><IMG SRC="holo1.jpg"></p>
+
+<P>Now that we have something to "project" our hologram, we are going to create the surface that 
+will actually be our hologram.  Cleave the sector straight between the two consoles like so:
+
+<p align="center"><IMG SRC="holo2.jpg"></p>
+
+<p>Now you have created a nice surface that we can play with.  Multiselect both of them (one surface
+belongs to each of the two sectors--make sure you get them both).</p>
+
+<p><A NAME="note"><b>**Note:</b></a> Every time that you have to cleave a surface while making a hologram, make sure you multiselect BOTH SIDES before you cleave.  It will save you half the time and work than if you don't.  Also remember to clear your multiselection after each cleave by pressing the 'Backspace' key.</p>
+
+<p>Looking at the surfaces from the side, cleave a 4 meter slice in both sides:</p>
+
+<p align="center">
+<IMG SRC="holo3.jpg">
+</p>
+
+<p>Now multiselect both of the new surfaces above the consoles and cleave a 2 meter section a little
+above the consoles: (Remember the <b>note</b>!)</p>
+
+<p align="center">
+<IMG SRC="holo4.jpg">
+</p>
+
+<P>
+<A NAME="texturing"><H3>Making it Show Up</H3></a>
+Now that we have our surface that will become the hologram, we can choose what we want it to 
+look like.  Multiselect both surfaces and keep them multiselected until we are done making our holo. 
+Double-click on the '+MATERIAL' button in the item editor so you can choose the mat to use as the holo.  Ones that work nicely are:
+<UL>
+  <TABLE>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>09wcomp2.mat</TD>   <TD><font face="verdana,arial,helvetica" size="2">(JK)</TD>  </TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>16wscrn1.mat</TD>   <TD><font face="verdana,arial,helvetica" size="2">(JK)</TD>  </TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>18wscrn1.mat</TD>   <TD><font face="verdana,arial,helvetica" size="2">(JK)</TD>  </TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>00awarn.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>00sctrl.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>00starg.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>00starg3.mat</TD>   <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>00tctrl.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>06acscreen.mat</TD> <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>06acscreen1.mat</TD><TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>14ascrn.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>14awscrn.mat</TD>   <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>41apanelb.mat</TD>  <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>41ardscrnx.mat</TD> <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>41pschem1.mat</TD>  <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>54amoth.mat</TD>    <TD><font face="verdana,arial,helvetica" size="2">(MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>16wscrn2.mat</TD><TD><font face="verdana,arial,helvetica" size="2">(JK/MotS)</TD></TR>
+    <TR><TD><font face="verdana,arial,helvetica" size="2"><LI>16wscrn3.mat</TD><TD><font face="verdana,arial,helvetica" size="2">(JK/MotS)</TD></TR>
+  </TABLE>
+</UL>
+
+<P><A NAME="GEO">Right now, our surface is adjoined to both sectors, and is invisible.  To make it show up go to the '+GEO' text area in the item selector.  Click on the text area so it is selected, and double-click on the '+GEO' button.</p>
+
+<p>**If you double-click the button without clicking on the text area, you will go into the texture selector because it (the texture selector) is automatically selected when the window is activated.</p>
+
+<p>After doubleclicking on the '+GEO' button, you should see a nice little window with values that you can select.  We want our picture to show up, so select 'Draw Textured' (I don't think it matters if you select the first or the last 'Draw Textured'--if you have problems, e-mail me). Once you have selected 'Draw Textured' click
+'OK'.  Make sure that both surfaces are still multiselected, or you will have to set the flags for the other side of the surface.</p>
+
+<p>Now that we have done that, our hologram should appear. Hit 'F12' and go into the 3-D Preview.  
+Your holo should look like this (maybe with a different mat):</p>
+
+<p align="center">
+<IMG SRC="holo5.jpg">
+</p>
+
+<p><A NAME="flagging">
+<H3>Setting the Flags</H3>
+There's still two more things to do to make this look really good (besides retexturing the 
+mat).</p>
+
+<p>Most holograms are transparent, so we need to set another flag to make it so.  This flag is in the 
+'+FACE FLAGS' section on your Item Editor, so open it just like the <A HREF="#GEO">'+GEO' button</A>.  Then select 'translucent' and click 'OK'.  You won't be able to see that it is transparent in the 3-D Preview, but it shows up in the game.</p>
+
+<p>This next flag is optional, but makes the hologram look very real.  What we will do is make the 
+holo look like it has its own power source by having it fully lit, just like in the movies.  To do this open the '+LIGHT MODE' button like you did the <A HREF="#GEO">'+GEO' and '+FACE FLAGS'</A> and select 'Fully Lit'.</p>
+
+<p><A NAME="flags">Here's</a> the flags that we used--make sure that both surfaces have them all!</p>
+
+<p align="center">
+<IMG SRC="holo6.jpg">
+</p>
+
+<P>When your surface has all the right flags, test it. Look at both sides, shoot it, and jump through
+it to make sure everything works. This is what it should look like in the game:</p>
+
+<p align="center">
+<IMG SRC="holo7.jpg">
+</p>
+
+<p><A NAME="troubling"><H3>Troubleshooting</H3></a>
+Here are some problems I ran into while making my own holograms.  If your problem isn't here, 
+e-mail me at samcoulson@hotmail.com and I will do my best to help you.</p>
+
+<p>
+<b><I>I can't see one or both sides of my hologram!</I></b><BR>
+<UL>
+<LI>Either your eyes are closed, your monitor is off, or you didn't set the 'Draw Textured' flag.  If you have fixed the first two possibilities, go to the <b>Making it Show Up</b> section and double-check everything, or check the <b>list of flags</b> that both surfaces should have.</UL>
+
+<p>
+<b><I>I can't move through my hologram!</I></b><BR>
+<UL>
+<LI>This happens when your surfaces did not get adjoined to each other. Go and select one of the surfaces that needs to be adjoined and press 'A' to adjoin it. Make sure that all the surfaces around the hologram are adjoined also.</UL>
+
+<p>
+<b><I>One or both of my consoles aren't there!</I></b><BR>
+<UL>
+<LI>Your 3do(s) are not assigned to a sector.  Make sure they are inside a sector, select them, and press 'Shift A'.  Save and test.</UL>
+
+<P><b>Good Job!  You have now made your own hologram for your level!</b><P>
+
+<P>If you have any comments, questions, problems, or cool screenshots of your level, e-mail me at 
+samcoulson@hotmail.com.</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

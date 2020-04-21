@@ -1,0 +1,66 @@
+<html>
+<head>
+ <title>The Massassi Temple: Broken TV Effect (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Broken TV Effect</font>
+<br clear="all">
+<hr>
+Author: Patrick &quot;EL3CTRO&quot; Grant (electro@usetheforce.co.uk)
+<br>
+<br>
+
+<p>Ok, this is an effect 
+I found while I was messing around with the different tools in Paint Shop Pro (http://www.jasc.com/download_4.asp). I'm not sure if you can re-create this effect in other paint packages because I haven't had a chance to try them, but I'm sure theres something similar. What this effect actually creates is similar to what you see when your TV has a very weak signal, this shot will better illustrate this:</p>
+
+<p><img src="interferexample.jpg" width="256" height="256" border="0" alt="Interferance"></p>
+
+<p>That is what the picture will look like after you have applied the various filters. If you look closely there is a faint outline of a logo there. This tutorial assumes that you know how to make basic mats (http://www.massassi.net/tutorials/mats/).</p>
+
+<hr>
+
+<p>Now, First things first, make sure you have a mat that you want to add the effect to, for this example I'm going to use a logo from one of my upcoming levels.</p>
+
+<p><img src="normexample.jpg" width="256" height="256" border="0"></p>
+
+<p>Ok, now I'm going to load this into Paint Shop Pro and apply the filter. The filter that we are using is called &quot;Noise&quot; and it can be found by going to: Image&gt;Noise&gt;Add... (for this to work, all the layers should be merged, and the colour depth has to be 24Bit (16 million colours)</p>
+
+<p><img src="scrn1.jpg" width="484" height="421" border="0"></p>
+
+<p>(Excuse the crappy compression.)</p>
+
+<p>Ok, once you have selected that, the following dialogue should come up:</p>
+
+<p><img src="scrn2.jpg" width="345" height="304" border="0"></p>
+
+<p>Set the slider bar to 100 and make sure the &quot;Random&quot; radio button is selected, then click OK. Once it has done this, you should be left with something like this (note: I performed the above operation 3 times because I wanted a lot of interference. You can just do it once or twice depending on how much you want.)</p>
+
+<p><img src="scrn3.jpg" width="267" height="286" border="0"></p>
+
+<p>Now some people might prefer one like this, with the different coloured interference, but I like the black and white once best (more realistic). All you have to do to make it black and white is to select &quot;Greyscale&quot; from the colours menu.</p>
+
+<p><img src="scrn4.jpg" width="466" height="405" border="0"></p>
+
+<p>Now this black and white picture goes well with the narsh pallet (CMP) from JK, but I haven't tried it with others. If you're a boring person, you can go away now happy that you got a new mat for your level. But if you're the interesting type you can animate it (http://www.massassi.net/tutorials/mats_multicell/). Simply put, do that procedure (the whole tutorial up to now) 3 times on the same picture, and save them under different names (eg. broken1.jpg, broken2.jpg, broken3.jpg). Because the noise filter is random, it creates the dots in different places on every picture!</p>
+
+<p>Now go take your 3 pictures and put them together in an animated mat. The finished article should look like this!</p>
+
+<p><img src="example.gif" width="400" height="200" border="0"></p>
+
+<p>Cool, eh?</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

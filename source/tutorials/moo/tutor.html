@@ -1,0 +1,55 @@
+<HTML><HEAD>
+<TITLE>Merging Non-Adjoined Sectors via JED & Wordpad</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT=52A54E LINK=A6BA45 VLINK=457E67>
+<center><font size="6"><b>Merging Non-Adjoined Sectors via JED & Wordpad</b></font></center>
+<center>Author: <a href="mailto:theensers@earthlink.net">Red</a></center>
+<BR><hr><br>
+<BR>
+Let's start out with why in the world you would do such a thing? The answer is simply to create 3dos. I used this technique to make Greedo's gun playable, and in a few 3dos for an upcomming level. I'm sure <b>someone</b> will find uses for this tutorial.. hopefully :-)<BR>
+<BR>
+Here we go.. (for lack of better words I am not the best tutorial writer :-) )<BR>
+<BR>
+<BR>
+1) Get the sectors set up how you'd like them in your 3do. My 3do is going to be simple because the bigger it is, the more time it takes :-)<BR>
+<CENTER><IMG SRC="moo1.jpg"></CENTER>
+<BR>
+2) Hit File -> Save JKL<BR>
+<BR>
+3) Open your new .jkl with Wordpad.<BR>
+<CENTER><IMG SRC="moo2.jpg"></CENTER>
+<BR>
+4) Scroll down to "Section: SECTORS"<BR>
+<CENTER><IMG SRC="moo3.jpg"></CENTER>
+<BR>
+5) Change "World sectors #" to "World sectors 1" (The # = another number :-) )
+<BR>
+6) Skip Sector 0's info and scroll down to "SECTOR 1"<BR>
+<BR>
+7) Highlight and cut (Ctrl + X) Sector 1's vertices<BR>
+<CENTER><IMG SRC="moo4.jpg"></CENTER>
+<BR>
+8) Paste them (Ctrl + V) <u>UNDER</u> Sector 0's vertices<BR>
+<CENTER><IMG SRC="moo5.jpg"></CENTER>
+<BR>
+9) Do the same for any additional sectors (Paste them under your previous Cut & Pastes -- they should count upwards)<BR>
+<BR>
+10) Count all of your vertices and change Sector 0's "VERTICES #" line to correspond with this number (i.e. if I counted 16 verticies I'd change it to "VERTICES 16")<BR>
+<BR>
+11) Fix the numbering of your vertices so it continues to count upward.<BR>
+<CENTER><IMG SRC="moo5.jpg"><BR>Becomes:<BR><IMG SRC="moo6.jpg"></CENTER>
+NOTE: The numbers SHOULD correspond!
+<BR>
+12) Scroll the "SURFACES # #" part of each sector (including sector 0) and add the <u>2nd</u> numbers together. So if you have 3 sectors you should've added 3 numbers together.<BR>
+<BR>
+13) Take this number and plug it into the "SURFACES 0 #' line of sector 0. My number was 12 so my line reads "SURFACES 0 16"<BR>
+<BR>
+14) Save your .jkl and re-open it with JED. Your end result?<BR>
+<CENTER><IMG SRC="moo7.jpg"></CENTER>
+<BR>
+<br>
+I hope I didn't confuse anyone too much. Do to this sector as you wish.. you can view my edited .jkl <A HREF="jkl.txt">here</a><BR>
+<BR>
+~ Red
+</BODY> 
+</HTML>

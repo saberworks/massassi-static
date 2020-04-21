@@ -1,0 +1,166 @@
+<html>
+<head>
+	<title>Domes with Beams Tutorial by Linus 'ThreeDee' Rachlis</title>
+	<style type="text/css">
+body, td
+{
+	background:white;
+	color:black;
+	font:9pt Verdana, Arial, Sans-Serif;
+}
+
+blockquote
+{
+	line-height:17px;
+}
+
+a, a:visited, a:active, a:hover
+{
+	color:blue;
+}
+
+p.head
+{
+	font-size:13pt;
+	font-weight:bold;
+}
+
+p.subhead
+{
+	font-size:10pt;
+	font-weight:bold;
+}
+
+div.title
+{
+	font-size:19pt;
+}
+	</style>
+</head>
+
+<body>
+
+<div class="title">Domes with Beams Tutorial</div>
+
+<hr>
+Author: <b>Linus 'ThreeDee' Rachlis</b> (<a href="mailto:threedee15@home.com">threedee15@home.com</a>)
+
+<p class="head">1. Preface</p>
+
+<blockquote>
+
+<p>This tutorial assumes basic knowledge of Jed. If you get stuck, try reading the basic tutorials first. Make sure you know all about multiselection. Mangore Kiramin's <b>Domes Tutorial</b> (<a href="http://www.massassi.net/tutorials/domes/">www.massassi.net/tutorials/domes</a>) is also recommended reading.</p>
+
+</blockquote>
+
+<p class="head">2. Building the Dome</p>
+
+<blockquote>
+
+<p>We start this off by building a dome using the same method as in Mangore Kiramin's tutorial (link above), except we make our initial cylinder differently.</p>
+
+<p>Begin with the default Jed box. Press F4 and set:<br>
+
+<b>Snap every</b>: 0.1<br>
+<b>Dot every</b>: 0.2</p>
+
+<p>Using the cleave tool, cut up the box from the top view (<b>Shift-1</b>), using the images below to guide you.</p>
+
+<blockquote><img src="2-1.gif"> &nbsp; <img src="2-2.gif"></blockquote>
+
+<p>Do those same two cleaves in the other four corners:</p>
+
+<blockquote><img src="2-3.gif"></blockquote>
+
+<p>Delete the extraneous sectors, so you have just one octogonal sector. Now enter surface mode (<b>F</b>) and select the top surface of the cylinder. Then, holding down <b>Shift</b> so the cleave tool snaps to verticies, cleave from vertex to opposite vertex, until you have divided the top surface into 8 "pie" pieces.</p>
+
+<blockquote><img src="2-4.gif"></blockquote>
+
+<p>Enter vertex mode (<b>V</b>) and select the vertex you just created in the centre of the top surface. In the front view (<b>Shift-2</b>), raise the vertex 2 JKUs along its Z axis.</p>
+
+<blockquote><img src="2-5.gif"></blockquote>
+
+<p>Enter surface mode and multiselect all the surfaces in the cone you just created (not the surfaces on the sides of the cylinder). Cleave those surfaces at 2 grid dots above the original top of the cylinder, then lower the vertex on top of the cone by <b>0.8 JKUs</b> (4 grid dots).</p>
+
+<blockquote><img src="2-6.gif"></blockquote>
+
+<p>Again, multiselect all the surfaces above where you just cleaved, and cleave them at <b>0.2 JKUs</b> (1 grid dot) above where you cleaved before. Then, lower the vertex on top by <b>0.3 JKUs</b> (1.5 grid dots - if you can't seem to get it, make sure you set your <b>Snap every</b> setting correctly to <b>0.1</b>). Enter sector mode (<b>S</b>), and cleave the sector <b>0.2 JKUs</b> above the cleave you just made. Delete the tiny sector on top.</p>
+
+<blockquote><img src="2-7.gif"></blockquote>
+
+</blockquote>
+
+<p class="head">3. Preparing the Beams</p>
+
+<blockquote>
+
+<p class="subhead">Vertical Beams</p>
+
+<p>First we will cleave the outlines of the beams into the walls of the dome. Drop into front view (<b>Shift-2</b>), and set your grid snap setting to <b>0.05</b> with <b>F4</b>. Now, multiselect the surfaces shown in the following screenshot. Make sure they're the surfaces on the NEAR side of the dome. They will appear brighter than the surfaces on the far side.</p>
+
+<blockquote><img src="3-1.gif"></blockquote>
+
+<p>Now, make a parallel cleave to the right of the left edges of those surfaces (the vertical line in the centre). Make it as close to that line as you can get (this should be within <b>0.05 JKUs</b>). Here is mine after cleaving, with the newly created surfaces selected for your viewing pleasure.</p>
+
+<blockquote><img src="3-2.gif"> &nbsp; <img src="3-3.gif"></blockquote>
+
+<p>Make sure you're in <b>Shift-2</b> view. Hit <b>Shift-Left Arrow</b> 9 times. This will orient the view so that it's the same as before, except that you're looking straight at the next edge, going counter-clockwise around the dome. You can confirm this by holding R and looking around, but when you're done, return to this view.</p>
+
+<p>Go to <b>Commands > Grid to view</b> to line up the grid with the camera. This is important; otherwise your will not be able to cleave correctly. Now do the same as you did before. Multiselect the surfaces to the right of the line down the centre, and cleave them as before. Again, make sure you select the surfaces on the NEAR side of the dome. Once you're done, you should have this (I have again selected the surfaces we just created, for clarity only):</p>
+
+<blockquote><img src="3-4.gif"></blockquote>
+
+<p>Using the same method, keep going counter-clockwise around the dome, multiselecting and then cleaving the surfaces in exactly the same way, until all 8 sides have been cleaved:</p>
+
+<blockquote><img src="3-5.gif"></blockquote>
+
+<p class="subhead">Horizontal Beams</p>
+
+<p>Now, go around and multiselect all the large surfaces (not the thin ones) on the bottom section, like so. Look closely, you will see that I have in fact only selected the large surfaces:</p>
+
+<blockquote><img src="3-6.gif"></blockquote>
+
+<p>Settle into <b>Shift-2</b> view, and cleave the very tops off of those surfaces, just <b>0.05</b> JKUs below their tops (the horizontal line). D&eacute;j&agrave; vu, anyone? Here's mine, after cleaving (I have selected the newly created surfaces for clarity):</p>
+
+<blockquote><img src="3-7.gif"> &nbsp; <img src="3-8.gif"></blockquote>
+
+<p>Do the same thing to the 3 other sections, and it's on to step 4!</p>
+
+<blockquote><img src="3-9.gif"></blockquote>
+
+</blockquote>
+
+<p class="head">4. Extrusion</p>
+
+<blockquote>
+
+<p>This step can be a bit tedious, but at least it's dead simple. Go through every one of the "large surfaces" in the dome (including the octogonal surface on the very top), press <b>Shift-X</b>, and extrude it by <b>0.1 JKUs</b>. This part is probably why most people have trouble figuring this technique out. When you look at ribbed domes, it seems that the beams <i>intrude</i>, while it is actually the other surfaces that <i>extrude</i>.</p>
+
+<blockquote><img src="4-1.gif"></blockquote>
+
+<p class="subhead">Tada!</p>
+
+<p><a href="final-1.jpg" target="_blank">Click here</a> to see the final product in 3D Preview, textured for clarity, and of course your viewing pleasure.</p>
+
+<p>You can also get a great open-air feel by changing the textures around. <a href="final-2.jpg" target="_blank">Click here</a> to see.</p>
+
+<p>Thank you for reading and have fun! :)</p>
+
+</blockquote>
+
+<p><br></p>
+
+<p class="head">Credits</p>
+
+<ul>
+<li><b>Written by Linus 'ThreeDee' Rachlis</b> (<a href="http://www.flowingcreativity.net" target="_blank">www.flowingcreativity.net</a>)<br><br>
+
+<li>Idea garnered from question asked by <b>PedHead</b>
+<li>Proof Readers
+<ul>
+<li>Elmo (<a href="mailto:jkelmo@hotmail.com">jkelmo@hotmail.com</a>)
+</ul>
+</ul>
+
+</body>
+</html>

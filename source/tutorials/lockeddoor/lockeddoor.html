@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Monday, October 04, 1999 09:04 PM -->
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 1.1a for Windows">
+	<META NAME="Author" Content="U.S.S. Saratoga: Webmaster">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#0033CC" VLINK="#FFCC00" ALINK="#009900">
+
+<P ALIGN="CENTER"><FONT SIZE="6" COLOR="#006600">Locked Doors<BR>
+</FONT><FONT SIZE="4" COLOR="#006600">By: REZ<BR>
+<BR>
+OK, before I start this tutorial theres somthing I'd like to say, use locked doors sparingly in your SP levels.
+ Think of other ideas for puzzles besides locked doors, as they're boring puzzles, but they do give a new objective
+for the player. I'm going to assume you have basic knowledge of JED and you know how to make doors.   OK that said
+lets get to the tutorial.<BR>
+<BR>
+<IMG SRC="Basic.gif" WIDTH="267" HEIGHT="274" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+Here we have our default JED box, lets start by cleaving a hall. Cleave it out like so:<BR>
+<BR>
+<IMG SRC="Cleaved.gif" WIDTH="367" HEIGHT="321" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+Now extrude it:<BR>
+<BR>
+<IMG SRC="Extrude.gif" WIDTH="432" HEIGHT="328" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+OK now we have a basic hall.  Put in door using the </FONT><A HREF="http://www.massassi.net/tutorials/doors/"><FONT
+SIZE="4">door tutorial</FONT></A><FONT SIZE="4" COLOR="#006600">.In the end it should look something like this:<BR>
+<BR>
+<IMG SRC="Door.gif" WIDTH="519" HEIGHT="349" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+ Instead of using 00_Door.cog use 00_DoorKey.cog by going to placed cogs... add cog... 00_DoorKey.cog. We have
+some values to place in the cog.<BR>
+<BR>
+<IMG SRC="Values.gif" WIDTH="197" HEIGHT="197" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+OK what do these values Mean:<BR>
+Door 0-3: These are the door things the cog uses. *Note, if you put other values for doors other than Door0, then
+when one opens they all will open.<BR>
+<BR>
+Movespeed: the speed the door moves (higher is faster)<BR>
+<BR>
+Sleeptime: How long the door stays open.<BR>
+<BR>
+LightValue: How much extra light is added. (Leave this value alone)<BR>
+<BR>
+Key: the key color needed to open the door.  Put a 0 for red 1 for blue and 2 for yellow.<BR>
+<BR>
+Wav0: The locked sound for the door. (Leave this alone)<BR>
+<BR>
+Fill in the appropriate values. Here are mine:<BR>
+<BR>
+<IMG SRC="Placevalues.gif" WIDTH="205" HEIGHT="198" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+OK now add a key. Sense I chose 1, Blue, I'll add a blue key. To do this I press insert in item mode and chose
+KeyBlue.  It should look something like this in JED:<BR>
+<BR>
+<IMG SRC="GOODINJED.gif" WIDTH="486" HEIGHT="398" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+Now if you saved and gobbed your key door would work, But look what happens when you try to open the door with
+no key:<BR>
+<BR>
+<IMG SRC="Wrongtext.gif" WIDTH="640" HEIGHT="400" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+How do we fix this?  Quite simple really and we will have to add something called level text to do this press F8.
+Click edit strings.  You will see this:<BR>
+<BR>
+<IMG SRC="Strings.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+OK all you have to do is type COG_01001 in the Key Box and Locked! in the String Box. Like so:<BR>
+<BR>
+<IMG SRC="Goodstring.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+ Now press add/Update.  Exit the string editor. Press update and then save in the episode editor and exit. MAKE
+SURE YOU SAVE YOUR EPISODE. Note how you character says LOCKED! instead of COG_01001.  You could make him say anything.
+ All Done! Here are a few working pics:<BR>
+<BR>
+<IMG SRC="Righttext.gif" WIDTH="640" HEIGHT="400" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+<BR>
+<BR>
+<IMG SRC="Open.gif" WIDTH="640" HEIGHT="400" ALIGN="BOTTOM" BORDER="0"><BR>
+<BR>
+Copyright 1999 REZ and the Massassi Temple.<BR>
+Any Questions? Hop to the Editing board and ask away!</FONT>
+
+</BODY>
+
+</HTML>

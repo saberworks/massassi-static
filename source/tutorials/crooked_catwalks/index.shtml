@@ -1,0 +1,92 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: &quot;Crooked&quot; Catwalks</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">&quot;Crooked&quot; Catwalks</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:samm519@rmci.net">Bulworth</a>
+<br>
+<br>
+
+<p>I'm sure some of you have already read the <a href="/tutorials/catwalks/">Catwalks Tutorial</a>, well this a &quot;Crooked&quot; Catwalks Tutorial so there is a difference. First off, I'd like to thank Brian of the Massassi Temple because I've learned everything I know reading all of the tutorials on his page (well, not all of them). This tutorial is for beginners, or if some of you advanced dudes don't know this, then it's for you too...</p>
+
+<p>OK here we go...</p>
+
+<ol>
+<p><li> First start up JED and you'll have that cube on the grid...
+
+<p><li> Then go to the Map Settings option (F4). Set the snap to 0.05. For this tutorial I work with the dots set to 0.1, but that's not necessary.
+
+<p><li> Now go into the top view (1), start by cleaving (C) the sector, or cube, into three even parts...
+
+<p><img src="01.gif" width="211" height="203"></p>
+
+<p>Try to cleave them evenly.</p>
+
+<p><li> OK now you should have three sectors... switch to the side view (2), select the sector that's on the left and cleave where you want the top of your catwalk to be.
+
+<p><li> Now select the middle sector and cleave (C) it so the top of the ramp is &quot;crooked&quot; or pointing up. Check out the picture below, its' a lot easier to understand when you've seen it...
+
+<p><li> After you've finished step five select the last sector, the one on the right, and cleave it so it starts from the ending of the last cleave (step 5). Again, look at the picture; it's easier to understand.
+
+<p><img src="02.gif" width="318" height="203"></p>
+
+<p>This is what your cube should look like by now.</p>
+
+<p><li> Now you have to create the &quot;bottom&quot; for your catwalk. Do the same thing you did for the top, except cleave under the one that we cleaved for the top (look at the picture and you'll know what I'm talking about).
+
+<p><img src="03.gif" width="427" height="245"></p>
+
+<p>Now you've made a catwalk, see?</p>
+
+<p><li> Rotate the cube a little bit and select the catwalk part, which should be a thin line going through the three sectors. Select by clicking on the sector and pressing space.
+
+<p><img src="04.gif" width="387" height="249"></p>
+
+<p>Select those 3 sectors...</p>
+
+<p><li> Switch to Top View (1) and cleave the catwalk so it's in the middle of the cube...
+
+<p><img src="05.gif" width="337" height="218"></p>
+
+<p>The selected sectors are the catwalk...
+
+<p><li> Now select the catwalk, like you see above, and delete it...
+
+<p><li> This is what it should look like when you're done... after texturing it...
+
+<p><img src="06.gif" width="325" height="283"></p>
+
+<p>Nice, eh?</p>
+
+</ol>
+
+<p>Well that concludes my tutorial. I sure hope this helped you because these things look really cool in levels, especially if they're big... it's better to make catwalks by cleaving than to use 50,000 3DOs, you know what I'm talking about... *LAG*</p>
+<p>Happy editing! If you have any questions or comments send them to <a href="mailto:samm519@rmci.net?subject=Massassi Tutorial Question">me</a>.</p>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

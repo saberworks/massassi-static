@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <STYLE>
+  <!--
+        A:link 	{text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+</STYLE>
+  <TITLE>The Massassi Temple: Tutorial</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT="white" LINK="52A54E" VLINK=52A54E>
+<font face="verdana" SIZE="6">Making an Actor for a Cutscene from a Skin</font>
+<br>
+<hr>
+<font face="verdana" size="2">Author: <a href="mailto:dshahoud@dircon.co.uk">Violata</a></font>
+<br>
+<br>
+<font face="verdana" size="2"><span style="font-family: verdana">
+
+<p><b>Sometimes, you're just doing nothing, and not thinking much, and then suddenly an idea clicks. That's what happened to me, I had been racking my brain to try and make an actor for a cutscene out of a skin. No one would help. And then, it clicked.</b></p>
+
+What you will need:
+<ul>
+ <li>The skin you want to use
+ <li>ConMan
+ <li>3do Viewer (Not compulsory)
+ <li>A text editor (Notepad will do fine)
+</ul>
+
+<p><b><u>Here's how to do It. it's really simple:</u></b></p>
+
+<ol>
+<b><li></b> Get your skin, I suggest using one that looks like it uses the Kyle model. it's easier. If it uses another model, it may be a bit hard. I am using a Thrawn skin. 
+
+<b><li></b> Open ConMan and open <b>jkmres.goo/gob</b>, usually located at <b>C:/program files/Lucasarts/Mots/Resource/Jkmres.gob/goo</b>
+
+<b><li></b> Find the <b>kk.3do</b> or <b>ky.3do</b> and extract it to your level directory. 
+
+<b><li></b> Rename the 3do to whatever you want it to be called. (In my case - thrawn_actor) 
+
+<b><li></b> Now open it and change all the mats it uses to that of your skins'. I presume you know how to match up mats. For example: You would replace <b>kydneck.mat</b> to (in my case) <b>athneck.mat</b>. 
+
+<b><li></b> Now you have a 3do from your skin. I bet you're thinking, what was that all about? I could have just used the 3do that came with the skin. But you can't, that doesn't have AI. Or maybe you can, but it'll be hard. This is the easy way.
+
+<p>Now, we're nearly done. Copy the bit below into your <b>mots.tpl</b> file in the level directory. Then paste it at the bottom of the file And change the bits that are in red to yours. This will provide you with AI and animations for the actor. And it will place him at the bottom of the 3do list when you're in JED.</p> 
+
+<blockquote><font size="3">
+<tt>
+# DESC: <font color="#FF0000">An actor for cutscenes</font><br>
+# BBOX: -.036449 -.016107 -.120075 .037661 .02734 .064161<br>
+<font color="#FF0000">thrawn_actor</font>         _humanactor        model3d=<font color="#FF0000">thrawn_actor.3do</font> puppet=mj_cuts.pup soundclass=ky.snd maxvel=.4 health=20000 maxhealth=20000 maxthrust=1 maxrotthrust=60 aiclass=jan.ai 
+</tt></font></blockquote>
+
+<p><i>Do not copy this line or below it.</i></p>
+
+<p>The first red text is the description that will appear in the preview window of JED's 3do browser. You don't really need to change it; it doesn't really make a difference. 
+The second red text is the name as it will appear in the 3do list of JED. 
+The third is the name of the 3do that you renamed earlier. Write the exact one in there. Try to use underscores in the 3do name, if you haven't just go and rename it again.</p>
+</ol>
+
+<p>That's it. Your actor will now move as you want it to in your cutscenes. In a level, it will run around aimlessly just like if you put the <b>jan_actor.3do</b> in JK or <b>Mara_actor.3do</b> in MotS. You can't kill him in a level. It took me this long to work out, if I'd had worked it out earlier, maybe it would have been more use to me. But I don't do much editing now, so it should be useful to you.</p> 
+
+<p><b>Extra useful notes:</b></p>
+
+<p>It's possible to do some neat things by just modifying 3do files and .tpl outtakes. Here's an easy way to make a boss from a normal enemy, as a bonus for you:</p>
+
+<ol>
+ <li>	Extract a 3do of an enemy, using Conman, to your level's 3do directory.
+ <li>	Rename the 3do
+ <li>	Open the .tpl and copy the part with your enemy's info. E.g. if your boss is a very strong Ree-Yees or probe droid, copy the bit with them and paste it at the bottom of the file. Then change the red bits.
+
+<blockquote><font size="3">
+<tt># DESC: <font color="#FF0000">boss enemy</font><br>
+# BBOX: -.037893 -.021815 -.12043 .03746 .022321 .066407<br>
+<font color="#FF0000">icommando</font>         _humanactor        thingflags=0x20000400 model3d=<font color="#FF0000">ic.3do</font> size=.06595 movesize=.06595 puppet=ic.pup soundclass=ic.snd cog=actor_ic.cog maxvel=.3 weapon=+elaser weapon2=+st_punch health=<font color="#0000FF">90</font> maxhealth=<font color="#0000FF">90</font> maxthrust=1.1 maxrotthrust=90 typeflags=0x20001 fireoffset=(.014/.059/.031) aiclass=icdefault.ai</tt></font></blockquote>
+
+ <li>	Change the blue bits to a high number, and the boss is done. This .tpl outtake above is from the imperial commando. He won't die as easy, and you'll keep this one as a special boss. It won't affect the other imperial commandos, they will be normal. All you need is some dark lighting and shadows, a large room, not too many powerups and an intimidating background sound, and he'll be a powerful enemy to round up a good level.
+</ol>
+
+<p>See how easy things are? This is probably one of the tutorials that everyone will rush to do as soon as they read it. If you want to customise the boss, then just edit it's Mats, (see the <a href="http://www.massassi.net/tutorials/skins/tutor.htm">Making a Skin Tutorial</a>) and tell the 3do to use them instead. So you can have a powerful commando, with a scarred up face, and a brilliant boss. Cool eh?</p>
+
+Any problems? Contact Violata at <a href="mailto:dshahoud@dircon.co.uk">dshahoud@dircon.co.uk</a>
+
+</font>
+
+</body>
+</html>

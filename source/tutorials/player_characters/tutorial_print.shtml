@@ -1,0 +1,81 @@
+<html>
+<head>
+ <title>The Massassi Temple: New Player Characters (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">New Player Characters</font>
+<br clear="all">
+<hr>
+Author: CrazedUp (jepman@hotmail.com)
+<br>
+<br>
+
+<p>In this tutorial, I will teach you how to make a new player character with the 3do used for Kyle Katarn Or Mara Jade.</p>
+
+<p>I assume you have a new character (skin) made with the <font color="#808080">ky.3do</font> (for JK) and the <font color="#808080">kk.3do</font> (MOTS KKatarn) or the <font color="#808080">mj.3do</font> (MOTS Mara Jade). I also assume you have your character ready and that you will not be needing help in making it. If that is your problem, please see the tutorial on Creating a Skin (http://www.massassi.net/tutorials/skins/).</p>
+
+<p><font size="4">Part 1 - The Easy Way</font></p>
+
+<ol>
+ <li>Put your character 3do in your Project directory, and do the following:
+  <ul>
+   <li>If making new character for JK : Just simply save 3do as <font color="#808080">ky.3do</font> (This disables you to use the usual KKatarn skin elsewhere)
+   <li>If making new KKatarn for MOTS : Save 3do as <font color="#808080">kk.3do</font> (&quot; &quot;)
+   <li>If making new MJade for MOTS : Save 3do as <font color="#808080">mj.3do</font> (&quot; &quot;)
+  </ul>
+ <li>This is it, just make sure to have all the correct mats in the project directory (except if textures already in <font color="#808080">Res2.gob</font> (JK) or <font color="#808080">JKmres.goo</font> (MOTS))
+ <li>In JED the walkplayer should appear as your character, same thing in the game.
+</ol>
+
+<p><font size="4">Part 2 - The Less Easy Way</font></p>
+
+<p>This method allows you to use kkatarn or mjade character some other way in the game (Ex. Enemy, helper). In this tutorial, I use the <font color="#808080">002.3do</font> (The Kyle Fett Skin from JK BFP) renamed to <font color="#808080">bounty.3do</font></p>
+
+<ol>
+ <li>Name the 3do whatever you want (I renamed <font color="#808080">002.3do</font> to <font color="#808080">bounty.3do</font>).
+ <li>Open up the <font color="#808080">Master.tpl</font> (JK) or the <font color="#808080">MOTS.tpl</font> (MOTS) in wordpad and do the following:
+  <ul>
+   <li>Find the <font color="#808080">&quot;walkplayer&quot;</font> template if making new kkatarn character in either MOTS or JK 
+   <li>Find the <font color="#808080">&quot;marawalkplayer&quot;</font> template (MOTS only) if making new mjade character.
+  </ul>
+ <li>Copy the contents from <font color="#808080"># Desc:</font> to <font color="#808080">walkplayer/marawalkplayer</font>. The following is the template code I use for my <font color="#808080">bounty.3do</font>:  
+</ol>
+
+<blockquote><font size="3" color="#808080"><pre>
+# DESC:
+# BBOX: -0.03730128 -0.01387423 -0.1184614 0.03811364 0.03983956 0.06454442
+mercaneryplayer _actor type=player thingflags=0x20000401 light=.2 model3d=bounty.3do size=.065
+movesize=.065 puppet=ky.pup soundclass=kybobafett.snd cog=ben_m.cog surfdrag=3 airdrag=.5
+staticdrag=.3 health=100 maxhealth=100 maxthrust=2 typeflags=0x1 error=.5 fov=.71 chance=1
+</pre></font></blockquote>
+
+<p>The previous lines should be copied and pasted.  They should appear as three lines in the template file just like above.</p>
+
+<ul>
+ <li>Enter the description of the template in <font color="#808080"># DESC:</font> <br>
+ <li><font color="#808080"># BBOX:</font> already has the right numbers in it
+ <li>In <font color="#808080">mercenaryplayer</font>  put the name of the character (No need of walkplayer of player)
+ <li>In the <font color="#808080">model3d</font> part put the name of your 3do, and change the <font color="#808080">soundclass</font> to the one you one to use for you own character. The original snd name is <font color="#808080">ky.snd</font> or <font color="#808080">mj.snd</font> but I use the <font color="#808080">kybobafett</font> one for my guy. The rest is to mess around with at risk.
+</ul>
+
+<p>Oh! The <font color="#808080">ben_m.cog</font> is the cog I use to make the saber green instead of orange (MOTS stuff here)</p>
+
+<p>This done, I wish you have a great time with your levels and characters.</p>
+
+<p>Email me: jepman@hotmail.com</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

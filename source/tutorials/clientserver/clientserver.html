@@ -1,0 +1,244 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Adam Heinmiller">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win98; I) [Netscape]">
+   <title>Client/Server cog tutorial</title>
+</head>
+<body text="#FFFFFF" bgcolor="#003300" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<b><font size=+2>Client/Server Cog Tutorial</font></b>
+<br><font size=-1>By <a href="mailto:dragons_bane@hotmail.com">Obsidian</a></font>
+<br>&nbsp;
+<p>This tutorial is most definitely not meant for the beginning coggers.&nbsp;
+It deals with some advanced stuff, meant to keep the lag down during Multiplayer
+games.&nbsp; You should know how to use triggers well, as c/s cogs depend
+on them heavily.
+<p>Why client/server cogs you ask?&nbsp; The reason is very simple:&nbsp;
+JK/MotS is laggy enough as it is, there is no need to add any more lag
+then necessary because a door or a window was not 'optimized' for MP games.&nbsp;
+A good way to think of it is to think of an actual network (at school,
+work, or even a LAN in your home).&nbsp; I'll use a school network as an
+example.&nbsp; Lets say you sit at a computer in the library and feel like
+surfing the net, so you double click on the Netscape icon.&nbsp; Now, 1
+of 2 things could happen.&nbsp; Lets say all the files and programs are
+on the file server (i.e. all the cogs are run off of the host's computer)
+and the computer your at needs to access and run Netscape from the server.&nbsp;
+Every action you make in Netscape (whether you are even connected to the
+internet or not) is sent over the network and back.&nbsp; It doesn't take
+a guineas to figure out that that will create an awful lot of lag on the
+network.&nbsp; Same is true with cogs.&nbsp; If you have to access a cog
+that is on the host computer only, each time it is used it will create
+an abundance of lag.&nbsp; Now, lets say that school installs Netscape
+onto the computer you are sitting at.&nbsp; You fire up Netscape, and it
+pops up almost immediately due to the fact that your computer didn't have
+to receive it over the network from the server, and you go chugging along
+browsing your pages.&nbsp; The server sends you the minimal amount of information
+needed to view the page and its contents, and Netscape deciphers it locally
+and displays it.&nbsp; This is very true with c/s cogs.&nbsp; You walk
+up to a c/s door and try to open it.&nbsp; It fires off a trigger telling
+the server that this door is going to open, and if the server ok's it,
+it will fire off another trigger telling ALL the clients to open that door
+locally.
+<p>There are inherent dangers when using c/s cogs though.&nbsp; One of
+the predominant issues is syncing the thing/s (in our case a door).&nbsp;
+For example, little Joey is playing on a JK game that little Billy is hosting.&nbsp;
+Billy opens a c/s door, and the network packet heading to Joey, that contains
+the trigger telling his door to open, gets dropped.&nbsp; Now, we end up
+with Billy having an open door and Joey having a closed door.&nbsp; Because
+Billy's door doesn't give a rip what Joey's door is doing, Billy is able
+to walk through his open door.&nbsp; Meanwhile, it appears to Joey that
+Billy just walked through a door (or it may appear that Billy is place
+walking into the door, which would cause horrendous syncing problems with
+the players as well as the doors), and is unable to follow because his
+door is closed.&nbsp; Or, Billy turns around and starts to shoot Joey.&nbsp;
+To Billy, the projectiles hit Joey.&nbsp; To Joey the projectiles hit his
+door, which isn't open, and does no damage.&nbsp; This could lead into
+rampit accusations of cheating, and possibly a boot or two.&nbsp;&nbsp;
+You could, however, use a system of triggers to keep all the doors synced
+on all machines, but that would use a lot of triggers, and defeat the purpose
+of using c/s cogs all together, and that would just be silly.
+<p>"But Obsidian, What good are c/s cogs then if they can mess up like
+that?!"
+<p>The answer is simple young grasshopper.. You need to use some innovation,
+a little luck, and a lot of skill.&nbsp; Think of a way that is bandwidth
+effective, yet still has a low chance of messing up under normal to moderately
+heavy usage.&nbsp; For example, don't code an idiot proof door that will
+resist messing up if constantly used over and over and over on multiple
+clients.&nbsp; It will take a lot of time, bandwidth, and the results will
+not be worth the extra bandwidth expended to keep it idiot proof.&nbsp;
+The best, though, would be idiot proof AND bandwidth effective.
+<p>Another danger with c/s programs/cogs/whatever is the ease in which
+they can be hacked.&nbsp; Diablo and Interstate '76 come to mind.&nbsp;
+Whenever information is used on the client side only (i.e. the server keeps
+its paws off of it until the client sends it) there is a tremendous possibility
+of hacking.&nbsp; That is also why massively multiplayer games, such as
+Utlima Online and EverQuest, give the server absolute rule over everything.&nbsp;
+Character information, item information, and world information are all
+saved on the server to prevent client side hacking of characters and items.&nbsp;
+However, as seen with UO Extreme, even this method is not hacker proof.&nbsp;
+Hacking is not a concern you will need to deal with when writing a c/s
+cog, because the information we're going to handle on the client side isn't
+even worth trying to hack.
+<p>Below are the simple cogs i made to demonstrate Client/Server coding.
+<p>If you are bright enough, you will see that my cogs actually create
+about 2x as much lag as necessary.&nbsp; The client cog (when activated)
+will send a trigger to the server cog.&nbsp; Upon the receiving of the
+trigger, the server cog will broadcast another trigger to all the clients
+telling them to move the thing to the other frame.&nbsp; I very well could
+have made the client cog broadcast the trigger that moves the thing to
+the other frame, which would reduce the lag it makes by about 1/2, but
+this way gives you a spot to sort of 'moderate' what is going on.&nbsp;
+You could cancel the thing moving, check to see if a certain player activated
+his thing, check to see if the player who activated the thing had a key
+(or other item required) to move the thing, all kinds of stuff which would
+otherwise be a pain in the ass to do within the door cog itself,&nbsp;
+and that may very well require you to send more then one trigger.. which
+would defeat the whole short cut idea and be an awful lot more messy.
+<p>As an example, lets say you restructure an entire door cog to c/s to
+cut out the middle server cog.&nbsp; Then your level editor comes to you
+and says "on second thought, I want to use this door cog insted".&nbsp;
+If you hadn't done the entire c/s operation in the door cog, all you would
+need to do is slap some triggers into the new door cog and shuffle the
+code around a bit to activate the door by triggers.. as opposed to having
+to either a) restructure the new door cog so it will be a stand-alone c/s
+cog, or b) shoot the level editor and use the door cog you spent hours
+restructuring.
+<p>Again, I feel It would be of more benefit to display the cogs I did
+and give detailed comments, as opposed to walking you through a step-by-step
+process which can get awfully confusing and tedious (too bad level tutorial
+authors don't have this luxury ;) )
+<br><font color="#CCCCCC"><font size=-1>(note: included cogs (in zip) are
+not commented)</font></font>
+<p>First the server cog (which is close to nothing because I didn't need
+to do anything besides redirect the client trigger)&nbsp; My comments are
+(obviously) in the darker gray after the comment slashes (//) .
+<p><font color="#999999"><font size=-1># Jedi Knight Cog Script</font></font>
+<br><font color="#999999"><font size=-1># server_mthing.cog</font></font>
+<br><font color="#999999"><font size=-1>#</font></font>
+<br><font color="#999999"><font size=-1># Server cog for the Cleint/Server
+tutorial.</font></font>
+<br><font color="#999999"><font size=-1>#</font></font>
+<br><font color="#999999"><font size=-1># -Obsidian 12-3-99</font></font>
+<p><font color="#999999"><font size=-1>symbols</font></font>
+<p><font color="#999999"><font size=-1>message trigger</font></font>
+<p><font color="#999999"><font size=-1>end</font></font>
+<p><font color="#999999"><font size=-1># ..........</font></font>
+<p><font color="#999999"><font size=-1>code</font></font>
+<p><font color="#999999"><font size=-1>Trigger:</font></font>
+<p><font size=-1><font color="#999999">If(GetSourceRef() == 98) SendTrigger(-1,
+99, 0, 0, 0, 0);&nbsp; </font><font color="#666666">// If this is the trigger
+sent by a client cog, send another trigger to all client</font></font>
+<br><font size=-1><font color="#999999">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</font><font color="#666666">cogs telling them to move their thing to
+the other frame.</font></font>
+<br><font color="#999999"><font size=-1>return;</font></font>
+<p><font color="#999999"><font size=-1>end</font></font>
+<p>Now the client cog, which is a bit heftier then the one-command-wonder
+server cog.
+<p><font color="#999999"><font size=-1># Jedi Knight Cog Script</font></font>
+<br><font color="#999999"><font size=-1># client_mthing.cog</font></font>
+<br><font color="#999999"><font size=-1>#</font></font>
+<br><font color="#999999"><font size=-1># Moves a thing from frame 0 to
+1 and vice versa when activated.&nbsp; Created for the C/S Tutorial.</font></font>
+<br><font color="#999999"><font size=-1>#</font></font>
+<br><font color="#999999"><font size=-1># -Obsidian 12-3-99</font></font>
+<p><font size=-1><font color="#999999">flags=0x240&nbsp;&nbsp;&nbsp; </font><font color="#666666">//
+Thee most important line in this entire cog.&nbsp; It tells the cog to
+run locally on each clients machine, and to not sync</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+itself with the other client cogs. (0x200 local, 0x40 no sync)</font></font>
+<br><font color="#999999"><font size=-1>symbols</font></font>
+<p><font size=-1><font color="#999999">int&nbsp; player&nbsp; local&nbsp;
+</font><font color="#666666">// Probably the only redundant line in this
+cog, because player is never used.&nbsp; A habit i guess.</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If you did need to use the player variable, you can assign it to GetLocalPlayerThing()</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(even though this is a MP cog) because the flags above set this cog to
+local.&nbsp; Print() also works</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+like it should (i.e. doesn't display on the host's side, like non local
+cogs do if Print is used.)</font></font>
+<p><font size=-1><font color="#999999">thing&nbsp; MoveThing&nbsp; mask=0x405
+</font><font color="#666666">//
+The thing we're moving.&nbsp; The mask allows it to call the activated:
+message when activated.</font></font>
+<br><font size=-1><font color="#999999">flex&nbsp; Speed=5&nbsp; nolink&nbsp;
+</font><font color="#666666">// How fast were moving the thing</font></font>
+<p><font color="#999999"><font size=-1>int&nbsp; frame&nbsp;&nbsp; local</font></font>
+<p><font color="#999999"><font size=-1>message startup</font></font>
+<br><font color="#999999"><font size=-1>message activated</font></font>
+<br><font color="#999999"><font size=-1>message trigger</font></font>
+<br>&nbsp;
+<p><font color="#999999"><font size=-1>end</font></font>
+<p><font color="#999999"><font size=-1># ==========</font></font>
+<p><font color="#999999"><font size=-1>code</font></font>
+<p><font color="#999999"><font size=-1>Startup:</font></font>
+<p><font size=-1><font color="#999999">player = GetLocalPlayerThing();&nbsp;
+</font><font color="#666666">// Redundant, but shows that GetLocalPlayerThing
+can be used instead of GetSourceRef or</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GetSenderRef</font></font>
+<p><font color="#999999"><font size=-1>return;</font></font>
+<p><font color="#999999"><font size=-1># ..........</font></font>
+<p><font color="#999999"><font size=-1>Activated:</font></font>
+<p><font size=-1><font color="#999999">If(IsThingMoving(movething)) return;&nbsp;
+</font><font color="#666666">// ALWAYS do checks that you can do locally
+first before sending the first trigger.&nbsp; If the thing</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+can't even be moved for some reason, you don't want to be firing off triggers
+and have it</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+find out it won't be able to move until the very end.&nbsp; This is a good
+way to reduce lag.</font></font>
+<p><font size=-1><font color="#999999">SendTrigger(-1, 98, 0, 0, 0, 0);&nbsp;
+</font><font color="#666666">// If the thing isn't moving, then send the
+first trigger to the server cog, which it will relay to the other</font></font>
+<br><font color="#666666"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+client cogs.</font></font>
+<br><font color="#999999"><font size=-1>return;</font></font>
+<p><font color="#999999"><font size=-1># ..........</font></font>
+<p><font color="#999999"><font size=-1>Trigger:</font></font>
+<p><font size=-1><font color="#999999">If(GetSourceRef() == 99) Call MThing;&nbsp;
+</font><font color="#666666">// If this is the trigger from our server
+cog (giving the OK to move the thing) call the message</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#666666"><font size=-1>that will send the thing on its way.</font></font>
+<br><font color="#999999"><font size=-1>return;</font></font>
+<p><font color="#999999"><font size=-1># ..........</font></font>
+<p><font size=-1><font color="#999999">MThing:&nbsp;&nbsp;&nbsp; </font><font color="#666666">//
+The message that will move the thing after all the triggers have been swapped
+and everything is given the OK</font></font>
+<p><font size=-1><font color="#999999">frame = GetCurFrame(movething);&nbsp;
+</font><font color="#666666">// Find out which frame the thing is at so
+it gets sent to the other frame.</font></font>
+<p><font color="#999999"><font size=-1>if(frame == 0) MoveToFrame(movething,
+1, speed);</font></font>
+<br><font color="#999999"><font size=-1>If(frame == 1) MoveToFrame(movething,
+0, speed);</font></font>
+<p><font color="#999999"><font size=-1>return;</font></font>
+<p><font color="#999999"><font size=-1>end</font></font>
+<br>&nbsp;
+<p>Now, to maybe clear up a little confusion, the above cogs will move
+the SAME object on all players' machines, making it appear as if it is
+done globally, only with a fraction of the lag.&nbsp; I think i heard somewhere
+that a trigger is only a few bytes in size, and when considering only 2
+triggers (1 if you didn't activate the thing) were sent to/from you, with
+a grand total of a few bytes of information being sent over the network.
+Client/server cogs are a work from the heavens.. if done properly.&nbsp;
+Glass would also benefit greatly from a c/s makeover.
+<br>The only thing i really see that cannot be effectively converted to
+c/s are elevators, and more generally anything that is designed to move
+players.&nbsp; These types of c/s cogs can create nasty player syncing
+problems, because the player won't be in the same spot on all machines,
+and that spells disaster.&nbsp;&nbsp; So there are some cogs that need
+to stay global for syncing reasons.. But barring those, the sky's the limit
+=).
+<br>&nbsp;
+<p><a href="mailto:dragons_bane@hotmail.com"><img SRC="http://www.jediknight.net/mcp/obsidian.jpg" NOSAVE height=31 width=107></a>
+<br><a href="http://www.planetjedi.com/hov">HOV home page</a>
+<br>&nbsp;
+</body>
+</html>

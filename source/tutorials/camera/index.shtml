@@ -1,0 +1,367 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Camera Tutorial</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Camera Tutorial</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:booto@geocities.com">Booto</a>
+<br>
+<br>
+
+<b>Note:</b> This tutorial covers each and every section of the Cog.  Understanding Cogs 
+is an important skill editors need.  If you, however, do not wish to go that far
+into the details, please feel free to skip down to the part that actually shows
+you <a href="#implement">how to implement cameras</a> into your level. I would suggest going through the <a href="/tutorials/elevators/">elevator</a> and <a href="/tutorials/doors">door tutorials</a>, as they discuss very simple cogs.  From there, you will be able to understand all the parts of this one.
+<BR><BR>
+Okay, I got an e-mail asking how to do cameras in levels, and 
+I decided to go through:
+<ul>
+<li>How to edit the camera cog for custom ones
+<li>Implement them in levels
+</ul>
+This is the cog:
+<BR><BR>
+<blockquote><pre><font size="2" color="#808080">
+# Jedi Knight Cog Script
+#
+# C3_CAMERAFF.COG
+#
+# This script will briefly show the effect of using the
+# forcefield console to the player...
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+
+symbols
+
+thing       console                          desc=console
+thing       camera                           desc=camera_ghost
+flex        delay=1.5                        desc=delay
+
+int         old_camera                       local
+int         player                           local
+int         active=0                         local
+
+message     activated
+message     timer
+
+end
+
+# ===================================================================
+
+code
+
+activated:
+   if(active) Return;
+   active = 1;
+
+   player = GetSourceRef();
+
+   if(player == GetLocalPlayerThing())
+   {
+      SetActorFlags(player, 0xa00000);
+      old_camera = GetCurrentCamera();
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+   }
+
+   SetTimer(delay);
+
+   Return;
+
+timer:
+   ClearActorFlags(player, 0xa00000);
+   SetCameraFocus(0, player);
+   SetCurrentCamera(old_camera);
+   active = 0;
+
+   Return;
+
+end</font></pre>
+</blockquote>
+I'll take you through it section by section:
+<blockquote><pre><font size="2" color="808080">
+# Jedi Knight Cog Script
+#
+# C3_CAMERAFF.COG
+#
+# This script will briefly show the effect of using the
+# forcefield console to the player...
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+</font></pre></blockquote>
+This is the header - everything after the # character is ignored.
+the flags=0x240 means that it is a local cog.
+Generally do not put this line in your cogs if you do not know what it does
+<BR><BR>
+Okay, that was easy. On to the next bit:
+<blockquote><pre><font size="2" color="808080">
+symbols
+
+thing       console                          desc=console
+thing       camera                           desc=camera_ghost
+flex        delay=1.5                        desc=delay
+
+int         old_camera                       local
+int         player                           local
+int         active=0                         local
+
+message     activated
+message     timer
+
+end
+</font></pre></blockquote>
+This simply sets up all local object references and variables.
+The first line is 'symbols.' This is needed at the start of the object and variable 
+declaration section.
+<BR><BR>
+The next line tells what kind of variable it is. "Thing" is thing, "int" is integer,
+and "message" means "call on some code in the cog when this happens."
+<BR><BR>
+I don't know what "desc = (x)" means - don't use it (not necessary).
+<BR><BR>
+"Local" means that this is defined later in the code - it doesn't need a value
+passed from the .jkl file.<BR><BR>
+You use "end" after all symbols (objects, variables) are defined.
+<BR><BR>
+Okay...got that?<BR>
+On to the code...<BR>
+<blockquote><pre><font size="2" color="808080">
+code
+
+activated:
+   if(active) Return;
+   active = 1;
+
+   player = GetSourceRef();
+
+   if(player == GetLocalPlayerThing())
+   {
+      SetActorFlags(player, 0xa00000);
+      old_camera = GetCurrentCamera();
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+   }
+
+   SetTimer(delay);
+
+   Return;
+
+timer:
+   ClearActorFlags(player, 0xa00000);
+   SetCameraFocus(0, player);
+   SetCurrentCamera(old_camera);
+   active = 0;
+
+   Return;
+
+end
+</font></pre></blockquote>
+The 'code' bit is needed at the start of the code (like 'symbols' sort of).
+"Activated" is one of the named messages in the symbols section.
+Since this is attached to a thing, when a player tries to activate
+that thing (usually a console in this case) this code is called.
+<BR>
+<blockquote><pre><font size="2" color="808080">
+if(active) Return;
+   active = 1;
+</font></pre></blockquote>
+This bit checks to see if the code is already active.
+If so, it returns to the game.
+If not, it sets active to true (1) and continues.
+<BR>
+<blockquote><pre><font size="2" color="808080">
+player = GetSourceRef();
+
+   if(player == GetLocalPlayerThing())
+   {
+      SetActorFlags(player, 0xa00000);
+      old_camera = GetCurrentCamera();
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+   }
+
+   SetTimer(delay);
+
+   Return;
+</font></pre></blockquote>
+This puts the the activating player in the object handler "player."
+<BR><BR>
+It then sees if the local player is the activating player.
+If so, it sets the actor flags of the player to 0xa00000.
+It then records what camera it has with:
+<BR>
+<blockquote><pre><font size="2" color="808080">
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+</font></pre></blockquote>
+It sets the camera in the new thing's position (usually a ghost thing).
+It then sets the timer to the delay length to the previously said amount
+in the .jkl.
+It then returns to the game ( until 'timer' is called).
+<BR>
+<blockquote><pre><font size="2" color="808080">
+timer:
+   ClearActorFlags(player, 0xa00000);
+   SetCameraFocus(0, player);
+   SetCurrentCamera(old_camera);
+   active = 0;
+
+   Return;
+
+end
+</font></pre></blockquote>
+When timer is called (after 'delay' has passed), It clears the 0xa00000 
+actorflag. It then retrieves the old camera and sets the camera to inactive(0).
+The code then returns to the game, and then the 'end' keyword shows that it is the
+end of the code.
+<BR><BR>
+You could change this so that it cycled through multiple camera positions before returning.
+<BR><BR>
+<a name="implement"><font size="4"><b>Implement the COG</b></font></a>
+<BR>
+Okay that's the how to change it a bit, now on to how to implement them (I will only show how to
+implement the original).
+<BR><BR>
+Copy the code from here:
+<BR>
+<blockquote><pre><font size="2" color="808080">
+# Jedi Knight Cog Script
+#
+# C3_CAMERAFF.COG
+#
+# This script will briefly show the effect of using the
+# forcefield console to the player...
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+
+symbols
+
+thing       console                          desc=console
+thing       camera                           desc=camera_ghost
+flex        delay=1.5                        desc=delay
+
+int         old_camera                       local
+int         player                           local
+int         active=0                         local
+
+message     activated
+message     timer
+
+end
+
+# ==================================================================
+
+code
+
+activated:
+   if(active) Return;
+   active = 1;
+
+   player = GetSourceRef();
+
+   if(player == GetLocalPlayerThing())
+   {
+      SetActorFlags(player, 0xa00000);
+      old_camera = GetCurrentCamera();
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+   }
+
+   SetTimer(delay);
+
+   Return;
+
+timer:
+   ClearActorFlags(player, 0xa00000);
+   SetCameraFocus(0, player);
+   SetCurrentCamera(old_camera);
+   active = 0;
+
+   Return;
+
+end
+</font></pre></blockquote>
+TO HERE.
+<BR><BR>
+Paste it into a new file (in notepad or MS-DOS edit)
+and save it as camera.cog.  Make sure to save it as 
+"text only" or it won't work right.
+<BR><BR>
+Now save that file in your projects directory.
+Open up Jed and go to the tools menu and click on "placed cogs."
+<BR><BR>
+Now go to "add cog."
+On the bar on the left there are two
+things - "project directory" and "res2.gob."
+<BR><BR>
+Click on "project directory."
+The camera.cog should be there, so add that cog.
+<BR><BR>
+Now there are 3 things you can pass insert into the cog:
+<BR><BR>
+<blockquote>
+<table>
+<tr>
+ <td><font face="verdana,arial,helvetica" size="2"><b>console(thing)</b></font></td>
+ <td><font face="verdana,arial,helvetica" size="2">the THING that, when activated, will start the camera</font></td>
+</tr>
+<tr>
+ <td><font face="verdana,arial,helvetica" size="2"><b>camera(thing)</b></font></td>
+ <td><font face="verdana,arial,helvetica" size="2">the THING that is the camera</font></td>
+</tr>
+<tr>
+ <td><font face="verdana,arial,helvetica" size="2"><b>delay(integer)</b></font></td>
+ <td><font face="verdana,arial,helvetica" size="2">the INTEGER that tells the camera how long it stays on the camera view</font></td>
+</tr>
+</table></blockquote>
+
+The console, surprisingly, is usually a console thing. Just put in the thing number.
+Camera is usually a ghost thing. Just add a new thing of type ghost. The hard bit is getting the pitch, yaw,
+and roll just right.  These 3 things are what actually align the camera's view.
+Don't make delay too long (5 max) or the player will be a trapped there, unable to move.
+<BR><BR>
+That's it! Pretty easy, huh?
+<BR><BR>
+Happy Editing,
+<BR><BR>
+Booto
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

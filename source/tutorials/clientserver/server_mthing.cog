@@ -1,0 +1,24 @@
+# Jedi Knight Cog Script
+# server_mthing.cog
+#
+# Server cog for the Cleint/Server tutorial.
+#
+# -Obsidian 12-3-99
+
+symbols
+
+message	trigger
+
+end
+
+# ..........
+
+code
+
+Trigger:
+
+If(GetSourceRef() == 98) SendTrigger(-1, 99, 0, 0, 0, 0);
+
+return;
+
+end

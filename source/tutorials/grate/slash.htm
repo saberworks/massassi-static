@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Massassi Temple Slashable Grates Tutorial</title>
+  </head>
+<BODY BGCOLOR="black" TEXT=52A54E LINK=A6BA45 VLINK=457E67>
+<CENTER><FONT SIZE=6><B>Slashable Grates</B></FONT></CENTER>
+<center>Author: <a href="mailto:glitch@digisys.net">8t88</a></center>
+<br><hr><br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A slashable grate is a cool feature of a JK level that's sure to help with your review scores.
+Slashable grates are surprisingly easy to make. So let's begin!</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First, select the default sector and switch to surface mode. Select a side wall and cleave a square
+on it, preferably close to the ground, 0.2 JKUs high. Now, press the &quot;X&quot; key to extrude the surface you just cleaved. Your
+level should look something like this.</p>
+<p align="center"><img src="slash1.gif" width=322 height=229></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this surface, shown selected above, we'll use 08tmshd.mat for the material. Next, we need to
+make it so that the engine draws that surface. When you extruded it was like adjoing the two sectors. Under the surface editor, set the GEO
+value to 4, draw textured.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, under Adjoin Flags, uncheck the second checkbox or flag. This sets the surface to impassible so you
+can't walk through it. Now, check the second and third Surface Flags checkboxes, Used in COG and Impassible respectively. Now, do all that
+again for the other side or surface of the adjoin.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write down the sector and surface numbers for each of the surfaces in the adjoin; you'll need these
+later. You'll find these at the top of the face editor.</p>
+<p align="center"><img src="slash3.gif" width=256 height=281></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, on to the COG! Under the Tools menu, select Placed Cogs. Press the Add Cog button. You
+will see a long list of COGs. Select 00_slashgrate.cog and press OK. There are two fields you need to enter. Under grate, enter one of the
+surface numbers (sector and surface number) and under grateback enter the other number. The format for this is Sector#[space]Surface#.
+Press Refresh and close that window. Now save and compile. That's all there is to it!</p>
+<p align="center"><img src="slash2.gif" width=459 height=48></p>
+<p align="center">The slashable grate in action</p>
+<p align="center">
+<table border="0">
+  <tr>
+    <td><img src="slash4.gif" width=192 height=137></td>
+    <td><img src="slash5.gif" width=210 height=131></td>
+  </tr>
+  <tr>
+    <td align="center">Before</td>
+    <td align="center">After</td>
+  </tr>
+</table>
+
+<BR></body></html>

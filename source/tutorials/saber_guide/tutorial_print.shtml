@@ -1,0 +1,98 @@
+<html>
+<head>
+ <title>The Massassi Temple: Saber Editing : Single Player Saber Color and Saber 2 Sword Tutorials (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Saber Editing : Single Player Saber Color and Saber 2 Sword Tutorials</font>
+<br clear="all">
+<hr>
+Author: Jepman (jepman@endormoon.net)
+<br>
+<br>
+
+<p><b>NOTE:</b> This tutorial expects you to be familiar already with Jedi Knight terms, and that you already have the required programs.</p>
+
+<p><font size="4">Part 1 : Single Player Saber Color</font></p>
+
+<p>I will start this guide off by showing you how to change your Single Player character's saber color for your own levels, WITHOUT renaming existing mats and overwriting and such. It is quite a simple method. What you need to do is add a few lines to your <b>kyle.cog</b> (or whatever the name of your player character is (see Part 2, further below).</p>
+
+<p>Anyway, we'll do this quickly. Open up <b>res2.gob</b> in Conman and go to the /cog folder. Then scroll down to find <b>kyle.cog</b>, and extract it to your project directory. Now, open <b>kyle.cog</b> up and add the following three lines below to the symbols section:</p>
+
+<p><pre><font size="2">template    tpl_wall=+ssparks_wall           local
+template    tpl_blood=+ssparks_blood         local
+template    tpl_saber=+ssparks_saber
+</font></pre></p>
+
+<p>Here is the list of the saber colors available in Jedi Knight:</p>
+
+<p>Yellow:<br>
+&nbsp;&nbsp;&nbsp; saberyellow0.mat<br>
+&nbsp;&nbsp;&nbsp; saberyellow1.mat<br>
+Red 1:<br>
+&nbsp;&nbsp;&nbsp; saberred0.mat<br>
+&nbsp;&nbsp;&nbsp; saberred1.mat<br>
+Red:<br>
+&nbsp;&nbsp;&nbsp; saberdred0.mat<br>
+&nbsp;&nbsp;&nbsp; saberdred1.mat<br>
+Blue:<br>
+&nbsp;&nbsp;&nbsp; saberblue0.mat<br>
+&nbsp;&nbsp;&nbsp; saberblue1.mat<br>
+Green:<br>
+&nbsp;&nbsp;&nbsp; sabergreen0.mat<br>
+&nbsp;&nbsp;&nbsp; sabergreen1.mat<br>
+Orange:<br>
+
+&nbsp;&nbsp;&nbsp; saberorange0.mat<br>
+&nbsp;&nbsp;&nbsp; saberorange1.mat<br>
+Purple:<br>
+&nbsp;&nbsp;&nbsp; saberpurple0.mat<br>
+&nbsp;&nbsp;&nbsp; saberpurple1.mat</p>
+
+<p>Now, add the following lines to the symbols section:</p>
+
+<p><pre><font size="2">material playersbrtip_mat=x.mat           local (eg. x = saberred0.mat)
+material playersbrside_mat=x.mat          local (eg. x = saberred1.mat
+</font></pre></p>
+
+<p>Done yet? If so, in <b>kyle.cog</b>, go down to the <i>init_kyle</i> section, and add the line below under &quot;SetTimerEx(1.50, 1, player, 0);&quot;<br>
+<br>
+<pre><font size="2">jkSetSaberInfo(player, playersbrside_mat, playersbrtip_mat, 
+0.003, 0.001, 0.100, tpl_wall, tpl_blood, tpl_saber);</font></pre></p>
+
+<p>There you go, now you've changed the saber color. In the above line, you could try and toy around with the three numbers (0.003, 0.001, 0.100) to change the size of the saber blade. In order, these three numbers refer to flex base radius, flex tip radius, and flex saber length. See what you can come up with!</p>
+
+<p><font size="4">Part 2 : Saber 2 Sword</font></p>
+
+<p><b>NOTE:</b> I assume that you have an external and internal sword models ready.</p>
+
+<p>Ok, now I will tell you how to set up your nice sword so that the saber blade does not show up and you only see the 3DO. The bad news is, to do this, you have to run this as a patch, and custom sabers are not compatible with this. First off, download this file (http://www.massassi.net/tutorials/sabertrans.zip).
+It is a zip containing all the default Jedi Knight saber mats, but are all transparent (invisible) which will hide the saber blade, yet still do damage.</p>
+
+<p>To change the saber handle to your sword is very easy. Open up <b>weapon_saber.cog</b> and go to the symbols section. There you should see the lines below :</p>
+
+<p><pre><font size="2">model    povModel=sabv.3do             local
+model    saberMesh=sabg.3do            local
+</font></pre></p>
+
+<p>Simply change <i>sabv.3do</i> and <i>sabg.3do</i> to the name of your models. <i>povModel</i> is the internal model and <i>saberMesh</i> is the external one. Now gob this thing up and run it in Patch Commander. It should work perfectly fine.</p>
+
+<p>Well anyway, if you have any trouble with these things, please feel free to contact me at jepman@endormoon.net. Thank you for taking the time to read this tutorial. I certainly hope it will serve you well for your projects.</p>
+
+<p align="center">This tutorial was brought to you by Jepman of Specter
+Studios (http://www.jedilegacy.net/specter/)</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

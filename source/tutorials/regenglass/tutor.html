@@ -1,0 +1,169 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Respawning Glass & Basic C/S .Cog Usage</title>
+</head>
+
+<body bgcolor="#000000" text="#52A54E" link="#A6BA45"
+vlink="#457E67">
+
+<h2 align="center">Regenerating Glass<br>
+and Basic<br>
+C/S .Cog Useage</h2>
+
+<p align="center"><font size="2">By: </font><a
+href="mailto:PC_McCloud@Hotmail.com"><font size="2">PC_McCloud</font></a><font
+size="2"> <br>
+Also Refrence </font><a
+href="http://massassi.jedinights.com/tutorials/glass/tutor.htm"><font
+size="2">Breaking Glass</font></a><font size="2"> By : </font><a
+href="mailto:executor2@earthlink.net"><font size="2">Executor</font></a></p>
+
+<hr>
+
+<p>This is a how to make Regenrating Glass and Basic
+Client/Server .cog Tutorial</p>
+
+<p>Things Needed :</p>
+
+<ul>
+    <li>Regenrating &quot;<a
+        href="http://massassi.jedinights.com/cogfiles/mp/bc.zip">Breaking
+        Glass (C/S)</a>&quot; By <a
+        href="mailto:%2520pele975@hotmail.com">Pele</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ol>
+    <li>Fire up JED and start a New JK / MotS Project with the
+        Defult sector slected Cleave it as I have just about in
+        half like so..</li>
+</ol>
+
+<p align="center"><img src="1.gif" border="1" width="510"
+height="400"></p>
+
+<ol type="1" start="2">
+    <li>Now select one of the surface to be your Glass and Select
+        the .mat you would like ...</li>
+</ol>
+
+<p>In Jedi Knight :</p>
+
+<ul>
+    <li>00wglas1.mat </li>
+    <li>00wglas2.mat </li>
+</ul>
+
+<p>In MotS :</p>
+
+<ul>
+    <li>00_glass.mat</li>
+    <li>00wglas1.mat</li>
+    <li>00wglas2.mat </li>
+</ul>
+
+<p>There are many mats that make Good Subs for the Glass mats tha
+give it a little diffrent look So experment with the mats..</p>
+
+<p>Now you need to Change some on the Serface Properties </p>
+
+<ol type="A" start="1">
+    <li>The &quot;+GEO&quot; needs to beed changed from
+        &quot;0&quot; to &quot;4&quot; this is so you can see the
+        Glass (See Image #2 Below)</li>
+    <li>The &quot;+ADJOIN FLAGS&quot; needs to be set from
+        &quot;7&quot; to &quot;5&quot; (See Image #3 Below)</li>
+    <li>If you want to see Past &quot;Transparten&quot; you Can
+        Set the &quot;+FACE FLAGS&quot; to &quot;2&quot; (See
+        Image #4 Below)</li>
+</ol>
+<div align="center"><center>
+
+<table border="0">
+    <tr>
+        <td>( +GEO ) settings </td>
+        <td>( +ADJOIN FLAGS) settings </td>
+        <td>( +FACE FLAGS ) settings </td>
+    </tr>
+    <tr>
+        <td align="center"><a href="2.gif"><img src="2.gif"
+        alt="Click to Inlarge" border="1" width="150"
+        height="200"></a></td>
+        <td align="center"><a href="3.gif"><img src="3.gif"
+        alt="Click to Inlarge" border="1" width="150"
+        height="200"></a></td>
+        <td align="center"><a href="4.gif"><img src="4.gif"
+        alt="Click to Inlarge" border="1" width="150"
+        height="200"></a></td>
+    </tr>
+    <tr>
+        <td align="center"><a href="2.gif">Click to inlarge</a></td>
+        <td align="center"><a href="3.gif">Click to inlarge</a></td>
+        <td align="center"><a href="4.gif">Click to inlarge</a></td>
+    </tr>
+</table>
+</center></div>
+
+<p>&nbsp;</p>
+
+<ol type="1" start="3">
+    <li>Now after cleaving and setting up the serfaces you need
+        to save your project ans Place the &quot;bcc.cog&quot;
+        &amp; &quot;bcs.cog&quot; in to your Poject Directory</li>
+</ol>
+
+<p align="center"><img src="5.gif" border="1" width="281"
+height="230"></p>
+
+<ol type="1" start="4">
+    <li>After saving you need project press &quot;F7&quot; and
+        &quot;Add Cog&quot; on the left of the window click on
+        the &quot;Project Directory&quot; and add Both
+        &quot;bcc.cog&quot; &amp; &quot;bcs.cog&quot; the Server
+        .cog is the where you add in your Serface infomation
+        Imput in to &quot;Glass (serface)&quot; your first
+        serface you want to be glass add in the serface with a
+        space in the middle like so &quot;0 5&quot;. do the same
+        for the other Glass serface and put it in to &quot;Glass2
+        (Serface)&quot; as i have done .. Don't mess with the
+        &quot;spawnpoints&quot; or &quot;density&quot; for now</li>
+</ol>
+
+<p align="center"><img src="6.gif" border="1" width="341"
+height="113"></p>
+
+<p>For me my Serfaces were &quot;0 5&quot; and &quot;1 5&quot;
+See how I placed the Serface information in to the
+&quot;bcs.cog&quot;. There is No information to imput in to the
+Client Cog &quot;bcc.cog&quot; for it to work properly you MUST
+have it. One Client Cog can Handle the Operation of more then one
+Server Cog, So if you wish to add more then glass serface all you
+to add in another Server Cog. The Client Cog will work for all
+the Glass serfaces in your level.</p>
+
+<p>Now that you have compleated all the Steps above Save and Test
+your level if you compleated them Properly you will have Glass
+the Brakes when you Shoot it and Respawns after 60 Seconds</p>
+<div align="center"><center>
+
+<table border="0">
+    <tr>
+        <td align="center"><img src="7.gif" border="1"
+        width="416" height="349"></td>
+    </tr>
+    <tr>
+        <td><img src="8.gif" border="1" width="425" height="313"></td>
+    </tr>
+</table>
+</center></div>
+
+<p>Good Luck and Happy Glass Shooting :-)<br>
+<font size="2">By </font><a href="mailto:PC_McCloud@Hotmail.com"><font
+size="2">PC_McCloud</font></a></p>
+</body>
+</html>

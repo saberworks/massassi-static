@@ -1,0 +1,63 @@
+<html>
+<head>
+ <title>The Massassi Temple: Finding Skin Palette Problems With JED (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Finding Skin Palette Problems With JED</font>
+<br clear="all">
+<hr>
+Author: Red (theensers@earthlink.net)
+<br>
+<br>
+
+<p><B>Note</B>: This tutorial assumes that the author has general skinning skills and just a smidgen of JED skills.</p>
+
+<p>Lately I've noticed several pallet problems in Jedi Knight Skin. What does a pallet Problem do? Check out these Leia's:</p>
+
+<CENTER>1) <IMG SRC="slave.gif" align="top"> 2) <IMG SRC="slave2.gif" align="top"></CENTER>
+
+<p>Notice how her dress shade changes. This is because each Color Map changes a select few colors in its palette (someday I'll make a list of these and send it in). In the most drastic case (a level with a dflt.cmp) these colors that change would be neon pink (Ouch!). That's why it's a good idea to check for these.</p>
+
+<ol>
+ <p><li> Open JED
+ 
+ <p><li> Hit File -> Save As and Save it (as <b>Untitled.JED</b>) to the directory with all you mats.</p>
+ 
+<CENTER><IMG SRC="save.jpg"></CENTER>
+
+ <p><li> Click the Surface button (<IMG SRC="surface.jpg" align="absmiddle">) on the top menu bar.
+
+ <p><li> Click Tools -> Item Editor<BR>
+
+ <p><li> Double Click +MATERIAL</p>
+ 
+<CENTER><IMG SRC="material.jpg"></CENTER>
+
+ <p><li> Click on Project Directory (upper left hand) and scroll down your mat list. If you see something like this in your lower left hand side: <IMG SRC="baddash.jpg"> you have a problem :-)<BR>
+
+That is what your lovely skin would look like in a level with the dflt.com -- see why we fix that?<BR>
+
+ <p><li> Just re-edit your mat -- trying to get rid of the bad color. And then repeat the checking process.<BR>
+
+</ol>
+
+Happy Hunting :-) I'll get the pallet done if I have a free day (and I'll send it to Massassi)<BR>
+<BR>
+~ Red
+
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

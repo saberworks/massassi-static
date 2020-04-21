@@ -1,0 +1,134 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Adding Multiplayer Sabers</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Adding Multiplayer Sabers</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:dylan_555@hotmail.com">Dylan</a><br>
+Site: <a target="_blank" href="http://www.geocities.com/TimesSquare/Portal/9054">"Dylan's Zone"</a>
+<br>
+<br>
+
+<p>First off, download ConMan (Container Manager).  You can get this at <a target="_top" href="http://www.darkjedi.com">DarkJedi.com</a>.</p>
+
+<p>After running ConMan, find the Res2.gob file (probably on the CD,
+it may be in your Jedi Knight\Resource folder).  Open the file.  After you have done
+that, follow these directions:</p>
+
+
+
+<p align="center">
+
+<table width=95% cols=2>
+ <tr>
+  <td align="center"><img src="modelsaber1.gif"></td>
+  <td>
+   <font face="verdana,arial,helvetica" size="2"><ol>
+    <li>Select the "<b>misc</b>" GOB directory.<br>
+    <li>Select the files "<b>models.dat</b>" and "<b>sabers.dat</b>"	using the <b>[CTRL]</b> key to multiselect.<br>
+     <i><b>NOTE:</b> <u>sabers.dat</u> is the only file required to
+			add multiplayer saberss, but you should also extract <u>models.dat</u>
+			while you're at it since you'll need it if you want to add new
+			models.</ol></font></td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td>
+   <font face="verdana,arial,helvetica" size="2"><ol start=3>
+    <li>Go to the <b>File Menu</b> and click on <b>Extract files...</b>.
+   </ol></font>
+  </td>
+  <td><img src="modelsaber2.gif"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td><img src="modelsaber3.gif"></td>
+  <td>
+   <font face="verdana,arial,helvetica" size="2"><ol start=4>
+    <li>Go to the <b>Jedi Knight</b> directory.<br>
+    <li>Go to the <b>Resource</b> directory.<br>
+   </ol></font>
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td><img src="modelsaber4.gif"></td>
+  <td>
+   <font face="verdana,arial,helvetica" size="2"><ol start=6>
+    <li>Click the <b>Create New Folder</b> button.<br>
+    <li>Name the new directory "<b>misc</b>".  Click "<b>Open</b>".</ol></font>
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td>
+   <font face="verdana,arial,helvetica" size="2"><ol start=8>
+    <li>Open your <b>Jedi Knight\Resource\misc</b> directory through Windows Explorer	and double-click the <b>sabers.dat</b> file.  When prompted, open the file with <b>Notepad</b> (or another text editor).</ol></font>
+  </td>
+  <td><img src="modelsaber5.gif"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td colspan=2><img src="modelsaber8.gif"></td>
+ </tr>
+ <tr>
+  <td colspan=2>
+   <font face="verdana,arial,helvetica" size="2"><ol start=9>
+    <li>Go to the end of the file.  Add the next number in the sequence followed by a colon, then hit <b>[TAB]</b>.<br>
+    <li>Add the BM file name, then hit <b>[TAB]</b>.  This is the picture shown in the Edit Character window in JK.<br>
+    <li>Add the side material (.MAT) file, then hit <b>[TAB]</b>.<br>
+    <li>Add the tip material (.MAT) file.</ol></font>
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2"><p><br></p></td>
+ </tr>
+ <tr>
+  <td colspan=2><img src="modelsaber9.gif"></td>
+ </tr>
+ <tr>
+  <td colspan=2>
+   <font face="verdana,arial,helvetica" size="2"><ol start=13>
+    <li>Go to the top of the file.  Add <i>ONE (1)</i> to <b>numSabers</b> for	each saber added to <b>sabers.dat</b>.</ol></font></td> 
+ </tr>
+</table>
+</p>
+
+<p>After that, you're ready to run JK and use your new sabers.</p>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

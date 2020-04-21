@@ -1,0 +1,165 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Adam Heinmiller">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win98; I) [Netscape]">
+   <title>Tutorial - Making/Using the Target Reticle</title>
+</head>
+
+<body text="#FFFFFF" bgcolor="#002800" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<b><font size=+1>Making/Using the Target Reticule</font></b>
+<br><b>By <a href="mailto:Dragons_bane@hotmail.com">Obsidian</a></b>
+<br>
+<p>This tutorial isn't meant for the new coggers...
+You have to have an understanding of how cog works and some knowledge of
+where files go in the resource directory.&nbsp; I'm going to assume you
+know what goes where in this tutorial.
+<p>The targeting reticule is mainly used in force
+powers (blinding, grip, pull, ect.) and tells the player who/what they
+have targeted.&nbsp; It has no effect other then that, as the force power's
+cog already knows what's targeted and what's not.
+<p>I reviewed many ways to write this tutorial, and
+I concluded that displaying the cog I made and giving detailed comments
+would be the best route, as (how i first started writing this tutorial)
+doing it step by step takes a long time, and is quite confusing (not only
+when writing it, but reading one as long as this one would have to be would
+be no walk in the park either).
+<p>There are 3 commands (there may be more, but you
+only need 3) specifically used for the target reticule.
+<p>JkSetTargetColor(color1, color2, color3);
+<br>JkSetTarget(Thing);
+<br>JkEndTarget();
+<p>JkSetTargetColor sets the colors of the 3 'bouncing'
+circles.&nbsp; Color1 is the color of the 1st circle, color 2 is the color
+of the 2nd circle, and color 3 is the color of the 3rd circle.
+<p>JkSetTarget sets the bouncing circles on the specified
+thing.&nbsp; Only one thing can be targeted in this manner at a time.
+<p>JkEndTarget removes the circles from whatever
+they were set to by JkSetTarget.
+<p>Below is the cog i wrote for this tutorial, it
+is also (should be anyway) available in the zip.&nbsp; It replaces force
+pull.
+<br><font color="#999999" size=-1>(note: the included cog is not commented)</font>
+
+<font color="#CCCCCC" size=-2>
+<p># Jedi Knight Cog Script
+<br># force_pull.cog
+<br>#
+<br># Cog for the Target Reticule tutorial.
+<br>#
+<br># Obsidian 11-14-99
+<p>symbols
+<p>int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+player&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+local
+<br>int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+potential&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; local
+<br>int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+victim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+local
+<p>flex&nbsp;&nbsp;&nbsp; MaxDist=5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local
+<p>message&nbsp;&nbsp;&nbsp;&nbsp;startup
+<br>message&nbsp;&nbsp;&nbsp;&nbsp;activated
+<br>message&nbsp;&nbsp;&nbsp;&nbsp;deactivated
+<br>message&nbsp;&nbsp;&nbsp;&nbsp;pulse
+<p>end
+<p># ==========
+<p>code
+<p>startup:
+<p>player = GetLocalPlayerThing();
+<p>return;
+<p># ..........
+<p>Activated:
+<p>victim = -1;
+<p>SetPulse(.33);
+<p>return;
+<p># ..........
+<p>pulse:
+<p>&nbsp;&nbsp; victim = -1;
+<p>&nbsp;&nbsp; potential = FirstThingInView(player,
+90, 8, 0x404);&nbsp; // Get the First thing in player's sight that is either
+a player (0x400) or an actor (0x4)
+<p>&nbsp;&nbsp; while(potential != -1)
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+HasLOS(player, potential) &amp;&amp;&nbsp;&nbsp;&nbsp; // If the player
+can see potential
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(potential != player) &amp;&amp;&nbsp;&nbsp;&nbsp; // if the player isn't
+potential
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(VectorDist(GetThingPos(player), GetThingPos(potential)) &lt;= MaxDist)
+&amp;&amp;&nbsp;&nbsp;&nbsp; // Make sure potential is no farther then
+MaxDist (5 JKUs)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+!(GetThingFlags(potential) &amp; 0x200)&nbsp;&nbsp;&nbsp; // *shrugs*
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+victim = potential;&nbsp;&nbsp;&nbsp; // If potential passes all the filters,
+then make it the victim.&nbsp; Victim, however, will not be killed until
+the deactivated: message is run.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; potential
+= NextThingInView();&nbsp;&nbsp;&nbsp; // Get the next thing if potential
+was filtered out
+<br>&nbsp;&nbsp; }
+<p>&nbsp;&nbsp; if(victim != -1)&nbsp;&nbsp;&nbsp;&nbsp;
+// If we have a victim targeted
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jkSetTargetColors(1, 2, 3);&nbsp;&nbsp;&nbsp; // Set the colors for the
+target circles
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jkSetTarget(victim);&nbsp;&nbsp;&nbsp; // Set Victim as the target and
+activates the circles
+<br>&nbsp;&nbsp; }
+<br>&nbsp;&nbsp; else
+<br>&nbsp;&nbsp; {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jkEndTarget();&nbsp;&nbsp;&nbsp; // If we have no victim, then turn off
+the circles/cancel the last target.
+<br>&nbsp;&nbsp; }
+<br>&nbsp;
+<p>return;
+<p># ..........
+<p>deactivated:
+<p>If((HasLOS(player, victim)) &amp;&amp;
+(victim != -1))&nbsp;&nbsp;&nbsp; // Makes sure that victim is still in
+sight, and that we actually have a victim to kill
+<br>{
+<br>&nbsp;&nbsp; DamageThing(victim,
+GetThingHealth(victim), 0x4, player);&nbsp;&nbsp;&nbsp; // Turns the lights
+out on whoever is targeted
+<br>}
+<p>SetPulse(0);
+<br>jkEndTarget();&nbsp;&nbsp;&nbsp;
+// Turn circles off
+<p>return;
+<p>end
+<br>
+</font></font>
+
+<font color="#FFFFFF">
+<p>That is the bare bones necessary for using the
+target reticule as it is used in the force powers.&nbsp; By changing the
+flags on FirstThingInView (thing type flags) you can make it select other
+things besides players/actors (such as in force pull).
+<br>
+<p>Good luck and happy editing,
+<p><img SRC="http://www.jediknight.net/mcp/obsidian.jpg" NOSAVE height=31 width=107>
+<br>
+<p><font size=-2>[How was it? Feel free to e-mail
+me at <a href="mailto:Dragons_bane@hotmail.com">dragons_bane@hotmail.com</a>
+with any questions/comments/suggestions]</font>
+<p><font size=-2>Thanks go out to ThreeDee for inspiring
+this tutorial (those that are wondering if I could have made this thanks
+any smaller.. no, believe me i tried :)) (j/k)</font></font>
+<br>
+</body>
+</html>

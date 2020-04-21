@@ -1,0 +1,56 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Ribbed Domes</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Ribbed Domes</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:DeyjaL@AOL.com">JEDMaster</a>
+<br>
+<br>
+
+<p>Before following this tutorial, be sure you can complete the <a href="/tutorials/perfect_pipes/">Perfect Polygons and Pipes Tutorial</a>.</p>
+
+First, you will follow the perfect polygons tutorial until you reach the state shown in the pic. I am making a ten-sided dome.
+<p><img src="rd1.gif"><p>
+Now, switch to the side view and cleave it into a rough dome shape.
+<P><img src="rd2.gif"><p>
+Multiselect the top surfaces and cleave them in half as shown.
+<p><img src="rd3.gif"><p>
+Multiselect the vertexes you created and drag them away from the point as shown.
+<p><img src="rd4.gif"><p>
+You've created some non-planar surfaces in doing that: cleave them in the pattern shown and it'll be fine.
+<P><img src="rd5.gif"><p>
+Now's a good time to texture it. I also cleaved off a flat section so I can add a series of archways around the perimeter later.
+<p>Continue with the perfect polygons tutorial until you've created a complete dome, then adjoin all the sectors.
+<p>Voila! A ribbed dome!
+<p><img src="rd6.gif"><p><img src="rd7.gif"><p>
+Hard, wasn't it?
+
+<br>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+ <title>The Massassi Temple: Simple Elevator (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Simple Elevator</font>
+<br clear="all">
+<hr>
+Author: JM (deyjaL@aol.com)
+<br>
+<br>
+
+<p>This tutorial will show you how to use my generic elevator script. It is not a scripting tutorial in itself, it is a script implementation tutorial! It should be noted that lifts can be created using entities, but scripting gives you much more control. THIS script won't give you much more control, but it's a good start!</p>
+
+<p><dl><dt><b>Tools needed:</b></dt>
+<dd><li>GTKRadiant 1.2.8 or above</li></dd>
+<dd><li>Jedi Outcast</li></dd>
+<dd><li>My script - JMGeneric/elevator01 (http://www.massassi.net/tutorials/jo_elevator/jmelev.zip)</li></dd>
+</dl></p>
+
+<p>Now, how to use the script...</p>
+
+<p>Create the following entities:</p>
+
+<ul>
+ <li>Your elevator, a func_static. Must have an origin brush, I suggest making the origin brush 16*16*16.</li>
+ <li>Two ref_tags. These are the up and down positions, similar to frames in JED. The elevator's origin brush will center itself on these positions.</li>
+ <li>Two func_usables for each switch that controls this elevator. One textured with a switch off texture. The other given the spawnflag 'start off', and textured with a switch on texture. They should be in exactly the same position. </li>
+ <li>A trigger_multiple with a wait value of at least 2 and the spawnflag 'use button'. </li>
+ <li>A target_scriptrunner with a count value of -1 </li>
+</ul>
+
+<p>Give your elevator entity a unique script_targetname value.<br>
+Give your buttons a unique targetname value. BOTH FUNC_USABLES SHOULD HAVE THE SAME TARGETNAME!<br>
+Give each ref_tags unique targetnames. <br>
+Select your trigger, then select your target_scriptrunner, then press ctrl+k <br>
+Deselect all, and select your elevator.<br>
+Insert the key 'PARM2' with the targetname of the up ref_tag as it's value. <br>
+Insert the key 'PARM3' with the targetname of the down ref_tag as it's value. <br>
+Insert the key 'PARM4' with the targetname of the button as it's value. <br>
+Insert the key 'PARM6' with a float value in milliseconds. This is how long it will stay at the top. The trigger_multiple should have a wait value equal to this divided by 1000, plus 2. That is, (PARM6/1000)+2. <br>
+Deselect all. <br>
+Select your target_scriptrunner. <br>
+Insert the key 'usescript' with the value 'JMGeneric/elevator01'. Do not include the extension, or scripts/ <br>
+Insert the key 'PARM1' with the script_targetname of the elevator as it's value. <br>
+Insert the key 'PARM4' with the targetname of the button as it's value. <br></p>
+
+<p>Your elevator will move to the top when the player presses the use button while inside the trigger. Place the trigger right in front of the button! To create more buttons, just duplicate the func_usables and the trigger. All buttons switch states when the elevator moves.</p>
+
+<p><b>DO NOT</b> use spacebar to duplicate elevators! This will clear the spawnflags for BOTH elevators! You have to build each one, and each button for each one, from scratch. </p>
+
+<p><b>DO</b> use unique names for everything! I suggest a naming scheme similiar to the one in the demo map. It uses 'elev_01_up', 'elev_01_button', etc. 
+This script has slightly more overhead then a script made specifically for your elevator, but the difference is negligible. This script is based off of the kejim_post/tower script which controls the small elevator that takes you up to the switch that turns the gun on. </p>
+
+<p>Cheers,<br>
+JM</p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

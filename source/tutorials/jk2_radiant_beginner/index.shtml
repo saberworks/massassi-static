@@ -1,0 +1,103 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: JK2Radiant Beginners Tutorial</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">JK2Radiant Beginners Tutorial</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:whooz@cox.net">Vincent Valentine</a>
+<br>
+<br>
+
+<p>If you haven't already, download JK2 Radiant from <A HREF="http://www.jediknightii.net/files/index.php?link=file&id=145" target="_top">www.jediknightii.net</A> or <A HREF="http://www.massassi.net/programs/">www.massassi.net</A>. After you've downloaded it, open the file and run the executable file, JK2EditingTools.exe.</p>
+
+<p>A dialog will come up, asking you where you want to extract the files to. This <B>must</B> be your gamedata folder. For example, on my computer, Jedi Outcast is installed in <I>C:\Jedi Outcast</I>. So I would type in <I>C:\Jedi Outcast\GameData\</I></p>
+
+<p><CENTER><IMG SRC="one.gif" ALT="WinZip Self Extractor"></CENTER><p>
+
+<p>After the extractor is finished, open up the new Tools folder in the GameData directory. These are all the tools Raven has given us (so far) that we can use to edit Jedi Outcast.</p>
+
+<p><CENTER><IMG SRC="two.gif" ALT="Jedi Outcast Editing Tools"></CENTER><p>
+
+<p>Since this tutorial is only covering basic level editing, we won't deal with the other programs. Double click JK2Radiant.exe to load the map editor. It <B>will</B> take a while to load. Don't give up! The first time Radiant loads, it has to set several configurations; the loading time from then on will be much faster. </p>
+
+<p>Grey on white is bad. It hurts after a while. Lets make it green. Go to Misc>Colors>Themes, and select Black and Green. Ah... my eyes feel better already.</p>
+
+<p>Now, to make sure you have all the necessary views open, go to Edit, and select preferences. Make sure that the first icon view in the Views/Rendering box is selected.</p>
+
+<p><CENTER><IMG SRC="three.gif" ALT="Select the first icon"></CENTER><p>
+
+<p>Okay, lets make a room! Creating a brush is simple, you just drag the mouse. Along the top and left side of the main editing window, you'll see a bunch of numbers. These are the map coordinates. Left click and hold where the 128 (on the left side) and the -128 (on the top) intersect. Drag the mouse over to where -128 (left) and 128 (top) intersect, creating a red box.</p>
+
+<p><CENTER><IMG SRC="four.gif" ALT="Your first brush"><br>*Note: That blue thing is the camera.</CENTER><p>
+
+<p>Now, we'll need to make sure the box is the right height. To change views, press <B>[Ctrl]+[Tab]</B>. Change views until <I>YZ Side</I> is displayed in the upper left corner of the main window. To make it taller, left click above the long side on the top and drag the mouse upward. Drag it until the top line is on 128, then bring the bottom to 0 if it isn't already.</p>
+
+<p><CENTER><IMG SRC="five.gif" ALT="YZ Side View"></CENTER><p>
+
+<p>We have just created a brush, which is a solid object in Jedi Outcast (and most other modern 3d games). But to actually have a level, you have to hollow out the brush. Otherwise the level would be unplayable; you have to have an empty space bounded by solids to run around in. To hollow the brush, hit the hollow button on the button bar. <IMG SRC="six.gif" ALT="Hollow button"> Now your map (hopefully) looks like this: </p>
+
+<p><CENTER><IMG SRC="seven.gif" ALT="Your Hollowed Room"></CENTER><p>
+
+<p>Now that it's hollowed, deselect it by pressing <B>[Esc]</B>.</p>
+
+<p>Let's texture this baby up. For this you won't need the main editing window, so lets focus on the 3d preview. Navigating in the 3d preview is fairly simple. The arrow keys move you around, <B>[A]</B> and <B>[Z]</B> look up and down, while <B>[D]</B> and <B>[C]</B> move you up and down.</p>
+
+<p>If you not inside your room, move inside it using the controls stated above. Select the floor by holding <B>[Shift]+[Ctrl]</B> and left clicking on it. It should turn reddish. We need to load a texture set to choose textures from. In the Textures menu, click <I>bespin</I>. The textures may take a while to load; be patient.]</p>
+
+<p>The Texture Browser should be right below the 3d preview. You can scroll through the textures and pick your own, or you can type in the box <I>floor</I> and select the first texture that appears. Your floor surface should be now textured.</p>
+
+<p><CENTER><IMG SRC="eight.gif" ALT="Your Textured Floor"></CENTER><p>
+
+<p>You can also select a group of brushes to texture at one time. Click in the 3d preview, then hit <B>[Esc]</B> to deselect the floor. Hold <B>[Shift]</B> and click each of your rooms foor walls. Once again, you may pick your own texture, or type in <I>mp_b_wall04a</I> and select that texture. Your walls should all be textured and (hopefully) aligned correctly.</p>
+
+<p><CENTER><IMG SRC="nine.gif" ALT="Your (almost) Textured Room"></CENTER><p>
+
+<p>Deselect your walls (<B>[Esc]</B>, remember?) and select the cieling. Texture it using your own texture, or <I>ceiling01</I>. Your room should be completely textured. But what good are textures if you cant see them in game? You need a light!</p>
+
+<p>In the main editing window, click somewhere in the middle of your room. From the large menu that comes up, select "light".</p>
+
+<p><CENTER><IMG SRC="ten.gif" ALT="Light"></CENTER><p>
+
+<p>Switch to other views (<B>[Ctrl]+[Tab]</B>) and move your light into the center of the room by clicking it and dragging. You just created a light, so you can see your beautiful level. But what good is that if you can't actually get in your room? You need a player_start!</p>
+
+<p>Deselect your light (<B>[Esc]</B>), and once again, right click in your room, and from the menu, choose info>info_player_start. Look in other views and make sure that he is completely inside your level and a little bit above the floor. If your player is not above the floor, he will fall through the floor, which is not a good thing.</p>
+
+<p>Now your level has everything it needs. Save your level (File>Save As), and save it in Jedi Outcast\GameData\Base\Maps. This is extremely important if you want to be able to play your level. After you have saved, go to Bsp>Fullvis.</p>
+
+<p><CENTER><IMG SRC="eleven.gif" ALT="BSP Menu"></CENTER><p>
+
+<p>A command window will pop up and do some stuff... it may take a while. This is a compiler, which converts your level into information Jedi Outcast can use to run a level. After it's done (it will say <I>Finished</I> in the title bar), close that window and exit Jk2Radiant. You're ready to test your level!</p>
+
+<p>Load the Jedi Outcast Single Player program. After you're in the interface, bring up the console by pressing <B>[Shift]+[`]</B>. In case you don't know, the <B>[`]</B> key is right above <B>[Tab]</B>. Type in <I>devmap [maptitle</I>], where <I>[maptitle]</I> is the name of your level. For example, my map is called MyMap.map, so I would type <I>devmap MyMap</I> without the *.map extension. Your level will load, if you did everything right.</p>
+
+<p>Now that are are somewhat familiar with how JK2Radiant works, you can use tutorials made for Quake3 Radiant and apply them to Jedi Outcast. Have fun!</p>
+
+<p><CENTER><IMG SRC="mymap.jpg" ALT="My Map"></CENTER><p>
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

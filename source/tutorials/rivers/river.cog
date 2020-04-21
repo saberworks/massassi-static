@@ -1,0 +1,113 @@
+# River cog script
+#
+# Cog to make river.
+# Keeps cogs to a minimum because it does sector thrust info
+# and surface slid info in one.
+#
+# Copyright (c) 1998 Evan C
+# ============================================================
+symbols
+
+vector		vec1
+vector		vec2
+vector		vec3
+vector		vec4
+vector		vec5
+vector		vec6
+vector		vec7
+vector		vec8
+vector		vec9
+vector		vec10
+vector		vec11
+vector		vec12
+
+surface		top1
+surface		bottom1
+surface		top2
+surface		bottom2
+surface		top3
+surface		bottom3
+surface		top4
+surface		bottom4
+surface		top5
+surface		bottom5
+surface		top6
+surface		bottom6
+surface		top7
+surface		bottom7
+surface		top8
+surface		bottom8
+surface		top9
+surface		bottom9
+surface		top10
+surface		bottom10
+surface		top11
+surface		bottom11
+surface		top12
+surface		bottom12
+
+sector		water1
+sector		water2
+sector		water3
+sector		water4
+sector		water5
+sector		water6
+sector		water7
+sector		water8
+sector		water9
+sector		water10
+sector		water11
+sector		water12
+
+flex		speed
+
+message		startup
+
+end
+code
+
+startup:
+// scrolls top of river
+SlideWall(top1,vec1,speed);
+SlideWall(top2,vec2,speed);
+SlideWall(top3,vec3,speed);
+SlideWall(top4,vec4,speed);
+SlideWall(top5,vec5,speed);
+SlideWall(top6,vec6,speed);
+SlideWall(top7,vec7,speed);
+SlideWall(top8,vec8,speed);
+SlideWall(top9,vec9,speed);
+SlideWall(top10,vec10,speed);
+SlideWall(top11,vec11,speed);
+SlideWall(top12,vec12,speed);
+
+SlideWall(bottom1,vec1,speed);
+SlideWall(bottom2,vec2,speed);
+SlideWall(bottom3,vec3,speed);
+SlideWall(bottom4,vec4,speed);
+SlideWall(bottom5,vec5,speed);
+SlideWall(bottom6,vec6,speed);
+SlideWall(bottom7,vec7,speed);
+SlideWall(bottom8,vec8,speed);
+SlideWall(bottom9,vec9,speed);
+SlideWall(bottom10,vec10,speed);
+SlideWall(bottom11,vec11,speed);
+SlideWall(bottom12,vec12,speed);
+
+// sector thrust
+SetSectorThrust(water1,vec1,speed);
+SetSectorThrust(water2,vec2,speed);
+SetSectorThrust(water3,vec3,speed);
+SetSectorThrust(water4,vec4,speed);
+SetSectorThrust(water5,vec5,speed);
+SetSectorThrust(water6,vec6,speed);
+SetSectorThrust(water7,vec7,speed);
+SetSectorThrust(water8,vec8,speed);
+SetSectorThrust(water9,vec9,speed);
+SetSectorThrust(water10,vec10,speed);
+SetSectorThrust(water11,vec11,speed);
+SetSectorThrust(water12,vec12,speed);
+
+return;
+
+end

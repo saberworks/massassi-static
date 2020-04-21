@@ -1,0 +1,46 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Sloped Corners</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Sloped Corners</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:DeyjaL@AOL.com">JEDMaster</a>
+<br>
+<br>
+
+This is another technique for creating sloped surfaces in the corner of rooms. This method is much more flexible and quicker than previous methods. Simply take the corner of your sector and cleave the corners off of all three surfaces that meet there, as shown:
+
+<p><img src="cornerslope1.gif" width=230 height=170 border="0"></p>
+
+Now, merge the cleaved off portions into a single surface. Presto!
+
+<p><img src="cornerslope2.gif" width=318 height=198 border="0"></p>
+
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

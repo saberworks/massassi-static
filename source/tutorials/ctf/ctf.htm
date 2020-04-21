@@ -1,0 +1,177 @@
+<HTML><HEAD>
+<TITLE>Massassi Temple CTF Tutorial</TITLE>
+</HEAD>
+<BODY BGCOLOR="black" TEXT=52A54E LINK=A6BA45 VLINK=457E67>
+
+<center><img src="Ctf1.jpg"></center>
+<BR><BR>
+
+	CTF (Capture The Flag) is a incredible composition of complex COG
+work and level design.  CTF can be very easy to install, however
+it can also be painstaking work if you have never had experience with
+it.  I hope this tutor will help you.  Some of the terms that I am going to use 
+may be a little bit more advanced since this tutor was not written for a 
+novice editor.  Enough of that, on to how to make CTF.
+<BR><BR>
+	The problem I had with CTF was how to place the things.
+You must have the "Thing Placement" in the "JKL" file in correct order.
+<BR><BR>
+Here is the correct "Thing Placement" for CTF to work correctly.
+(Note: The terms that I use will be explained later, and I've used "Thing Numbers"
+1 - 46 in in my chart.
+<BR><BR>
+<center><table width="90%" border="1" cellpadding="3">
+<tr><td><FONT COLOR=48BFB0><b>Thing Number</b></font></td><td><FONT COLOR=48BFB0><b>Thing Name</b></font></td><td><FONT COLOR=48BFB0><b>ThingFlags</b></font></td><td><FONT COLOR=48BFB0><b>Notes</b></font></td></tr>
+
+<tr><td>1:</td><td>ctf_redflag</td><td>0X400</td><td>&nbsp;</td></tr>
+
+<tr><td>2:</td><td>ctf_redflag</td><td>0X400</td><td>&nbsp;</td></tr>
+
+<tr><td>3:</td><td>ghost</td><td>None</td><td>This is where the flag is
+                                           spawned back to if it was 
+                                           captured or a player was killed
+                                           with it. Red Teams.</td></tr>
+
+<tr><td>4:</td><td>ghost</td><td>None</td><td>Same as above but for Gold Team</td></tr>                 
+
+<tr><td>5 - 12:</td><td>ghost</td><td>None</td><td>These are the start points  
+                                           for the red team when entering
+                                           the game.</td></tr>
+
+<tr><td>13 - 20:</td><td>ghost</td><td>None</td><td>Same as above but for the Gold
+                                           Team.</td></tr>
+
+<tr><td>21 - 28:</td><td>Walkplayer</td><td>0X20080501</td><td>Red Teams player start points 
+                                           after entering the CTF enviroment.</td></tr>
+                                           
+<tr><td>29 - 36:</td><td>Walkplayer</td><td>0X20080501</td><td>Same as above but for the gold
+                                           team.</td></tr>
+
+<tr><td>37 - 44:</td><td>Walkplayer</td><td>0X20080501</td><td>These are the player points which
+                                           are used when entering the game.</td></tr>
+
+<tr><td>45:</td><td>ghost</td><td>None</td><td>Used in CTF_SAFEENTY.COG to teleport
+                                           a player back if there is too much 
+                                           lag.  More on this later. Red Team.</td></tr>
+
+<tr><td>46:</td><td>ghost</td><td>None</td><td>Same as above.  Gold Team.</td></tr>
+</table></center><BR>
+	Ok now that I have shown you the correct order in which "Things"
+should be placed. I will now go on to installing CTF, which will use my definitions
+of things above within it.
+<BR><BR>
+Now I will add the appropriate thing values of what they should be in your
+placed COG which is CTF_MAIN.COG.
+<BR><BR>
+<CENTER><img src="Ctf2.jpg"></CENTER>
+<BR><BR>
+<table width="80%" border="1" cellpadding="3">
+<tr><td><FONT COLOR=48BFB0><b>Value</b></font></td><td><FONT COLOR=48BFB0><b>Thing Number</b></font></td></tr>
+
+<tr><td>Flag_Red</td><td>         1</td></tr>
+<tr><td>Flag_Gold</td><td>        2</td></tr>
+<tr><td>Flag_Ghost_Red</td><td>   3</td></tr>
+<tr><td>Flag_Ghost_Gold</td><td>  4</td></tr>
+<tr><td>Start_Room</td><td>       Explain Later</td></tr>
+<tr><td>Mark_Red</td><td>         Explain Later</td></tr>
+<tr><td>Mark_Gold</td><td>        Explain Later</td></tr>
+<tr><td>Limit1</td><td rowspan="3">These are surface values used for setting the score limit.
+I know how to use these but I have been unable to display
+the texture correctly it always ends up like if you were 
+holding up say the letter "B" and looking in the mirror at
+it completly ass-backwards.  If you can figure this out
+please let me know.</td></tr>
+
+<tr><td>Limit2</td>
+<tr><td>Limit3</td>
+<tr><td>Score_Dislay_Cog</td><td>Not to sure what this is for.</td></tr>
+<tr><td>Red_Start</td><td>        5</td></tr>     
+<tr><td>Red_Start1</td><td>       6</td></tr>
+<tr><td>Red_Start2</td><td>       7</td></tr>                                 
+<tr><td>Red_Start3</td><td>       8</td></tr>
+<tr><td>Red_Start4</td><td>       9</td></tr>
+<tr><td>Red_Start5</td><td>       10</td></tr>
+<tr><td>Red_Start6</td><td>       11</td></tr>
+<tr><td>Red_Start7</td><td>       12</td></tr>
+<tr><td>Gold_Start</td><td>       13</td></tr>
+<tr><td>Gold_Start1</td><td>      14</td></tr>
+<tr><td>Gold_Start2</td><td>      15</td></tr>  
+<tr><td>Gold_Start3</td><td>      16</td></tr>
+<tr><td>Gold_Start4</td><td>      17</td></tr> 
+<tr><td>Gold_Start5</td><td>      18</td></tr>
+<tr><td>Gold_Start6</td><td>      19</td></tr>
+<tr><td>Gold_Start7</td><td>      20</td></tr>
+</table>
+Don't worry about the last 4.  Same problem as with the Limits
+<BR><BR>
+I will now explain CTF_SAFEENTRY.COG.
+<BR><BR>
+<img src="Ctf3.jpg">
+<BR><BR>
+<table border="1" cellpadding="3">
+<tr><td><FONT COLOR=48BFB0><b>Value</b></font></td><td><FONT COLOR=48BFB0><b>Thing Number</b></font></td></tr>
+<tr><td>Mark_Red</td><td>Explain Later</td></tr>
+<tr><td>Mark_Gold</td><td>Explain Later</td></tr>
+<tr><td>Ghost_Red</td><td>45</td></tr>
+<tr><td>Ghost_Gold</td><td>46</td></tr>
+</table><br><br>
+Last COG is called CTF_RESPAWN.COG
+<BR><BR>
+<img src="Ctf4.jpg">
+<BR><BR>
+<table border="1" cellpadding="3">
+<tr><td><FONT COLOR=48BFB0><b>Value</b></font></td><td><FONT COLOR=48BFB0><b>Thing Number</b></font></td></tr>
+<tr><td>Mark_Red</td><td>Explain Later</td></tr>
+<tr><td>Mark_Gold</td><td>Explain Later</td></tr>
+</table><BR>
+
+	Now the format of the level will be explian using a simplistic level
+with the basic components needs for a CTF level to work correctly.
+<BR><BR>
+<img src="Ctf5.jpg">
+<BR><BR>
+
+(i) This is your start sector so get the sectors number and put that into 
+the CTF_MAIN.COG where it says Start_Room.  The things that are present in
+this sector are things 37 - 44 these are the inital start places for players.
+<BR><BR>
+(ii) This is defined in CTF_SAFEENTRY.COG under the value of Mark_Red.  
+So get the value of the sector and input it under the Mark_Red value.
+This is important to the game because if lag is to great and you are not 
+teleported into the game with your color it will put you back infront of
+the team select sector.
+<BR><BR>
+(iii) This is the Ghost_Red value in the CTF_SAFEENTRY.COG mark the thing
+number under that value.
+<BR><BR>
+(iiii) This sector has two functions.  The first is Mark_Red in the CTF_MAIN.COG.
+the second function is for CTF_RESPAWN.COG which the sectors value is placed
+again in the Mark_Red.
+<BR><BR>
+(iiiii) Same as (ii) but for the Gold team.
+<BR><BR>
+(iiiiii) Same as (iii) but for the gold team.
+<BR><BR>
+(iiiiiii) Same as (iiii) but for the gold team.
+<BR><BR>
+Ok now that all this values are entered and if you have done this correctly
+your CTF should work.
+<BR><BR>
+Now for a explanation of the mechanics.
+<BR><BR>
+The CTF_MAIN.COG designates the Walkplayers from 37 - 44 as the start players
+thats why you must define a start sector.
+<BR><BR>
+Next a player has entered a game and he/she decides to goto the Red team so
+they enter the Mark_Red sector or (iiii) as I have defined above and then 
+the CTF_RESPAWN.COG chooses a random start point using the ghost things 
+5 - 12.  Say a player does not enter the game correctly the CTF_SAFEENTRY.COG
+teleports the play back to the Ghost_Red thing so he can try to enter again.
+<BR><BR>
+Thats it except for when a player dies the CTF_MAIN.COG has a internal code
+which is not defined to Respawn players from Walkplayer 29 - 36 for Red Team
+and 37 - 44 for Gold Team.
+<BR><BR>
+Questions or Comments, feel free to ask:<BR>
+<a href="mailto:herion@idirect.com">Pot-Head</a>
+<BR><BR>

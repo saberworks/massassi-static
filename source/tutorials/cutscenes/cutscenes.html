@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>MotS-Style Cutscenes Tutorial</title>
+</head>
+<BODY   BGCOLOR = "#000000"
+        TEXT    = "#52A54E"
+        LINK    = "#A6BA45"
+        VLINK   = "#457E67"
+        ALINK   = "#FFFF00">
+
+<center>
+<FONT SIZE="+2">MotS-Style Cutscenes Tutorial</FONT><BR>
+<FONT SIZE="+1">What they are, how they work and how to create them</FONT><BR>
+By <A HREF="mailto:Ant@Horrible.Demon.co.uk">Antony Espindola</A>
+</center>
+<P>
+<HR>
+<P>
+One of the best features of the Jedi Knight series of games is the fact that they contain
+"cutscenes" when you finish either a level or certain objectives. These are like
+mini-movies which help with the flow of the story being told by the game.
+The cutscenes in Jedi Knight were pre-recorded video which is then saved to the CD in
+a special format and then played back.
+<p>
+With the Mysteries of the Sith add-on pack, the cutscenes changed from video to being
+"acted" out by the graphics engine of the game itself. These cutscenes were also recorded
+to the CD (as .san files) but were created using the game engine and COGs. This tutorial
+shows you how to achieve the same effects by writing your own COGs to control Actors and
+the camera(s). You'll need some COG experience, which you can get from other tutorials, but
+I'll explain everything as best I can so hopefully you won't need too much experience
+to understand it!
+<p>
+Cutscenes make a nice addition to any SP level. They give a professional feel and are
+easy to write. At least you don't have to hire (and pay) actors! The best way to implement
+any cutscenes is to have a story. Use the cutscenes to enforce the story and give your
+player a break from the action. It's nice to see a quick intro to a level (How did Kyle/Mara
+get there? Why are they there?) and also to wrap up the ending to the story.
+<p>
+Now you have some idea about what you want to see in your cutscenes, we'll discuss how
+you go about implementing your ideas. We all know from using Security Cameras in levels
+that you can view your level from a different object - this is the basis for our "camera".
+A camera is only a "thing" which can have frames and can therefore be moved around. Now
+we have a panning, tilting and moving camera!
+<p>
+Our actors are just that - Actor Things. We can create things that use any template and that
+includes Kyle, Mara, StormTroopers, Darth Vader and so on. Each Actor has commands which
+can be used to get it to do things - move to positions, look in certain places and even
+fire their weapons or die. In fact, anything in the game can be done with the right COG
+commands.
+<p>
+One thing that we cannot do however, is control the Player object. We must therefore be a
+bit sneaky and replace the Player object with an exact copy which is really an Actor object
+instead. We then hide the Player object by making it invisible! That way, we control the
+Actor, don't worry about the player and you just see the cutscene!
+<p>
+<h2>Setting the Stage</h2>
+The first thing that we need to do for our cutscene is to create a stage for our actors
+to work with. This is simply part of the level where we can create our Actors, move them
+around, play out the cutscene and then pass control back to the game and the player.
+This area doesn't have to be part of the actual level; you can create it seperately from
+the main level in a bit of space that you have spare. This works best for levels where
+the action takes place inside something, such as a Bulk Cruiser, but we want the cutscene
+to show some action outside, such Pirate Fighters attacking it. Just create a large cube
+in the corner of your level somewhere, dress the inside with the ships and stars and viola!
+One make-shift studio!
+<p>
+<h2>Implementing our COGs</h2>
+I assume that you know how and when COGs can be called, such as entering sectors, touching
+surfaces, activating objects and so on. We can also use the Master COG to produce a small
+intro cutscenes when our level starts. Maybe Kyle has just landed and discovers the
+hidden entrance to an Imperial Base in a mountain. You get the idea! Assuming that we
+have an area in our level for our Actors to "work" in, we can create our Startup COG
+to start playing our cutscene. You can edit the startup COG directly or call another COG
+from within. I'll leave that up to you as it depends on your COGging ability!
+<p>
+<h2>Camera Implementation</h2>
+We know that viewing the cutscene as Kyle/Mara isn't going to very exciting, so we need to
+create one or more external cameras. We simply place "ghost" objects, as these don't appear in
+the game and are invisible, into our level. Change the <i>Roll, Pitch and Yaw</i> of the
+camera to get it pointing in the right direction. This is a bit hit-and-miss, so you'll
+have to give it a try and keep testing until you get it right. Just a few attempts will
+give you the feel for it.
+<p>
+Using frames in our camera things allows us to setup positions where we want the camera
+to move between. We then simply use our COG to move the camera around between the frames.
+Before we do that, we first want to switch the view to our camera object. This is done
+with this little bit of code:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+    // switch to camera view
+    SetCameraFocus(0, CameraThing);
+</PRE></FONT></UL>
+<p>
+The first parameter, a <FONT COLOR="#FFFFFF">0</FONT> in this case is always used as a zero. This defines "internal"
+view, just like the internal view for Kyle. As other objects don't have external views,
+always make sure this parameter is zero!
+<p>
+The <FONT COLOR="#FFFFFF">CameraThing</FONT> object has been defined as a Thing
+and assigned to our Ghost object we want to use as a camera. When this piece of code is
+now called, we see the view from that Object.
+<p>
+Use this code to switch between any number of cameras you have defined in your COG.
+<p>
+We also need to know how to set the view back to the player. This is done using the code:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+    // switch to player view
+    SetCameraFocus(0, jkGetLocalPlayer());
+</PRE></FONT></UL>
+<p>
+This just switches the camera back to the internal view for the player. Simple!
+<p>
+<h2>Introducing the Grip</h2>
+Ever wondered what the "Grip" is in a film's credits? Apparently it's the poor person who
+has to pull the cart with the camera attached when they film a moving shot. This is
+what we are now going to look at - moving our camera.
+<p>
+Moving any object can be done with frames. A frame is a definition of an object in a
+certain position. Most objects don't have frames because they don't need to move. If you've
+ever created a door in your level, you'll know about how frames work. You define a series
+of frames for an object, a bit like a "dot-to-dot" puzzle. When you use the COG to move
+the object to the next frame, or "dot", the game engine fills in between the frames,
+moving it along the "line". This allows us to create complicated paths for our camera which
+it can move along.
+<p>
+Getting the camera to move between frames is a doddle:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+    // move camera between frames
+    MoveToFrame(CameraThing, 1, speed);
+    MoveToFrame(CameraThing, 2, speed);
+    MoveToFrame(CameraThing, 3, speed);
+</PRE></FONT></UL>
+<p>
+No! That's too easy! Yes, it really is <b>that</b> easy to move a camera around.
+You don't need to implement any sort of delays in between moving the frames as the
+game engine will wait until the camera has finished moving before setting it off
+to the next frame.
+<p>
+In case you didn't guess it, <FONT COLOR="#FFFFFF">CameraThing</FONT> is our Ghost object
+we're using as a camera. The number, <FONT COLOR="#FFFFFF">1</FONT>,
+<FONT COLOR="#FFFFFF">2</FONT>, <FONT COLOR="#FFFFFF">3</FONT> etc is the number
+of the frame you want the object to move to. The last number (a float) is
+<FONT COLOR="#FFFFFF">Speed</FONT> which is just that - the speed the object moves.
+<p>
+Because our ghost "camera" object is just another object, we can use this technique to
+move <b>any</b> object around, including the models of ships.
+<p>
+<h2>Emotions Dahling, Emotions...</h2>
+Now we need to look at how we create, move and animate our Actors.
+Remember I said earlier about cheating with the Player by replacing it with an Actor?
+This is how you do it:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+thing      player                    local
+thing      kyle                      local
+template   gunless=KyleBryarActor    local
+
+[...]
+
+    // setup first
+    player = GetLocalPlayerThing();
+    jkBeginCutscene();
+
+    // switch the player for an Actor
+    SetActorFlags(player, 0xa00000);
+    StopThing(player);
+    Kyle = CreateThing(gunless, player);
+    StopThing(Kyle);
+    SetThingCurGeoMode(player, 0);
+
+</PRE></FONT></UL>
+<p>
+You'll notice I've introduced a few extras in there. The first bit gets the handle for
+our player. The next line, <FONT COLOR="#FFFFFF">jkBeginCutscene();</FONT> tells the
+game engine that we are acting out a cutscene and that the user <b>must</b> sit and
+watch it. It stops them pressing "Escape" to get out to the setup screens.
+<p>
+The <FONT COLOR="#FFFFFF">SetActorFlags(player, 0xa00000);</FONT> makes the player
+object (that we setup earlier) unable to respond to the player's interactions. This stops
+them running around, shooting or whatever when we're trying to do our cutscene!
+<p>
+We also use <FONT COLOR="#FFFFFF">StopThing(player);</FONT> as this stops the player
+dead in their tracks. If you don't have this line, it's possible to move the mouse and
+when the <FONT COLOR="#FFFFFF">SetActorFlags()</FONT> line is executed, the player can
+spin on the spot! Looks kinda funny!
+<p>
+The next lines are where we do our swapping. We setup an object (called
+<FONT COLOR="#FFFFFF">Kyle</FONT>) to be a new object that we create using the template
+defined for <FONT COLOR="#FFFFFF">gunless</FONT>, at the position of <FONT COLOR="#FFFFFF">player</FONT>.
+This will create an exact replica of Kyle where the player is standing. At this point,
+we haven't yet switched to our camera view so you can't see it.
+<p>
+We also want to make sure that our new Kyle actor isn't doing anything, so we use the
+<FONT COLOR="#FFFFFF">StopThing()</FONT> command again.
+<p>
+Finally, we make our player "invisible" by using the <FONT COLOR="#FFFFFF">SetThingCurGeoMode()</FONT>
+to set their Geo Mode to zero, which is "not drawn".
+<p>
+We are now free to use our camera code to switch to an external view and watch the action!
+<p>
+Using the same code to create Actors at points, using different templates such as the
+StormTrooper or Darth Vader, we can create more Actors in our scene. If the scene is
+in an area the player cannot get to, the Actors can always be predefined, ready and waiting
+for the words <b>"Action!"</b>.
+<p>
+<h2>What's my motivation for this scene...?</h2>
+Now we have all our actors, scenery and the like ready and waiting, we just need to animate
+the Actors. There are many commands you can use to do this. A good reference is at the
+<a href="http://www.jedinights.com/massassi/specs/jkspecs.htm" target ="_top">JK Specs</A>
+pages under the Actors section in "COGs".
+<p>
+Another good place to check on how LucasArts did their cutscenes is by looking in the
+<FONT COLOR="#FFFFFF">CutScenes.zip</FONT> file which is on your MotS CD. This has all
+the COGs used to create all the cutscenes from the game. It's interesting to look through
+these and see some of the names they gave the StormTroopers. I would have thought they'd
+have had more <i>macho</i> names than <i>Kevin</i> or <i>Brian</i>!
+<p>
+Anyway, here are a few commands you can use to create some effects:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+    AISetMoveSpeed(Kyle, 1.0);
+    AISetLookPos(Kyle, GetThingPos(BombGhost));
+    AISetMoveThing(Kyle, BombGhost);
+</PRE></FONT></UL>
+<p>
+This shouldn't take too much explaining as it's pretty obvious. This code comes from
+one of my levels where Kyle looks towards an object (<FONT COLOR="#FFFFFF">BombGhost</FONT>)
+and then runs towards it. Don't forget to set the <FONT COLOR="#FFFFFF">AISetMoveSpeed</FONT>
+to make it look right.
+<p>
+<h2>Play it again Sam</h2>
+You can also play Keys for an actor to make it look like they are doing things. Define
+the key you want to play by looking in that Actor's <b>.PUP</B> file as this will
+tell you which keys do what action. You then "play" the key and the Actor does the action:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+keyframe    crouch=kyusef0.key    local
+int         keynum                local
+
+[...]
+
+    keynum=PlayKey(Kyle, crouch, 1, 0x4);
+
+    // now do some other stuff
+
+    StopKey(Kyle, keynum, 0);
+</PRE></FONT></UL>
+<p>
+This code plays the animation key for kyle to crouch down and look like he is either
+picking something up, putting it down or activating it. The KeyFrame will play continuously
+until you use the <FONT COLOR="#FFFFFF">StopKey()</FONT> command to stop playing it.
+Use a <FONT COLOR="#FFFFFF">Sleep()</FONT> command to get the COG to wait until you have
+finished what you are doing.
+<p>
+<h2>That's a Wrap!</h2>
+Now you've done your acting, you need to tidy-up after yourself at the end of the code.
+This includes things like switching back to the Player's viewpoint, turning off the
+CutScene command, making the player visible again and so on. Here's the code:
+<p><UL>
+<FONT COLOR="#FFFFFF"><PRE>
+    // stop cutscene
+    jkEndCutscene();
+
+    // switch back to player focus
+    SetCameraFocus(0, Player);
+
+    // unfreeze Kyle
+    ClearActorFlags(Player, 0xa00000);
+
+</PRE></FONT></UL>
+<p>
+...and you're off again!
+<p>
+I haven't gone too deeply into creating cutscenes- just shown you how to create them
+and what you need to do to get the right effects. As always, experimentation is the best
+way of getting the knowledge, so get out there, stoke up your copy of JED and make
+yourself some tasty COGs which are good enough for an Oscar!
+<p>
+<i>Happy Hunting!</I>
+<p>
+<HR>
+</BODY>
+</HTML>
+
+

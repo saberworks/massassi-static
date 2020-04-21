@@ -1,0 +1,81 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Intermediate Ramps</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Intermediate Ramps</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:brian@massassi.net">Brian Lozier</a>
+<br>
+<br>
+
+<p>It is recommended that you work through the first <a href="/tutorial/ramps/">Ramps Tutorial</a>.  We will begin here using the following project that I suggested saving in the last
+half:</p>
+<BR><BR>
+<center><img src="1.gif"></center>
+<center><b>Note:</b> this is before the bottom cleaved sector was deleted!</center>
+<BR><BR>
+Another thing, for this tutorial, since there are more precise cleaves required,
+I have switched the grid dots to 0.1, and the snap to 0.1.  As I just said, this
+will allow you make more precise cleaves.
+<BR><BR>
+<ol>
+<li> The first step in this tutorial is to cleave the bottom cleaved sector
+(the one selected above) just below the original cleave, like illustrated
+below.
+<BR><BR>
+<center><img src="2.gif"></center>
+<BR><BR>
+<li> Now making sure the SECTOR shown above is highlighed, switch to the top
+view using [shift+1].
+<BR><BR>
+<li> You will notice that the sector now looks square, but remember, it is
+slanted upwards, you just can't see it from this view.
+<BR><BR>
+<center><img src="3.gif"></center>
+<BR><BR>
+<li> Now it's time to make 2 cleaves, creating a ramp in the center of your
+room, going up.  Follow the diagram below to see where to make the cleaves.
+I suggest switching back and forth between side and top view to make sure
+you have the correct sectors selected before cleaving!
+<BR><BR>
+<center><img src="4.gif"></center>
+<BR><BR>
+Note: if you did it correctly, your side view should still look like this:
+<center><img src="5.gif"></center>
+<BR><BR>
+<li> Now, almost done already!  Make sure the sector below is highlighted,
+and delete it!
+<BR><BR>
+<CENTER><img src="6.gif"></CENTER>
+<BR><BR>
+<li> Below is the finished product, textured for clarity of course:
+<BR><BR>
+<center><img src="7.gif"></center>
+<BR><BR>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

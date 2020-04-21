@@ -1,0 +1,82 @@
+# Moves a camera around when the thing
+# gets activated
+#
+# Modified from Dak's camera script
+# Modified further from Antony's script
+# This is the tutorial.cog
+
+
+
+
+symbols
+message		activated
+thing		cam
+thing		console	
+thing 		player				local
+flex		speed=2.0
+sound       	goalsnd=kk60058.wav         local
+int		done=0				local
+sound           SoundToPlay=jabba.wav		local
+int		Player				local
+int		check				local
+
+end
+
+code
+activated:
+
+if (done ==0)
+	{
+	check = GetSenderRef();
+	if (check == console)
+		{
+		Player = GetLocalPlayerThing();
+
+		// freeze Kyle
+		SetActorFlags(Player, 0xa00000);
+		StopThing(Player);
+		
+		SetCameraFocus(0, cam);
+		SetCurrentCamera(0);
+
+		Sleep(2.0);
+		PlaySoundLocal(SoundToPlay, 1, 0, 132);
+		Print("This is your first Cutscene!!!");
+
+		MoveToFrame(cam, 1, speed);
+	       MoveToFrame(cam, 2, speed);
+	       MoveToFrame(cam, 3, speed);
+	       MoveToFrame(cam, 4, speed);
+		MoveToFrame(cam, 5, speed);
+	       MoveToFrame(cam, 6, speed);
+	       MoveToFrame(cam, 7, speed);
+	       MoveToFrame(cam, 8, speed);
+		MoveToFrame(cam, 9, speed);
+
+		
+		Sleep(3.5);
+		PlaySoundLocal(SoundToPlay, 1, 0, 132);
+		Print(">> This is your first Cutscene sound <<");
+	
+		Sleep(22.0);
+		SetCameraFocus(0, jkGetLocalPlayer());
+
+		if (jkGetSaberCam() == 1)
+		CycleCamera();
+		DestroyThing(cam);
+		
+		// unfreeze's Kyle
+		ClearActorFlags(Player, 0xa00000);
+
+	   	PlaySoundLocal(goalsnd, 1, 0, 0);
+		Print("The End of your first Cutscene");
+		SetGoalFlags(Player, 1, 2);
+	   	SetGoalFlags(Player, 2, 1);
+
+		}
+	}
+
+	return;
+
+end
+

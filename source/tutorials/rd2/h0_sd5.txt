@@ -1,0 +1,123 @@
+# Jedi Knight Cog Script
+#
+# h0_swingdoors5.cog
+#
+# By Heinz Högel 6/98 for free use in add-on levels
+#
+# This script controls one or two winged rotating doors. To start open/close
+# action, touch one of the doors, activate one out of two possibly linked
+# switches or send a user0 message to this cog.
+#
+# Parameters:
+#
+# Door0
+# Door1           -  IDs of door things (one is optional).
+#
+# Switch0
+# Switch1         -  Surfaces with switches on. These switches can activate opening
+#                    and closing of the door wings. They are both displayed as activated
+#                    as long as the doors are moving and then return to deactivated state.
+#                    Both are optional.
+#
+# Time            -  How long a complete door swing should last (in seconds). Should be positive
+#                    on startup.
+#
+# AutoCloseDelay  -  If greater than 0.0, delay in seconds for automatic re-closing of doors.
+#
+# TouchOpening    -  If set to 0 (off) the doors won't open simply by "touching" them (hitting
+#                    the spacebar) (default: 1 (on)).
+#
+#
+# This script is designed for JK Basic levels, for MotS levels please use
+# h0_swingdoors4.cog or similar scripts!
+#
+# This file is was not made is not supported by LucasArts Entertainment Co.
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+   message     startup
+   message     activated
+   message     arrived
+   message     user0
+   message     timer
+
+   thing       Door0=-1          linkid=0
+   thing       Door1=-1          linkid=1
+
+   surface     Switch0=-1        linkid=2
+   surface     Switch1=-1        linkid=3
+
+   flex        Time=4.0
+   flex        AutoCloseDelay=0.0
+
+   int         TouchOpening=1
+
+   int         Rotating=0        local
+   int         NoOfDoors=0       local
+   int         SenderID          local
+   int         ArrivedCount=0    local
+end
+
+
+## Code Section
+code
+
+startup:
+   if (Door0 >= 0)
+      NoOfDoors = NoOfDoors + 1;
+   if (Door1 >= 0)
+      NoOfDoors = NoOfDoors + 1;
+   return;
+
+activated:
+   SenderID = GetSenderID();
+   if (TouchOpening == 0)
+      {
+      // Allow only switches to activate
+      if (SenderID < 2 || SenderID > 3)
+         return;
+      }
+   else
+      {
+      // Allow only switches and doors to activate
+      if (SenderID < 0 || SenderID > 3)
+         return;
+      }
+user0:
+   KillTimerEx(1);                        // Avoid additional autoclose
+delayed:
+   if (Rotating) return;                  // Rotation already in progress
+   Rotating = 1;
+   if (Switch0 >= 0)
+      SetWallCel(Switch0, 1);             // Display first switch as activated
+   if (Switch1 >= 0)
+      SetWallCel(Switch1, 0);             // Display second switch as activated
+   if (Door0 >= 0)
+      RotatePivot(Door0, 1, Time);        // Swing (rotate) first door
+   if (Door1 >= 0)
+      RotatePivot(Door1, 1, Time);        // Swing (rotate) second door
+   return;
+
+arrived:
+   if (!Rotating) return;                 // Rotation already finished
+   ArrivedCount = ArrivedCount + 1;       // Count arrived messages
+   if (ArrivedCount < NoOfDoors) return;  // All doors have to be arrived!
+   Time = -Time;                          // Negate time for invers rotation
+   if (Switch0 >= 0)
+      SetWallCel(Switch0, 0);             // Display first switch as deactivated
+   if (Switch1 >= 0)
+      SetWallCel(Switch1, 0);             // Display first switch as deactivated
+   ArrivedCount = 0;
+   Rotating = 0;
+   if (AutoCloseDelay > 0.0  &&  Time < 0)
+      SetTimerEx(AutoCloseDelay, 1, 0, 0);   // Prepare delayed automatic closing
+   return;
+
+timer:
+   call delayed;                          // Delayed closing
+   return;
+
+end
+
+

@@ -1,0 +1,30 @@
+Param 0:	Param 1:	Param 2:	Hex Flag:	Key:
+
+0		n/a		1/0		0x1		Jump  (1 is the jump, 0 is the landing)
+1		n/a		1/0		0x2		Crouch  (1 is the crouch, 0 is the getting up)
+2		n/a		n/a		0x4		Activate
+3		n/a		n/a		0x8		2nd Fire
+4		n/a	       speed		0x10		Left/Right Straff  (<0 is left, >0 is right)
+5		n/a	     direction		0x20		Left/Right Turn  (-1 is right, 1 is left)
+6		n/a	       speed		0x40		Forward/Backwards  (<0 is backwards, >0 is forwards)
+7		n/a	      key num		0x80		Weapon Switching Keys  (13 to 22 (key 1 to 0))
+8	       speed        Pitch Angle	0x100		Up/Down pitch (>0 is up, <0 is down)
+
+9		???		???		???		???
+10		 1	     direction		0x400		Inventory Menu  (-1 for left, 1 for right)
+11		 1	     direction		0x800		Force Power Menu  (-1 for left, 1 for right)		
+12		n/a		n/a		0x1000		Inventory Use
+13		n/a		n/a		0x2000		Force Power Use
+14		SB		SB		0x4000		Misc. keys  (see below)
+
+Misc Keys are as follows:
+
+Param 2:	Param 3:	Key:
+
+0		n/a		Cycle Camera
+1		n/a		Talk
+2		n/a		Quick Save
+3		1/-1		Screen Size Adjustment (1 is size increase, -1 is size decrease)
+4		n/a		Gamma Level
+5		n/a		Score talley
+6		n/a		Screen Shot

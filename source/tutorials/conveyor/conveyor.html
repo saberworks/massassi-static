@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Friday, July 16, 1999 06:50 PM -->
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows - Trial Version">
+	<TITLE>Making Conveyor Belts - The Massassi Temple</TITLE>
+</HEAD>
+
+<BODY TEXT="#ffffff" BGCOLOR="#000000" LINK="#0033CC" ALINK="#009900" VLINK="#FFCC00">
+
+<P ALIGN="CENTER"><B><U><FONT SIZE="6">Making Conveyor Belts</FONT></U></B></P>
+<P ALIGN="CENTER"><B><U><FONT SIZE="4">By: REZ</FONT></U></B></P>
+<P ALIGN="CENTER"><B><U><FONT SIZE="4"><BR>
+</FONT></U></B>Many things in Jedi Knight editing are hard. However here is an example of something really cool,
+that's easy to make, and it can make your level much better too. I'll try to use a lot of pictures so you don't
+get lost. Lets start. Open JED and you will see the basic sector.</P>
+<P ALIGN="CENTER"><IMG SRC="Basic.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">OK, let's set our snap to grid to .1 by pressing F4, Snap every: .1. Now let's go to sector mode
+and start cleaving. Move your walk player in to a corner to keep him out of the way. Cleave a middle sector 2 JKUs
+wide.</P>
+<P ALIGN="CENTER"><IMG SRC="Cleaved.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Now press Shift 3 and cleave from the floor one JKU up, across your middle sector.</P>
+<P ALIGN="CENTER"><IMG SRC="Cleaved2.gif" WIDTH="565" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Now delete that new sector.</P>
+<P ALIGN="CENTER"><IMG SRC="delete.gif" WIDTH="505" HEIGHT="303" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Now texture the top of that bump with 00fgrte2.mat. I like to use this mat because it works in
+most colormaps. Don't forget to make a note of that surface number as you will need it later. Mine is 1 5. Also
+set the surface flag to 5.</P>
+<P ALIGN="CENTER"><IMG SRC="Texture.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Now we pick the conveyor.cog from our cog menu by pressing F7 add cog.</P>
+<P ALIGN="CENTER"><IMG SRC="cog.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">We need to find the vector for our conveyor to move. I use VecCalc for JED because it's fast
+and easy, download at <A HREF="http://www.darkjedi.com">www.DarkJedi.com</A>. For more on vector calculation see
+the <A HREF="http://massassi.jedinights.com/tutorials/thrust/tutor.htm">vectors tutorial</A>. Make two ghost objects,
+one at each end and multiselect them. Fire Up VecCalc for JED and get the vector, mine is (1.00/0.00/0.00).</P>
+<P ALIGN="CENTER"><IMG SRC="vec.gif" WIDTH="525" HEIGHT="419" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Delete those ghosts and press F7. Put the vector in the vector spot and the surface in the convey0
+surface space. Press refresh.</P>
+<P ALIGN="CENTER"><IMG SRC="cog2.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">If we saved now and tried it, it would work but you can't hear it. This makes it seem very dumb.
+To fix this we add sector sound. Multiselect all the sectors and give it either 00conveyoramb01.wav or 00conveyoramb02.wav.
+Don't forget to set the volume to 1 or you won't hear it.</P>
+<P ALIGN="CENTER"><IMG SRC="sound.gif" WIDTH="640" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"></P>
+<P ALIGN="CENTER">Do you want to make your belt move faster? Increases the Speed (flex) in the cog window. More
+than one surface? No need for another cog, if it moves the same way just add another surface value to the cog.</P>
+<P ALIGN="CENTER"><IMG SRC="Values.gif" WIDTH="206" HEIGHT="252" ALIGN="BOTTOM" BORDER="0"><BR>
+If you try it you have a working, moving conveyor belt. You may wonder why that belt looks painted on. To fix this
+you'll have to do a bit more cleaving, But I won't get into that.</P>
+<P ALIGN="CENTER"><IMG SRC="Working_in_JK.gif" WIDTH="640" HEIGHT="400" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P ALIGN="CENTER">If you have any trouble you can always ask me, REZ, a question on the <A HREF="http://massassi.jedinights.com/msgboard/index.shtml">Editing
+Board</A> and I'll help you all I can.
+
+</BODY>
+
+</HTML>

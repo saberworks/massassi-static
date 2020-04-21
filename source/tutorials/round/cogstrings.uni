@@ -1,0 +1,9 @@
+MSGS 3
+
+#  "<key>"     <unused number>   "<string>"
+
+"ROUND" 0 "Round Room"
+"ROUND_TEXT_00" 0 ""
+"ROUND_TEXT_01" 0 " "
+
+END

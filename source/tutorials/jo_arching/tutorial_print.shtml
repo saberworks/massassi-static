@@ -1,0 +1,58 @@
+<html>
+<head>
+ <title>The Massassi Temple: Arches/Domes (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Arches/Domes</font>
+<br clear="all">
+<hr>
+Author: JM (deyjaL@aol.com)
+<br>
+<br>
+
+<p><i><b>Note:</b> the following is edited from a transcript of a tutorial session conducted on the #coffestain channel via IRC.</i></p>
+
+<p><dl>
+ <dt><b>JM</b>: We are going to build a [archy ceiling thing].</dt>
+ <dt><b>JM</b>: First we need a column. If you haven't got GTKRadiant open yet, get it up now.</dt>
+ <dt><b>JM</b>: Open up any texture set and pick a texture. A plain one, we won't be getting into texturing it today.</dt>
+ <dt><b>JM</b>: Make a brush that's 64*64*256 - very simple column.</dt>
+ <dt><b>JM</b>: At any rate, texture the top face of your column with caulk. There's going to be curve sitting there.</dt>
+ <dt><b>JM</b>: Clone the brush, and move it so it's sitting on top of the original. Then turn it into a square cylinder.</dt>
+ <dt><b>JM</b>: Now switch to a side view if you aren't already in one.</dt>
+ <dt><b>JM</b>: Feel free to ask if you don't understand something.</dt>
+ <dt><b>JM</b>: Select your new patch, and hit V to enter vertex mode. Bend it so it makes a 90 degree angle. Take the top vertices and move them so the top face faces the left. Make sure it stays the same size. Then move the middle vertices so all the yellow lines are straight.</dt>
+ <dt><b>JM</b>: Select the column and patch, clone them and rotate them 90 degrees (Little button with two zs and an arrow on the top bar)</dt>
+ <dt><b>JM</b>: Rotate it twice, and position it so the arches line up with a bit of space between them.</dt>
+ <dt><b>JM</b>: Then make another, and move it so they form a t shape. Fill in the left over gap with a brush, this will look sort of like a keystone.</dt>
+ <dt><b>JM</b>: That was pretty basic; now it's going to become a ceiling.</dt>
+ <dt><b>JM</b>: Create a brush that fits into the corner of the T shape, and turn it into a bevel (curves menu) Rotate and resize as neccessary to make the bevel connect the outer edges of the columns, and make sure it's at the same altitude as the arches and the same size.</dt>
+ <dt><b>JM</b>: The matrix might be facing the wrong way - make sure you can see the texture from below the arches.
+ <dt><b>JM</b>: Once you've got your bevel prepared, select it and switch to a side view. Enter vertex mode.
+ <dt><b>JM</b>: Drag all the top vertices to a single point, right where the arches meet.</dt>
+ <dt><b>JM</b>: Switch to the other side view and do it again.</dt> 
+ <dt><b>JM</b>: Then drag the middle vertices up so they are level with the top of the bevel.</dt>
+ <dt><b>JM</b>: Sweet, isn't it?</dt>
+ <dt><b>JM</b>: Just a few things to take care of - we need a wall below the ceiling. Create another bevel the same way you did before, and position it so it lines up with the columns.</dt>
+ <dt><b>JM</b>:  All you need to do it caulk behind it. Make a brush the same height as all your geometry, and cover it with caulk. Then position so it fits exactly behind the corner wall. Use two to make the corner itself.</dt>
+ <dt><b>JM</b>: Then you need a smaller one only as tall as the arches behind the arches that are above the columns.</dt>
+ <dt><b>JM</b>: Select the caulk, the ceiling, and the wall. Clone, rotate, and fit in place on the other side of the T.</dt>
+ <dt><b>JM</b>: Select that entire half (except the arches on the open side) clone, rotate, and make it a solid round room.</dt>
+ <dt><b>JM</b>: For those of you still going - make a roof of caulk above everything, toss in a floor, add a player start, a light, compile and enjoy.</dt></dl></p>
+
+<div align="center"><img src="01.jpg" width=640 height=480 alt="" border="0"></div>
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

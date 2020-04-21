@@ -1,0 +1,213 @@
+SND Files by The Massassi Temple:
+=================================
+
+This document lists all possible actions for use in .snd files.
+We have also attempted to describe each one so you know what it
+does. In parenthesis are suggested min/max radi.  You can, of
+course, set your own, but these are the ones used by LEC.
+For more information on .snd files and what the values do,
+please see the specs on www.darkjedi.com:
+
+http://www.darkjedi.com/JK_Specs/jkspecs.htm
+
+=================================
+Non-Character SND actions.
+=================================
+
+startmove
+	Sound plays when a thing (3do, player, etc) starts to move.
+stopmove
+	Thing stops moving.
+moving
+	Played as a thing is moving.
+hitmetal
+	Projectile hits metal.
+hithard
+	Projectile hits hard surface.
+
+
+=================================
+Character SND actions.
+=================================
+
+lwalkmetal
+	Left foot on metal (walking). (0.3,1.0)
+rwalkmetal
+	Right foot on metal (walking). (0.3,1.0)
+lrunmetal
+	Left foot on metal (running). (0.5,2.0)
+rrunmetal
+	Right foot on metal (running). (0.5,2.0)
+lwalkhard
+	Left foot on hard surface (walking). (0.3,1.0)
+rwalkhard
+	Right foot on hard surface (walking). (0.3,1.0)
+lrunhard
+	Left foot on hard surface (running). (0.5,2.0)
+rrunhard
+	Right foot on hard surface (running). (0.5,2.0)
+lwalkpuddle
+	Left foot in puddle (walking). (0.3,1.0)
+rwalkpuddle
+	Right foot in puddle (walking). (0.3,1.0)
+lrunpuddle
+	Left foot in puddle (running). (0.5,2.0)
+rrunpuddle
+	Right foot in puddle (running). (0.5,2.0)
+lwalkwater
+	Left foot in water (walking). (0.3,1.0)
+rwalkwater
+	Right foot in water (walking). (0.3,1.0)
+lrunwater
+	Left foot in water (running). (0.5,2.0)
+rrunwater
+	Right foot in water (running). (0.5,2.0)
+lwalkearth
+	Left foot on dirt (walking). (0.3,1.0)
+rwalkearth
+	Right foot on dirt (walking). (0.3,1.0)
+lrunearth
+	Left foot on dirt (running). (0.5,2.0)
+rrunearth
+	Right foot on dirt (running). (0.5,2.0)
+enterwater
+	Enter water. (1.0,3.0) *Usually Maxvolume of 0.7.
+enterwaterslow
+	Slowly enter water. (0.5,1.5) *Usually Maxvolume of 0.4.
+exitwater
+	Leave water.
+exitwaterslow
+	Leave water slowly.
+lswimsurface
+	Left arm swimming on the surface.
+rswimsurface
+	Right arm swimming on the surface.
+treadsurface
+	Treading water on the surface.
+jump
+	Basic jump. (1.5,2.5)
+jumpmetal
+	Jump from metal. (1.5,2.5)
+jumpwater
+	Jump from water. (1.5,2.5)
+jumpearth
+	Jump from dirt. (1.5,2.5)
+landhard
+	Land on hard surface. (1.5,2.5)
+landmetal
+	Land on metal. (1.5,2.5)
+landearth
+	Land on dirt. (1.5,2.5)
+landpuddle
+	Land in a puddle. (1.5,2.5)
+landwater
+	Land in water. (1.5,2.5)
+falling
+	Falling... (1.5,2.5)
+landhurt
+	Land so hard it hurts. (1.5,2.5)
+splattered
+	Land even harder than above. (1.5,2.5)
+hitdamaged
+	Same .wav as above, don't know really what this does. (1.5,2.5)
+
+=================================
+Special Character Actions.
+=================================
+The following are special actions -- they are repeated twice because
+depending on how far away from the object/character you are, you will
+hear a different .wav file.  Because of this, I have left an example
+of each snd action including the flags and wav files.  The last two
+numbers on each are the min/max distance to hear the wav.  So on the
+first one, you will hear I00S127Z.WAV if you're between 0.3 and 1.0
+units from the "impact."  If you are from 1.0 to 4.0 units from the
+"impact," you will hear I00S128Z.WAV.
+
+I have left these with double entries because when making your own
+.snd files, you will want to emulate how LEC did it originally.
+
+HURTIMPACT	 I00S127Z.WAV		0X014000         0.3     1.0
+HURTIMPACT	 I00S128Z.WAV		0X014000         1.0     4.0
+	Damage from Impact.
+
+HURTENERGY	 I00S127Z.WAV		0X014000         1.0     4.0
+HURTENERGY	 I00S128Z.WAV		0X014000         1.0     4.0
+	Not too sure about this one, maybe from energy weapons (bryar, ST rifle).
+
+HURTFIRE	 I00S127Z.WAV		0X014000         1.0     4.0
+HURTFIRE	 I00S128Z.WAV		0X014000         1.0     4.0
+	Not sure once again, hurt from explosions?
+
+HURTMAGIC	 I00S127Z.WAV		0X014000         1.0     4.0
+HURTMAGIC	 I00S128Z.WAV		0X014000         1.0     4.0
+	Damage from magic (force powers).
+
+HURTSPECIAL	 I00S127Z.WAV		0X010000         0.3     1.0
+HURTSPECIAL	 I00S128Z.WAV		0X010000         1.0     4.0
+	Damage from special things -- I have no idea.
+
+DEATH1		I00S129Z.WAV		0X010100         1.0     4.0
+DEATH2		I00S129Z.WAV		0X010100         1.0     4.0
+	Death.
+
+deflected	LtSaberHit12.wav
+deflected	LtSaberHit15.wav
+	Assuming they have two because the cog will play a random .wav.
+
+=================================
+Resume Normal Character Actions.
+=================================
+
+drowning
+	Drowning. (0.3,1.0)
+drowned
+	Death by drowning. (0.3,1.0)
+deathUnder
+	Death under water (like from a gun, not drowning). (0.3,1.0)
+breath
+	Breath when you surface. (0.3,1.0)
+gasp
+	Breath if you surface after being underwater for a long time. (0.5,2.0)
+corpsehit
+	Dead body falls to the ground, or something like that. (0.8,4.0)
+choking
+	Being force-choked.
+choked
+	Choked to death.
+
+=================================
+Dark Jedi Special Actions.
+=================================
+
+victory
+	Dark Jedi wins.
+happy
+	He's happy because you just got smoked.
+alert
+	Dunno, really, waiting to smoke you? (1.0,4.0)
+idle
+	Standing there doing nothing.
+gloat
+	Laughing at you because he's kicking your @$$.
+fear
+	Scared of you.
+boast
+	Boasting because he smoked you.
+surprise
+	You somehow surprised him.
+
+=================================
+Other Special Actions.
+=================================
+
+curious
+	Droid/NPC/Enemy is curious (only place I've seen it).
+create
+	Used in lots of .snd for when a 3do/object/anything is created by a cog.
+fire1
+fire2
+	Can be used by weapons and/or enemies that fire/attack (turrets, at-st's, kell dragons).
+deflected
+	Used when saber deflects shot as well as when a bolt/shot/projectile bounces.
+activate
+	Activate things (seq charge, probe droid).

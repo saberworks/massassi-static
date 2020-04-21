@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<title></title>
+</HEAD>
+<BODY bgColor=#000000 text="#FFFFFF">
+<p>-------------------FIXING PIVOT POINTS ON 3DOS------------------------<br>
+Authors: Mr. Xeinsane and Lilguy of Frontier Creature Creations</p>
+<p>tools needed:</p>
+<p>JED, Fun3do.</p>
+<p>This tutorial will explain how you can take the 3do you've created, and fix the pivot points on each mesh so you can create key frame animations for it.<br>
+<br>
+1. Open the 3do in Jed, and do a consistency check. If you get any errors at all, make sure you fix them. If you get an error you don't know how to fix, feel free to contact Lilguy on icq at 11933301. please don't send Lilguy a 3do and ask him to fix it for you :)<br>
+There is one thing you'll want to carefully do: delete any vertices that connect only two lines, and those lines are collinear. Example:<br>
+-------*-------<br>
+These undetected extra vertices seem to render the surface they belong to invisible in the JK engine.<br>
+<br>
+2. To ensure that Fun3do and Jed won't have any conflicts, open the 3do in Fun3do, save it, then do a consistency check in Jed again.<br>
+Keep repeating steps 1 and 2 until there are absolutely no errors.<br>
+<br>
+3. Texture your entire 3do. Try not to change your mind about how you want the texture placed on the 3do, because you'll have to do the entire pivot point fix again if you save it in Jed again.<br>
+<br>
+4. open the 3do in Fun3do, and write down all regular xyz coordinate numbers. (Pivot coordinates should all be at zero- if they are not, zero them, then move your node to the place where you want it, then continue to the next step)</p>
+<p><i>Figure1: here is an example of a node with an incorrect pivot point (the
+pivot point is the green spot)</i></p>
+<p><img border="0" src="1.jpg" width="490" height="416"></p>
+<p><img border="0" src="2.jpg" width="241" height="342"></p>
+<p><br>
+<br>
+5. Move the node around (in regular move mode), the center (or place where the place where it pivots around) of where you moved the node being at the place you want the node to pivot at.<br>
+</p>
+<p><i>Figure 2: here is the node moved so the pivot point is in the correct
+place:</i></p>
+<p><img border="0" src="3.jpg" width="479" height="401"></p>
+<p><i>Notice how the difference from the original position is 0.006000</i></p>
+<p><br>
+6. Write the new numbers down. (Only the regular xyz coordinates, the others shouldn't have changed)<br>
+<br>
+7. Figure out the difference in each case (old numbers-new numbers)(so they don't have to be reversed later)(xyz.)<br>
+<br>
+8. Add this to the pivot coordinates respectively.</p>
+<p><i>Figure 3: here is the result of adding the difference to the pivot point:</i></p>
+<p><img border="0" src="5.jpg" width="511" height="343"><br>
+<br>
+<br>
+<br>
+Note: This messes up all the children nodes.</p>
+<p>It's best to leave all the meshes in the $$dummy node until you fix the pivot points, then arrange them one at a time. When you make a node a child to another one, Fun3do moves the node out of place. Just move it back to where it was, and everything should be all right.<br>
+<br>
+We hope this helps you, good luck with your new creation!</p>
+<p><i>You can get a tutorial explaining many different aspects of creating new
+enemies and actors at the homepage of&nbsp; <a href="http://www.geocities.com/timessquare/zone/6310">Frontier
+creature creations.</a></i></p>
+<p><br>
+<br>
+</p>
+</BODY></HTML>

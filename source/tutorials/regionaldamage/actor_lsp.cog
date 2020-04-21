@@ -1,0 +1,94 @@
+# Jedi Knight Cog Script
+#
+# ACTOR_LSP.COG
+#
+# ACTOR SCRIPT
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+#
+# [Cap R]
+#
+# Modifications (C) 1998, 1999 Last Stand Productions.
+
+symbols
+
+message		killed
+message		damaged
+
+template		powerup=+dstrifle			local
+
+int		newThing				local
+int		victim				local
+int		bin				local
+int		senderref=-1			local
+int		culprit				local
+
+int		damage				local
+
+vector		location0				local
+flex		location1				local
+
+flex		HeadDist=0.0036			local
+
+flex		HeadFactor=3			local
+flex		BackheadFactor=1.2		local
+flex		ChestFactor=0.5			local
+flex		BackFactor=0.9			local
+
+
+end
+
+# ========================================================================================
+
+code
+
+damaged:
+	culprit = GetSourceRef();
+	victim = GetSenderRef();
+	damage = GetParam(0);
+	location0 = VectorSub(GetThingPos(culprit), GetThingPos(victim));
+	location1 = (VectorY(GetThingLVec(victim)) * VectorY(GetThingLVec(culprit)));
+	if(VectorZ(location0) > HeadDist) {
+		// headshot
+		if(location1 < 0.0) {
+			damage = (damage * HeadFactor);
+			// print("headshot");
+		}
+		else {
+			damage = (damage * BackheadFactor);
+			// print("backheadshot");
+		}
+	}
+	else  {
+		// bodyshot
+		if(location1 < 0.0) {
+			damage = (damage * ChestFactor);
+			// print("chestshot");
+		}
+		else {
+			damage = (damage * BackFactor);
+			// print("backshot");
+		}
+	}
+
+	printVector(location0);
+	printFlex(location1);
+	ReturnEx(damage);
+	return;
+
+# ........................................................................................
+
+killed:
+	victim = GetSenderRef();
+	if(GetActorWeapon(victim, 1) != -1) {
+		AmputateJoint(victim, 3);
+		newThing = CreateThing(powerup, victim);
+		SetLifeleft(newThing, 200.0);
+	}
+
+	return;
+
+# ........................................................................................
+
+end
+

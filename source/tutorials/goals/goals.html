@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>Objectives Tutorial</title>
+</head>
+<BODY   BGCOLOR = "#000000"
+        TEXT    = "#52A54E"
+        LINK    = "#A6BA45"
+        VLINK   = "#457E67"
+        ALINK   = "#FFFF00">
+
+<center>
+<FONT SIZE="+2">Objectives Tutorial</FONT><BR>
+<FONT SIZE="+1">What they are, how they work and how to use them</FONT><BR>
+By <A HREF="mailto:Ant@Horrible.Demon.co.uk">Antony Espindola</A>
+</center>
+<P>
+<HR>
+<P>
+There are currently other tutorials around for Objectives (which are also called "Goals")
+at the moment, but they seem to introduce too many concepts in the COG language at once and
+this can be a bit confusing for the novice programmers amongst us, therefore
+I have done this tutorial to explain more about how Objectives are defined in JK/MotS,
+how they work and give you a few tips on creating your own.
+<P>
+<FONT COLOR="#FFFFFF"><I>I'm pretty new to this - how do I add Objectives to my level?
+</I></FONT>
+<P>
+First off, let's talk about what exactly Objectives are. When you play a Single-Player
+JK/MotS level, you will (normally) have a few Objectives that you must complete to end
+the level - be it picking up a certain object, killing a "Dark Jedi" or similar character,
+entering a certain area or even simply spotting a certain item in a room. The Objectives
+are designed to give you a <i>purpose</i> to the level, rather than just going round and
+killing all the enemies and finding keys to open doors (otherwise we'd all be playing
+Quake, right? ;-)
+<P>
+This doesn't mean that you can't end the level without completing all the Objectives-
+you will need to either setup you level so that you can only enter the end sector (say
+by keeping a door locked until a certain Objective is completed), or you will need to
+check that all the Objectives have been completed in your end-level COG. 
+<P>
+So when we create our levels, the first thing we need to do is let our level know that
+we actually <b>have</b> Objectives in it! This is done through the <FONT COLOR="#FFFFFF">
+COGSTRINGS.UNI</FONT> file which holds things like lines of text, the name of
+your level and the introduction text you see as the level loads, but then you should be
+familiar with this file by now!
+<P>
+The Objectives are entered into the COGSTRINGS.UNI file in the following format:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ "GOAL_01000"   0  "This is the first Goal Text"
+ "GOAL_01001"   0  "This is the second Goal Text"
+ </PRE></UL>
+ </FONT>
+<P>
+The first number (in quotes) defines the Objective's number and level it it used in.
+It always starts "GOAL_" and then has a 5-digit number. You multiply the number of your
+level by one thousand and then add the number of the Objective in that level, but don't
+forget that the Objectives start at Zero and not One! For example, Objective 4 of Level 6 would be specified as:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ "GOAL_06003"   0  "Gain access to the Security Tower"
+ </PRE></UL>
+ </FONT>
+<P>
+The next number (always a zero) is not used. The next line of text is what appears in the
+"Objectives" screen in the game. This text shouldn't be too long- the loading screen's
+text should explain the overall purpose of the level. Keep the text short, but not too
+vague otherwise the player might get stuck. Something like <FONT COLOR="#FFFF00"><I>
+"Get some Ammo"</I></FONT> is rather dull and doesn't really help whereas
+<FONT COLOR="#FFFF00"><I>"Find an alternative route into the Ammunition Room"</I></FONT>
+would be a much better way of saying the same thing.
+<P>
+<FONT COLOR="#FFFFFF"><I>Great! I've typed in the Objectives but nothing appears!
+What am I doing wrong?</I></FONT>
+<P>
+Now you have defined your Objectives, you need to add them into the game. This is done
+through COGs which can be kept very simple or made incredibly complicated - it all
+depends on your ability which can easily grow if you experiment, learn and practise.
+There are no easy routes to learning how to write COGs, but with a little programming
+knowledge (like how an "IF...ELSE..." statement works) and by looking at other people's
+COGs (I recommend you look through the ones by LucasArts that come with the game as these
+are well commented so you can tell what they are doing) and the use of the
+<A TARGET="_TOP" HREF="http://www.jedinights.com/massassi/specs/jkspecs.htm">JK Specs</A> to find out what they do, you
+should have no trouble understanding it.
+<P>
+Now we have defined our Objective in the COGSTRINGS.UNI file, we need to make them appear
+in our game - this requires a command inside a COG. To show the Objectives, we use the
+<FONT COLOR="#FFFFFF">SetGoalFlags()</FONT> command:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ player = GetLocalPlayerThing();
+ SetGoalFlags(player, 0, 1);
+ </PRE></UL>
+ </FONT>
+<P>
+The first line simple gets the "handle" for the Player and assigns it to the <i>player</i>
+variable (but then you knew that!) The second line makes the Objective appear in the list.
+<P>
+Let's take a look at the SetGoalFlags() command in more detail to show how it works as this
+is the important bit when working with Objectives.
+<P>
+The first parameter, <i>player</i>, is the handle for the current player. We got that in
+the line above. The second parameter (zero in this case) is the number of the goal that
+we want to show; our zero equates to the first Objective we defined. The second number
+(1 in this case) is the flag value:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ <FONT COLOR="#FFFFFF">1</FONT> = Visible
+ <FONT COLOR="#FFFFFF">2</FONT> = Completed
+ </PRE></UL>
+ </FONT>
+<P>
+By <b>not</b> setting the Goal flags, the Objective will not appear in our Objectives list.
+If you want to have all your goals appear at the start, add a SetGoalFlags line for each of
+your Objectives and set the flag for each of them to 1.
+<P>
+Another way to work with Objectives is to "hide" some of them until other Objectives are
+completed. This helps to keep some of the plot a mystery and won't give away any secrets
+or twists in your Level's story until the Player needs to know about them. To do this,
+simply don't add the required lines in your Startup COG, but do them elsewhere...
+<P>
+To make an Objective appear when we complete another Objective, we simply have to put the
+line which "shows" our Objective into the same COG as that which "completes" the previous
+Objective. I'll show you how to do this in a moment, but first let's see how you code
+to "complete" and Objective:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ player = GetLocalPlayerThing();
+ SetGoalFlags(player, 0, 2);
+ </PRE></UL>
+ </FONT>
+<P>
+Looks familiar? That's because we just set the Goal flag to 2 to make it "completed"!
+This shows you just how easy it can be to program COGs yourself!
+<P>
+<FONT COLOR="#FFFFFF"><I>Ok, I understand how to define, show and complete an Objective,
+but how do I work this into my level's COGs?</I></FONT>
+<P>
+You simply need to add a COG that will be triggered when the player does something that
+would complete an Objective. For example, if one of our Objectives was to 
+<FONT COLOR="#FFFF00"><I>"Gain access to the Security Tower"</I></FONT>
+then we would set up a COG that triggers when the player enters that sector. Showing
+you how you write a COG to trigger like this is beyond the scope of <i>this</i> tutorial
+and I'm sure it's been written far better elsewhere! So let's say we have a COG that
+triggers when we enter a sector, and we can just edit it and add our "Objective Completed"
+lines to it:
+<P>
+ <FONT COLOR="#FFFF00">
+ <UL><PRE>
+ [...]
+
+ sound	goalsnd=Accomplish1.wav		local
+ int	player				local
+ end
+
+ code
+ entered:
+ 	// player has entered the sector!
+ 	player = GetLocalPlayerThing();
+
+ 	//complete the first objective
+ 	PlaySoundThing(goalsnd, player, 1.0, -1, -1, 0);
+ 	SetGoalFlags(player, 0, 2);
+ 	Print("Now I'm in the Security Tower, I need to disable the alarm")
+
+ 	// now show the second objective
+ 	SetGoalFlags(player, 1, 1);
+ 	Return;
+
+ [...]
+ </PRE></UL>
+ </FONT>
+<P>
+So you can see how easy it is to complete and show your Objectives. There are also
+conditions that can be triggered in a COG for things like when an item or surface is
+damaged, an object is sighted or when you walk into a certain sector - more information
+is available in other tutorials but I wanted to keep this one simple and explain about
+Objectives and not how to write COGs!
+<P>
+The tricky part to Objectives is thinking of inventive ways to use them- not
+just picking up items or opening doors, but by solving puzzles in the level
+or checking for certain conditions. As you get better and better with your
+COGs, you will be able to create more interesting and complicated ones which
+will help to make your level stand out.
+<P>
+<I>Good luck!</I>
+<P>
+</BODY>
+</HTML>
+
+

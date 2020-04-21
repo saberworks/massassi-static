@@ -1,0 +1,72 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Glow Tutorial</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Glow</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:deathbane27@massassi.com">Mark "Deathbane27" Allred</a>
+<br>
+<br>
+
+<p>First of all, I suggest you download the <a href="http://www.code-alliance.com/~editors/jediknight/plugins/gorotate.zip">GoRotate</a> plug-in for JED.  It makes things a lot easier in this field...  I'll start off with a Glowsaber for an example.</p>
+
+<p>Making the glow looks cool with a lot of stuff, but the best use of it is in making lightsabers and projectiles.  I'll start off with a lightsaber for an example. To start, import <b>sabg.3do</b>.</p>
+
+<p>Now, use the GoRotate plug-in to create a half-sphere.  The Radials and Arc Radials should reflect how much detail you are going to have in the glow.  6 Radials and 4 Arc Radials are usually enough detail.  Now hit the Draw button, then the Rotate button.</p>
+
+<CENTER><IMG SRC="glow1.jpg"></CENTER>
+
+<p>Once you have your half-sphere, copy the sector it and paste it.  Flip it on the Z axis (Hit F9 to bring up the tool window).</p>
+
+<CENTER><IMG SRC="glow2.jpg"></CENTER>
+
+<p>Now hold Ctrl + Shift drag one half-sphere so it's touching the other.  Adjoin and merge them to make one large sphere.  Set the sector flags to 'Preview as 3DO'.</p>
+
+<CENTER><IMG SRC="glow3.jpg"></CENTER>
+
+<p>Now it's time scale that puppy down.  First, though, rotate it 90 degrees around the X axis.  Now scale it by .14 on the Y axis, and 0.004 on the X and Z axes.  Drag it so it looks like it's coming out of the saber (You may have to close and re-open the 3D-preview window to see it).</p>
+
+<CENTER><IMG SRC="glow4.jpg"></CENTER>
+
+<p>As you can see, the ends are a little pointy.  Slice off the end that sticks into the saber handle, and drag the end vertices in to make the other end rounder.</p>
+
+<p>Okay, you're probably wondering right about now when I'm going to actually tell you how to make the glow.  Just hold your horses...</p>
+
+<p>Copy the 'cylinder', and scale it up a bit so it fit's around the first.  Set the surfaces in the first cylinder to a white mat (your own), and the ones in the larger cylinder to a mat of the color you want your saber.  (<b>sabvbld.mat</b> is a good one to use for a green saber.)  Flag the surfaces in the larger sector as translucent.  You will notice that you can't see the small sector in the large one.</p>
+
+<CENTER><IMG SRC="glow5.jpg"></CENTER>
+
+<p>Okay, now it's finally time to tell you how do it.  Take the 'glow' sector, and scale it on the X or Z axis by <b>-1</b>.  That's right, <b>-1</b>.  Turn it inside-out.</p>
+
+<CENTER><IMG SRC="glow6.jpg"></CENTER>
+
+<p>That's pretty much it for making glow.  You probably want to make a larger copy the Glow sector around the first, so you have 2 levels of glow  (you can't see it in JED, but you can in <a href="http://outpostd34.com/droid/download/index.html" target="_top">Fun3do</a>).  Yeah, I could have just said "Scale the sector by -1" in the first place, but then this tutorial would be too short...</p>
+
+<p>Special thanks to <a href="mailto:darkforce_st@hotmail.com">Jamontoast</a> for telling me how to do this.</p>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

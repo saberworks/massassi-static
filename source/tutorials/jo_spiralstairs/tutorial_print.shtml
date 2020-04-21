@@ -1,0 +1,56 @@
+<html>
+<head>
+ <title>The Massassi Temple: Spiral Staircase (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Spiral Staircase</font>
+<br clear="all">
+<hr>
+Author: JM (deyjaL@aol.com)
+<br>
+<br>
+
+<p><i><b>Note:</b> the following is edited from a transcript of a tutorial session conducted on the #coffestain channel via IRC.</i></p>
+
+<p><dl>
+ <dt><b>JM</b>: We are going to make a spiral staircase.</dt>
+<dt><b>JM</b>: GTKRadiant open? YES? </dt>
+<dt><b>JM</b>: Everyone ready? You'll be amazed how quick and simple this is... </dt>
+<dt><b>JM</b>: Okay. Radiant open. Pick a texture. </dt>
+<dt><b>JM</b>:  Make a square brush 512 units on a side and 8 units tall. </dt>
+<dt><b>JM</b>:  Now clip it from the top left corner across diagonally to an opposite side, pressing shift+enter so you keep both halfs. </dt>
+<dt><b>JM</b>: Do that until you have about sixteen nearly even sections. </dt>
+<dt><b>JM</b>: Everyone got that done? Select all the brushes. </dt>
+<dt><b>JM</b>: Then deselect the one all the way on the left (Just shift click it again) </dt>
+<dt><b>JM</b>: Move the rest up 8 units, deselect the next one, move the rest up 8 units, repeat until done. I'll wait (I have to do it too) </dt>
+<dt><b>JM</b>: Okay. You will need to create a roof. Make it the same size as your original brush, but far enough above the stairs so the player can walk under it. </dt>
+<dt><b>JM</b>: Then seal off the right and bottom sides of the stairway with caulk. </dt>
+<dt><b>JM</b>: You will need to seal off the top and left, but only halfway. Seal off the half of those sides closer to the 'point' where all the steps meet. </dt>
+<dt><b>JM</b>: Now for the part that makes it not look like crap. Create a brush exactly one fourth the size of the original brush. Then make it as tall as the stairway, and position it so it fits exactly between the bottom step the ceiling and lines up with your two smaller caulk brushes. </dt>
+<dt><b>JM</b>: Goto the curves menu, and select 'bevel'. If you've built the map in the same orientation as I said, it will be perfect already. </dt>
+<dt><b>JM</b>: Now we just need the OTHER wall! Clone our bevel, position it back over the first one, and stretch it out so it fills the entire space, lining up with the other two walls. </dt>
+<dt><b>JM</b>: But theres a problem! All you see is a wireframe, the surface is on the otherside. Goto curves/matrix/invert. </dt>
+<dt><b>JM</b>: Seal off the ends, add a light and playerstart, compile and enjoy. </dt>
+<dt><b>JM</b>: This is the 'cheap and dirty' way of making a staircase. You can do better ones with lots of vertex editing. </dt>
+<dt><b>JM</b>: Or patches for the steps, which I might manage to figure out before next time. </dt>
+<dt><b>Evil_Giraffe</b>: if we used a patch mesh, we'd could probably get a nice sloping roof as well </dt>
+<dt><b>Evil_Giraffe</b>:  or on the floor to have a sloping ramp </dt>
+<dt><b>JM</b>: Yes, you could put a patch up there quite easily. </dt>
+<dt><b>JM</b>: And there. </dt></dl></p>
+
+<div align="center"><img src="01.jpg" width=640 height=480 alt="" border=0></div>
+
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

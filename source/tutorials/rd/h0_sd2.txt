@@ -1,0 +1,89 @@
+# Jedi Knight Cog Script
+#
+# h0_swingdoors2.cog
+#
+# By Heinz Högel 5/98 for free use in add-on levels
+#
+# This script controls one or two winged rotating doors. To start open/close
+# action, activate one out of two possibly linked switches or send a user0
+# message to this cog.
+#
+# Parameters:
+#
+# Door0
+# Door1           -  IDs of door things (one is optional).
+#
+# Switch0
+# Switch1         -  Surfaces with switches on. These switches can activate opening
+#                    and closing of the door wings. They are both displayed as activated
+#                    as long as the doors are moving and then return to deactivated state.
+#                    Both are optional (without them you have to send a user0 message to this
+#                    cog to open/close the doors).
+#
+# Time            -  How long a complete door swing should last (in seconds). Should be positive
+#                    on startup.
+#
+# AutoCloseDelay  -  If greater than 0.0, delay in seconds for automatic re-closing of doors.
+#
+#
+# This file is was not made and is not supported by LucasArts Entertainment Co.
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+   message     activated
+   message     arrived
+   message     user0
+   message     timer
+
+   thing       Door0=-1          linkid=1
+   thing       Door1=-1          nolink      // nolink necessary to avoid double arrived messages!!!
+
+   surface     Switch0=-1        linkid=0
+   surface     Switch1=-1        linkid=0
+
+   flex        Time=4.0
+   flex        AutoCloseDelay=0.0
+
+   int         Rotating=0        local
+end
+
+
+## Code Section
+code
+
+activated:
+   if (GetSenderID() != 0) return;        // Allow only switches to send activated message
+user0:
+delayed:
+   if (Rotating) return;                  // Rotation already in progress
+   Rotating = 1;
+   if (Switch0 >= 0)
+      SetWallCel(Switch0, 1);             // Display first switch as activated
+   if (Switch1 >= 0)
+      SetWallCel(Switch1, 0);             // Display second switch as activated
+   if (Door0 >= 0)
+      RotatePivot(Door0, 1, Time);        // Swing (rotate) first door
+   if (Door1 >= 0)
+      RotatePivot(Door1, 1, Time);        // Swing (rotate) second door
+   return;
+
+arrived:
+   if (!Rotating) return;                 // Rotation already finished
+   Time = -Time;                          // Negate time for invers rotation
+   if (Switch0 >= 0)
+      SetWallCel(Switch0, 0);             // Display first switch as deactivated
+   if (Switch1 >= 0)
+      SetWallCel(Switch1, 0);             // Display first switch as deactivated
+   Rotating = 0;
+   if (AutoCloseDelay > 0.0  &&  Time < 0)
+      SetTimer(AutoCloseDelay);           // Prepare delayed automatic closing
+   return;
+
+timer:
+   call delayed;                          // Delayed closing
+   return;
+
+end
+
+

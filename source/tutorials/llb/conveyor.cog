@@ -1,0 +1,64 @@
+# Jedi Knight Cog Script
+#
+# 00_conveyor.cog
+#
+# generic conveyor belt script
+#
+# This script will control 1-8 conveyor belts moving in the same direction
+# and with the same velocity. The conveyors run continuously.
+#
+# [IS]
+#
+# LKOH_SniperWolf
+# 07/2004
+# Updated to slide selected surfaces the X & Y, in relation to the surface itself.
+# Same effect as changing position of texture in 2d relations.
+# Positive X is to the right, positive Y is up. These act as vector components, and so an
+# amount. IE, X:5 Y:5 will have a greater effect than X:1 Y:1
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+# ========================================================================================
+symbols
+message startup
+float X desc=conveyor_x_direction
+float Y desc=conveyor_y_direction
+vector vec0 local
+vector newVec local
+vector tempVec local
+vector tempVec2 local
+float speed=2.0 desc=conveyor_speed
+surface convey0 nolink
+surface convey1 nolink
+surface convey2 nolink
+surface convey3 nolink
+surface convey4 nolink
+surface convey5 nolink
+surface convey6 nolink
+surface convey7 nolink
+int garbage local
+int cnt local
+end
+# ========================================================================================
+code
+startup:
+for (cnt = 0; cnt<=7; cnt=cnt+1){
+if (convey0[cnt] >= 0){
+// The following uses various calculations to create a new vector appropriate for the surface
+// Basically, it just creates a new vector already aligned to the conveyor surface, and uses it to slide
+// the surface the X and Y in the inputted vector relative to the surface.
+
+tempVec = VectorCross(GetSurfaceNormal(convey0[cnt]), '0 0 -1');
+tempVec = VectorNorm(tempVec);
+vec0 = VectorSet(X*VectorX(tempVec), X*VectorY(tempVec), X*VectorZ(tempVec));
+tempVec = vec0;
+tempVec2 = VectorCross(GetSurfaceNormal(convey0[cnt]), tempVec);
+tempVec2 = VectorNorm(tempVec2);
+vec0 = VectorSet(Y*VectorX(tempVec2), Y*VectorY(tempVec2), Y*VectorZ(tempVec2));
+tempVec2 = vec0;
+newVec = VectorAdd(tempVec, tempVec2);
+garbage=slidewall(convey0[cnt], newVec, speed);
+}
+}
+return;
+end
+

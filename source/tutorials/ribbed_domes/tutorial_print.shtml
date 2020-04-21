@@ -1,0 +1,45 @@
+<html>
+<head>
+ <title>The Massassi Temple: Ribbed Domes (Printable Version)</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#004000" vlink="#004000">
+<font face="verdana,arial,helvetica" size="2">
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="5">Ribbed Domes</font>
+<br clear="all">
+<hr>
+Author: JEDMaster (DeyjaL@AOL.com)
+<br>
+<br>
+
+<p>Before following this tutorial, be sure you can complete the Perfect Polygons and Pipes Tutorial (http://www.massassi.net/tutorials/perfect_pipes/).</p>
+
+First, you will follow the perfect polygons tutorial until you reach the state shown in the pic. I am making a ten-sided dome.
+<p><img src="rd1.gif"><p>
+Now, switch to the side view and cleave it into a rough dome shape.
+<P><img src="rd2.gif"><p>
+Multiselect the top surfaces and cleave them in half as shown.
+<p><img src="rd3.gif"><p>
+Multiselect the vertexes you created and drag them away from the point as shown.
+<p><img src="rd4.gif"><p>
+You've created some non-planar surfaces in doing that: cleave them in the pattern shown and it'll be fine.
+<P><img src="rd5.gif"><p>
+Now's a good time to texture it. I also cleaved off a flat section so I can add a series of archways around the perimeter later.
+<p>Continue with the perfect polygons tutorial until you've created a complete dome, then adjoin all the sectors.
+<p>Voila! A ribbed dome!
+<p><img src="rd6.gif"><p><img src="rd7.gif"><p>
+Hard, wasn't it?
+
+<br>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

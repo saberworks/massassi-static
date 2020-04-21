@@ -1,0 +1,75 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Connecting Rooms Using Corridors</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<a href="tutorial_print.shtml"><img src="/images/printable.gif" width=100 height=30 border=0 align="right" alt="Printable Version"></a>
+<font face="verdana,arial,helvetica" size="5">Connecting Rooms Using Corridors</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:det@massassi.net">DeTRiTiC-iQ</a>
+<br>
+<br>
+
+<p><i>This tutorial assumes that you can already make an individual room.</i></p>
+
+<p><b>Included:</b> <a href="corridors.map">corridors.map</a> (the final .map file for this tutorial)</p>
+
+<ol> 
+ <li><p>Start off with making a simple room:</p>
+ <p><img src="corridors01.gif" width="411" height="411"></p></li>
+ <li><p>Now select one of the walls and use the Clipping tool <img src="clipper.gif" width="17" height="17">, cut a hole in the wall in the shape of the corridor you want.</p>
+<p><table width="70%" border="0" cellspacing="0" cellpadding="5" bgcolor="#666666" align="center">
+  <tr bgcolor="#666666"> 
+    <td> 
+      <p><font face="verdana,arial,helvetica" size="2"><b>How to use the Clipping Tool:</b></font></p>
+      </td>
+  </tr>
+  <tr bgcolor="#CCCCCC"> 
+    <td><font face="verdana,arial,helvetica" size="2" color="#000000"> 
+      <ol><li>Select the Clipping 
+        tool by press 'X' or by clicking the button '<img src="clipper.gif" width="17" height="17">'</li>
+        <li>Click where you want the clipping to start and where you want it to 
+        finish</li>
+        <li>The part of the brush which will be kept is highlighted with a different 
+        colour (in my case, yellow)</li>
+        <li>Press 'Enter' to confirm the clip, press 'Ctrl+Enter' to select the 
+        other part of the brush, or press 'Shift+Enter' to keep both parts of 
+        the brush.</li></ol></font>
+      </td>
+  </tr>
+</table></p></li>
+<li><p>You should end up with something like this:</p>
+<p><img src="corridors02.jpg" width="446" height="384"></p></li>
+<li><p>Now create an identical room but facing the opposite direction (you can select all the brushes in the room by shift+click, then duplicate with 'space', and finally rotate with <img src="zrotate.gif" width="16" height="17">):</p>
+<p><img src="corridors03.gif" width="169" height="337"></p></li>
+<li><p>Using a similar method to what you used to make your initial room; create a long, open-ended room (ie 2 walls, ceiling and floor) that fits the holes in your main rooms:</p>
+<p><img src="corridors04.gif" width="482" height="402"><br>
+  <i>(Note this is a view from the side)</i></p>
+<li><p>Now you should be ready to add spawn points and lights for a test compile. Here is a screenshot of the level running.</p>
+<p><img src="corridors05.jpg" width="400" height="300"></p></li>
+</ol>
+
+<!-- Include footer -->
+<!--#include virtual="/ssi/tutorial_footer.htm" -->
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

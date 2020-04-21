@@ -1,0 +1,212 @@
+#Name:           Based On:        Params:
+_actor           none             orient=(0.000000/0.000000/0.000000) type=actor collide=1 move=physics thingflags=0x20000000 mass=150.000000 physflags=0x4a4f maxrotvel=200.000000 maxvel=1.000000 health=40.00 maxhealth=40.00 maxrotthrust=180.00 jumpspeed=1.50 eyeoffset=(0.000000/0.000000/0.037000) minheadpitch=-80.00 maxheadpitch=80.00 lightoffset=(0.000000/0.070000/0.040000) lightintensity=0.80 
+walkplayer       _actor           type=player thingflags=0x20000401 light=0.200000 model3d=ky.3do size=0.065000 movesize=0.065000 puppet=ky.pup soundclass=ky.snd cog=kyle.cog surfdrag=3.000000 airdrag=0.500000 staticdrag=0.300000 health=100.00 maxhealth=100.00 maxthrust=2.00 typeflags=0x1 error=0.50 fov=0.71 chance=1.00 
+_decor           none             orient=(0.000000/0.000000/0.000000) type=cog collide=1 move=path 
+_structure       _decor           collide=3 thingflags=0x8 
+_walkstruct      _structure       thingflags=0x400048 
+2x8catwalk       _walkstruct      model3d=c2x8.3do size=0.412822 movesize=0.412822 
+4x4elev          _walkstruct      model3d=e4x4.3do size=0.336311 movesize=0.336311 soundclass=med_elev.snd 
+_humanactor      _actor           size=0.065000 movesize=0.065000 surfdrag=3.000000 airdrag=0.500000 maxvel=0.500000 maxthrust=0.80 typeflags=0x80000 
+_weapon          none             orient=(0.000000/0.000000/0.000000) type=weapon collide=1 move=physics thingflags=0x20000000 timer=10.000000 mass=5.000000 physflags=0x200 maxrotvel=90.000000 damageclass=0x2 typeflags=0x1 
+_explosion       none             orient=(0.000000/0.000000/0.000000) type=explosion typeflags=0x1 damageclass=0x4 
++laserhit        _explosion       thingflags=0x1 light=0.200000 timer=0.500000 sprite=bryx.spr soundclass=exp_laserhit.snd typeflags=0x33 blasttime=0.300000 maxlight=0.400000 
++smflash         _explosion       thingflags=0x1 light=0.400000 timer=0.100000 typeflags=0x0 
++laserfleshhit   +laserhit        soundclass=exp_fleshy.snd 
++bryarbolt       _weapon          thingflags=0x20000001 light=0.400000 model3d=bry0.3do size=0.001000 movesize=0.001000 soundclass=bry.snd creatething=+smflash maxrotvel=0.000000 vel=(0.000000/4.000000/0.000000) explode=+laserhit fleshhit=+laserfleshhit damage=30.000000 mindamage=10.000000 typeflags=0x20440d rate=15.000000 
++stlaser         +bryarbolt       model3d=str0.3do soundclass=stlaser.snd vel=(0.000000/6.000000/0.000000) rate=10.000000 
++elaser          +stlaser         vel=(0.000000/4.000000/0.000000) damage=12.000000 mindamage=5.000000 
+reeyeesgun       _humanactor      thingflags=0x20000400 model3d=rystr.3do size=0.072900 movesize=0.072900 puppet=rystr.pup soundclass=rystr.snd cog=actor_rb.cog weapon=+elaser health=50.00 maxhealth=50.00 maxthrust=0.90 maxrotthrust=70.00 jumpspeed=1.20 typeflags=0x1 fireoffset=(0.014700/0.080000/0.034000) aiclass=rydefault.ai 
+2x3door          _structure       model3d=d2x3.3do size=0.180710 movesize=0.180710 soundclass=sm_door.snd 
+3x10catwalk      _walkstruct      model3d=c3x10.3do size=0.522160 movesize=0.522160 
+crate4_3         _walkstruct      model3d=crt4-3.3do size=0.173196 movesize=0.173196 
+crane            _decor           thingflags=0x400 model3d=cran.3do size=0.075000 movesize=0.075000 cog=xcrane.cog 
+funicular        _walkstruct      model3d=01func.3do size=0.369225 movesize=0.369225 soundclass=funicular.snd 
+crate6_2         _walkstruct      thingflags=0x400448 model3d=crt6-2.3do size=0.087201 movesize=0.087201 cog=actor_cr.cog 
+console2         _walkstruct      model3d=con2.3do size=0.073806 movesize=0.073806 
+_ghoststructure  _structure       collide=0 
+2x3jam           _ghoststructure  model3d=j2x3.3do size=0.268712 movesize=0.268712 
+6x6elev_1        _walkstruct      model3d=e6x6_1.3do size=1.180995 movesize=1.180995 soundclass=lg_elev.snd 
+crate4_1         _walkstruct      model3d=crt4-1.3do size=0.051962 movesize=0.051962 
+crate4_2         _walkstruct      model3d=crt4-2.3do size=0.086602 movesize=0.086602 
++whitecloud      none             orient=(0.000000/0.000000/0.000000) type=particle timer=0.200000 typeflags=0x3f material=00gsmoke.mat range=0.020000 rate=128.000000 maxthrust=30.000000 elementsize=0.007000 count=128 
++dustcloud       +whitecloud      timer=0.120000 material=dusty.mat range=0.015000 rate=256.000000 maxthrust=80.000000 elementsize=0.010000 
++punchcloud      +dustcloud       timer=0.150000 material=00gsmoke.mat range=0.006000 rate=64.000000 maxthrust=4.000000 elementsize=0.004000 count=16 
++punch_exp       _explosion       timer=0.001000 soundclass=exp_punch.snd creatething=+punchcloud typeflags=0x0 
++punch           _weapon          size=0.001000 movesize=0.001000 mass=50.000000 explode=+punch_exp fleshhit=+punch_exp damage=20.000000 damageclass=0x1 typeflags=0x200d range=0.150000 force=50.000000 
++ry_punch        +punch           damage=10.000000 force=25.000000 
+reeyeesfist      _humanactor      thingflags=0x20000400 model3d=ry.3do size=0.072900 movesize=0.072900 puppet=ryfist.pup soundclass=ryfist.snd cog=actor_rf.cog weapon=+ry_punch health=50.00 maxhealth=50.00 maxthrust=1.00 maxrotthrust=70.00 jumpspeed=1.20 typeflags=0x20001 aiclass=rypundefault.ai 
+_droidactor      _humanactor      typeflags=0x80140 
+powerdroid       _droidactor      thingflags=0x20000400 model3d=pd.3do size=0.080000 movesize=0.080000 puppet=pd.pup soundclass=gonk.snd cog=actor_go.cog mass=180.000000 health=50.00 maxhealth=50.00 maxthrust=0.20 maxrotthrust=50.00 typeflags=0x180140 aiclass=gonk.ai 
+_powerup         none             orient=(0.000000/0.000000/0.000000) type=item collide=1 move=physics size=0.100000 movesize=0.010000 surfdrag=3.000000 airdrag=1.000000 mass=10.000000 height=0.050000 physflags=0x400000 angvel=(0.000000/90.000000/0.000000) typeflags=0x1 respawn=30.000000 
+shieldrecharge   _powerup         thingflags=0x400 model3d=shld.3do cog=pow_shields.cog 
+3x3door_1        _walkstruct      model3d=d3x3_1.3do size=0.262464 movesize=0.262464 soundclass=sm_door.snd 
+_ghostdecor      _decor           collide=0 
+light1.0         _ghostdecor      thingflags=0x1 light=1.000000 
+ghostshuttle     _ghostdecor      model3d=shut.3do size=1.000000 movesize=1.000000 
+fan1             none             orient=(0.000000/0.000000/0.000000) type=cog collide=1 move=physics model3d=fan1.3do size=0.005000 movesize=0.005000 physflags=0x200 maxrotvel=90.000000 angvel=(0.000000/90.000000/0.000000) 
+roofvent3        _walkstruct      model3d=01rfd3.3do size=0.249375 movesize=0.249375 
+roofvent2        _walkstruct      model3d=01rfd2.3do size=0.226595 movesize=0.226595 
+roofpipe         _ghostdecor      model3d=01rfd0.3do size=0.077027 movesize=0.077027 
+4x3door_1        _structure       model3d=d4x3_1.3do size=0.250312 movesize=0.250312 soundclass=med_door.snd 
+reeyeesbhfist    reeyeesfist      model3d=rh.3do health=60.00 maxhealth=60.00 maxrotthrust=85.00 
+reeyeesbhgun     reeyeesgun       model3d=rhstr.3do health=60.00 maxhealth=60.00 maxrotthrust=80.00 aiclass=rybdefault.ai 
+healthpack       _powerup         thingflags=0x408 model3d=hepk.3do cog=pow_health.cog 
+strifle          _powerup         thingflags=0x400 model3d=strp.3do cog=pow_strifle.cog 
+2x2elev          _walkstruct      model3d=e2x2_0.3do size=0.192295 movesize=0.192295 soundclass=sm_elev.snd 
+3x8catwalk       _walkstruct      model3d=c3x8.3do size=0.427378 movesize=0.427378 
+energycell       _powerup         thingflags=0x400 model3d=ecel.3do cog=pow_energy.cog 
+greedopistol     _powerup         thingflags=0x400 model3d=ggun.3do cog=pow_bryar.cog 
++ebolt           +bryarbolt       model3d=bry1.3do vel=(0.000000/3.500000/0.000000) damage=10.000000 mindamage=5.000000 
+greedo           _humanactor      thingflags=0x20000400 model3d=gr.3do size=0.061500 movesize=0.061500 puppet=gr.pup soundclass=gr.snd cog=actor_gr.cog mass=70.000000 maxvel=0.300000 weapon=+ebolt maxrotthrust=80.00 typeflags=0x2080001 fireoffset=(0.016000/0.055000/0.004000) aiclass=grdefault.ai 
+bactatank        _powerup         thingflags=0x400 model3d=bact.3do cog=pow_bacta.cog respawn=60.000000 
+_civilian        _humanactor      surfdrag=2.000000 mass=100.000000 maxvel=0.300000 maxthrust=2.00 maxrotthrust=90.00 typeflags=0x180000 
+man2             _civilian        thingflags=0x20000400 model3d=m2.3do size=0.060000 movesize=0.060000 puppet=m2.pup soundclass=mn1.snd cog=actor_pm.cog maxvel=0.200000 health=50.00 maxhealth=50.00 maxthrust=0.50 maxrotthrust=60.00 aiclass=peddefault.ai 
+nman2            man2             cog=actor_mn.cog aiclass=pednarsh.ai 
+crate4_4         _walkstruct      model3d=crt4-4.3do size=0.259810 movesize=0.259810 
+crate6_1         _walkstruct      thingflags=0x400448 model3d=crt6-1.3do size=0.045598 movesize=0.045598 cog=actor_cs.cog 
+man1             _civilian        thingflags=0x20000400 model3d=mn.3do size=0.060000 movesize=0.060000 puppet=mn.pup soundclass=mn1.snd cog=actor_pm.cog maxvel=0.200000 health=50.00 maxhealth=50.00 maxthrust=0.50 maxrotthrust=60.00 aiclass=peddefault.ai 
+nman1            man1             cog=actor_mn.cog aiclass=pednarsh.ai 
+woman1           _civilian        thingflags=0x20000400 model3d=wm.3do size=0.056000 movesize=0.056000 puppet=wm.pup soundclass=wm1.snd cog=actor_pf.cog maxvel=0.200000 health=50.00 maxhealth=50.00 maxthrust=0.50 maxrotthrust=60.00 aiclass=peddefault.ai 
+nwoman1          woman1           cog=actor_fn.cog aiclass=pednarsh.ai 
+goggles          _powerup         thingflags=0x400 model3d=gogl.3do cog=pow_goggles.cog respawn=60.000000 
+freighter        _ghoststructure  model3d=01frt.3do size=7.945067 movesize=7.945067 
+r5               _droidactor      thingflags=0x20000400 model3d=r5.3do size=0.036000 movesize=0.036000 puppet=r5.pup soundclass=r2.snd cog=actor_r5.cog maxvel=0.400000 health=50.00 maxhealth=50.00 maxthrust=0.40 maxrotthrust=50.00 typeflags=0x180140 aiclass=drdefault.ai 
+smbp             _powerup         thingflags=0x400 model3d=bpck.3do cog=pow_smbkpk.cog 
+_zwalkstruct     _structure       thingflags=0x400040 
+tiebomber        _zwalkstruct     model3d=tieb.3do size=0.500000 movesize=0.500000 puppet=cr.pup 
+3x3elev          _walkstruct      model3d=e3x3.3do size=0.209751 movesize=0.209751 soundclass=sm_elev.snd 
+8t88             _humanactor      model3d=8t.3do size=0.060000 movesize=0.060000 puppet=8t.pup soundclass=8t.snd mass=300.000000 health=10000.00 maxhealth=10000.00 maxrotthrust=70.00 typeflags=0x100 aiclass=default.ai 
+00table          _walkstruct      thingflags=0x48 model3d=00tabl.3do size=0.070420 movesize=0.070420 
+column01         _structure       model3d=01colm.3do size=0.204987 movesize=0.204987 
+nbartender       nman2            cog=actor_bt.cog 
+tuskensoused     _ghostdecor      move=none model3d=thout.3do size=0.227490 movesize=0.227490 puppet=cr.pup 
+ghost            none             orient=(0.000000/0.000000/0.000000) type=ghost move=path 
+fullshield       _powerup         thingflags=0x400 model3d=vest.3do cog=pow_vest.cog respawn=60.000000 
+10x10door        _walkstruct      model3d=d10x10.3do size=1.169825 movesize=1.169825 soundclass=lg_elev.snd 
+detonator        _powerup         thingflags=0x400 model3d=detp.3do cog=pow_thermal.cog 
+bottle04         _structure       model3d=bottle4.3do size=0.080942 movesize=0.080942 
++firecloud       +dustcloud       material=00explosion.mat range=0.050000 rate=64.000000 maxthrust=40.000000 count=64 
++grenade_exp     _explosion       thingflags=0x1 light=0.200000 timer=0.800000 sprite=detx.spr soundclass=exp_det.snd creatething=+firecloud typeflags=0x17 damage=75.000000 blasttime=0.700000 force=100.000000 maxlight=0.800000 range=0.450000 
++remote_exp      +grenade_exp     sprite=debrisx.spr soundclass=exp_remote.snd damage=0.000000 force=25.000000 
++mouse_exp       +remote_exp      force=10.000000 
+mousebot         _droidactor      thingflags=0x20000400 model3d=mb.3do size=0.039000 movesize=0.039000 soundclass=mousebot.snd cog=actor_mb.cog mass=20.000000 height=0.040000 health=10.00 maxthrust=1.00 maxrotthrust=80.00 typeflags=0x20 explode=+mouse_exp aiclass=mouse.ai 
++grenade2        _weapon          timer=3.000000 model3d=det0.3do size=0.014895 movesize=0.014895 soundclass=det.snd surfdrag=3.000000 airdrag=0.800000 mass=1.000000 physflags=0x225 vel=(0.000000/2.000000/1.500000) angvel=(90.000000/45.000000/90.000000) buoyancy=0.250000 explode=+grenade_exp fleshhit=+grenade_exp damageclass=0x4 typeflags=0x40309 
++grenade1        +grenade2        timer=10.000000 typeflags=0x4030d 
++crossbowhit     +laserhit        sprite=bowx2.spr soundclass=exp_bowhit.snd 
++lgflash         _explosion       thingflags=0x1 light=0.300000 timer=0.400000 typeflags=0x12 blasttime=0.200000 maxlight=1.000000 
++crossbowbolt    _weapon          thingflags=0x20000001 light=0.500000 model3d=bow0.3do size=0.005000 movesize=0.005000 soundclass=bow.snd creatething=+lgflash vel=(0.000000/5.000000/0.000000) angvel=(0.000000/0.000000/120.000000) explode=+crossbowhit fleshhit=+crossbowhit damage=60.000000 mindamage=20.000000 damageclass=0x4 typeflags=0x20440d rate=10.000000 
++crossbowhit2    _explosion       thingflags=0x1 light=0.200000 timer=0.500000 sprite=bowx.spr typeflags=0x33 blasttime=0.300000 maxlight=0.400000 
++crossbowbolt2   +crossbowbolt    model3d=bow1.3do soundclass=none creatething=none explode=+crossbowhit2 fleshhit=+crossbowhit2 damage=40.000000 typeflags=0x440d 
++crossbowbolt3   +crossbowbolt    typeflags=0x28440d 
++repeaterhit     +laserhit        sprite=rptx.spr soundclass=exp_rpthit.snd 
++rpt_sparks      none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.700000 mass=0.100000 physflags=0x400201 vel=(0.000000/0.000000/0.200000) typeflags=0x27 material=sparky.mat range=0.040000 rate=24.000000 maxthrust=7.000000 elementsize=0.005000 count=24 
++rptfleshhit     _explosion       thingflags=0x1 light=0.100000 timer=0.800000 soundclass=exp_fleshy.snd creatething=+rpt_sparks typeflags=0x12 blasttime=0.700000 maxlight=0.300000 
++repeaterball    _weapon          thingflags=0x20000001 light=0.300000 model3d=rpt0.3do size=0.005000 movesize=0.005000 soundclass=rep.snd creatething=+smflash vel=(0.000000/6.000000/0.000000) explode=+repeaterhit fleshhit=+rptfleshhit damage=20.000000 mindamage=5.000000 typeflags=0x440d rate=20.000000 
++firecloud2      +firecloud       elementsize=0.012500 
++firecloud3      +firecloud       maxthrust=20.000000 count=32 
++debris_exp      _explosion       timer=1.000000 sprite=debrisx.spr soundclass=exp_small.snd creatething=+firecloud3 typeflags=0x7 blasttime=0.500000 
+_debris          none             orient=(0.000000/0.000000/0.000000) type=weapon collide=1 move=physics timer=1.100000 airdrag=3.000000 physflags=0x201 vel=(0.000000/4.000000/0.000000) angvel=(5.000000/10.000000/0.000000) explode=+debris_exp damage=5.000000 damageclass=0x1 typeflags=0xc 
+_debris2         _debris          explode=+smflash 
+shrapnel2_1      _debris2         model3d=shrp_1.3do size=0.045000 movesize=0.045000 
+shrapnel2_2      _debris2         model3d=shrp_2.3do size=0.040000 movesize=0.040000 
+shrapnel2_3      _debris2         model3d=shrp_3.3do size=0.028000 movesize=0.028000 
+shrapnel2_4      _debris2         model3d=shrp_4.3do size=0.026000 movesize=0.026000 
++sequencer_exp   _explosion       thingflags=0x1 light=0.200000 timer=0.800000 sprite=seqx2.spr soundclass=exp_med.snd creatething=+firecloud2 typeflags=0x17 damage=100.000000 blasttime=0.700000 force=300.000000 maxlight=0.800000 range=0.600000 debris=shrapnel2_1 debris=shrapnel2_2 debris=shrapnel2_3 debris=shrapnel2_4 
++seqchrg         +grenade2        timer=1.000000 model3d=seq0.3do size=0.010000 movesize=0.010000 soundclass=seq.snd surfdrag=5.000000 airdrag=1.000000 physflags=0x29d vel=(0.000000/0.100000/0.000000) angvel=(0.000000/0.000000/0.000000) buoyancy=0.150000 explode=+sequencer_exp fleshhit=+sequencer_exp typeflags=0x40380 
++seqchrg2        +seqchrg         thingflags=0x20000400 timer=60.000003 cog=class_sequencer.cog 
+shrapnel_1       _debris          model3d=shrp_1.3do size=0.045000 movesize=0.045000 
+shrapnel_2       _debris          model3d=shrp_2.3do size=0.040000 movesize=0.040000 
+shrapnel_3       _debris          model3d=shrp_3.3do size=0.028000 movesize=0.028000 
+shrapnel_4       _debris          model3d=shrp_4.3do size=0.026000 movesize=0.026000 
++raildet_exp     _explosion       thingflags=0x1 light=0.200000 timer=0.500000 sprite=rldx.spr soundclass=exp_raildet.snd typeflags=0x17 damage=110.000000 blasttime=0.700000 force=300.000000 maxlight=0.800000 range=0.500000 debris=shrapnel_1 debris=shrapnel_2 debris=shrapnel_3 debris=shrapnel_4 
++raildet2        +grenade1        thingflags=0x20000400 timer=2.500000 model3d=rld0.3do size=0.003000 movesize=0.003000 puppet=ra.pup soundclass=rail.snd creatething=+lgflash cog=00_smoketrail.cog airdrag=0.000000 height=0.003000 physflags=0x200 vel=(0.000000/2.500000/0.000000) angvel=(0.000000/0.000000/90.000000) explode=+raildet_exp fleshhit=+raildet_exp damage=5.000000 typeflags=0x240b81 
++raildet_exp2    +raildet_exp     debris=shrapnel_1 debris=shrapnel_2 debris=shrapnel_3 debris=shrapnel_4 
++raildet         +raildet2        timer=10.000000 explode=+raildet_exp2 fleshhit=+raildet_exp2 damage=20.000000 typeflags=0x24020d 
++conccloud       +dustcloud       rate=512.000000 maxthrust=100.000000 count=256 minsize=0.012000 pitchrange=5.000000 
++conc_exp        _explosion       thingflags=0x1 light=0.300000 timer=1.000000 sprite=conx.spr soundclass=exp_conc.snd creatething=+conccloud typeflags=0x17 damage=80.000000 blasttime=1.000000 force=200.000000 maxlight=0.800000 range=0.800000 
++concbullet      _weapon          thingflags=0x20000001 model3d=con0.3do size=0.005000 movesize=0.005000 soundclass=conc.snd creatething=+lgflash vel=(0.000000/7.000000/0.000000) explode=+conc_exp fleshhit=+conc_exp damage=20.000000 typeflags=0x20000d 
++concblast2p     +dustcloud       orient=(90.000000/0.000000/0.000000) range=0.001500 rate=128.000000 elementsize=0.005000 count=64 minsize=0.001200 pitchrange=5.000000 
++concblast3p     +concblast2p     typeflags=0x2b material=00ramp4.mat maxthrust=100.000000 
++concblast2      _weapon          size=0.005000 movesize=0.005000 fleshhit=+concblast3p trailthing=+concblast2p elementsize=0.300000 damage=80.000000 mindamage=20.000000 typeflags=0xa00d range=5.000000 rate=1.000000 
++axe_exp         _explosion       timer=0.001000 soundclass=exp_axe.snd typeflags=0x0 
++gamaxe          _weapon          size=0.001000 movesize=0.001000 mass=100.000000 explode=+axe_exp fleshhit=+axe_exp damage=40.000000 damageclass=0x1 typeflags=0x200d range=0.250000 force=50.000000 
++force_repel     _explosion       thingflags=0x1 light=0.500000 timer=0.400000 soundclass=exp_dest.snd typeflags=0x52 blasttime=0.300000 force=200.000000 maxlight=1.000000 range=0.500000 
++force_ltpeice   none             orient=(0.000000/0.000000/0.000000) type=weapon move=physics timer=0.250000 model3d=ligt2.3do size=0.005000 movesize=0.005000 physflags=0x200 maxrotvel=360.000000 angvel=(0.000000/0.000000/360.000000) 
++lightninghit    none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.200000 typeflags=0x2b material=00ramp4.mat range=0.020000 rate=16.000000 maxthrust=8.000000 elementsize=0.003000 count=16 
++force_lightning _weapon          thingflags=0x1 light=0.100000 timer=0.100000 size=0.005000 movesize=0.005000 vel=(0.000000/1.000000/0.000000) angvel=(0.000000/0.000000/360.000000) explode=+lightninghit fleshhit=+lightninghit trailthing=+force_ltpeice elementsize=0.075000 trailcylradius=0.050000 trailrandangle=30.000000 damage=13.000000 damageclass=0x8 typeflags=0x1840d range=1.500000 
++force_lightning2 +force_lightning damage=15.000000 
++force_lightning3 +force_lightning damage=20.000000 
++force_lightning4 +force_lightning damage=25.000000 
+lightsaber       _powerup         thingflags=0x400 model3d=sabp.3do cog=pow_saber.cog 
++force_saber     _weapon          thingflags=0x20000001 light=0.100000 timer=1.000000 model3d=sab0.3do size=0.005000 movesize=0.005000 vel=(0.000000/1.000000/0.000000) angvel=(0.000000/150.000000/0.000000) explode=lightsaber fleshhit=lightsaber damage=50.000000 damageclass=0x10 typeflags=0x40d 
++force_shield    none             orient=(0.000000/0.000000/0.000000) type=cog move=physics timer=61.000003 particle=sphere.par angvel=(60.000000/60.000000/60.000000) 
++force_blind     +dustcloud       material=00teleport.mat range=0.050000 rate=32.000000 elementsize=0.003000 minsize=0.020000 pitchrange=1.000000 yawrange=1.000000 
++smoke           none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.800000 physflags=0x20000 vel=(0.000000/0.000000/0.120000) angvel=(0.000000/90.000000/0.000000) typeflags=0x3e material=00gsmoke.mat range=0.030000 elementsize=0.005000 count=8 
++dest_trail      +smoke           vel=(0.000000/0.000000/0.000000) material=dstructparts.mat 
++dest_cloud      +firecloud       material=dstructparts.mat 
++force_dest1     _explosion       thingflags=0x1 light=0.100000 timer=0.400000 sprite=destruct8.spr soundclass=exp_dest.snd creatething=+dest_cloud typeflags=0x53 damage=15.000000 damageclass=0x8 blasttime=0.300000 force=100.000000 maxlight=0.500000 range=0.500000 
++force_dest2     _explosion       thingflags=0x1 light=0.200000 timer=0.600000 sprite=destruct8.spr soundclass=exp_dest.snd creatething=+dest_cloud typeflags=0x53 damage=30.000000 damageclass=0x8 blasttime=0.400000 force=200.000000 maxlight=0.600000 range=1.000000 
++force_dest3     _explosion       thingflags=0x1 light=0.300000 timer=0.800000 sprite=destruct8.spr soundclass=exp_dest.snd creatething=+dest_cloud typeflags=0x53 damage=45.000000 damageclass=0x8 blasttime=0.500000 force=300.000000 maxlight=0.700000 range=1.500000 
++force_dest4     _explosion       thingflags=0x1 light=0.400000 timer=1.000000 sprite=destruct8.spr soundclass=exp_dest.snd creatething=+dest_cloud typeflags=0x53 damage=60.000000 damageclass=0x8 blasttime=0.600000 force=400.000000 maxlight=0.800000 range=2.000000 
++force_dest_p1   _weapon          thingflags=0x20000401 light=0.400000 sprite=forcedstruct_150.spr cog=00_desttrail.cog vel=(0.000000/7.000000/0.000000) explode=+force_dest1 fleshhit=+force_dest1 damage=20.000000 typeflags=0xd 
++force_dest_p2   +force_dest_p1   explode=+force_dest2 fleshhit=+force_dest2 
++force_dest_p3   +force_dest_p1   explode=+force_dest3 fleshhit=+force_dest3 
++force_dest_p4   +force_dest_p1   explode=+force_dest4 fleshhit=+force_dest4 
++force_heal      none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=2.000000 angvel=(90.000000/90.000000/90.000000) typeflags=0x3f material=00teleport.mat range=0.300000 rate=128.000000 maxthrust=0.010000 elementsize=0.003000 count=128 
++heavysmoke      +smoke           timer=1.600000 range=0.100000 rate=32.000000 count=64 
++twinkle         none             orient=(0.000000/0.000000/0.000000) type=explosion thingflags=0x1 timer=0.500000 sprite=twinkle.spr typeflags=0x11 
++sspks_wall      none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.100000 mass=0.050000 physflags=0x400201 vel=(0.000000/0.000000/0.150000) typeflags=0x2b material=00ramp1.mat range=0.030000 rate=4.000000 maxthrust=8.000000 elementsize=0.003000 count=48 
++ssparks_wall    _explosion       thingflags=0x1 light=0.300000 timer=0.800000 soundclass=exp_saber_wall.snd creatething=+sspks_wall typeflags=0x112 blasttime=0.700000 maxlight=0.500000 flashrgb=(80/90/80) 
++sspks_blood     none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.200000 mass=0.100000 physflags=0x400201 vel=(0.000000/0.000000/0.200000) typeflags=0x2b material=00ramp2.mat range=0.040000 rate=4.000000 maxthrust=9.000000 elementsize=0.005000 count=24 
++ssparks_blood   _explosion       thingflags=0x1 light=0.100000 timer=0.800000 soundclass=exp_saber_blood.snd creatething=+sspks_blood typeflags=0x12 blasttime=0.700000 maxlight=0.300000 
++sspks_saber     none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.300000 mass=0.050000 physflags=0x400200 vel=(0.000000/0.000000/0.100000) typeflags=0x27 material=00teleport.mat range=0.020000 rate=32.000000 maxthrust=8.000000 elementsize=0.003000 count=32 
++ssparks_saber   _explosion       thingflags=0x1 light=0.800000 timer=0.800000 soundclass=exp_saber_saber.snd creatething=+sspks_saber typeflags=0x112 blasttime=0.700000 maxlight=1.000000 flashrgb=(150/160/150) 
+_droppowerup     _powerup         timer=30.000001 height=0.011000 physflags=0x41 typeflags=0x0 
++backpack        _droppowerup     thingflags=0x400 model3d=bpck.3do cog=pow_backpack.cog height=0.036337 typeflags=0x4 
+bryarpistol      _powerup         thingflags=0x400 model3d=bryp.3do cog=pow_bryar.cog 
+singledetonator  _powerup         thingflags=0x400 model3d=detp_1.3do cog=pow_single_thermal.cog 
+crossbow         _powerup         thingflags=0x400 model3d=bowp.3do cog=pow_crossbow.cog 
+repeatergun      _powerup         thingflags=0x400 model3d=rptp.3do cog=pow_repeater.cog 
+railgun          _powerup         thingflags=0x400 model3d=rldp.3do cog=pow_railgun.cog respawn=60.000000 
+singleseqcharge  _powerup         thingflags=0x400 model3d=seqp_1.3do cog=pow_single_sequencer.cog 
+concrifle        _powerup         thingflags=0x400 model3d=conp.3do cog=pow_concrifle.cog respawn=60.000000 
++fpbryarpistol   bryarpistol      collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fpstrifle       strifle          collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fpdetonator     singledetonator  collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fpcrossbow      crossbow         collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fprepeatergun   repeatergun      collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fprailgun       railgun          collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fpseqcharge     singleseqcharge  collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++fpconcrifle     concrifle        collide=0 timer=4.000000 typeflags=0x0 respawn=0.000000 
++telesparks      none             orient=(0.000000/0.000000/0.000000) type=particle timer=0.120000 typeflags=0x3f material=00teleport.mat range=0.030000 rate=256.000000 maxthrust=80.000000 elementsize=0.002000 count=256 
+bubble           none             orient=(0.000000/0.000000/0.000000) type=cog move=physics thingflags=0x10000000 timer=3.000000 sprite=bubble.spr mass=0.050000 physflags=0x200 vel=(0.000000/0.000000/0.300000) 
+bubble2          bubble           sprite=bubble2.spr vel=(0.000000/0.000000/0.450000) 
+bubble3          bubble           sprite=bubble3.spr vel=(0.000000/0.000000/0.600000) 
++watersplash     none             orient=(0.000000/0.000000/0.000000) type=explosion timer=0.500000 sprite=splash.spr typeflags=0x1 damageclass=0x4 
++watersplash2    +watersplash     sprite=splooshx.spr 
++dstrifle        _droppowerup     thingflags=0x400 model3d=strp.3do cog=pow_dstrifle.cog height=0.035177 
+_limb            none             orient=(0.000000/0.000000/0.000000) type=corpse collide=1 move=physics thingflags=0x400 timer=30.000001 model3d=stlimb.3do size=0.102337 movesize=0.000001 cog=00_bloodtrail.cog surfdrag=1.000000 airdrag=4.000000 mass=15.000000 physflags=0x44261 buoyancy=0.500000 
++rylimb          _limb            model3d=rylimb.3do size=0.050000 movesize=0.010000 
++rhlimb          _limb            model3d=rhlimb.3do size=0.050000 movesize=0.010000 
+shrapnel_5       _debris          model3d=shrp_5.3do size=0.084000 movesize=0.084000 
++xtank1_exp      _explosion       thingflags=0x1 light=0.200000 timer=0.800000 sprite=detx.spr soundclass=exp_probe.snd typeflags=0x17 damage=90.000000 blasttime=0.700000 force=100.000000 maxlight=0.800000 range=0.450000 debris=shrapnel_1 debris=shrapnel_2 debris=shrapnel_3 debris=shrapnel_5 
++xtank4_exp      +xtank1_exp      sprite=tiex.spr soundclass=exp_tie.snd damage=250.000000 force=300.000000 range=0.700000 debris=shrapnel_1 debris=shrapnel_2 debris=shrapnel_3 debris=shrapnel_5 
++crane_exp       +xtank4_exp      damage=50.000000 force=75.000000 range=0.500000 debris=shrapnel_1 debris=shrapnel_2 debris=shrapnel_3 debris=shrapnel_5 
++sentry_exp      +grenade_exp     damage=5.000000 force=50.000000 
++crate_exp       +sentry_exp      damage=30.000000 force=75.000000 range=0.200000 
++dhealthpack     _droppowerup     thingflags=0x408 model3d=hepk.3do cog=pow_health.cog height=0.023701 
++dbactatank      _droppowerup     thingflags=0x400 model3d=bact.3do cog=pow_bacta.cog height=0.028885 
++dshield         _droppowerup     thingflags=0x400 model3d=shld.3do cog=pow_shields.cog height=0.021618 
++dbattery        _droppowerup     thingflags=0x408 model3d=battery.3do cog=pow_battery.cog height=0.022909 
++denergycell     _droppowerup     thingflags=0x400 model3d=ecel.3do cog=pow_energy.cog height=0.022435 
++dpowercell      _droppowerup     thingflags=0x400 model3d=pcel.3do cog=pow_power.cog height=0.017868 
++dsmbp           _droppowerup     thingflags=0x400 model3d=bpck.3do cog=pow_smbkpk.cog height=0.036337 
++rycw_punch      +ry_punch        damage=5.000000 
+reeyeescw        reeyeesfist      weapon=+rycw_punch typeflags=0x1020001 
++gonk_exp        +grenade_exp     damage=20.000000 
++dgreedopistol   _droppowerup     thingflags=0x400 model3d=ggun.3do cog=pow_bryar.cog height=0.011450 
++scrate_exp      +crate_exp       damage=10.000000 force=25.000000 range=0.100000 
++r2r5_exp        +grenade_exp     damage=10.000000 force=50.000000 
++sparks          none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=1.000000 mass=1.000000 physflags=0x201 typeflags=0x3d material=embers.mat range=0.030000 rate=32.000000 maxthrust=20.000000 elementsize=0.010000 count=32 
++limb_blood      none             orient=(0.000000/0.000000/0.000000) type=particle move=physics timer=0.250000 physflags=0x201 vel=(0.000000/0.000000/0.200000) typeflags=0x27 material=00gsmoke.mat range=0.020000 rate=48.000000 maxthrust=3.000000 elementsize=0.005000 count=16 
+end

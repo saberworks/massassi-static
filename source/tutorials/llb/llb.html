@@ -1,0 +1,105 @@
+<html>
+<head>
+ <style>
+  <!--
+        A:link 	  {text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+ </style>
+ <title>The Massassi Temple: Layered Lightbeams Tutorial</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#52A54E" vlink="#52A54E">
+
+<!-- Ad Code -->
+<center><table cellspacing="0" cellpadding="0"><tr><td valign="middle"><a href="http://www.recongamer.com/" target="_top"><img src="http://www.massassi.net/images/rg.gif" width="80" height="60" border="0" alt="Recon Gamer"></a>&nbsp;</td>
+<td><script language="JavaScript">
+var code = '';
+var now = new Date();
+var nIndex = now.getTime();
+document.write('<s' + 'cript src="http://adservice.recon-networks.com/scriptinject.asp?F=1&Z=6&N=2&nocache=' + nIndex + '">');
+document.write('</' + 's' + 'cript>');
+</script>
+<script language="JavaScript">document.write(code);</script>
+
+<noscript><a href="http://adservice.recon-networks.com/adclick.asp?F=1&Z=6&N=2">
+<img border="0" src="http://adservice.recon-networks.com/adserve.asp?F=1&Z=6&N=2"></a></noscript>
+</td></tr></table></center><br>
+
+<!-- End Ad Code -->
+
+<font face="verdana,arial,helvetica" size="2">
+
+<font face="verdana,arial,helvetica" size="5">Layered Lightbeams</font>
+<br clear="all">
+<hr>
+Author: <a href="mailto:halucid@verizon.net">halucid</a>
+Reprinted with Permission by: <a href="mailto:jEDIkIRBY007@hotmail.com">jEDIkIRBY</a>
+<br>
+<br>
+
+
+<p><i>I was attempting to make my own level using pretty lightbeams like the one showcased in halucid's MadaMemorial level, so when I e-mailed him and asked him to give me a few pointers, he gladly replied with a full blown tutorial.  I asked him if he'd mind me posting it on massassi, and he was happy to.  So here's halucid's Layered Lightbeams Tutorial in full:</i></p>
+
+<center><img src="1.jpg"></center>
+
+<p>
+Yes layered... there's actually two light beams there. An outer and an inner beam. The technique is very similar to the one used to create a glowing saber, as they both take advantage of hardware antialiasing to acheive the effect.
+</p>
+
+<p>
+Now first, create the beams. You can choose to either make them 3DOs, or part of the level architecture. To keep the ammount of visible adjoins to a minimum, I recommend using 3DOs (Just don't forget to set the thing flags to render as architecture...0x8) However, since my beams required sector thrust, I made them out of architecture.
+</p>
+
+<center><img src="2.jpg"></center>
+
+<p>
+Now the effect cannot be acheived without custom textures. I used 8x8 8-bit MATs, as they don't need to be any larger than that. These textures MUST have transparent sections.
+</p>
+
+<center><img src="3.jpg"></center>
+
+<p>
+Now pay attention to the phrasing here... pretty tricky. Place the "INNER MAT" around the OUTER surfaces of the INNER beam. Then place the "OUTER MAT" on the INSIDE contours of the OUTER beam (if you're making a 3DO beam, you must first invert the surfaces in order to do this ALT+I).
+</p>
+
+<center><img src="4.jpg"></center>
+
+<p>
+OK, now the fade effect won't be created unless you set the UV scales so that the textures are stretched.... a lot. All settings vary depending on the size and layout of your level, so you'll have to experiment a few time to acheive the desired effect. Don't forget to add surface lighting and the translucent flag!</p>
+
+<center><img src="5.jpg"></center>
+
+<p>
+You're done! Your level should now look axactly like this! Hehe, just kidding. Actually, depending on how you decide to design the tubes and how you create your textures, your beam will be truly unique. It's unlikely yours will look like this one at all... but there's only one way to find out.
+</p>
+
+<p>
+Now for an added effect, you can use surface scrolling to make the rays apear to move. Try conveyor.cog, specially designed just for this effect by LKOH_SniperWolf. 
+</p>
+
+<p>
+Good luck, and I hope this answers any questions you might have.
+</p>
+
+<p>
+Attached: 
+<a href="conveyor.cog" target="_top">Conveyor.cog</a>
+
+<!-- Include footer -->
+
+<br><br>
+<center>
+Copyright &copy 1998-2005 Respective Authors &
+<a href="http://www.massassi.net" target="_top">The Massassi Temple</a>
+
+</center>
+
+
+<!-- End include -->
+
+</font>
+</body>
+
+</html>

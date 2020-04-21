@@ -1,0 +1,47 @@
+body, td
+{
+	background:black;
+	color:#e0e0e0;
+	font:9pt Verdana, Arial, Sans-Serif;
+}
+
+blockquote
+{
+	line-height:17px;
+}
+
+b
+{
+	color:white;
+}
+
+a, a:visited
+{
+	text-decoration:none;
+	color:#52A54E;
+}
+
+a:active, a:hover
+{
+	text-decoration:underline;
+	color:#A6BA45;
+}
+
+p.head
+{
+	font-size:13pt;
+	font-weight:bold;
+	color:#52A54E;
+}
+
+p.subhead
+{
+	font-size:10pt;
+	font-weight:bold;
+	color:#52A54E;
+}
+
+td.title
+{
+	font-size:19pt;
+}
