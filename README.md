@@ -2,6 +2,34 @@
 
 ## Background
 
+[The Massassi Temple](https://www.massassi.net/) is a long-running fan site for
+the game Dark Forces II: Jedi Knight (and Jedi Outcast and Jedi Academy).  The
+site was pretty popular back in the day but there aren't a lot of people
+editing these games anymore.  However, I would like to keep the site alive and
+there are problems with the current design/system:
+
+* it uses frames which means when people land on a specific page on the site
+  they don't get a menu
+* it's written in a combination of various languages, styles, and generations,
+  and much of the dynamic content doesn't really need to be dynamic anymore
+* it's got many generations of outdated and bad old HTML
+* it takes too much maintenance
+
+The goal of this repo is:
+
+* get help updating the content to be in a format usable by the included
+  static site generator
+* make the content available/open so it doesn't disappear if I get hit by a
+  bus, lose my job and can't make the hosting payments, etc.
+* accept PRs that improve the site in any way (if you're planning on making a
+  big change please let's talk first so no effort is wasted)
+
+You can read more about this here:
+
+[https://forums.massassi.net/vb3/showthread.php?68160-Future-of-Massassi-(open-content-open-source)](Future of Massassi \(open content, open source\))
+
+## More Background
+
 Massassi has a ton of content.  Some of it is stored in a database and served dynamically.  Some of it is stored in a database and written to static files to be served by apache.  Some of it is based on perl, some on php, some ssi-based .shtml.  A lot is just static HTML pages with hard-coded fonts, sizes, etc.  Much of the content also has associated images and other downloads that need to be included.
 
 I want to create a system that will allow me to go through all the _static_ stuff and place it into a filesystem-based repository (that can be checked into git).  I want to upgrade the static stuff so each page has a title, content, images, any associated downloads, but instead of having the entire design, css, etc., in each content page, I want to just store the content and have this static site generator output pages with the content interpolated into whatever design is present in templates/.  The point of this is that I can make design tweaks to the outer template, re-output the site, and have all pages reflect the change.
