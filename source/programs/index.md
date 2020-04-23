@@ -109,7 +109,11 @@ they share the same file formats).
 > 2001*: version 1.0.8 has a feature to download updates and patches from the 
 > author's Web site.
 
-### MAT / CMP
+### MAT / CMP / BM
+
+**[JKPaint v0.8](matcmp/JKPaint08.zip)** by Craig "UGG" Urquhart
+
+> A graphics editor for Jedi Knight and Mysteries of the Sith
 
 **[Mat16 v.9](matcmp/mat16_9.zip)** by BoBo Fett
 
