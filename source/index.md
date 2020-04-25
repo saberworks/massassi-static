@@ -43,7 +43,7 @@ The following sections are **in progress**
 The following sections have not been started:
 
 * News
-  * current/old/search
+    * current/old/search
 * levels/mods
 * cogs
 * main page
