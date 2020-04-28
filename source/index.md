@@ -31,9 +31,9 @@ As of 2020-04-24, the following sections are **done**
 * game info (jk/mots)
 * editing articles/basics/faq
 * resources
-  * 3dos
-  * misc
-  * programs
+    * 3dos/md3s
+    * misc
+    * programs
 
 The following sections are **in progress**
 
