@@ -1,0 +1,58 @@
+---
+title: Jedi Outcast &amp; Jedi Academy 3d Objects
+description: 3d objects for use in your levels/maps/mods.
+---
+
+<ul>
+    <li><a href="/3dos/jk.html">Jedi Knight 3dos</a></li>
+    <li><a href="/3dos/mots.html">Mysteries of the Sith 3dos</a></li>
+    <li><a href="/3dos/both.html">Both Jedi Knight &amp; Mysteries of the Sith 3dos</a></li>
+    <li><a href="/3dos/jo.html">Jedi Outcast MD3s</a></li>
+</ul>
+
+<p>These are 3d objects you can download and include in your level/map/mod.</p>
+<p><strong>Note:</strong> We don't take submissions for this section anymore.  If you want to share your 3do maybe try the <a href="https://forums.massassi.net/">forums</a>.</p>
+
+<h2>Object Models</h2>
+
+<div class="tutorial-table">
+<table>
+{% for o in data['md3'] %}
+    {% if o.type != 'md3.objects' %}
+        {% continue %}
+    {% endif %}
+
+    <tr>
+        <td>
+            {% if o.screenshot %}
+                <a href="screenshots/{{ o.screenshot }}"><img src="screenshots/{{ o.screenshot }}" width="100"></a>
+            {% endif %}
+            </td>
+        <td><a href="/files/md3/{{ o.file }}">{{ o.file }}</a> by {{ o.author }}<br>
+        {{ o.description }}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+
+<h2>Player Character Models</h2>
+
+<div class="tutorial-table">
+<table>
+{% for o in data['md3'] %}
+    {% if o.type != 'md3.players' %}
+        {% continue %}
+    {% endif %}
+
+    <tr>
+        <td>
+            {% if o.screenshot %}
+                <a href="screenshots/{{ o.screenshot }}"><img src="screenshots/{{ o.screenshot }}" width="100"></a>
+            {% endif %}
+            </td>
+        <td><a href="/files/md3/{{ o.file }}">{{ o.file }}</a> by {{ o.author }}<br>
+        {{ o.description }}</td>
+    </tr>
+{% endfor %}
+</table>
+</div>

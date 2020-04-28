@@ -51,7 +51,7 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 }
 
 #menu {
-    background-image: url("https://www.massassi.net/bground.gif");
+    background-image: url("/bground.gif");
     padding-left: 8px;
     padding-top: 8px;
     min-height: 100%;
