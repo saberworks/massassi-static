@@ -5,6 +5,7 @@ email: evil_editor@hotmail.com
 category: metal
 date: 2000-08-20
 screenshot: metalplate2.jpg
+colormap: dflt
 description: >
     A nice metal plate with a side bar and small weld plates.
 ---

@@ -5,6 +5,7 @@ email: evil_editor@hotmail.com
 category: decor
 date: 2000-08-04
 screenshot: eetrimb.jpg
+colormap: dflt
 description: >
     A blue wall trim.
 ---

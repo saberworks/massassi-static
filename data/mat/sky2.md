@@ -5,6 +5,7 @@ email: darrenrw@free.midcoast.com
 category: skies
 date: 2000-07-03
 screenshot: sky2.jpg
+colormap: dflt
 description: >
     A red and black sky best used with a horizon distance of at least 500.
 ---

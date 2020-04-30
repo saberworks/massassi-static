@@ -5,6 +5,7 @@ email: mop___@hotmail.com
 category: stone
 date: 2001-07-24
 screenshot: cw_trim.jpg
+colormap: dflt
 description: >
     Yellowish 16-bit stone wall with dirty marble trim.
 ---

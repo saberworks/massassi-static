@@ -180,6 +180,7 @@ def main():
                 f.write('category: '   + category            + '\n')
                 f.write('date: '       + date                + '\n')
                 f.write('screenshot: ' + screenshot          + '\n')
+                f.write('colormap: '   + row['mat_colormap'] + '\n')
 
                 # put description on own line using > operator because 
                 # descriptions have combinations of double and single quotes 

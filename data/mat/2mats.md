@@ -5,6 +5,7 @@ email: funkified@iwon.com
 category: stone
 date: 2000-06-05
 screenshot: 2mats.jpg
+colormap: dflt
 description: >
     Two mat files.  One is cement, another is some type of outdoors floor type thing.
 ---

@@ -5,6 +5,7 @@ email: evil_editor@hotmail.com
 category: walls
 date: 2000-08-16
 screenshot: wavewall.jpg
+colormap: dflt
 description: >
     A white wavy wall.
 ---

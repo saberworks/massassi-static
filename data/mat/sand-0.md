@@ -5,6 +5,7 @@ email: hhopkins@bellsouth.net
 category: sand
 date: 2000-04-15
 screenshot: sand-0.jpg
+colormap: unicolor
 description: >
     This mat works good with the green rock mat and will help with the prob of your walls and ground from looking the same.
 ---

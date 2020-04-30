@@ -5,6 +5,7 @@ email: MaDaVentor@aol.com
 category: metal
 date: 2000-08-20
 screenshot: j_metal_1.jpg
+colormap: dflt
 description: >
     A metal mat.
 ---

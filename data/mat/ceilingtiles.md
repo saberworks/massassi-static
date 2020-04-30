@@ -5,6 +5,7 @@ email: mibconversion@yahoo.com
 category: ceiling
 date: 2001-06-04
 screenshot: ceilingtiles.jpg
+colormap: dflt
 description: >
     To be used in offices or buisness type enviornments.
 ---
