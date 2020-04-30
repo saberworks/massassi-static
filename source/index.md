@@ -25,7 +25,7 @@ In order to help, you should probably learn about:
 
 ## Progress
 
-As of 2020-04-24, the following sections are **done**
+As of 2020-04-29, the following sections are **done**
 
 * submission instructions
 * game info (jk/mots)
