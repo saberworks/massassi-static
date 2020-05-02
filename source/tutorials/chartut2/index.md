@@ -3,8 +3,8 @@ title: Creating New Player Characters - Revisited
 author: Lee Howett
 email: leezer123@hotmail.com
 description: >
-    ####NOT LISTED
-date: 
+    Learn another technique to create player characters
+date: 1998-10-03
 original: player_characters.html
 category: jk
 ---
@@ -22,9 +22,9 @@ me with your question.
 
 Things you need, plus a link where to get it, if necessary:
 
-+ JED V. 0.85 (The newest version, you don't need it but it's what I use)
-+ The 3do's and mat's for your new character.
-+ Jedi Knight, or the Mysteries of the Sith Add-on Pack
+- JED V. 0.85 (The newest version, you don't need it but it's what I use)
+- The 3do's and mat's for your new character.
+- Jedi Knight, or the Mysteries of the Sith Add-on Pack
 
 Okay, here we go.  By the way, I'm using MotS.
 
@@ -75,7 +75,7 @@ making a new player character, you can also ignore this.
 
 5. Snd classes.  This is sometimes difficult.  If you are making a male
 character, then I usually use Kyle's. In this case, I'm making a male
-character, so I'm going to use Kyle's.  You choose a \.snd class the same
+character, so I'm going to use Kyle's.  You choose a .snd class the same
 way that you choose a 3do or an AI class. 
 
     This is what the Snd. class picker looks like: ![](pic6.gif)
@@ -106,7 +106,7 @@ tell you what it is for on the left, just like in the AI class thing.
 Once again, if you are an advanced editor, and you have your own .pup
 file, stick it in your project directory and then click Project
 Directory on the left, and then click your .pup file on the right.  When
-you have chosen a \.pup file, click OK.  
+you have chosen a .pup file, click OK.  
   
 7. Now we get to choose a cog file.  This is very important, it will
 tell JK what your thing really is, it's the difference from making a
@@ -122,8 +122,8 @@ also change the saber color by editing the Cog, just replace
 sabergreen0.mat and sabergreen1.mat for kyle in JK to whatever color you
 want, for example, saberorange0.mat and saberorange1.mat for the saber
 that he uses at the end of JK and in MotS.  To do this, just locate
-where it says the saber color (the name of the \.mat file that is the
-color, like the ones above) and replace it with the new \.mat file.  This
+where it says the saber color (the name of the .mat file that is the
+color, like the ones above) and replace it with the new .mat file.  This
 is pretty complicated, and I tried to put it in as simple terms as
 possible, but you still might not understand it, if you don't then
 email me and I'll try to explain it better.

@@ -46,7 +46,7 @@ Now we pick the conveyor.cog from our cog menu by pressing F7 add cog.
 We need to find the vector for our conveyor to move. I use VecCalc for
 JED because it's fast and easy, download at
 DarkJedi.com. For more on vector
-calculation see the [vectors tutorial](/../thrust/tutor.htm).
+calculation see the [vectors tutorial](/tutorials/thrust/).
 Make two ghost objects, one at each end and multiselect them. Fire Up
 VecCalc for JED and get the vector, mine is (1.00/0.00/0.00).
 

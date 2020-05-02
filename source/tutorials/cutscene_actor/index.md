@@ -105,7 +105,7 @@ a bonus for you:
 See how easy things are? This is probably one of the tutorials that
 everyone will rush to do as soon as they read it. If you want to
 customise the boss, then just edit it's Mats, (see the [Making a Skin
-Tutorial](http://www.massassi.net/tutorials/skins/tutor.htm)) and tell
+Tutorial](/tutorials/skins/)) and tell
 the 3do to use them instead. So you can have a powerful commando, with a
 scarred up face, and a brilliant boss. Cool eh?
 

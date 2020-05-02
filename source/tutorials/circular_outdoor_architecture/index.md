@@ -3,8 +3,8 @@ title: Circular Exterior Architecture
 author: Jkior Kav
 email: jkior@fcmail.com
 description: >
-    ####NOT LISTED
-date: 
+    Learn a new technique to create circular exterior architecture
+date: 1999-09-04
 category: jk
 ---
 
@@ -67,7 +67,7 @@ That said, lets get started.
     ![](8.jpg)  
       
     (BTW, this part might make more sense if you go to the [perfect
-    pipes](http://www.massassi.net/tutorials/pipes/perfectpipes.htm)
+    pipes](/tutorials/pipes/)
     tutorial)  
     Note: Because you will have to adjoin everything in the end, you
     might try adjoining as you go.  
@@ -81,7 +81,4 @@ That said, lets get started.
       
     ![](10.jpg)  
     And, Voila\! You now have perfectly circular exterior architecture\!
-    Enjoy and have fun\!  
-      
-    &copy; Copyright 1999 Jkior Level Productions and [The Massassi
-    Temple](http://www.massassi.net/).
+    Enjoy and have fun\!

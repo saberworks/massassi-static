@@ -15,8 +15,7 @@ Setting up the parameters in the Cogs for CTF is very easy affair to do
 but it can be complicating to setup if you don't understand the
 parameter's use. This tutorial will help explain how to set it up.
 
-CTF\_Main.cog
------
+##CTF\_Main.cog
 
 This is obviously the main cog for CTF levels. Without the cog, you
 can't play CTF. All values must be set for it to work.
@@ -44,8 +43,7 @@ in JED:
 | **players_gold1(surface):**  | Used for showing the players in the lobby how many players are on the gold team. This value is used to display the players in TENS. |
 | **players_gold2(surface):**  | Used for showing the players in the lobby how many players are on the gold team. This value is used to display the players in ONES. |
 
-CTF\_Respawn.cog
------
+##CTF\_Respawn.cog
 
 This cog is used to set the respawn mask for the players. See the "how
 to setup walkplayers" for more info on this.
@@ -53,14 +51,13 @@ to setup walkplayers" for more info on this.
 Here are the parameters you'll encounter in this cog when assigning them
 in JED:
 
-|                       |      |
-| --------------------- | ---- |
-| **mark_red(sector):** | This is used to assign the player to the red team. This should be the exact same value you have used in the mark_red value in the CTF_main.cog. |
+|                        |      |
+| ---------------------- | ---- |
+| **mark_red(sector):**  | This is used to assign the player to the red team. This should be the exact same value you have used in the mark_red value in the CTF_main.cog. |
 | **mark_gold(sector):** | This is used to assign the player to the gold team. This should be the exact same value you have used in the mark_gold value in the CTF_main.cog |
 
 
-CTF\_safeentry.cog
------
+##CTF\_safeentry.cog
 
 The purpose of this cog is for incase when a player misses the sector
 that is supposed to send the player to his new team. This usually
@@ -80,8 +77,7 @@ in JED:
 | **Ghost_red(thing):**   | Used to placement of the player when player is teleported back up to the lobby. Use in conjunction with the mark_red.  |
 | **Ghost_gold(thing):**  | Used to placement of the player when player is teleported back up to the lobby. Use in conjunction with the mark_gold. |
 
-CTF\_displayscore.cog
------
+##CTF\_displayscore.cog
 
 This cog layout is a bit tricky to understand so bare with me here. This
 cog is used to display the score in the game via scoreboards on the
@@ -94,8 +90,7 @@ should be grouped with (ex. rl0 + rm0 + rr0 is the first scoreboard for
 the red team) since I have explained the layout here, I won't list the
 values here since it would be redundant.
 
-CTF\_iconsclient.cog
------
+##CTF\_iconsclient.cog
 
 There are no values to set for this cog BUT you MUST have this placed in
 the "placed cogs" section in your level so that the level is aware of
@@ -103,8 +98,7 @@ the cog. This is used to sync the icon display (such as the flags and
 keys) so that level will run smoothly in MP. Without this, only the host
 of the game will have his icons working.
 
-CTF\_keysclient.cog
------
+##CTF\_keysclient.cog
 
 There are no values to set for this cog BUT you MUST have this placed in
 the "placed cogs" section in your level so that the level is aware of
@@ -113,22 +107,19 @@ that everyone in the game will know when a player has a key or not.
 Without this cog, don't expect the CTF doors that use the keys to work
 for the players that are not the host.
 
-CTF\_keyred.cog and CTF\_keygold.cog
------
+##CTF\_keyred.cog and CTF\_keygold.cog
 
 Like the icon and key client cogs, these cogs have no values to set BUT
 MUST be placed in the cog section of your level so that the game is
 aware of the cogs. These are for the key powerups that player will find
 in CTF games.
 
-CTF\_doorred.cog and CTF\_doorgold.cog
------
+##CTF\_doorred.cog and CTF\_doorgold.cog
 
 These work just like the 00\_door.cog in Jedi Knight so I won't explain
 these since it's pointless.
 
-How to Setup Walkplayers
------
+##How to Setup Walkplayers
 
 Ok, here is the number one thing in CTF that is probably the most
 confusing element to understand. Walkplayers are not setup by the CTF
