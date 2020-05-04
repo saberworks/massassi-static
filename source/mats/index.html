@@ -1,0 +1,45 @@
+---
+title: Mat/Texture Archive
+---
+
+<h1>Mat/Texture Archive</h1>
+
+<p>Welcome to the Massassi Temple Mat Archive. This is where you can download 
+textures to replace or compliment the ones shipped with JK or MotS. All files 
+are free for use in your level, but please credit the author of the mat in your 
+readme file!</p>
+
+<p><strong>Note:</strong> if you want to share your textures in this section, 
+please submit a Pull Request to our <a 
+href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
+
+<ul class="columns-2">
+{% for cat in data['mat_categories'] %}
+    <li><a href="#{{ cat.name }}">{{ cat.title }}</a></li>
+{% endfor %}
+</ul>
+
+{% for cat in data['mat_categories'] %}
+    <h2><a name="{{ cat.name }}">{{ cat.title }}</a></h2>
+    <p>{{ cat.description }}</p>
+
+    <div class="tutorial-table">
+    <table>
+    {% for m in data['mat'] %}
+        {% if m.category != cat.name %}
+            {% continue %}
+        {% endif %}
+
+        <tr>
+            <td>
+                {% if m.screenshot %}
+                    <a href="screenshots/{{ m.screenshot }}"><img src="screenshots/{{ m.screenshot }}" width="200"></a>
+                {% endif %}
+                </td>
+            <td><a href="/files/mats/{{ m.file }}">{{ m.file }}</a> by {{ m.author }}<br>
+            {{ m.description }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+{% endfor %}

@@ -34,11 +34,11 @@ As of 2020-04-29, the following sections are **done**
     * 3dos/md3s
     * misc
     * programs
+    * mats
 
 The following sections are **in progress**
 
 * tutorials
-* mats
 
 The following sections have not been started:
 
