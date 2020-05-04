@@ -51,7 +51,7 @@ sector selected before you switch to the top view.
 
 My catwalk is the small sector on the left. Go on down to the next step.
 
-*Now comes the next step. If you want to be able to walk on the catwalk,
+\*Now comes the next step. If you want to be able to walk on the catwalk,
 you need to select the top surface of the walk. Ok? Now, press enter and
 the surface box thingy comes up. Double-click on the surface flags. To
 make the surface usable, make sure the flag "Floor" and "Impassible" is
@@ -59,11 +59,11 @@ checked, like so:
 
 ![](image4.gif)
 
-*After all that is finished, select the small sector and delete it\!\!
+\*After all that is finished, select the small sector and delete it\!\!
 That's right, get rid of it\! This creates a negative-space effect,
 explained in the next paragraph. Read on. :)
 
-*Now to explain how these negative-space effects are achieved. It is
+\*Now to explain how these negative-space effects are achieved. It is
 really quite simple. The sector that was deleted created a kind of
 "hole" in the big sector itself. Since JK knows this can't be, and JED
 also knows this can't be. The surfaces that were part of the sector were

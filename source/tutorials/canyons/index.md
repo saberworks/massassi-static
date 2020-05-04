@@ -5,6 +5,7 @@ email: jstocks@cow-net.com
 description: >
     Learn how to create very realistic looking canyons in JED
 date: 1999-07-04
+original: canyontut.html
 category: jk
 ---
 
