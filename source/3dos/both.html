@@ -11,15 +11,14 @@ description: 3d objects for use in your levels/maps/mods.
 </ul>
 
 <p>These are 3d objects you can download and include in your level/map/mod.</p>
-<p><strong>Note:</strong> We don't take submissions for this section anymore.  If you want to share your 3do maybe try the <a href="https://forums.massassi.net/">forums</a>.</p>
+
+<p><strong>Note:</strong> if you want to share your textures in this section, 
+please submit a Pull Request to our <a 
+href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
 
 <div class="tutorial-table">
 <table>
-{% for o in data['3do'] %}
-    {% if o.type != 'both' %}
-        {% continue %}
-    {% endif %}
-
+{% for o in data['3do']['both'] %}
     <tr>
         <td>
             {% if o.screenshot %}

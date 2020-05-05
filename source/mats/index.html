@@ -11,11 +11,13 @@ readme file!</p>
 please submit a Pull Request to our <a 
 href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
 
-<ul class="columns-2">
+<div class="mat-category-list">
 {% for cat in data['mat_categories'] %}
-    <li><a href="#{{ cat.name }}">{{ cat.title }}</a></li>
+    <p class="mat-category">
+        <a href="#{{ cat.name }}">{{ cat.title }}</a> ({{ data['mat'][cat.name]|length }})<br>
+    {{ cat.description }}</p>
 {% endfor %}
-</ul>
+</div>
 
 {% for cat in data['mat_categories'] %}
     <h2><a name="{{ cat.name }}">{{ cat.title }}</a></h2>
@@ -23,7 +25,7 @@ href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
 
     <div class="tutorial-table">
     <table>
-    {% for m in data['mat'] %}
+    {% for m in data['mat'][cat.name] %}
         {% if m.category != cat.name %}
             {% continue %}
         {% endif %}

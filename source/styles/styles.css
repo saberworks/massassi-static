@@ -330,10 +330,15 @@ code {
     display: block;
 }
 
-ul.columns-2 {
-    height: 210px;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+div.mat-category-list {
+    column-count: 3;
+}
+
+p.mat-category {
+    break-inside: avoid;
+}
+
+p.mat-category > a {
+    font-size: 1.2em;
+    font-weight: bold;
 }

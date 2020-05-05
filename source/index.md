@@ -49,3 +49,5 @@ The following sections have not been started:
 * main page
 * level of the week (which is not weekly)
 * screenshot of the day (which is not daily)
+* editors corner (???)
+
