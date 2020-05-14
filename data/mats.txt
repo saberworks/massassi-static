@@ -1,0 +1,192 @@
+mat_id	category_id	mat_filename	mat_description	mat_colormap	author_name	author_email	date
+6	5	snumbers	Some numbers for score keeping.	unicolor	Nightmare	knud@raex.com	955666333
+3	4	16tsignblue	A sign with blue arrows.	unicolor	Nightmare	knud@raex.com	955628963
+1	1	snow2	A snow mat.	unicolor	Red	theensers@earthlink.net	955577906
+4	4	empsym	The Imperial symbol.	unicolor	PC_McCloud	PC_McCloud@hotmail.com	955629479
+2	3	skstars	A star mat.	unicolor	Red	theensers@earthlink.net	955628636
+5	4	rebsym	The Rebel symbol.	unicolor	PC_McCloud	PC_McCloud@hotmail.com	955629553
+7	14	pine02-dflt	A pine wood mat.	unicolor	Gary MacDonald	garymacdonald@sprint.ca	955666539
+8	14	redwd02-dflt	A redwood mat.	unicolor	Gary MacDonald	garymacdonald@sprint.ca	955666637
+9	6	egwater	A falling water mat.	unicolor	Element God	god@jedinights.com	955666824
+10	3	space5	A space mat.	unicolor	Element God	god@jedinights.com	955667080
+11	3	machinesstars	Another star mat.	unicolor	The Machine	the_machine90@hotmail.c	955667224
+12	7	dshall	The Death Star's walls (A).	unicolor	Red	theensers@earthlink.net	955667634
+13	7	hothout	The Death Star's walls (B).	unicolor	Red	theensers@earthlink.net	955667745
+14	9	00wcity2red	Red city lights.	unicolor	Nightmare	knud@raex.com	955667923
+15	8	cutgrate	A cut grate.	unicolor	Red	theensers@earthlink.net	955668296
+16	9	00_warnlight	A red light that blinks to warn you.	unicolor	Nightmare	knud@raex.com	955668696
+17	14	wood	A custom wood mat designed to work in any colormap.	dflt	Darren R. Williams	darrenrw@free.midcoast.com	955670602
+18	16	grass	A custom grass mat designed to work in any colormap.	dflt	Darren R. Williams	darrenrw@free.midcoast.com	955670818
+19	16	grass2	A custom grass mat designed to work in any colormap.	dflt	Darren R. Williams	darrenrw@free.midcoast.com	955671001
+20	14	03bark1	A light 'bark', that you might find inside a giant tree.	03house	Tee	terrancehansen@hotmail.com	955748117
+21	14	03bark2	A darker 'bark', that you might find inside a giant tree.	03house	Tee	terrancehansen@hotmail.com	955748174
+22	3	06evilsky	A very odd looking sky, from some far off alien world.	06baron	Tee	terrancehansen@hotmail.com	955748786
+23	17	06itiles	An irregular tile pattern, could be used for walls or floors.	06baron	Tee	terrancehansen@hotmail.com	955748847
+24	18	06rockwall1	A rocky canyon wall.	06baron	Tee	terrancehansen@hotmail.com	955748913
+25	17	06slbrick	A dirty slant-edged brick wall.	06baron	Tee	terrancehansen@hotmail.com	955748978
+26	19	06stonefloor	A floor, or wall, carved from living rock.	06baron	Tee	terrancehansen@hotmail.com	955749084
+27	20	cl_darkglass	A dark glass mat which could be used to hide things behind glass.	dflt	Coolie_Loach	coolie_loach@hotmail.com	955753777
+28	5	numbers	A small mat that uses the Imperial numbers seen in the Aurabresh font.  This font uses the Imperial Characters used in Star Wars.	dflt	Lt Grant	mvdailey@juno.com	955754864
+29	15	sand-0	This mat works good with the green rock mat and will help with the prob of your walls and ground from looking the same.	unicolor	Evil_Editor	hhopkins@bellsouth.net	955764079
+30	16	darkgrass	A mat of dark grass.	unicolor	Evil_Editor	hhopkins@bellsouth.net	955764225
+31	6	JKDWater	A water mat.	unicolor	Jedi Knight Domain	"n/a"	955764544
+32	15	03sand01	A sand mat.	unicolor	ZebaZxant	ZebaZxant@aol.com	955765213
+33	15	03sand02	Another sand mat.	unicolor	ZebaZxant	ZebaZxant@aol.com	955765262
+34	15	sand	2 Sand Mats (from photos of the Tatooine set).	unicolor	Tee	gwilliams@horizon.co.fk	955765820
+35	6	bactah2o	Green water.	unicolor	Red	theensers@earthlink.net	955766254
+36	6	brnswr	Brown sewer water.	unicolor	Element God	god@jedinights.com	955766317
+37	1	snow_mats	Several snow mats.	unicolor	Nightmare	knud@raex.com	955766873
+38	2	gwspack	23 photorealistic grass, water and sky mats.	unicolor	The Big Giant Head	dahoss_2@yahoo.com	955767454
+39	14	woodmats	29 photorealistic wood mats.	unicolor	The Big Giant Head	dahoss_2@yahoo.com	955768389
+40	10	checkerfloor	A black and white checkered floor.	unicolor	REZ	"n/a"	955812762
+41	9	00wcity3	An alternative city mat.	unicolor	Nightmare	knud@raex.com	955813453
+42	7	bigred	A reactor mat.	unicolor	Red	theensers@earthlink.net	955813575
+43	8	skgrate	A grate mat.	unicolor	Red	theensers@earthlink.net	955813666
+44	17	brickmats	17 photorealistic brick and tile mats.	unicolor	The Big Giant Head	dahoss_2@yahoo.com	955814277
+64	10	hotelrugcarpet	A rug and carpet.	unicolor	The Machine	the_machine@hotmail.net	957443130
+46	15	dessert	Yet another sand mat.	dflt	The Machine	the_machine90@hotmail.com	955815101
+47	18	15rockwall1	A rocky canyon wall.	15maw	Tee	terrancehansen@hotmail.com	955816863
+48	19	15stonefloor	A carved rocky floor/wall.	15maw	Tee	terrancehansen@hotmail.com	955816921
+49	12	jmmats	84 textures of walls, dirt, lights, and more.	01narsh	JM	XXWP39C@Prodigy.com	955818796
+50	12	matpackv3	209 textures.	06baron	Ventrue_Vannula	ayork@acadia.net	955821039
+51	13	dfltbookshelf	A bookshelf.	dflt	Tee	terrancehansen@hotmail.com	955822488
+52	10	dfltfloortile	A black/white floor tile, with a circular pattern.	dflt	Tee	terrancehansen@hotmail.com	955822568
+53	13	dfltrdrape	A red drape.	dflt	Tee	terrancehansen@hotmail.com	955822628
+54	18	dfltrock	A rocky canyon wall.	dflt	Tee	terrancehansen@hotmail.com	955822760
+55	19	dfltstonefloor	A rocky carved floor/wall.	dflt	Tee	terrancehansen@hotmail.com	955822894
+56	15	dfltsand	A desert wind blown sand.	dflt	Tee	terrancehansen@hotmail.com	955822950
+57	3	dfltwarpsky	A wild alien sky/space thing.	dflt	Tee	terrancehansen@hotmail.com	955833040
+58	13	dfltwoodcrate	A wooden crate with metal trim.	dflt	Tee	terrancehansen@hotmail.com	955833213
+59	13	dfltwoodcrate2	A wooden crate with metal trim, different colour wood.	dflt	Tee	terrancehansen@hotmail.com	955833268
+60	16	grass1	A grass floor mat.	dflt	Jason	TallKid77@aol.com	956096783
+61	13	dfltwoodbarrel	An olde wooden barrel texture.	dflt	Tee	terrancehansen@hotmail.com	956097104
+62	12	JKGraphtalica	A collection of 169 mats from Graphtallica using various colormaps.  Textures converted by Ping_Me.	dflt	Sean Johnson	salty@ingava.com	956372397
+63	12	Graphtallica2	250 mats from Graphtallica using different colormaps.  These textures were converted by Ping_Me.	dflt	Sean Johnson	salty@ingava.com	956444111
+65	17	Mats	12 brick and floor mats.	dflt	SuperSlasher	ccm@hpnc.com	957561869
+66	12	aematpack1	Alliance Editing's mat pack containing 38 various mats.	01narsh	Posse	funkified@iwon.com	958768762
+67	3	sky	Cloud and sky mat.	dflt	Evil_Editor	beph@bellsouth.net	958856677
+68	4	dangermat	Danger mat sign for a wall or billboard.	dflt	Evil_Editor	beph@bellsouth.net	958856770
+69	18	cliff	A mat to use for a cliff.	03house	Kevinator	gao_kevinator@hotmail.com	958934096
+70	2	hotlava	A lava mat that also contains a new crunchy lava wav file.	06baron	HothRebel	hothrebel@hotmail.com	959707759
+71	1	snwdrft	A snow drift mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960146842
+72	19	cement2	A cement/wall mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960147358
+73	2	bublava	A bubbly lava mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960147694
+74	14	darkbark	A dark tree bark mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960147942
+75	16	igrass	A grass mat.	03house	Kevinator	gao_kevinator@hotmail.com	960170277
+76	19	stonpack	A collection of 5 stone mats.	dflt	Kevinator	gao_kevinator@hotmail.com	960170867
+77	19	dirtycem	A mat of dirty cement.	dflt	Kevinator	gao_kevinator@hotmail.com	960175053
+78	3	beautsky	A mat of a sky at sunset.	06baron	Kevinator	gao_kevinator@hotmail.com	960216690
+79	19	darkcem	A dark cement mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960216947
+80	19	2mats	Two mat files.  One is cement, another is some type of outdoors floor type thing.	dflt	Posse	funkified@iwon.com	960237856
+81	10	barren	A collection of five barren/alien ground textures.	dflt	Kevinator	gao_kevinator@hotmail.com	960254295
+82	3	skypack	Five mats of different types of skies.	06baron	Kevinator	gao_kevinator@hotmail.com	960310318
+83	1	icepack	Five mats of different kinds of ice.	06baron	Kevinator	gao_kevinator@hotmail.com	960310862
+84	19	bumpyrck	A bumpy rock mat.	dflt	PedHead	pedhead@att.net	960311158
+85	19	sandstone_1	A sandstone like mat.	dflt	PedHead	pedhead@att.net	960311368
+86	19	sandstone_2	A sandstone like mat.	dflt	PedHead	pedhead@att.net	960311487
+87	19	stonetile	A stone tile mat.	dflt	PedHead	pedhead@att.net	960311626
+88	19	tiki_tile	A tiki type of tile.	dflt	PedHead	pedhead@att.net	960311769
+89	19	tile	A tile mat that goes with the tiki_tile mat.	dflt	PedHead	pedhead@att.net	960311933
+90	19	walbrwn	A stone type of a wall mat.	dflt	PedHead	pedhead@att.net	960312088
+91	2	walvine	A stone wall with a vine growing on it.	dflt	PedHead	pedhead@att.net	960312242
+92	13	ceiling1	A mat for a white ceiling with bumps.	dflt	Travis	Travwil2@msn.com	960317081
+93	19	rwall	A rough stone wall mat.	dflt	Kevinator	gao_kevinator@hotmail.com	960324088
+94	13	curtainpack	Five different colored curtain mats.	dflt	Kevinator	gao_kevinator@hotmail.com	960327952
+95	16	pedgrass	A grass mat.	dflt	PedHead	pedhead@att.net	960333670
+96	3	Nebula	A mat of a space nebula.	dflt	Kevinator	gao_kevinator@hotmail.com	960334185
+97	19	marblemats	7 greyish marble mats.	dflt	Snootle	eggenletus@yahoo.com	960672596
+98	10	floortileelyas	A floor tile set that could be used in anything from an office building to a mall.	dflt	Elyas Machera	elyas2k@hotmail.com	960674194
+99	10	etile	A Black/White & Purple floor tile with a circular pattern.	dflt	Evil_Editor	evil_editor@hotmail.com	960918636
+100	12	evindust	These 4 mats are designed to be used in industrial/city type levels.  It includes an animated mercury pool as well as a couple yellow warning stripes.	dflt	Evan Carson	evcarson@xtra.co.nz	961273907
+101	10	ballroomfloor	A ball room floor mat designed for many colormaps, but works best using 09fuel.cmp.	09fuel	GuNbOy	rocesk8er@hotmail.com	961274409
+102	8	vent	This is a mat of a grate/vent...  It looks shiney and new.	dflt	MaDaVentor	MaDaVentor@aol.com	962420643
+103	8	vent_cut	This is the same grate/vent as the "vent" file, only slashed wide open...	dflt	MaDaVentor	MaDaVentor@aol.com	962420721
+104	8	vent_in	This is the inside "walls" of a vent.  Works on the ceiling and floor also..	dflt	MaDaVentor	MaDaVentor@aol.com	962420771
+105	3	sky-gold	A gold colored sky, best used with a horizon distance of at least 500.	dflt	Darren R. Williams	darrenrw@free.midcoast.com	962637210
+106	3	sky2	A red and black sky best used with a horizon distance of at least 500.	dflt	Darren R. Williams	darrenrw@free.midcoast.com	962637275
+107	3	sky-blue	A blue sky.	06baron	Darren R. Williams	darrenrw@free.midcoast.com	962637332
+108	17	eebrick	Big dark brick for walls.	dflt	Evil_Editor	evil_editor@hotmail.com	962831080
+109	14	dfltwood	This mat is used for wooden floors.	dflt	Hebedee	lordhebedee@hotmail.com	962922367
+179	21	ceilingtiles	To be used in offices or buisness type enviornments.	dflt	Agent J	mibconversion@yahoo.com	991669216
+111	4	darthvader	Darth vader sign for a wall.	dflt	Evil_Editor	evil_editor@hotmail.com	963268201
+112	18	imajedi_cliff_mats	Two cliff mats, one with moss and one without.  Intended to be used together.	03house	Imajedi	imajedi@massassi.com	963689986
+113	17	Ancient_brick	An old-looking brick with some moss on it.	dflt	DAK	DAK@massassi.com	964048012
+114	19	pedcement	A cement mat.	dflt	PedHead	pedhead@pedworld.com	964306009
+115	10	pedcheck	A checker floor mat.	03house	PedHead	pedhead@pedworld.com	964306085
+116	19	pedconstruct	A mat of cement that's under contruction.	06baron	PedHead	pedhead@pedworld.com	964306159
+117	19	pedconstruct_1	Another mat of cement under construction.	06baron	PedHead	pedhead@pedworld.com	964306241
+118	2	leaves	A mat for a tree or bush.	dflt	Evil_Editor	evil_editor@hotmail.com	964822723
+119	13	eetrimb	A blue wall trim.	dflt	Evil_Editor	evil_editor@hotmail.com	965430023
+120	14	woodshingle	A wood shingle mat for a roof.	dflt	Evil_editor	evil_editor@hotmail.com	965430071
+121	13	eetrimg	A trim mat for a wall.	dflt	Evil_Editor	evil_editor@hotmail.com	965525556
+122	20	stainglass	A stainglass mat.	dflt	Evil_Editor	evil_editor@hotmail.com	965525634
+123	13	walltrim1	A trim mat for a wall.	dflt	Evil_Editor	evil_editor@hotmail.com	965525688
+124	13	walltrim2	A trim mat for a wall.	dflt	Evil_Editor	evil_editor@hotmail.com	965525726
+125	18	eerock	A mat for canyon wall.	dflt	Evil_Editor	evil_editor@hotmail.com	966464009
+126	13	goldit	A gold mat.	dflt	Evil_Editor	evil_editor@hotmail.com	966464059
+127	7	tanwall	Just a tan wall.	dflt	Evil_Editor	evil_editor@hotmail.com	966464115
+128	7	wavewall	A white wavy wall.	dflt	Evil_Editor	evil_editor@hotmail.com	966464151
+129	7	wavewall2	A darker wavy wall.	dflt	Evil_Editor	evil_editor@hotmail.com	966464199
+130	12	matsandscreens	A pack of five different mats.	dflt	Kevinator	gao_kevinator@hotmail.com	966549727
+131	3	sunsets	Two textures of orange / sunset type skies.	dflt	Emon	emon@massassi.com	966705360
+132	12	tatooine	71 Tatooinish wall and ceiling mats.	dflt	Goofz	ouch@mucl.de	966708638
+133	4	Mat	A mat similar to 00wwarny but looks sharper farther away.	dflt	Nathan	Naythn@massassi.com	966797570
+134	22	metal	A metal mat for walls or floor.	dflt	Evil_Editor	evil_editor@hotmail.com	966798896
+135	22	hull	A beautiful hull mat with a repeat factor of 100%	dflt	Evil_Editor	evil_editor@hotmail.com	966798938
+136	22	metalplate	A metal plate mat with bars.	dflt	Evil_Editor	evil_editor@hotmail.com	966798983
+137	22	j_metal_1	A metal mat.	dflt	MaDaVentor	MaDaVentor@aol.com	966799034
+138	22	metalplate2	A nice metal plate with a side bar and small weld plates.	dflt	Evil_Editor	evil_editor@hotmail.com	966799088
+139	22	j_metal_2	A dark metal mat.	dflt	MaDaVentor	MaDaVentor@aol.com	966799138
+140	22	j_metal_3	A light metal mat.	dflt	MaDaVentor	MaDaVentor@aol.com	966799183
+141	3	dfltsunset3	A deep purple sky with clouds and some stars showing through.	dflt	Emon	emon@massassi.com	966799654
+142	19	volcano_1	A rocky volcano texture.	dflt	PedHead	pedhead@pedworld.com	967239081
+143	19	volcano_2	A rocky volcano texture with some lava showing.	dflt	PedHead	pedhead@pedworld.com	967239139
+144	19	volcano_3	A different rocky volcano texture.	dflt	PedHead	pedhead@pedworld.com	967239197
+145	22	dtswitc76	A basic switch.	01narsh	GeneralRamos	AGAGnrlRamos@aol.com	968363146
+146	8	grate21	A slashable grate.	01narsh	GeneralRamos	AGAGnrlRamos@aol.com	968363222
+147	8	grate31	A slashable grate.	01narsh	GeneralRamos	AGAGnrlRamos@aol.com	968363265
+148	22	01Coupli64	A multicell power coupling.	01narsh	GeneralRamos	AGAGnrlRamos@aol.com	968363355
+149	22	dtswitch2-1	A basic switch.	01narsh	GeneralRamos	AGAGnrlRamos@aol.com	968363414
+150	22	wavep06	Meant as a monitor for inside a station.	dflt	GeneralRamos	AGAGnrlRamos@aol.com	968886022
+151	1	pedsnow_1	A snow mat made in photoshop.	dflt	PedHead	pedhead@pedworld.com	969207296
+152	12	episode1pack	Mats from Theed and the Jedi Council Chamber.  Also work in 09fuel and 17saris colormaps.	dflt	Jepman	jepman@massassi.com	970278961
+153	1	snowwall2	It's an 8 bit (tiling) icy wall mat.	dflt	Adam Roberts	moneyob@massassi.com	973372150
+154	12	realityzip	59 mats for modern and high-class settings.	01narsh	Masq	Masq@massassi.com	975785183
+155	1	darkice	A dark ice mat intened for use for walls and ceilings made of ice. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	976672470
+156	22	roughmetal	This is a shiny metal mat that has a rough texture. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977354685
+157	3	bedspinmat	Bespin sky mat.  It doesn't have clouds, but the colors are much richer than the normal one. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977437795
+158	2	Firemat	This is a fire. It is very small so use it for texturing small areas. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977589423
+159	14	Wood1	This is a great photorealistic wood mat.  Really great for gun stocks. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977606037
+160	14	treebark	This is a treebark mat.  Great for skinny trees. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977686316
+161	19	Spottedrock	This is a sandy rock mat. It looks good in caves. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977712602
+162	19	Redrock	This is a red pigment rock mat. It is best on floors. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977712804
+163	9	brightred	This is a shiny red mat.  Good for blinking lights or royal guard helmets. <b>**This is a 16 bit mat**</b>	dflt	rathi	Paul_Cattaneo@pacbell.net	977775093
+165	13	window	Here is a mat to make a window.	dflt	Elmo	Elmo@massassi.com	985307004
+166	10	tile	A tile mat. <b>**This is a 16 bit mat**</b>	dflt	EAH_Psych0_MaN	Scognetto@home.com	985308064
+167	12	skyboxes1	This is my sky box matpack, it contains mats for 6 different skyboxes. <b>Every mat is 16 bit</b>.	dflt	Cave_Demon	cave_demon@massassi.com	986773403
+168	3	leninsky	Made at first in Terragen and then edited so it could tile of be used in a skybox or as a very excellent sky texture. <b>Note: It is 16-bit</b>	dflt	Ulicqeldroma	dashredar@hotmail.com	986938062
+169	9	00_lightning_anim	Animated lightning mat for DFLT.  Fades away as it animates.  Includes 2 lightning WAVs.  Best rigged with COGs, lights and sounds.	dflt	Emon	emon@ejm.i-p.cm	987891469
+170	7	grass_wall	<b>16 bit</b> wall mats.	dflt	Goofz	ouch@mucl.de	987892788
+171	10	palace	<b>16 bit</b> palace floor mats.	dflt	Goofz	ouch@mucl.de	987893160
+172	7	wall4	<b>16 bit</b> rocky wall mat.	dflt	Goofz	ouch@mucl.de	987893306
+173	2	camoflauge	This is a camoflauge mat that will work great on any soilder or vehicle. <b>*16 bit*</b>	dflt	Darth Dude	Ewok1234@AOL.com	988410512
+174	6	wateranime	An animated whirlpool mat.	dflt	JoShEr	indwelling_flame@hotmail.com	988841596
+175	3	purplesky	This is a purple sky with white clouds. <b>Note: This is a 16 bit mat</b>.	dflt	Jim14	Jim14@cfaith.com	991327521
+176	7	16bit_portal	This is a blue-white animated portal MAT. It bulges in and out as it animates. <b>This MAT is 16-bit</b>.	dflt	Emon	emon@ejm.i-p.com	991584095
+177	12	phatmat1	Consits of various useful textures I've found around the net and converted to DFLT.	dflt	Agent J	mibconversion@yahoo.com	991668078
+178	6	slime	Slime MAT based off of Evil_Editor's alien water MAT.	dflt	Agent J	mibconversion@yahoo.com	991668863
+180	12	Ultimate16-bitmatsk	This is a 16-bit sky mat pack. It contains over 30 sky mats.	dflt	Jim14 & SS4Gohan	Jim14@cfaith.com	992960285
+181	10	brickfloor	A 16bit MAT. Best used as floor under a translucent water MAT.	dflt	Elmo	Elmo@massassi.com	993427284
+182	12	industextures	Six industrial looking mats.	15maw	Darren "Zuljin" Williams	darrenrw@kona.midcoast.com	994972954
+183	3	spacemats	Several mats of space nebulas and star clusters and such.	06baron	Kryptos	ArnarchyPhorbes185@hotmail.com	995149526
+184	19	cw_cross1	Yellowish 16-bit wall with cross and dirty marble trim.	dflt	mop	mop___@hotmail.com	996002936
+185	19	cw_cross2	Yellowish 16-bit stone wall with cross.	dflt	mop	mop___@hotmail.com	996003023
+186	19	cw_plain	A 16-bit yellowish stone wall.	dflt	mop	mop___@hotmail.com	996003144
+187	19	cw_trim	Yellowish 16-bit stone wall with dirty marble trim.	dflt	mop	mop___@hotmail.com	996003411
+188	19	pw_plain	Purplish 16-bit wall.	dflt	mop	mop___@hotmail.com	996003493
+189	19	pw_trim	Purplish 16-bit wall with shiny marble trim.	dflt	mop	mop___@hotmail.com	996003597
+190	7	slimecoat	A 16 bit mat of slime covering a wall.	dflt	SAJN_Master	ujn_goku@hotmail.com	999639383
+191	2	rain-0	A rain mat, use conveyor cogs for movement.	06baron	JeDaK	dave.allsopp@ntlworld.com	1002838104
+192	12	redrum	Intended for miscellaneous use. <b>* This is a 16-bit mat pack *</b>	dflt	Darren Williams	darrenrw@kona.midcoast.com	1006242159
+193	4	signmat1	A sign for a bathroom.	dflt	ChiaPet	ty_weick@hotmail.com	1009070424
+195	23	glhq_skybox	A JK2 skybox with a blue tint.  Original BMPs included in ZIP file.	dflt	Patrick "EL3CTRO" Grant	patrick.grant@ntlworld.com	1029346681

@@ -2,7 +2,7 @@
 # data/3do.txt is a tab-separated database dump of the massassi 3dos table
 #
 # Parse the tab-delimited file and output individual 3do md files into the 
-# source/3do directory.  Then I can retire the 3do table.
+# data/3do directory.  Then I can retire the 3do table.
 #
 
 import csv

@@ -51,7 +51,7 @@ a:hover   { text-decoration: underline; color: #A6BA45; }
 }
 
 #menu {
-    background-image: url("https://www.massassi.net/bground.gif");
+    background-image: url("/bground.gif");
     padding-left: 8px;
     padding-top: 8px;
     min-height: 100%;
@@ -323,9 +323,22 @@ div.tutorial-table th {
     padding: 1em;
 }
 
-code.plain {
+code {
     color: #808080;
     font-size: 1.2em;
     margin-left: 20px;
     display: block;
+}
+
+div.mat-category-list {
+    column-count: 3;
+}
+
+p.mat-category {
+    break-inside: avoid;
+}
+
+p.mat-category > a {
+    font-size: 1.2em;
+    font-weight: bold;
 }

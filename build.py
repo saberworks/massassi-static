@@ -6,6 +6,7 @@ import re
 import shutil
 import sys
 import warnings
+import pprint
 
 # installed via pip
 import frontmatter
@@ -42,7 +43,47 @@ collections = {
 #
 # relative to the root project directory
 #
-data_dir = './data'
+base_data_dir = './data'
+
+# Data dirs:
+#   key:
+#       key will be used to provide the data in the `data` dict; this allows 
+#       you to specify a key different than the directory specified, but I 
+#       don't recommend it.
+#   values:
+#       dir: what directory contains the data files
+#       group_by:
+#           optionally specify a key (must be present in each of the data 
+#           files) that will be used to group the data in the `data` dict.  For 
+#           example if each mat belongs to a `category` you can group by 
+#           `category` and then the dict will look like:
+#
+#           data['mat']['stone'] = [ # list of mats in stone category ]
+#           data['mat']['floor'] = [ # list of mats in floor category ]
+#
+#           if group_by is not set, the resulting data will just be in a list:
+#           data['mat_categories'] = [
+#               { name: foo, title: Foo },
+#               { name: bar, title: Bar },
+#           ]
+#
+data_dirs = {
+    '3do': {
+        'dir': base_data_dir + '/3do',
+        'group_by': 'type',
+    },
+    'mat': {
+        'dir': base_data_dir + '/mat',
+        'group_by': 'category',
+    },
+    'mat_categories': {
+        'dir': base_data_dir + '/mat_categories',
+    },
+    'md3': {
+        'dir': base_data_dir + '/md3',
+        'group_by': 'type',
+    },
+}
 
 #
 # Loop through all files in source_dir, process the ones that need processing, 
@@ -50,7 +91,7 @@ data_dir = './data'
 #
 def main():
     collection_data = process_collections(collections)
-    data = process_data(data_dir)
+    data = process_data(data_dirs)
     
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
@@ -230,28 +271,40 @@ def process_collections(collections):
 #
 # Deal with `data` directories.
 #
-def process_data(data_dir):
+def process_data(data_dirs):
     data = {}
 
-    if not os.path.isdir(data_dir):
-        print("data_dir specified but present:", data_dir, file=sys.stderr);
-        return data
+    for key, data_info in data_dirs.items():
+        data_dir = data_info['dir']
+        group_by = data_info['group_by'] if 'group_by' in data_info else ''
 
-    for entry in os.listdir(data_dir):
-        path = data_dir + '/' + entry
+        if(group_by):
+            data[key] = {}
+        else:
+            data[key] = []
 
-        if not os.path.isdir(path):
+        if not os.path.isdir(data_dir):
+            print("data_dir specified but missing:", data_dir, file=sys.stderr)
             continue
 
-        data[entry] = []
+        for entry in sorted(os.listdir(data_dir), key=str.casefold):
 
-        for file in sorted(os.listdir(path), key=str.casefold):
-            file_path = path + '/' + file
+            path = data_dir + '/' + entry
 
-            if not os.path.isfile(file_path):
+            if not os.path.isfile(path):
                 continue
 
-            data[entry].append(extract_vars_from_file(file_path))
+            template_vars = extract_vars_from_file(path)
+
+            if(group_by):
+                if template_vars[group_by] not in data[key]:
+                    data[key][template_vars[group_by]] = []
+
+                data[key][template_vars[group_by]].append(template_vars)
+            else:
+                data[key].append(template_vars)
+
+    #pprint.pprint(data)
 
     return data
 
@@ -283,16 +336,23 @@ def extract_vars_from_file(source_path, include_body=True):
 # look for templates in `templates_dir`).
 #
 def get_template(template_file_name):
-    tpl_loader = jinja2.FileSystemLoader(searchpath=templates_dir)
-    tpl_env = jinja2.Environment(loader=tpl_loader, extensions=['jinja2.ext.loopcontrols'])
+    tpl_env = _get_template_env()
     return tpl_env.get_template(template_file_name)
 
 #
 # Returns a jinja2 template object with the passed-in template parsed.
 #
+# Note: same loader being used (filesystem loader) in case templates need to 
+# `import` other templates
+#
 def get_template_from_memory(template):
-    tpl_env = jinja2.Environment(extensions=['jinja2.ext.loopcontrols'])
+    tpl_env = _get_template_env()
     return tpl_env.from_string(template)
+
+def _get_template_env():
+    tpl_loader = jinja2.FileSystemLoader(searchpath=templates_dir)
+    tpl_env = jinja2.Environment(loader=tpl_loader, extensions=['jinja2.ext.loopcontrols'])
+    return tpl_env
 
 main()
 
