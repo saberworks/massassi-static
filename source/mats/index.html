@@ -20,7 +20,7 @@ href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
 </div>
 
 {% for cat in data['mat_categories'] %}
-    <h2><a name="{{ cat.name }}">{{ cat.title }}</a></h2>
+    <h2><a id="{{ cat.name }}">{{ cat.title }}</a></h2>
     <p>{{ cat.description }}</p>
 
     <div class="tutorial-table">
@@ -35,7 +35,7 @@ href="https://github.com/saberworks/massassi.net/">github repo</a>.</p>
                 {% if m.screenshot %}
                     <a href="screenshots/{{ m.screenshot }}"><img src="screenshots/{{ m.screenshot }}" width="200"></a>
                 {% endif %}
-                </td>
+            </td>
             <td><a href="/files/mats/{{ m.file }}">{{ m.file }}</a> by {{ m.author }}<br>
             {{ m.description }}</td>
         </tr>
