@@ -7,7 +7,7 @@ description: >
 date: 1999-07-10
 category: jk
 ---
------
+
 Author: EvanC
 
 Pipes can be used in many different ways. In the original JK levels
