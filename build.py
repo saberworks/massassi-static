@@ -85,6 +85,7 @@ data_dirs = {
     },
 }
 
+
 #
 # Loop through all files in source_dir, process the ones that need processing, 
 # and copy to output_dir.
@@ -92,7 +93,7 @@ data_dirs = {
 def main():
     collection_data = process_collections(collections)
     data = process_data(data_dirs)
-    
+
     for dir_name, subdirs, files in os.walk(source_dir):
         print('processing directory: {}'.format(dir_name))
 
@@ -111,14 +112,14 @@ def main():
             template_vars['data'] = data
 
             inner_tpl = get_template_from_memory(
-                template_vars.pop('body', '')
+                template_vars.pop('content', '')
             )
 
-            template_vars['body'] = inner_tpl.render(template_vars)
+            template_vars['content'] = inner_tpl.render(template_vars)
 
             if source_path.endswith('.md'):
-                template_vars['body'] = markdown.markdown(
-                    template_vars['body'], extensions=['extra', 'toc']
+                template_vars['content'] = markdown.markdown(
+                    template_vars['content'], extensions=['extra', 'toc']
                 )
 
             tpl = get_template(outer_template)
@@ -133,6 +134,7 @@ def main():
 
             output_file(content, output_path)
 
+
 #
 # Given source path & dir, output dir, and optional extension (only taken into 
 # account if source file is markdown), generate and return the output path.
@@ -144,6 +146,7 @@ def get_output_path(source_path, source_dir, output_dir, ext):
     source_path = re.sub(r'\.md$', '.' + ext, source_path)
 
     return re.sub(source_dir, output_dir, source_path)
+
 
 #
 # Determine proper public-facing web path for the resource.  If extension is 
@@ -161,16 +164,18 @@ def get_href(source_path, source_dir, ext):
     # `index.html` and not `tutorial_index.html`, for example
     return re.sub(r'/index.html$', '/', href)
 
+
 #
 # File should be processed if:
 #   * it ends in a support extension _and_
-#   * it contains at least one var (like title: or body:)
+#   * it contains at least one var (like title:)
 #
 def should_process(source_path):
     if has_supported_ext(source_path) and has_tags(source_path):
         return True
 
     return False
+
 
 #
 # True if the file has a supported extension (list at top), False otherwise.
@@ -179,8 +184,9 @@ def has_supported_ext(path):
     for ext in extensions:
         if path.endswith('.' + ext):
             return True
-    
+
     return False
+
 
 #
 # For performance, don't parse the entire file; just look at the first line; 
@@ -195,17 +201,19 @@ def has_tags(path):
 
     return pattern.match(line)
 
+
 #
 # Write content.
 #
 def output_file(content, path):
-    output_dir = os.path.dirname(path)
+    directory = os.path.dirname(path)
 
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(directory, exist_ok=True)
 
     f = open(path, 'w')
     f.write(content)
     f.close()
+
 
 #
 # Copy file from source_dir to output_dir (generally used for files that aren't 
@@ -218,6 +226,7 @@ def copy_file(path, source_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     shutil.copyfile(path, output_path)
+
 
 #
 # Look in the collections configuration for any directories (relative to 
@@ -232,7 +241,7 @@ def copy_file(path, source_dir, output_dir):
 # list that can be used to automatically generate a tutorials index page.
 #
 def process_collections(collections):
-    if(len(collections) == 0):
+    if len(collections) == 0:
         return []
 
     # will contain keys that match the collections key, values are lists of 
@@ -249,16 +258,16 @@ def process_collections(collections):
         for file_path in pathlib.Path(source_dir).glob(maybe_safe_path):
             if not should_process(str(file_path)):
                 continue
-            
+
             template_vars = extract_vars_from_file(str(file_path), False)
-            
+
             ext = template_vars.get('ext', '')
 
             template_vars['_path'] = str(file_path)
             template_vars['_href'] = get_href(
                 "./" + str(file_path), source_dir, ext
             )
-        
+
             collection_data[name].append(template_vars)
 
     # sort all the keys :-|  by document title I guess
@@ -267,6 +276,7 @@ def process_collections(collections):
         collection_data[key] = sorted(collection, key=operator.itemgetter('title'))
 
     return collection_data
+
 
 #
 # Deal with `data` directories.
@@ -278,7 +288,7 @@ def process_data(data_dirs):
         data_dir = data_info['dir']
         group_by = data_info['group_by'] if 'group_by' in data_info else ''
 
-        if(group_by):
+        if group_by:
             data[key] = {}
         else:
             data[key] = []
@@ -296,7 +306,7 @@ def process_data(data_dirs):
 
             template_vars = extract_vars_from_file(path)
 
-            if(group_by):
+            if group_by:
                 if template_vars[group_by] not in data[key]:
                     data[key][template_vars[group_by]] = []
 
@@ -304,9 +314,10 @@ def process_data(data_dirs):
             else:
                 data[key].append(template_vars)
 
-    #pprint.pprint(data)
+    # pprint.pprint(data)
 
     return data
+
 
 #
 # Read the content file, extract the vars from the top ("front matter") and the 
@@ -316,7 +327,7 @@ def extract_vars_from_file(source_path, include_body=True):
     data = frontmatter.load(source_path)
 
     template_vars = data.metadata
-    template_vars['body'] = data.content
+    template_vars['content'] = data.content
 
     # If source is a markdown file, and desired output extension isn't 
     # specified, use .html.
@@ -325,11 +336,12 @@ def extract_vars_from_file(source_path, include_body=True):
 
     if not include_body:
         try:
-            del template_vars['body']
+            del template_vars['content']
         except KeyError:
-            pass # really don't care
+            pass  # really don't care
 
     return template_vars
+
 
 #
 # Returns a jinja2 template object with the filesystem loader enabled (set to 
@@ -338,6 +350,7 @@ def extract_vars_from_file(source_path, include_body=True):
 def get_template(template_file_name):
     tpl_env = _get_template_env()
     return tpl_env.get_template(template_file_name)
+
 
 #
 # Returns a jinja2 template object with the passed-in template parsed.
@@ -349,10 +362,11 @@ def get_template_from_memory(template):
     tpl_env = _get_template_env()
     return tpl_env.from_string(template)
 
+
 def _get_template_env():
     tpl_loader = jinja2.FileSystemLoader(searchpath=templates_dir)
     tpl_env = jinja2.Environment(loader=tpl_loader, extensions=['jinja2.ext.loopcontrols'])
     return tpl_env
 
-main()
 
+main()

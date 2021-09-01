@@ -2,18 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="/styles/styles.css">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="/styles/smallstyles.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="/static/css/smallstyles.css">
 
         <title>
-        {% if title %}
-            {{ title }} -
-        {% endif %}
-        The Massassi Temple
+            {% block title %}
+                {% if title %}{{title}}{% else %}Home{% endif %}
+            {% endblock %} - The Massassi Temple
         </title>
 
-        <meta name="description" content="{{ description }}"> 
-        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="description" content="{{ description }}">
+        <link rel="shortcut icon" href="/static/favicon.ico">
     </head>
 
     <body>
@@ -28,13 +27,14 @@
 
                     <ul>
                         <li><a href="/">Current</a></li>
-                        <li><a href="/oldnews/">Old</a> / <a href="/oldnews/search.php">Search</a></li>
-                        <li><a href="/submit/">Submitting...</a></li>
+                        <li><a href="/news_archive.html">Archive</a></li>
+                        <li><a href="/news_search.html">Search</a></li>
+                        <li><a href="/submit/">Submit</a></li>
                     </ul>
 
                     <h1>Community</h1>
                     <ul>
-                        <li><a href="http://forums.massassi.net/" target="_top">Forums</a></li>
+                        <li><a href="http://forums.massassi.net/">Forums</a></li>
                         <li><a href="/chat/">Chat</a></li>
                     </ul>
 
@@ -69,21 +69,30 @@
             </nav>
 
             <div id="content">
-                {% if title %}
-                    <h1>{{ title }}</h1>
+                {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    </div>
                 {% endif %}
 
                 {% if original %}
                     <p class="note">Note: This is an old page that has been updated/formatted, you can view the original <a href="{{ original }}">here</a>.
                 {% endif %}
 
-                {{ body }}
-
-                <div id="footer">
-                    <p id="copyright">Copyright &copy; 1997-2020 Brian E. Lozier &amp; Contributers</p>
-                    <p id="disclaimer">Nothing on this site is made, distributed, or supported by LucasArts Entertainment Company or Disney. This site was created by and is maintained by fans of Star Wars and Star Wars gaming. Use and download all information/files at your own risk.</p>
-                </div>
+                {% block content %}
+                    {% if title %}<h1>{{ title }}</h1>{% endif %}
+                    {{ content }}
+                {% endblock %}
             </div> <!-- end "content" -->
+
+            <div id="footer">
+                <p id="copyright">Copyright &copy; 1997-2021 Brian E. Lozier &amp; Contributers</p>
+                <p id="disclaimer">Nothing on this site is made, distributed, or supported by LucasArts Entertainment
+                    Company or Disney. This site was created by and is maintained by fans of Star Wars and Star Wars
+                    gaming. Use and download all information/files at your own risk.</p>
+            </div>
 
         </div> <!-- end "layout_grid" -->
     </body>

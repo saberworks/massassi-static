@@ -1,32 +1,18 @@
 ---
-title: IRC Chat
+title: Chat/Discord
 ---
 
 ## Chat Room Rules
 
-Please be courteous.  If you aren't, you may be kicked and banned.
+Please be courteous.  If you aren't, you may be kicked and banned.  Please try
+to keep the chat PG-rated.  Keep discussion light and maybe related to Star
+Wars, Jedi Knight, video games, etc.
 
-## IRC
+* No politics, drug references, alcohol, etc.
+* No profanity, insults, or personal attacks.
+* No racist, sexist, or other derogatory language.
 
-We use a service called Internet Relay Chat (IRC).  You can use any IRC client.  
-Probably the most popular client on Windows is [mIRC](http://www.mirc.com/).
+## Massassi now uses Discord!
 
-To connect, point your client to the server, port, and channel below.
-
-<div class="chat-table" markdown=1>
-
-Server         | Port | Channel
----------------|------|--------
-irc.synirc.org | 6667 | #massassi
-
-</div>
-
-## Chat Community
-
-(this doesn't seem to be updated anymore but I'm leaving the link up since the site is still up)
-
-Many folks who visit the site also hang out in the \#massassi channel
-quite a bit. oSiRiS has put together a site dedicated to the channel
-that offers statistics, user profiles, and a veritable treaure trove of
-inside-joke material. Check it out at <http://chat.woggle.org>.
+Please see the thread on the Official Massassi Discord, here: <a href="https://forums.massassi.net/vb3/showthread.php?68227-Official-Massassi-Discord" target="_top">Official Massassi Discord</a>.  See you there!</font></p>
 

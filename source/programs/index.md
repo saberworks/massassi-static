@@ -44,6 +44,12 @@ they share the same file formats).
 
 ## Jedi Knight / Mysteries of the Sith
 
+### ZED (newest level editor)
+
+ZED is based on JED and provides fixes and new features.  It is strongly recommended that you use ZED instead of JED.  This project lives on [JK Hub](https://www.jkhub.net/) but as of mid-2021 JK Hub is still down :(
+
+**[ZED 2008-01-31](jed/ZED_2008-01-31.zip)** by ZeqMacaw, Code Alliance, other contributers.
+
 ### JED (level editor)
 
 **[JED v.951](jed/jed_beta951.zip)** by Code Alliance
