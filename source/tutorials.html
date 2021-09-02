@@ -3,11 +3,11 @@ title: "Editing/Modding Tutorials for Dark Forces II: Jedi Knight, Jedi Outcast,
 ---
 
 <ul>
-    <li><a href="#jk">Jedi Knight / Mysteries of the Sith Editing Tutorials</a></li>
-    <li><a href="#jo">Jedi Outcast / Jedi Academy Tutorials</a></li>
+    <li><a href="#jk_section">Jedi Knight / Mysteries of the Sith Editing Tutorials</a></li>
+    <li><a href="#jo_section">Jedi Outcast / Jedi Academy Tutorials</a></li>
 </ul>
 
-<h2><a name="jk">Jedi Knight/Mysteries of the Sith Editing Tutorials</a></h2>
+<h2 id="jk_section">Jedi Knight/Mysteries of the Sith Editing Tutorials</h2>
 
 {% for tut in collections.tutorials %}
     {% if tut.category != 'jk' %}
@@ -19,7 +19,7 @@ title: "Editing/Modding Tutorials for Dark Forces II: Jedi Knight, Jedi Outcast,
     <p class="tutorial-description">{{ tut.description }}</p>
 {% endfor %}
 
-<h2><a name="jo">Jedi Knight II: Jedi Outcast & Jedi Academy Tutorials</a></h2>
+<h2 id="jo_section">Jedi Knight II: Jedi Outcast & Jedi Academy Tutorials</h2>
 
 {% for tut in collections.tutorials %}
     {% if tut.category != 'jo' %}
