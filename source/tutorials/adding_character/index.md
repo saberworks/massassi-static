@@ -1,6 +1,6 @@
 ---
 title: Adding Character to Your Levels
-author: Daft\_Vader
+author: Daft_Vader
 email: wondermog@bellsouth.net
 date: 2003-07-19
 description: >
@@ -9,7 +9,7 @@ description: >
 category: jk
 ---
 
-Author: Daft\_Vader
+Author: Daft_Vader
 
 First off, this tutorial is meant for people who have been around JED a
 little while, but still aren't very confident in their level-making
