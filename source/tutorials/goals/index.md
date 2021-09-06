@@ -1,17 +1,18 @@
 ---
-title: 
-author: 
-email: 
+title: Goals
+author: Antony Espindola
+email: Ant@Horrible.Demon.co.uk
 description: >
-
-date: 
+    Learn how to create goals (mission objectives) in Single Player JK and MotS levels.
+date: 1998-06-30
 original: goals.html
-category: 
+category: jk
 ---
 
-Author:Objectives Tutorial  
+Author: Antony Espindola
+
+Objectives Tutorial --
 What they are, how they work and how to use them  
-By [Antony Espindola](mailto:Ant@Horrible.Demon.co.uk)
 
 -----
 
@@ -48,12 +49,17 @@ loads, but then you should be familiar with this file by now\!
 The Objectives are entered into the COGSTRINGS.UNI file in the following
 format:
 
+    "GOAL_01000"   0  "This is the first Goal Text"
+    "GOAL_01001"   0  "This is the second Goal Text"
+
 The first number (in quotes) defines the Objective's number and level it
 it used in. It always starts "GOAL\_" and then has a 5-digit number. You
 multiply the number of your level by one thousand and then add the
 number of the Objective in that level, but don't forget that the
 Objectives start at Zero and not One\! For example, Objective 4 of Level
 6 would be specified as:
+
+    "GOAL_06003"   0  "Gain access to the Security Tower"
 
 The next number (always a zero) is not used. The next line of text is
 what appears in the "Objectives" screen in the game. This text shouldn't
@@ -76,12 +82,15 @@ learning how to write COGs, but with a little programming knowledge
 people's COGs (I recommend you look through the ones by LucasArts that
 come with the game as these are well commented so you can tell what they
 are doing) and the use of the [JK
-Specs](http://www.jedinights.com/massassi/specs/jkspecs.htm) to find out
+Specs](/jkspecs/) to find out
 what they do, you should have no trouble understanding it.
 
 Now we have defined our Objective in the COGSTRINGS.UNI file, we need to
 make them appear in our game - this requires a command inside a COG. To
 show the Objectives, we use the SetGoalFlags() command:
+
+    player = GetLocalPlayerThing();
+    SetGoalFlags(player, 0, 1);
 
 The first line simple gets the "handle" for the Player and assigns it to
 the *player* variable (but then you knew that\!) The second line makes
@@ -95,6 +104,9 @@ got that in the line above. The second parameter (zero in this case) is
 the number of the goal that we want to show; our zero equates to the
 first Objective we defined. The second number (1 in this case) is the
 flag value:
+ 
+    1 = Visible
+    2 = Completed
 
 By **not** setting the Goal flags, the Objective will not appear in our
 Objectives list. If you want to have all your goals appear at the start,
@@ -113,6 +125,9 @@ COG as that which "completes" the previous Objective. I'll show you how
 to do this in a moment, but first let's see how you code to "complete"
 and Objective:
 
+    player = GetLocalPlayerThing();
+    SetGoalFlags(player, 0, 2);
+
 Looks familiar? That's because we just set the Goal flag to 2 to make it
 "completed"\! This shows you just how easy it can be to program COGs
 yourself\!
@@ -128,6 +143,28 @@ you how you write a COG to trigger like this is beyond the scope of
 *this* tutorial and I'm sure it's been written far better elsewhere\! So
 let's say we have a COG that triggers when we enter a sector, and we can
 just edit it and add our "Objective Completed" lines to it:
+
+    [...]
+
+    sound	goalsnd=Accomplish1.wav		local
+    int	player				local
+    end
+
+    code
+    entered:
+        // player has entered the sector!
+        player = GetLocalPlayerThing();
+
+        //complete the first objective
+        PlaySoundThing(goalsnd, player, 1.0, -1, -1, 0);
+        SetGoalFlags(player, 0, 2);
+        Print("Now I'm in the Security Tower, I need to disable the alarm")
+
+        // now show the second objective
+        SetGoalFlags(player, 1, 1);
+        Return;
+
+    [...]
 
 So you can see how easy it is to complete and show your Objectives.
 There are also conditions that can be triggered in a COG for things like

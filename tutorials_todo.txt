@@ -1,4 +1,3 @@
-	new file:   source/tutorials/goals/index.md
 	new file:   source/tutorials/gravtube/index.md
 	new file:   source/tutorials/ground/index.md
 	new file:   source/tutorials/gunmodels/index.md
