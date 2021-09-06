@@ -70,7 +70,6 @@
 	new file:   source/tutorials/stair2/index.md
 	new file:   source/tutorials/stair3/index.md
 	new file:   source/tutorials/stairs/index.md
-	new file:   source/tutorials/superfog/index.md
 	new file:   source/tutorials/switch/index.md
 	new file:   source/tutorials/template_reference/index.md
 	new file:   source/tutorials/templates/index.md

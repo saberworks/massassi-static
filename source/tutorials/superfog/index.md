@@ -1,25 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Super Fog
+author: Zagibu
+email: zagibu@gmx.ch
 description: >
-
-date: 
-original: index.shtml
-category: 
+    This tutorial is about adding fog to JK MP/SP levels using a special cog, allowing the user to create very individual fog (even colorchanging).
+date: 2002-04-07
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Super Fog  
-
------
-
-Author: [Zagibu](mailto:zagibu@gmx.ch)  
-  
+Author: Zagibu
 
 This tutorial will teach you how to add fog to JK levels using the
-[included
-superfog.cog](http://files.massassi.net/tutorials/superfog.zip). First
+[included superfog.cog](superfog.zip). First
 of all, you have to know that fog in JK is a difficult thing (not for
 the lvleditor, but for the cogger), and that it can't be done very well.
 The most common way (used in superfog.cog) is to add a greyshade to the
