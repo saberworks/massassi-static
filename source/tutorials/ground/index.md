@@ -1,17 +1,12 @@
 ---
-title: 
-author: 
-email: 
+title: Rugged Terrain
+author: Brian Lozier
+email: brian@massassi.net
 description: >
-
-date: 
-original: ground.htm
-category: 
+    Learn to create realistic, random looking ground for your outdoor type levels.
+date: 1998-10-18
+category: jk
 ---
-
-Author:Rugged Terrain
-
------
 
 Author: [Brian Lozier](mailto:lozier@bigfoot.com)  
 Creator: [Mangore Kiramin](mailto:mangore_kiramin@geocities.com)  
@@ -182,10 +177,6 @@ and walls if you can get it to look right. When texturing, make sure to
 use a texture that is not so picky about stitching, as this doesn't
 allow for perfect stitching.  
   
-As always, feel free to [email me](mailto:lozier@bigfoot.com) or use the
-[Message Board](http://massassi.jedinights.com/msgboard/index.shtml) to
-ask questions.  
+As always, feel free to use the [Message Board](http://forums.massassi.net/)
+to ask questions.  
   
-
-© Copyright 1998 [The Massassi Temple](http://massassi.jedinights.com)
-and [Brian Lozier](mailto:lozier@bigfoot.com).

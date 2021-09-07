@@ -1,20 +1,20 @@
 ---
-title: 
-author: 
-email: 
+title: Creating Internal Gun Models
+author: Z@NARDI
+email: soulfly_tribe@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    The steps involved in incorporating a new internal gun model.
+date: 2000-01-31
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Creating Internal Gun Models  
+<style>
+.underline {
+    text-decoration: underline;
+}
+</style>
 
------
-
-Author: [Z@NARDI](mailto:soulfly_tribe@hotmail.com)  
+Author: Z@NARDI
   
 
 This tutorial is intended to assist new editors with making an internal
@@ -25,11 +25,11 @@ you can reach me on ICQ. My UIN is 43779070.
 
 **The materials you'll need are**
 
-  - [JED .94](http://www.darkjedi.com/download/caa/jedi/jed_beta94.zip)
+  - [JED.94](/programs/)
     (the version used in this tutorial)
   - Word Pad or equivalent text editor
-  - [intgun.3do](intgun.3do) (also included in the [downloadable zip
-    file](http://198.92.131.5/files/jk_and_mots/tutorials/gunmodels.zip))
+  - [intgun.3do](intgun.3do)
+
 
 -----
 
@@ -62,7 +62,8 @@ Sectors as 3do, then save your gun (e.g. gun.3do).
 
   
 
-Working on the Internal Mesh:  
+**Working on the Internal Mesh:**
+
 Okay, now open up Word Pad, then open up gun.3do (or whatever file name
 you just gave it). Again, I'll use mine:
 

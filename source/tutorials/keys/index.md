@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Keys
+author: PJB
+email: pokejoyboy@pjb.i8.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    A beginner's guide to .KEY animation files in Jedi Knight.
+date: 2003-03-02
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Keys  
-
------
-
-Author: [PJB](mailto:pokejoyboy@pjb.i8.com)  
+Author: PJB  
   
 
 1.  What is a key?
@@ -54,12 +48,8 @@ your Jedi Knight game disc in your CD drive, then click **File**, then
 **Open**, then navigate to **3DO/KY.3do**. When you open it, you will be
 presented with this\!
 
-<div data-align="center">
-
-![](keys_1.jpg)  
-*\*gulp\* Looks complicated, doesn't it?*
-
-</div>
+![](keys_1.jpg)
+*gulp* Looks complicated, doesn't it?
 
 Don't worry, it's easy\! Now, we can either edit an existing key
 (example: to make Kyle fall apart when he jumps, HE HE HE), or make a
@@ -79,20 +69,12 @@ want to believe).
 Move around a bit, get used to the movements, and then position the
 model like this.
 
-<div data-align="center">
-
 ![](keys_2.jpg)
-
-</div>
 
 Now we can start to work. Click **File \> New Key** and you'll get this:
 
-<div data-align="center">
-
 ![](keys_3.jpg)  
-*\*screams\* Lots of horrid numbers\!*
-
-</div>
+*screams* Lots of horrid numbers\!
 
 LOL don't worry it's all quite straightforward. Those numbers indicate
 the number of single frames. A frame is like a single picture, like the
@@ -125,11 +107,7 @@ very important. the first is to *move* the part, the second is to
 selected, (like in the picture below), then click and drag Kyle's arm
 until it looks like this:
 
-<div data-align="center">
-
 ![](keys_6.jpg)
-
-</div>
 
 Okay, here's the interesting part: right-click on Frame 3 and select
 **Copy**, then click on the next frame, right-click and select
@@ -157,19 +135,11 @@ Kyle here\!
 Select **K\_lhand** and **Entry 4**. Move his hand so it's facing in,
 bent in the opposite direction of his wave, like this:
 
-<div data-align="center">
-
 ![](keys_7.jpg)
-
-</div>
 
 Then on **Entry 5** move it the opposite way, like this:
 
-<div data-align="center">
-
 ![](keys_8.jpg)
-
-</div>
 
 Repeat this with all the other entries for his hand, then play it back.
 It looks a little more life-like now, doesn't it?
@@ -195,9 +165,9 @@ keys with this new one, so when he fired a weapon he would wave instead.
 There are lots of things in JK you can do with keys: you can make ships
 land and open its landing gear, get an actor to do stuff, and of course
 make new enemies. In *Mysteries of the Sith* you can go [one step
-further](/tutorials/cutscene_actor/tutorial.html) and [create new
-movements](/tutorials/cutscenes/cutscenes.html) for the [in-game
-cutscenes](/tutorials/cutscene2/cutscene2.html).
+further](/tutorials/cutscene_actor/) and [create new
+movements](/tutorials/cutscenes/) for the [in-game
+cutscenes](/tutorials/cutscene2/).
 
 -----
 

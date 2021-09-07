@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Adding Hotkeys
+author: Hell Raiser
+email: hell_raiser64@softhome.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Learn how to add hotkeyable items/force powers/weapons to JK/MotS.
+date: 1999-05-10
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Adding Hotkeys  
-
------
-
-Author: [Hell Raiser](mailto:hell_raiser64@softhome.net)  
+Author: Hell Raiser  
   
 
 So you wanna add hotkeys to some of your newly made items, force powers,
@@ -76,7 +70,7 @@ Close and save.
 Now open up jkstrings.uni and "search" for ACTIVATE16. Under that,
 follow the rest of the ACTIVATE as an example.
 
-ACTIVATE17   0   "description"
+    ACTIVATE17   0   "description"
 
 ![hk4.jpg (46255 bytes)](hk4.jpg)
 

@@ -1,8 +1,3 @@
-	new file:   source/tutorials/gravtube/index.md
-	new file:   source/tutorials/ground/index.md
-	new file:   source/tutorials/gunmodels/index.md
-	new file:   source/tutorials/holograms/index.md
-	new file:   source/tutorials/hotkeys/index.md
 	new file:   source/tutorials/jk2_bots/index.md
 	new file:   source/tutorials/jk2_corridors/index.md
 	new file:   source/tutorials/jk2_prep_for_release/index.md
@@ -21,8 +16,6 @@
 	new file:   source/tutorials/jo_spiralstairs/index.md
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
-	new file:   source/tutorials/keys/index.md
-	new file:   source/tutorials/keytrapping/index.md
 	new file:   source/tutorials/levelhelper/index.md
 	new file:   source/tutorials/lighting/index.md
 	new file:   source/tutorials/llb/index.md

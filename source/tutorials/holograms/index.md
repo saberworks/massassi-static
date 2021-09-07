@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Holograms
+author: Sam Coulson
+email: samcoulson@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Everything you need to know to create 2D holograms in JK.
+date: 2000-06-16
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml) 2D
-Holograms for JK/MotS  
-
------
-
-Author: [Sam Coulson](mailto:samcoulson@hotmail.com)  
+Author: Sam Coulson
   
 
 Making holograms for Jedi Knight and Mysteries of the Sith is easy and
@@ -23,10 +17,10 @@ It only involves setting some flags on an adjoined surface. (No
 cogs--yay\!)
 
   - Use these links to skip around or read it all the way through:   
-    [Creating the Surface](#cleaving)
-    [Making it Show Up](#texturing)
-    [Setting the Flags](#flagging)
-    [Troubleshooting](#troubling)
+  - [Creating the Surface](#cleaving)
+  - [Making it Show Up](#texturing)
+  - [Setting the Flags](#flagging)
+  - [Troubleshooting](#troubling)
 
 <span id="cleaving"></span>
 
@@ -130,14 +124,14 @@ There's still two more things to do to make this look really good
 
 Most holograms are transparent, so we need to set another flag to make
 it so. This flag is in the '+FACE FLAGS' section on your Item Editor, so
-open it just like the ['+GEO' button](#GEO). Then select 'translucent'
+open it just like the '+GEO' button. Then select 'translucent'
 and click 'OK'. You won't be able to see that it is transparent in the
 3-D Preview, but it shows up in the game.
 
 This next flag is optional, but makes the hologram look very real. What
 we will do is make the holo look like it has its own power source by
 having it fully lit, just like in the movies. To do this open the
-'+LIGHT MODE' button like you did the ['+GEO' and '+FACE FLAGS'](#GEO)
+'+LIGHT MODE' button like you did the '+GEO' and '+FACE FLAGS'
 and select 'Fully Lit'.
 
 <span id="flags">Here's</span> the flags that we used--make sure that

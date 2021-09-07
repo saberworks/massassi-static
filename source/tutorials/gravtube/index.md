@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Anti-Gravity Tubes
+author: Myrddraal
+email: myrddraal_fade@mailexcite.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Learn how to make anti-gravity tubes.
+date: 1998-09-05
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Anti-Gravity Tubes  
-
------
-
-Author: [Myrddraal](mailto:myrddraal_fade@mailexcite.com)  
+Author: Myrddraal
   
 Have you ever wanted to go flying up a shaft without having to put in
 all those messy elevator settings?? Well, anti-grav tubes (as seen in
