@@ -17,15 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-
-	new file:   source/tutorials/mats_multicell/index.md
-	new file:   source/tutorials/models/index.md
-	new file:   source/tutorials/moo/index.md
-	new file:   source/tutorials/mots_color/index.md
-	new file:   source/tutorials/par/index.md
-	new file:   source/tutorials/patrol/index.md
-	new file:   source/tutorials/perfect_pipes/index.md
-	new file:   source/tutorials/pivot_fix/index.md
 	new file:   source/tutorials/player3dos/index.md
 	new file:   source/tutorials/player_characters/index.md
 	new file:   source/tutorials/player_characters2/index.md
@@ -63,7 +54,6 @@
 	new file:   source/tutorials/template_reference/index.md
 	new file:   source/tutorials/templates/index.md
 	new file:   source/tutorials/texturefaq/index.md
-	new file:   source/tutorials/water/index.md
 	new file:   source/tutorials/weapon_template/index.md
 
 plus everything in misc/

@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Coloured Lighting in MotS  
+author: Antony Espindola
+email: Ant@Horrible.Demon.co.uk
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Learn to create coloured lighting in Mysteries of the Sith.
+date: 1998-04-12
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Coloured Lighting in MotS  
-
------
-
-Author: [Antony Espindola](mailto:Ant@Horrible.Demon.co.uk)  
+Author: Antony Espindola
   
 
 This Editing tutorial covers how to create coloured lighting effects in
@@ -30,7 +24,7 @@ in your level until you are happy with it.
 It's a good tip to also get your lighting checked on both a 3D Card
 system as well as using the software mode. There can be great
 differences between the two and refining the lighting to give the best
-comprimise will give a better overall impression with players using both
+compromise will give a better overall impression with players using both
 systems.
 
 We'll start with the basics of creating a light in a room in JED. To

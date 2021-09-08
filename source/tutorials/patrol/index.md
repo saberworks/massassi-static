@@ -1,19 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: Patrolling Enemies
+author: Dino Delucchi
+email: dino@giant.bnc.com.au
 description: >
-
-date: 
+    Learn how to make your enemies patrol around a specified path..
+date: 1999-03-12
 original: patroller.htm
-category: 
+category: jk
 ---
 
-Author:## Tutorial: Patrolling Enemies
+Author: Dino Delucchi
 
-### By [Dino Delucchi](mailto:dino@giant.bnc.com.au)
-
------
 
 This tutorial shows how to use the 00\_AIFramePatrol.cog to make an
 enemy that will patrol around a circuit.
@@ -92,5 +89,6 @@ update this tutorial.
 -----
 
 Good luck and I hope you can make use of this technique.  
+
 [Download the JED file for this tutorial](patroller.jed)  
-Send comments to [Dino Delucchi](mailto:dino@giant.bnc.com.au)
+

@@ -1,27 +1,20 @@
 ---
-title: 
-author: 
-email: 
+title: Merging Non-Adjoined Sectors via JED & Wordpad
+author: Red
+email: theensers@earthlink.net
 description: >
-
-date: 
+    Learn how to merge unadjoined sectors for 3do purposes (not for level architecture).
+date: 1998-11-16
 original: tutor.html
-category: 
+category: jk
 ---
 
-Author:**Merging Non-Adjoined Sectors via JED & Wordpad**
+Author: Red
 
-Author: [Red](mailto:theensers@earthlink.net)
-
-  
-
------
-
-  
   
 Let's start out with why in the world you would do such a thing? The
 answer is simply to create 3dos. I used this technique to make Greedo's
-gun playable, and in a few 3dos for an upcomming level. I'm sure
+gun playable, and in a few 3dos for an upcoming level. I'm sure
 **someone** will find uses for this tutorial.. hopefully :-)  
   
 Here we go.. (for lack of better words I am not the best tutorial writer
@@ -93,4 +86,4 @@ sector 0. My number was 12 so my line reads "SURFACES 0 16"
 I hope I didn't confuse anyone too much. Do to this sector as you wish..
 you can view my edited .jkl [here](jkl.txt)  
   
-\~ Red
+~ Red

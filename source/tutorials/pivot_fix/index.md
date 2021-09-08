@@ -1,19 +1,18 @@
 ---
-title: 
-author: 
-email: 
+title: Fixing Pivot Points on 3dos
+author: Mr. Xeinsane and Lilguy
+email: lilguy@vbe.com
 description: >
-
-date: 
+    Learn how to fix pivot points on 3dos so that they can be properly animated.
+date: 1999-10-12
 original: pivot_fix.htm
-category: 
+category: jk
 ---
 
-Author:\-------------------FIXING PIVOT POINTS ON
-3DOS------------------------  
+
 Authors: Mr. Xeinsane and Lilguy of Frontier Creature Creations
 
-tools needed:
+Tools needed:
 
 JED, Fun3do.
 

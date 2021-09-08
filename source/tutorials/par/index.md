@@ -1,21 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Making .par Files the Easy Way
+author: EvanC
+email: ev@wave.co.nz
 description: >
-
-date: 
+    Learn how to make particle files.
+date: 1999-02-22
 original: partut.htm
-category: 
+category: jk
 ---
 
-Author:![Darkness Falls Tutorial](tutorial.jpg)
+Author: EvanC
 
-# Making .par Files the Easy Way  
-
-by [EvanC](mailto:ev@wave.co.nz)  
-
-  
+![Darkness Falls Tutorial](tutorial.jpg)
 
 -----
 

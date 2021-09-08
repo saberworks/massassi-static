@@ -99,9 +99,8 @@ On a final note, many people want their water to flow, or push you in a
 certain direction. This is done by adding sector thrust to the water
 sector. Be sure to check out our sector thrust tutorial, which can be
 found in the [tutorials
-section](http://www.massassi.net/tutorials.html). Once your water
+section](/tutorials.html). Once your water
 flows, you may want to make the surface scroll in the same direction --
 this will make it *look* like the water is flowing. Once again, check
 out the tutorials section for the rivers tutorial.  
-  
-© 1998 [The Massassi Temple](http://www.massassi.net)
+

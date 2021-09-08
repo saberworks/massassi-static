@@ -2,6 +2,9 @@
 title: Editing Programs
 ---
 
+**Update 2021** If JK Hub is still down, and if you can't find what you're 
+looking for here, please ask on the forums, probably someone has a copy.
+
 **Update 2016:** If you can't find what you're looking for here, or if
 there are broken links, try the [tools
 section](http://jkhub.net/library/tools.php) of [JK

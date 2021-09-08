@@ -1,22 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: Perfect Pipes & Polygons
+author: aDames Lombardi (JM)
+email: XXWP39C@Prodigy.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    An alternative to the original Perfect Polygons tutorial, as well as how
+    to make perfect curving pipes (any angle).
+date: 1999-03-02
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Perfect Pipes and Polygons  
+Author: aDames Lombardi (JM)
 
------
-
-Author: [aDames Lombardi (JM)](mailto:XXWP39C@Prodigy.com)  
-Edited by: [Brian Lozier](mailto:brian@massassi.net)  
-  
 There's one thing I've been struggling with since I began editing... The
 universal question... the bane of editors everywhere... five simple
 words... HOW DID THEY DO IT??\!\!  
