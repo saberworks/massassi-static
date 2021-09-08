@@ -14,9 +14,10 @@ title: "Editing/Modding Tutorials for Dark Forces II: Jedi Knight, Jedi Outcast,
         {% continue %}
     {% endif %}
 
-    <p class="tutorial-list-item"><strong><a href="{{ tut._href }}">{{ tut.title }}</a></strong></p>
-    <p class="tutorial-author">by {{ tut.author|safe }} <span class="tutorial-date">({{ tut.date }})</span></p>
-    <p class="tutorial-description">{{ tut.description }}</p>
+    <p class="tutorial-list-item"><strong><a href="{{ tut._href }}">{{ tut.title }}</a></strong>
+    <span class="tutorial-author">by {{ tut.author }}</span>
+    <span class="tutorial-date">({{ tut.date }})</span><br>
+    {{ tut.description }}</p>
 {% endfor %}
 
 <h2 id="jo_section">Jedi Knight II: Jedi Outcast & Jedi Academy Tutorials</h2>
@@ -26,7 +27,7 @@ title: "Editing/Modding Tutorials for Dark Forces II: Jedi Knight, Jedi Outcast,
         {% continue %}
     {% endif %}
 
-    <p><strong><a href="{{ tut._href }}">{{ tut.title }}</a></strong>
+    <p class="tutorial-list-item"><strong><a href="{{ tut._href }}">{{ tut.title }}</a></strong>
     <span class="tutorial-author">by {{ tut.author }}</span>
     <span class="tutorial-date">({{ tut.date }})</span><br>
     {{ tut.description }}</p>

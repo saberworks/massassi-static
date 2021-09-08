@@ -16,11 +16,8 @@
 	new file:   source/tutorials/jo_spiralstairs/index.md
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
-	new file:   source/tutorials/levelhelper/index.md
-	new file:   source/tutorials/lighting/index.md
-	new file:   source/tutorials/llb/index.md
-	new file:   source/tutorials/lockeddoor/index.md
-	new file:   source/tutorials/mats_detailed/index.md
+
+
 	new file:   source/tutorials/mats_multicell/index.md
 	new file:   source/tutorials/models/index.md
 	new file:   source/tutorials/moo/index.md

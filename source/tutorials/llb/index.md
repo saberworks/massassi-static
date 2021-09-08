@@ -1,22 +1,13 @@
 ---
-title: 
-author: 
-email: 
+title: Layered Lightbeams
+author: halucid
+email: halucid@verizon.net
 description: >
-
-date: 
+    How to create good looking lightbeams in JK.
+date: 2003-03-02
 original: llb.html
-category: 
+category: jk
 ---
-
-Author:|                                                                                     |                                                                                                                                 |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [![Recon Gamer](http://www.massassi.net/images/rg.gif)](http://www.recongamer.com/) | [![](http://adservice.recon-networks.com/adserve.asp?F=1&Z=6&N=2)](http://adservice.recon-networks.com/adclick.asp?F=1&Z=6&N=2) |
-
-  
-Layered Lightbeams  
-
------
 
 Author: [halucid](mailto:halucid@verizon.net) Reprinted with Permission
 by: [jEDIkIRBY](mailto:jEDIkIRBY007@hotmail.com)  
@@ -80,5 +71,3 @@ Good luck, and I hope this answers any questions you might have.
 Attached: [Conveyor.cog](conveyor.cog)  
   
 
-Copyright © 1998-2005 Respective Authors & [The Massassi
-Temple](http://www.massassi.net)

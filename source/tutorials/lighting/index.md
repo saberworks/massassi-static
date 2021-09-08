@@ -1,19 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Lighting
+author: Jake Troxell
+email: jtroxell@chollian.net
 description: >
-
-date: 
-original: index.html
-category: 
+    Learn about the 3 different types of lighting in JK.
+date: 1999-04-24
+original: original.html
+category: jk
 ---
 
-Author:Basic Lighting
-
------
-
-Author: [Jake Troxell](mailto:jtroxell@chollian.net)
+Author: Jake Troxell and Contributor - Farrax
 
 There are three different ways to do lighting in Jedi Knight: lights as
 objects themselves in light mode, extra lighting by sector or surface,

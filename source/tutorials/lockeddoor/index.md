@@ -1,16 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Locked Doors
+author: REZ
+email: staff@massassi.net
 description: >
-
-date: 
+    Create locked doors.
+date: 1999-10-12
 original: lockeddoor.html
-category: 
+category: jk
 ---
 
-Author:Locked Doors  
-By: REZ  
+Author: REZ  
   
 OK, before I start this tutorial theres somthing I'd like to say, use
 locked doors sparingly in your SP levels. Think of other ideas for

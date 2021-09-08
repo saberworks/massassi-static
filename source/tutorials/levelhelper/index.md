@@ -1,22 +1,21 @@
 ---
-title: 
-author: 
-email: 
+title: Level Helper
+author: Ped_Head
+email: Cloudstrife111@hotmail.com
 description: >
-
-date: 
+    A tutorial explaining the basics of JED.
+date: 1999-06-13
 original: levelhelper.html
-category: 
+category: jk
 ---
 
-Author:Learn How To Make Levels  
+Author: Ped_Head
+
 ![](1.gif)  
-By: Ped\_Head  
+
 **Please do not send any comments on this tutorial\!  
 If you need help e-mail me <Cloudstrife111@hotmail.com>  
-To get the level editor go to
-[www.darkjedi.com](http://www.darkjedi.com)**  
-
+To get the level editor go to [/programs/](/programs/)**
   
 Making a level in Jedi Knight seems quite easy. Well I hate to tell you
 this but, starting out its a little bit difficult and confusing and its
@@ -28,36 +27,28 @@ technique of level editing. Some people like to do indoors and very boxy
 with a little bit of architecture. Or people like to make a canyon type
 of a level with lots turns and curves and good architecture.  
   
-**Starting off tips  
+**Starting off tips**
   
-1\. Have the game, *Jedi Knight*.  
-2\. You have to have a mind that can see 3d.  
-3\. If you don't get it move onto something else that is easier in Jed
-before starting the hard things such as (elevators, doors, frames.)  
-4\. Have an idea of a level.  
-5\. Important\! You must have the editor called JED\!  
-**  
-  
-Table of Contents:  
-  
-**Chapter 1: *Getting Started*  
-Chapter 2: *Tool Bar*  
-Chapter 3: *Cleaving*  
-Chapter 4: *Texturing*  
-Chapter 5: *Extruding*  
-Chapter 6: *Placing items and 3do's*  
-Chapter 7: *Adjoining*  
-  
-**  
+1. Have the game, *Jedi Knight*.  
+2. You have to have a mind that can see 3d.  
+3. If you don't get it move onto something else that is easier in Jed before starting the hard things such as (elevators, doors, frames.)  
+4. Have an idea of a level.  
+5. Important\! You must have the editor called JED\!  
 
+**Table of Contents:**
+  
+**Chapter 1:** *Getting Started*  
+**Chapter 2:** *Tool Bar*  
+**Chapter 3:** *Cleaving*  
+**Chapter 4:** *Texturing*  
+**Chapter 5:** *Extruding*  
+**Chapter 6:** *Placing items and 3do's*  
+**Chapter 7:** *Adjoining*  
+  
 -----
 
-  
+## Chapter 1: *Getting Started*
 
-Chapter 1: *Getting Started*
-
-  
-  
 Some people open Jed and they see this purple square and all these dots.
 And someone asks me a question. "Where do I start?" Well getting started
 out you see a purple square with dots. You can use the buttons - and +
@@ -85,7 +76,7 @@ plain white.
 
   
 
-Chapter 2: *The Tool Bar*
+## Chapter 2: *The Tool Bar*
 
   
   
@@ -95,35 +86,34 @@ do and what are they down below
   
 ![](3.gif)  
   
-**1. This one is your sector mode. If you don't know what a sector is
+1. This one is your sector mode. If you don't know what a sector is
 its a room.  
-2\. This is your Surface mode. You can texture walls with this and
+2. This is your Surface mode. You can texture walls with this and
 select which wall you want to extrude and you need this tool to
 adjoin.  
-3\. This is your Vertex mode. This helps so you can make a sector bigger
+3. This is your Vertex mode. This helps so you can make a sector bigger
 or more narrow. When you click on it, it shows the corners of your
 shape. You can drag the vertex's by holding down Ctrl and moving your
 mouse.  
-4\. This is your Edge mode you can cleave (To know what cleaving is go
+4. This is your Edge mode you can cleave (To know what cleaving is go
 to chapter 3) the surface of a wall and make a new edge. I use this
 rarely.  
-5\. This is Thing Mode. Thing mode is where you can place down 3do's.
+5. This is Thing Mode. Thing mode is where you can place down 3do's.
 Such as chairs, tables, guns and other things. To level out the 3do and
 have the height you want just switch to side view (look at chapter 1 on
 views) and simply just have the object selected and hold down ctrl and
 drag the height you want it to be.  
-6\. Now this is light mode. It makes your level look better in JED. This
+6. Now this is light mode. It makes your level look better in JED. This
 is kind of like the object 3do but you get to select how bright you want
 your light in a level.  
-7\. Frame mode. You can do frames in your level with this object.  
-**  
+7. Frame mode. You can do frames in your level with this object.  
   
 
 -----
 
   
 
-Chapter 3: *Cleaving*
+## Chapter 3: *Cleaving*
 
   
   
@@ -163,7 +153,7 @@ sector wider and longer.
 
   
 
-Chapter 4: *Texturing*
+## Chapter 4: *Texturing*
 
   
   
@@ -189,7 +179,7 @@ should have texture\!
 
   
 
-Chapter 5: *Extruding*
+## Chapter 5: *Extruding*
 
   
   
@@ -215,7 +205,7 @@ will see that the side of the sector has been expanded out.
 
   
 
-Chapter 6: *Placing Weapons and 3do's*
+## Chapter 6: *Placing Weapons and 3do's*
 
   
 Placing 3do's is very easy. First thing you do you go to your tool bar
@@ -264,7 +254,7 @@ your item you have placed. To find 3d preview go into tools.
 
   
 
-Chapter 6: *Adjoining*
+## Chapter 7: *Adjoining*
 
   
 Adjoining is when you make a hallway connecting to a room or a small
