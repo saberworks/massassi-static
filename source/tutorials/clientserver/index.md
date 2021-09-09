@@ -1,5 +1,5 @@
 ---
-title: Cleaving
+title: Client/Server Cogs
 author: Obsidian
 email: dragons_bane@hotmail.com
 description: >
@@ -127,6 +127,8 @@ First the server cog (which is close to nothing because I didn't need to
 do anything besides redirect the client trigger)  My comments are
 (obviously) after the comment slashes (//) .
 
+[Download server_mthing.cog](server_mthing.cog)
+
 ```
 # Jedi Knight Cog Script  
 # server_mthing.cog  
@@ -147,7 +149,7 @@ code
 
 Trigger:
 
-If(GetSourceRef() == 98) SendTrigger(-1, 99, 0, 0, 0, 0);  // If this is the trigger sent by a client cog, send another trigger to all client                                                                                                      
+If(GetSourceRef() == 98) SendTrigger(-1, 99, 0, 0, 0, 0);  // If this is the trigger sent by a client cog, send another trigger to all client
                                                                 cogs telling them to move their thing to the other frame.  
 return;
 
@@ -156,6 +158,8 @@ end
 
 Now the client cog, which is a bit heftier then the one-command-wonder
 server cog.
+
+[Download client_mthing.cog](client_mthing.cog)
 
 ```
 # Jedi Knight Cog Script  

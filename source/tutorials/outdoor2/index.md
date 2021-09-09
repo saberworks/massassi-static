@@ -4,10 +4,11 @@ category: jk
 description: This tutorial teaches you how to create the &quot;insides&quot; of buildings built using the technique outlined in the previous Outdoor Tutorial.
 date: 1998-03-25
 author: Brian Lozier
-email: massassi.temple@gmail.com
+email: brian@massassi.net
+original: original.html
 ---
 
-Author: [Brian Lozier](mailto:brian@massassi.net)
+Author: Brian Lozier
 
 Okay, first off, please make sure you understand the concepts and
 processes presented in the first Outdoor Tutorial. It is important that
