@@ -17,7 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/player3dos/index.md
 	new file:   source/tutorials/player_characters/index.md
 	new file:   source/tutorials/player_characters2/index.md
 	new file:   source/tutorials/playeraction/index.md

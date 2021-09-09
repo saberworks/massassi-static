@@ -1,17 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: New Player Models / Making Player 3dos
+author: Mike "LikWid" Watson
+email: jwatson@kent.edu
 description: >
-
-date: 
+    Learn how to make new player models.
+date: 1999-03-28
 original: player3dos.html
-category: 
+category: jk
 ---
 
-Author:# Making Player 3dos
-
-## The easy way
+### The easy way
 
 #### By Mike "LikWid" Watson
 
