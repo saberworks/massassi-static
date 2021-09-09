@@ -59,6 +59,19 @@ of work to translate all the static html files into "content" files.  This
 means removing all the outer HTML, specifying titles (to be exported to the 
 "outer" template), removing special colors and fonts, etc.
 
+## Set Up
+
+* Clone this repo.
+* Make sure you have python3 installed
+* cd into the cloned repo directory
+* create a virtual environment:
+    * python3 -m venv ./env
+* activate it:
+    * source env/bin/activate
+* install dependencies:
+    * pip install -r requirements.txt
+
+
 ## Content Format
 
 Most static site generators allow you to write your code in Markdown and then 
