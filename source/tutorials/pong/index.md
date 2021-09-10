@@ -1,27 +1,22 @@
 ---
-title: 
-author: 
-email: 
+title: Pong Tutorial
+author: Mike "LikWid" Watson
+email: jwatson@kent.edu
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Shows how to create your own Pong arena, COGs and templates included.
+date: 2000-02-05
+original: original.shtml
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Making Your Own Pong Levels  
-
------
-
 Author: Mike "LikWid" Watson  
-  
 
 Before you try making a pong level, you should have a decent amount
 experience with jed- you should know how to add templates, place cogs,
 set frames for objects, and the like.
 
-**[Download this first\!](neededfiles.zip)**  
+**[Download this first\!](neededfiles.zip)**
+
 This contains all the files necessary to make a pong level: the COG
 files, the new templates, etc.
 

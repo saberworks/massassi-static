@@ -1,27 +1,22 @@
 ---
-title: 
-author: 
-email: 
+title: "Rotating Doors: 2nd Edition"
+author: Heinz Högel
+email: HeiHoegel@compuserve.com
 description: >
-
-date: 
+    A revised version of the above Rotating Doors tutorial. This one includes 
+    MotS support.
+date: 1998-06-27 
 original: tutor.htm
-category: 
+category: jk
 ---
 
-Author:**Rotating Doors I**
+Author: Heinz Högel
 
-***2nd Edition***
-
-Author: [Heinz Högel](mailto:HeiHoegel@compuserve.com)
-
------
-
+<span class="tutorial-orange">
 This is the second edition of the Rotating Doors Tutorial, Part I. It
 was revised to support MotS levels too and contains some improved
 control scripts.
-
------
+</span>
 
 Without doors every level would be extremely boring. They add a good
 amount of uncertainty  to a Jedi Knight's playground (who knows what is
@@ -61,9 +56,7 @@ use of the function **RotatePivot()** instead of the usual
 Knight Unofficial Specs* (version 0.3) yet, I did this little tutorial
 to give you an idea on how to use it for swinging doors.  
    
- 
-
-**Swinging doors in JK Basic levels**
+## Swinging doors in JK Basic levels
 
 What I have in mind is a double wing door swinging open to both sides of
 the door frame. I assume that you're pretty experienced in making
@@ -179,7 +172,7 @@ parameters have to be filled in:
 
  ![](pic7.gif)
 
- 
+<div class="tutorial-table" markdown=1>
 
 |                    |                                                                                                                                                                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -190,6 +183,7 @@ parameters have to be filled in:
 | **AutoCloseDelay** | Normally you have to activate one of the switches once more to close the doors again after they were opened. Setting AutoCloseDelay to a positive value causes the doors to be closed automatically after the specified time (in seconds). |
 | **TouchOpening**   | You can also open/close the doors by "touching" them (hitting the spacebar), if this parameter is set to 1. To disable this feature just set it to 0.                                                                                      |
 
+</div>
    
 That's all, folks\! Save the level and start it in JK. Activate the
 switch or just "touch" the doors and voilá — they swing open.  
@@ -216,8 +210,6 @@ that is the SND file specified in the template of the doors. In this
 particular case it's **med\_door.snd** linked to the **3x3door\_2a**
 thing:
 
-> 
-> 
 >     # Foley description for medium doors
 >     startmove df_door2-1.wav  0x0     0.1  1.0
 >     stopmove  df_door2-3.wav  0x0     0.1  1.0
@@ -246,18 +238,13 @@ You find the described door example as a (very small) demonstration
 level here (containing both JK and MotS versions): 
 [rotdoor1.zip](rotdoor1.zip)  
    
-   
- 
-
-**The technical aspect**
+## The technical aspect
 
 For those of you who want to take advantage of the RotatePivot()
 function in their own cog scripts, here is the formal syntax of that
 verb (in JK, not in MotS) in the *Jedi Knight Unofficial Specs*
 format:  
    
- 
-
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -271,13 +258,8 @@ format:
 </tbody>
 </table>
 
-   
-   
- 
+## The MotS Disaster (and a solution for it)
 
-**The MotS Disaster (and a solution for it)**
-
-   
 Soon after the first edition of this tutorial was published, I received
 some alarming feedback from JK designers who tried to implement swinging
 doors in their new MotS levels: It simply didn't work\! My naive
@@ -322,8 +304,6 @@ provide new ghost type things with associated SND files (taken from
 typical door things) and use one of them for a hinge. Simply add the
 following lines to the MOTS.TPL file in the JEDDATA folder:
 
-> 
-> 
 >     # DESC:
 >     # BBOX: 0 0 0 0 0 0
 >     ghost_hinge_sm   none   orient=(0/0/0) type=ghost move=path soundclass=sm_door.snd
@@ -343,6 +323,8 @@ door itself is needed). Maybe one of the readers of this tutorial will
 find a better solution - let the Massassi Temple know\!  
  
 
+<span class="tutorial-orange">
 Part II of the Rotating Doors Tutorial (if ever published) will feature
 some "iris doors", build of wedge style segments (6 or 8), which are
 opened by rotating them back into the wall.
+</span>

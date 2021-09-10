@@ -1,19 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: "Rotating Doors: 1st Edition"
+author: Heinz Högel
+email: HeiHoegel@compuserve.com
 description: >
-
-date: 
+    Learn to create swinging, true to life, doors. This version only address 
+    doing so in Jedi Knight (not MotS).
+date: 1998-06-27
 original: tutor.htm
-category: 
+category: jk
 ---
 
-Author:**Rotating Doors I**
-
-Author: [Heinz Högel](mailto:HeiHoegel@compuserve.com)
-
------
+Author: Heinz Högel
 
 Without doors every level would be extremely boring. They add a good
 amount of uncertainty  to a Jedi Knight's playground (who knows what is
@@ -45,7 +42,7 @@ semicircle doors in the pipe area itself and some concave doors in the
 inner pipe walls) and 10 (the large cargo doors in the ship's exterior
 area). Investigating more deeply into these levels you will find the cog
 scripts used to control these special doors: **09\_tilting\_floor.cog**,
-**09\_pipedoor***xx***.cog** (*xx* stands for variations) and
+**09\_pipedoor*xx*.cog** (*xx* stands for variations) and
 **10\_cargodoors.cog**. Besides the level specific extra code these
 scripts are very similar to normal door scripts. Their "secret" is the
 use of the function **RotatePivot()** instead of the usual
@@ -161,7 +158,7 @@ parameters have to be filled in:
 
  ![](pic7.gif)
 
- 
+<div class="tutorial-table" markdown=1>
 
 |                    |                                                                                                                                                                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -171,6 +168,7 @@ parameters have to be filled in:
 | **Time**           | This time (in seconds) determines the duration of open/close actions.                                                                                                                                                                      |
 | **AutoCloseDelay** | Normally you have to activate one of the switches once more to close the doors again after they were opened. Setting AutoCloseDelay to a positive value causes the doors to be closed automatically after the specified time (in seconds). |
 
+</div>
    
 That's all, folks\! Save the level and start it in JK. Activate the
 switch and voilá — the doors swing open.  

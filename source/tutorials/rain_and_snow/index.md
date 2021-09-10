@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Rain and Snow
+author: Zagibu
+email: swisshome@freesurf.ch
 description: >
-
-date: 
-original: index.shtml
-category: 
+    This simple tutorial will teach you how to add good-looking rain or snow to 
+    your level.
+date: 2002-03-12
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml) Rain
-and Snow Tutorial  
-
------
-
-Author: [Zagibu](mailto:swisshome@freesurf.ch)  
-  
+Author: Zagibu
 
 This simple tutorial will teach you how to add good looking rain or snow
 to your level. You need to know how to create simple levels and how to
@@ -23,8 +17,7 @@ add things and cogs to them. The snow or rain will cause minimum lag and
 framerate drop, due to the use of particles instead of sprites or
 animated sector surfaces. Just remember not to add too many ghosts.
 
-**Note:** Be sure to [download the
-files](http://files.massassi.net/tutorials/rainsnow.zip) used in this
+**Note:** Be sure to [download the files](rainsnow.zip) used in this
 tutorial before proceeding.
 
 1.  Build your level.  
@@ -69,8 +62,5 @@ the range change the timer value of the template. You can also change
 the vel value (velocity), because the range is timer \* vel, but this
 will probably destroy the rain or snow feeling...
 
-<div data-align="center">
-
 ![](rainsectorsetup.gif)
 
-</div>

@@ -1,22 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Changing MotS Player Actions  
+author: MastaJedi
+email: hill@golden.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    How to interperet and change player actions.
+date: 1998-09-05
+original: original.html
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Changing MotS Player Actions  
-
------
-
-Author: [MastaJedi](mailto:hill@golden.net), [Jedi Knight Role Playing
-Group](http://www.jedilegacy.net/SWRPG/)  
-  
+Author: MastaJedi,Jedi Knight Role Playing Group
 
 In *Mysteries of the Sith*, any COG can analyze, define, disable, enable
 or otherwise manipulate the messages that are sent by the user, from
@@ -26,21 +19,15 @@ when an item is used, when the camera mode is switched - even when the
 autosave function is used, and disable these messages or modify their
 outcome. This ability must be activated like so:
 
-> 
-> 
 >     SetActionCog(GetSelfCog(), 0x7fffffff);
 
 and also present in this cog must be the message:
 
-> 
-> 
 >     message playeraction
 
 All player actions are now passed to this message as a combination of
 parameters. Using the verb:
 
-> 
-> 
 >     GetParam(flex);
 
 in the playeraction message will return values which can be interpreted
@@ -51,8 +38,6 @@ being interpreted by the game, and ReturnEx(1.0) permits actions to be
 passed through to the game. To disable parameter passing to the
 playeraction message, one must run the following:
 
-> 
-> 
 >     SetActionCog(GetSelfCog(), 0);
 
 (GetSelfCog() can also be substituted with the integer (-1) to
@@ -62,19 +47,13 @@ In the following examples, understand that parameter(0) having a value
 of 0.0 is the parameter that is passed when the Jump key is
 pressed/activated. In all cases, assume that
 
-> 
-> 
 >     SetActionCog(GetSelfCog(),0x7fffffff)
 
 has been executed, enabling parameters passing to the playeraction
 message.
 
-<span class="underline"></span>
+## Example 1
 
-**Example 1**
-
-> 
-> 
 >     ...
 >     Playeraction:
 >     Return;
@@ -82,12 +61,8 @@ message.
 
 **Resolution:** All actions will pass through unaffected.
 
-<span class="underline"></span>
+## Example 2
 
-**Example 2**
-
-> 
-> 
 >     ...
 >     Playeraction:
 >     if(GetParam(0) == 0.0)
@@ -116,12 +91,8 @@ pass any action sent by the user to the game. If we take this a step
 further, we can block the outcome of an action and re-define it so some
 other outcome is observed. The following are examples of this:
 
-<span class="underline"></span>
+## Example 3
 
-Example 3
-
-> 
-> 
 >     ...
 >     Playeraction:
 >     
@@ -139,10 +110,8 @@ in and prints "The Jump key was pressed, but it makes us crouch\!", then
 SetParam(0, 1.0) changes the jump action to a crouch action - so the
 player will crouch instead of jumping when the jump key is pressed.
 
-<span class="underline">**Example 4**</span>
+## Example 4
 
-> 
-> 
 >     ...
 >     Playeraction:
 >      ReturnEx(0.0);
@@ -160,8 +129,6 @@ all actions have more than one parameter to describe the action.
 
 Playeraction Parameter List with Definitions
 
-> 
-> 
 >     Action   Param(0) (1)    (2)
 >     
 >     Jump    0.0 ---    1.0 in air
