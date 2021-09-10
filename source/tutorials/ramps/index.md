@@ -1,21 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: "Ramps: Part 1"
+author: Brian Lozier
+email: brian@massassi.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Two rooms, one higher than the other, connected by a sloped floor.
+date: 1998-03-20
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Ramps and Slanted Walkways  
-
------
-
-Author: [Brian Lozier](mailto:brian@massassi.net)  
-  
+Author: Brian Lozier
 
 The first part of this tutorial will show you how to link two rooms
 together with a slanted walkway (ramp). It is very basic. The second

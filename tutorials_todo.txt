@@ -17,12 +17,9 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/player_characters2/index.md
 	new file:   source/tutorials/playeraction/index.md
 	new file:   source/tutorials/pong/index.md
 	new file:   source/tutorials/rain_and_snow/index.md
-	new file:   source/tutorials/ramps/index.md
-	new file:   source/tutorials/ramps2/index.md
 	new file:   source/tutorials/rd/index.md
 	new file:   source/tutorials/rd2/index.md
 	new file:   source/tutorials/regenglass/index.md
