@@ -1,19 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Rivers Tutorial
+author: EvanC
+email: ev@wave.co.nz
 description: >
-
-date: 
+    Learn how to make rivers using the cog.
+date: 1999-02-27
 original: rivers.html
-category: 
+category: jk
 ---
 
-Author:Rivers Tutorial
-
------
-
-Author: [EvanC](mailto:ev@wave.co.nz)  
+Author: EvanC  
   
 When making a level, there are a few little tricks you can learn to make
 the level a little bit more interesting and a lot more fun to play. One
@@ -108,7 +104,8 @@ Put it in your project directory. Push "f7" and go to the placed cogs
 menu. Add the cog to your level (if you don't know how look in the basic
 editing section). You will notice it has a lot of values in this
 pattern:  
-  
+
+```
 vec1(vector)  
 ...  
 ...  
@@ -124,7 +121,7 @@ water1(sector)
 ...  
 water12(sector)  
 speed(flex)  
-  
+```
   
 An explanation: The vectors are the direction that the water flows in
 that section of your river. The surfaces are the top and bottom of the
@@ -168,5 +165,4 @@ Good luck with your rivers and if you need any extra help don't
 hestitate to ask me.  
   
 
-© Copyright 1998 [EvanC](mailto:ev@wave.co.nz) and [The Massassi
-Temple](http://massassi.jedinights.com/).
+© Copyright 1998 EvanC and The Massassi Temple

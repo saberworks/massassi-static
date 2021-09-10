@@ -17,9 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/rivers/index.md
-	new file:   source/tutorials/round/index.md
-	new file:   source/tutorials/saber_guide/index.md
 	new file:   source/tutorials/sabers/index.md
 	new file:   source/tutorials/sabhandle/index.md
 	new file:   source/tutorials/savguns/index.md

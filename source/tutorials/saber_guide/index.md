@@ -1,26 +1,23 @@
 ---
-title: 
-author: 
-email: 
+title: "Saber Editing : Single Player Saber Color and Saber 2 Sword Tutorials"
+author: Jepman
+email: jepman@endormoon.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    A method to change the color of the saber in single-player without
+    overwriting MAT files like most do, and also a method on creating a good
+    sword-mod-thing.
+date: 2000-07-16
+original: original.html
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Saber Editing : Single Player Saber Color and Saber 2 Sword Tutorials  
-
------
-
-Author: [Jepman](mailto:jepman@endormoon.net)  
+Author: Jepman
   
 
 **NOTE:** This tutorial expects you to be familiar already with Jedi
 Knight terms, and that you already have the required programs.
 
-Part 1 : Single Player Saber Color
+## Part 1 : Single Player Saber Color
 
 I will start this guide off by showing you how to change your Single
 Player character's saber color for your own levels, WITHOUT renaming
@@ -81,7 +78,7 @@ you can come up with\!
 
 <span id="2"></span>
 
-Part 2 : Saber 2 Sword
+## Part 2 : Saber 2 Sword
 
 **NOTE:** I assume that you have an external and internal sword models
 ready.
@@ -106,11 +103,8 @@ Simply change *sabv.3do* and *sabg.3do* to the name of your models.
 Now gob this thing up and run it in Patch Commander. It should work
 perfectly fine.
 
-Well anyway, if you have any trouble with these things, please feel free
-to contact me at <jepman@endormoon.net>. Thank you for taking the time
-to read this tutorial. I certainly hope it will serve you well for your
-projects.
+Thank you for taking the time to read this tutorial. I certainly hope it will
+serve you well for your projects.
 
 This tutorial was brought to you by
-[Jepman](mailto:jepman@endormoon.net) of [Specter
-Studios](http://www.jedilegacy.net/specter/)
+Jepman of Specter Studios
