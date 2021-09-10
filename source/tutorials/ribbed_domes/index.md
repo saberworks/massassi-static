@@ -1,20 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Ribbed Domes
+author: JEDMaster
+email: DeyjaL@AOL.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    An elegant touch to add to the domes ceilings in your levels.
+date: 2000-06-04
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Ribbed Domes  
-
------
-
-Author: [JEDMaster](mailto:DeyjaL@AOL.com)  
+Author: JEDMaster
   
 
 Before following this tutorial, be sure you can complete the [Perfect

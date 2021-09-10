@@ -1,35 +1,24 @@
 ---
-title: 
-author: 
-email: 
+title: Regenerating Glass
+author: PC_McCloud
+email: PC_McCloud@Hotmail.com
 description: >
-
-date: 
+    Explains how to use the regenerating glass cog available in the cog section of the site.. Also touches upon client/server cog usage in general
+date: 1999-01-02
 original: tutor.html
-category: 
+category: jk
 ---
 
-Author:## Regenerating Glass  
-and Basic  
-C/S .Cog Useage
+Author: PC\_McCloud  
 
-By: [PC\_McCloud](mailto:PC_McCloud@Hotmail.com)  
-Also Refrence [Breaking
-Glass](http://massassi.jedinights.com/tutorials/glass/tutor.htm) By :
-[Executor](mailto:executor2@earthlink.net)
-
------
+Also Reference [Breaking Glass](/tutorials/glass/) By Executor
 
 This is a how to make Regenrating Glass and Basic Client/Server .cog
 Tutorial
 
 Things Needed :
 
-  - Regenrating "[Breaking Glass
-    (C/S)](http://massassi.jedinights.com/cogfiles/mp/bc.zip)" By
-    [Pele](mailto:%2520pele975@hotmail.com)
-
- 
+Regenerating "[Breaking Glass (C/S)](bc.zip)" By Pele
 
 1.  Fire up JED and start a New JK / MotS Project with the Defult sector
     slected Cleave it as I have just about in half like so..
@@ -62,7 +51,7 @@ Now you need to Change some on the Serface Properties
 3.  If you want to see Past "Transparten" you Can Set the "+FACE FLAGS"
     to "2" (See Image \#4 Below)
 
-<div data-align="center">
+<div class="tutorial-table" markdown=1>
 
 |                                     |                                     |                                     |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- |
@@ -102,7 +91,7 @@ Now that you have compleated all the Steps above Save and Test your
 level if you compleated them Properly you will have Glass the Brakes
 when you Shoot it and Respawns after 60 Seconds
 
-<div data-align="center">
+<div class="tutorial-table" markdown=1>
 
 |            |
 | :--------: |
@@ -112,4 +101,4 @@ when you Shoot it and Respawns after 60 Seconds
 </div>
 
 Good Luck and Happy Glass Shooting :-)  
-By [PC\_McCloud](mailto:PC_McCloud@Hotmail.com)
+By PC\_McCloud

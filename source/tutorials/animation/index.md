@@ -9,8 +9,6 @@ category: jk
 original: original.html
 ---
 
-# Animation made easy\!\!\!\!
-
 Allright Jedi Knightnicks\! I've always wanted to create new player
 animations and animations for new enemies, but the task is has been so
 daunting {daunting (daun' ting) adj, def: scary} with the current

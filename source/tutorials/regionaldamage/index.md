@@ -1,18 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Regional Damage
+author: Captain Ramen
+email: ctramen@outpostd34.com
 description: >
-
-date: 
+    Shows how to give regional damage to your enemies. Ie. Making a shot to the head hurt more than a shot to the torso. Includes necessary cog.
+date: 1999-11-17
 original: damage.html
-category: 
+category: jk
 ---
 
-Author:## Regional Damage
+Author: Captain Ramen
 
-Author: [Captain Ramen](mailto:ctramen@outpostd34.com) | Comments?
-Questions? Drop 'em off at our [forum](/forums/lsp/).
+Questions? Drop 'em off at our [forum](https://forums.massassi.net/).
 
 -----
 

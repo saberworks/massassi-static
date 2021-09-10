@@ -17,10 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/regenglass/index.md
-	new file:   source/tutorials/regionaldamage/index.md
-	new file:   source/tutorials/reticule/index.md
-	new file:   source/tutorials/ribbed_domes/index.md
 	new file:   source/tutorials/rivers/index.md
 	new file:   source/tutorials/round/index.md
 	new file:   source/tutorials/saber_guide/index.md
