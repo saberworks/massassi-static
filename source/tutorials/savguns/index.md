@@ -1,23 +1,18 @@
 ---
-title: 
-author: 
-email: 
+title: Creating New Weapons
+author: SavageX
+email: savagex@sprynet.com
 description: >
-
-date: 
-original: index.html
-category: 
+    This tutorial helps you make an external, internal, and a powerup of a gun.
+date: 1999-06-13
+original: original.html
+category: jk
 ---
 
-Author:Creating New Weapons
-
------
-
-Author: [SavageX](mailto:savagex@sprynet.com)  
+Author: SavageX  
   
 *Note: This is an htmlized version - if you would like, feel free to
-download the [original Microsoft Word
-version](ftp://ftp.jedinights.com/massassi/savguns.zip).*  
+download the [original Microsoft Word version](savguns.zip).*  
   
 Tools needed:
 
@@ -152,5 +147,3 @@ making process.
 > Yahhoo\!\! You did it\! You made your new gun\! That wasn't to hard
 > was it?
 
-If you have any questions regarding this tutorial, email me at
-<savagex@sprynet.com>.
