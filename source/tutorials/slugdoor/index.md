@@ -1,20 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: Basic Doors 2
+author: Tim "Slug" Hayes
+email: slug@massassi.net
 description: >
-
-date: 
+    Another basic doors tutorial - Worded differently and done slightly 
+    differently, may be easier to understand.
+date: 1999-08-02
 original: index.shtml
-category: 
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Doors  
-
------
-
-Author: [Tim "Slug" Hayes](mailto:slug@massassi.net)  
+Author: Tim "Slug" Hayes
   
 We'll be using the default sector. Before you start though, go to
 "Tools, Options, and click on the "misc options" tab. Un-select "move
@@ -83,20 +79,22 @@ done.
 Still in thing mode, hit "enter" to invoke the thing editor.. If you
 scroll down, you'll see new fields. They are:  
 
-> 
-> 
-> |                 |                                                                     |
-> | --------------- | ------------------------------------------------------------------- |
-> | **Thing Flags** | These control various things about the door. Don't worry about them |
-> | **numframes**   | This is how many frames your door will have. Don't worry about it   |
-> | **frame**       | These are the coordinates for your frames                           |
-> 
+<div class="tutorial-table" markdown=1>
+
+|                 |                                                                     |
+| --------------- | ------------------------------------------------------------------- |
+| **Thing Flags** | These control various things about the door. Don't worry about them |
+| **numframes**   | This is how many frames your door will have. Don't worry about it   |
+| **frame**       | These are the coordinates for your frames                           |
+
+</div>
 
   
 To find the coordinates for your frames, simply press the button in the
 thing editor that says "copy as frame". Then click on the first "frame"
 box and right click with the mouse. Select paste, and voila.. Frame 1 is
-done.  
+done.
+
 To get frame 2, go to side view and move the door up as shown in the
 picture below. Press "copy as frame" again, and this time paste in the
 second frame box. Move the door back to it's original position and you

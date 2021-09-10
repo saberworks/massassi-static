@@ -32,7 +32,6 @@
 	new file:   source/tutorials/skinmaking/index.md
 	new file:   source/tutorials/skins/index.md
 	new file:   source/tutorials/sloped_corners/index.md
-	new file:   source/tutorials/slugdoor/index.md
 	new file:   source/tutorials/smacker/index.md
 	new file:   source/tutorials/spforcepowers/index.md
 	new file:   source/tutorials/sphdome/index.md
