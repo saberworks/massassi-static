@@ -5,7 +5,7 @@ email: HeiHoegel@compuserve.com
 description: >
     Learn to create swinging, true to life, doors. This version only address 
     doing so in Jedi Knight (not MotS).
-date: 1998-06-27
+date: 1998-06-10
 original: tutor.htm
 category: jk
 ---
