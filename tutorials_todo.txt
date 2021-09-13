@@ -17,12 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/shellfish_stairs/index.md
-	new file:   source/tutorials/ships/index.md
-	new file:   source/tutorials/skinmaking/index.md
-	new file:   source/tutorials/skins/index.md
-	new file:   source/tutorials/sloped_corners/index.md
-	new file:   source/tutorials/smacker/index.md
 	new file:   source/tutorials/spforcepowers/index.md
 	new file:   source/tutorials/sphdome/index.md
 	new file:   source/tutorials/spiralstairs/index.md

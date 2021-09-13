@@ -1,17 +1,14 @@
 ---
-title: 
-author: 
-email: 
+title: Shellfish Stairs
+author: GrndAdmThrawn
+email: dberens@plainstel.com
 description: >
-
-date: 
-original: index.html
-category: 
+    Learn to create stairs that spiral up in a shellfish pattern.
+date: 2001-09-01
+category: jk
 ---
 
-Author:Shellfish Stairs
-
-By: [GrndAdmThrawn](mailto:dberens@plainstel.com)
+Author: GrndAdmThrawn
 
 This tutorial is about Shellfish Stairs, theyre similar to spiral stairs
 with couple important difference, one end is biger than the other end.

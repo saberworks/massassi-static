@@ -1,26 +1,20 @@
 ---
-title: 
-author: 
-email: 
+title: Flying Ships
+author: EvanC
+email: ev@wave.co.nz
 description: >
-
-date: 
+    Learn how to make ships fly by using keyframes.
+date: 1998-07-05
 original: ships.html
-category: 
+category: jk
 ---
 
-Author:**Flying ships**
-
-Author: [EvanC](mailto:ev@wave.co.nz)
+Author: EvanC
 
   
-
------
-
-  
-In this tutorial you will learn how to use Trajedi(from
-http://darkjedi.com) to make ships fly with keyframes. Download Trajedi
-before you begin.  
+In this tutorial you will learn how to use Trajedi (available in the 
+[programs section](/programs/) to make ships fly with keyframes.
+Download Trajedi before you begin.  
   
 Before you can do keyframes you need to understand 3d movements. An
 objects position is determined by a 3d co-ordinate. The co-ordinate will
@@ -73,8 +67,7 @@ your project directory. To use the keys in your level you will need to
 use a cog. I have made some simple cogs that will play a key in some
 common situations.  
   
-<span style="font-family: verdana">[Download
-cogs](shipcogs.zip)</span>  
+[Download cogs](shipcogs.zip) 
   
 Here is what the cogs do: SPFYACT.COG This will make the ship fly when a
 button is pushed by the player SPFYENT.COG This will make the ship fly

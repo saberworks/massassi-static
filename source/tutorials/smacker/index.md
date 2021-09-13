@@ -1,22 +1,19 @@
 ---
-title: 
-author: 
-email: 
+title: Smacker FAQ
+author: Craig "UggBoot" Urquhart
+email: ugg@darkjedi.com
 description: >
-
-date: 
+    Learn how to use the smacker tools (for creating cutscenes).
+date: 2000-01-09
 original: smacker.htm
-category: 
+category: jk
 ---
 
-Author:![](smackershot.jpg)  
-  
-Author: [Craig "UggBoot" Urquhart](mailto:ugg@darkjedi.com)
+Author: Craig "UggBoot" Urquhart
 
-  
+![](smackershot.jpg)  
 
 -----
-
   
 **What is Smacker?**  
 Smacker is by far the most popular codec (compression / decompression
@@ -35,8 +32,10 @@ still just videos. They are not run by the game engine\!
 **Where do I get Smacker?**  
 [RAD Game Tools](http://www.radgametools.com/smkmain.htm) are the makers
 of Smacker and other multimedia codecs. Smacker files are made with
-their freeware program [Smacker Tools (1.5
-MB)](http://www.radgametools.com/down/smacker/setup.exe)  
+their freeware program Smacker Tools (1.5MB).  *Note:* The Smacker
+Tools seem to have been replaced by [The Rad Video
+Tools](http://www.radgametools.com/smkdown.htm), which include Bink and
+Smacker.
   
 **What else do I need?**  
 The images (or an AVI movie clip) you want compressed into a Smacker
@@ -51,12 +50,13 @@ since *Jedi Knight* places the top left corner at about (0,80) on
 640x480 screen.  
   
 **What if I don't want to make an animation?**  
-The [Star Wars 3D Modelling Alliance](http://www.swma.net/) has over 100
-short movie clips to download, just make sure you get the author's
-permission before using them in your level. Most are AVI format but a
-few are MPEG which Smacker cannot use. Another problem is that all the
-clips are smaller than 640x300 and while Smacker can change the window
-size, it doesn't resize the graphics.  
+The Star Wars 3D Modelling Alliance (defunct, but you can see a gallery here:
+[Star Wars Modeling Alliance
+Gallery](https://www.imperialorder.org/swma-gallery/)) has over 100 short movie
+clips to download, just make sure you get the author's permission before using
+them in your level. Most are AVI format but a few are MPEG which Smacker cannot
+use. Another problem is that all the clips are smaller than 640x300 and while
+Smacker can change the window size, it doesn't resize the graphics.  
   
 **Where do I put the Smacker files?**  
 In your *Jedi Knight* directory, create a `Resources/Video` directory.
@@ -88,20 +88,22 @@ GOB file. Move the Smacker file from the project directory to the
   
 **Links**  
 
+*Note:* These links have all expired and some point to malware. They have been
+switched to wikipedia links where possible.
+
+<div class="tutorial-table" markdown=1">
+
 |                                                                   |                                                                                                                                                                         |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [TrueSpace](http://www.caligari.com/)                             | TrueSpace is An excellent learning program for 3D modelling. You can download a full version from here - [Truespace v1.04](http://www.pcplus.co.uk/article.asp?ID=8561) |
-| [3D Studio Max](http://www.ktx.com/)                              | 3D Studio Max is the industry standard, but is far too expensive for most hobbyists. However, if you want a job as a 3D modeller you had better learn it\!              |
-| [Crossroads](http://www.europa.com/~keithr/crossroads/index.html) | Crossroads is freeware and will convert between most graphics file formats. Very useful since TrueSpace 1.04 doesn't support 3D Studio 3DS models.                      |
-| [Star Wars 3D Modelling Alliance](http://www.swma.net/)           | Here you can download movie clips and detailed 3DS (3D Studio Max) models of nearly every vehicle, actor and building that appeared in the films.                       |
-| [The Comlink](http://outer-rim.net/multimedia/sounds.htm)         | The only place to go when looking for Star Wars sound files, it is easily the largest collection on the internet.                                                       |
+| [TrueSpace](https://en.wikipedia.org/wiki/TrueSpace)                             | TrueSpace is An excellent learning program for 3D modelling.  |
+| [3D Studio Max]( https://en.wikipedia.org/wiki/Autodesk_3ds_Max)                             | 3D Studio Max is the industry standard, but is far too expensive for most hobbyists. However, if you want a job as a 3D modeller you had better learn it\!              |
+| Crossroads | Crossroads is freeware and will convert between most graphics file formats. Very useful since TrueSpace 1.04 doesn't support 3D Studio 3DS models.                      |
+| [Star Wars 3D Modelling Alliance](https://www.imperialorder.org/swma-gallery/)           | Here you can download movie clips and detailed 3DS (3D Studio Max) models of nearly every vehicle, actor and building that appeared in the films.  (DEFUNCT, link points to gallery, sorry!)                       |
+| The Comlink         | The only place to go when looking for Star Wars sound files, it is easily the largest collection on the internet. (DEFUNCT)                                                       |
 
+</div>
   
 **Credits**  
-I'd like to thank Jonathan Clark and Darkness Falls for their [Smacker
-Tutoiral](http://www.jediknight.net/darkfall/jkarts/smacktut.html). It
-was very helpful in getting me started with cutscenes and is a good
-tutorial in using the Smacker Tools program.  
-  
-
------
+I'd like to thank Jonathan Clark and Darkness Falls for their Smacker Tutorial.
+It was very helpful in getting me started with cutscenes and is a good tutorial
+in using the Smacker Tools program.  

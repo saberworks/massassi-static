@@ -1,27 +1,25 @@
 ---
-title: 
-author: 
-email: 
+title: Skin Making Tutorial
+author: Admiral Thrawn
+email: thrawn_18@hotmail.com
 description: >
-
-date: 
+    Teaches you how to use the various programs involved in skin making.
+date: 1999-03-27
 original: skinmaking.html
-category: 
+category: jk
 ---
 
-Author:Skin Making Tutorial
+Author: Admiral Thrawn
 
------
-
-Author: [Admiral Thrawn](mailto:thrawn_18@hotmail.com)  
-  
 So, you wanna make a skin eh? Well I will tell you some basics on making
-a new skin. Here is what you need.  
-A Gob program from www.darkjedi.com (I prefer ConMan)  
-Mat Master from www.darkjedi.com  
-The JK.PAL from massassi.jedinights.com in the MISC section  
-Paint Shop Pro or any other photo editor. I prefer Paint Shop Pro -
-www.jasc.com for a 30 day trial.  
+a new skin. Here is what you need.  You should be able to find them in the
+[programs section](/programs/).
+
+* A Gob program (I prefer ConMan)  
+* Mat Master 
+* The JK.PAL from massassi in the [MISC section](/misc/) ("Colormaps" by Vannula) 
+* Paint Shop Pro or any other photo editor. I prefer Paint Shop Pro -
+  www.jasc.com for a 30 day trial.  
   
 1.)Open up your Gob program and open the res2.gob. Either in the JK
 directory or on the CD under Gamedata/Resource and click and extract a
@@ -114,14 +112,5 @@ inside the Jan 3do put that in janface.mat. So it becomes fettface.mat
 instead of janface.mat. Follow that with the arms and legs and so on.  
   
 One last thing. If you PAINT any mats. EVERYONE in the MP game must have
-that skin to see it. If you have any problems e-mail me at
-thrawn\_18@hotmail.com and I'll see what I can do. I do NOT however make
-skins for people. Though sometimes I make exceptions. To get Al
-MacDonald's Tutorial go to  
-http://209.1.245.15/3do/swskins.htm  
-It is under QUICK DOWNLOADS  
+that skin to see it.   
   
-  
-
-© Copyright 1998 [Admiral Thrawn](mailto:thrawn_18@hotmail.com) and [The
-Massassi Temple](http://massassi.jedinights.com/).
