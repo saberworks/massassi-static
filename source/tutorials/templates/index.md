@@ -1,24 +1,18 @@
 ---
-title: 
-author: 
-email: 
+title: Templates
+author: Brian Lozier
+email: brian@massassi.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Add custom 3dos to your level.
+date: 1998-11-02
+original: original.html
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Templates  
-
------
-
-Author: [Brian Lozier](mailto:brian@massassi.net)  
+Author: Brian Lozier 
   
-
 In Jedi Knight and Mysteries of the Sith (JK and MotS), there are things
-called 3do's. 3do's are explained in detail in the [Basic
+called 3dos ("3d Objects"). 3dos are explained in detail in the [Basic
 Editing](/basics/) lessons. Once you know what a 3do is, and what it's
 used for, you may want to create your own. You can follow the [3do
 Creation](/tutorials/3do/) tutorial for instructions on that. Once you
@@ -27,7 +21,7 @@ have completed your 3do, you must make a template for it.
 The template file has many uses. In very basic terms, it gives a name
 for each 3do and defines how it acts in-game. What does this mean? Well,
 templates can assign flags to each entry, and depending on the flags,
-the 3do's act differently. You can set them so you can walk on the 3do,
+the 3dos act differently. You can set them so you can walk on the 3do,
 make it metal, make it "throwable," etc. Fortunately, you don't have to
 assign flags to each entry. When JK was created, the team used what are
 called "parent templates." These are just template entries that have all
@@ -36,7 +30,7 @@ parent template. I have never manually added the flags, as the parent
 templates are great for anything you would want to do. There is a [great
 reference](/tutorials/template_reference/) by Slug that talks about all
 the parent templates. The template file also defines things OTHER than
-3do's, but that is not covered here.
+3dos, but that is not covered here.
 
 To emphasize the concept, I will show a small example. First, when you
 add an existing JK/MotS 3do to your level, such as a storm trooper or a
@@ -45,11 +39,11 @@ resource picker are the names defined in the template. The actual name
 of the .3do file doesn't necessarily have to be the same. Here are a few
 small examples.
 
-  
-
+```
     Name:        3do File:       Parent Template:
     My_Chair    my_chair.3do        _walkstruct
     Chair_2     big_chair.3do       _walkstruct
+```
 
 As you can see, the name of the actual file doesn't have to be the same
 as the template name. The \_walkstruct parent template allows the player
@@ -62,8 +56,10 @@ great Template Creator. First, create your 3do file, and put it in your
 project directory under a seperate folder called \\3do. Your directory
 structure should look like this:  
 
+```
     C:\Jed\current_project\         (Project Directory)
     C:\Jed\current_project\3do\     (Directory for your 3do file)
+```
 
 If you are confused about project directories, take a look at the [Basic
 Editing](/basics/) lessons. Once you have placed your 3do file in the
@@ -87,9 +83,9 @@ on the 3do button and select your 3do.
 
 ![](2.gif)
 
-You will notice that the \#BBOX field has been populated. When you use
+You will notice that the `#BBOX` field has been populated. When you use
 JED, there is an option to show things as boxes (View, View Things As,
-Boxes). JED uses this \#BBOX entry to calculate how big the box will be
+Boxes). JED uses this `#BBOX` entry to calculate how big the box will be
 drawn. It has no effect on actual game-play.
 
 There are also other entries. The "size" and "movesize" entries have
@@ -100,7 +96,7 @@ level can freeze up (among other things). Don't worry, though, if you
 use JED to make your templates, these won't get messed up.
 
 Now its time to select a parent template. These are the entries that
-define the flags (such as \_walkstruct, explained above). Read through
+define the flags (such as `_walkstruct`, explained above). Read through
 [Slug's reference document](/tutorials/template_reference/) to find the
 correct one for your 3do. If you leave it blank, your 3do will freeze
 the level.
@@ -145,10 +141,11 @@ before you've added a template, its best to copy the template file from
 the JED directory into your project directory and modify that one.
 
 The files are called:  
-****
 
-    JK:     MotS:
+```
+    JK:         MotS:
     master.tpl  mots.tpl
+```
 
 As with any text file, you can modify it with Wordpad, which is Windows
 9x's built in text editor. So, go through My Computer or Windows
@@ -163,20 +160,20 @@ the bottom to find your template. A typical template entry looks similar
 to the following string. Remember, depending on names, flags, etc, it
 could look different.
 
-  
-
+```
     # DESC: Door 15x10 1/2 of BayDoor type door
     # BBOX: -0.75 -0.499 -0.034859 0.75 0.499 0.034859
     baydoor_b   _walkstruct   model3d=bayd_b.3do size=0.951508 movesize=0.951508
+```
 
 A lot of these entries should look familiar. The top line is the
-description you entered in the Template Creator. The \#BBOX entry is the
+description you entered in the Template Creator. The `#BBOX` entry is the
 automatically generated number that's for JED only. On the bottom line,
 you will find the template's name, the parent template, then the name of
 the 3do file, its size, movesize, and other flags.
 
 Now is a good time to examine the actual template entry (sometimes you
-will need to modify these manually). Anything with a \# in front of it
+will need to modify these manually). Anything with a `#` in front of it
 is ignored by JK/MotS. The top line is just for us humans, and the
 second line is created by JED, for JED. So, the only really important
 line is the bottom line.
@@ -203,4 +200,4 @@ Some things to remember:
     movesize are correct.
 
 As always, feel free to ask questions on the [message
-board](http://forums.massassi.net) if you need more help.
+board](https://forums.massassi.net) if you need more help.

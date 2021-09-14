@@ -17,8 +17,4 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/templates/index.md
-	new file:   source/tutorials/texturefaq/index.md
-	new file:   source/tutorials/weapon_template/index.md
-
 plus everything in misc/

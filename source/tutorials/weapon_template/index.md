@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Weapons Templates
+author: GuNbOy
+email: rocesk8er@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Unravels the mysteries behind weapons templates, and tips on making your own.
+date: 2000-03-21
+original: original.html
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Weapons Templates  
-
------
-
-Author: [GuNbOy](mailto:rocesk8er@hotmail.com)  
-  
+Author: GuNbOy
 
 In this tutorial you will learn how to make different types of weapons
 templates and how to make them work together in the static.jkl file.
@@ -25,7 +19,7 @@ templates and how to make them work together in the static.jkl file.
   - [tempref.txt](tempref.txt)
   - [static.jkl](static.jkl)
 
-The Basics of Templates
+## The Basics of Templates
 
   - All templates that are based on another one, have to come after the
     one they are based on in the jkl.  
@@ -40,7 +34,7 @@ The Basics of Templates
     specs](http://www.code-alliance.com/doc_jk/jk_specs/jkspecs.htm) or
     refer to the tempref.txt file that i give you.**
 
-Messages in Templates
+## Messages in Templates
 
   - **orient=(0.000000/0.000000/0.000000):** this I'm not sure about. I
     think it's the position at which the template is created. I don't
@@ -92,7 +86,7 @@ Messages in Templates
 
   
 
-Specific Messages for Weapon Types
+## Specific Messages for Weapon Types
 
   - **airdrag=flex** is how much resistance from "air" there is on the
     weapon.
@@ -131,7 +125,7 @@ Specific Messages for Weapon Types
 
   
 
-Messages for Explosions
+## Messages for Explosions
 
   - **blasttime=flex** is the delay between the explosion and when the
     damage is done (if you'll notice Force Destruction is delayed a
@@ -153,7 +147,7 @@ Messages for Explosions
 
   
 
-Particle Messages
+## Particle Messages
 
   - **material=\*.mat** refers to the material of the particles
   - **range=flex** indicates how far away the particles will go from
@@ -172,7 +166,7 @@ Particle Messages
 
   
 
-How to Make the Freakin' Things Work\!\!\!
+## How to Make the Freakin' Things Work\!\!\!
 
 I hope I didn't scare you all away with that crapload of messages...
 anyway, first off you go get the static.jkl I included with the
@@ -185,31 +179,35 @@ to fit your needs. Be sure to put the weapons explosion and anything
 that the explosion creates BEFORE the template itself, otherwise it
 won't work).
 
-\+bulletcloud none orient=(0.000000/0.000000/0.000000) type=particle
-timer=0.150000 typeflags=0x3f material=00gsmoke.mat range=0.006000
-rate=64.000000 maxthrust=4.000000 elementsize=0.004000 count=16 *///this
-is for when the bullet hits the wall*
+<p class="tutorial-gray">
++bulletcloud none orient=(0.000000/0.000000/0.000000) type=particle timer=0.150000 typeflags=0x3f material=00gsmoke.mat range=0.006000 rate=64.000000 maxthrust=4.000000 elementsize=0.004000 count=16
+<em>// this is for when the bullet hits the wall</em>
+</p>
 
-\+bloodcloud +bulletcloud material=bloody.mat range=0.030000 count=40
-*///all I changed from the bullet cloud was: material so it looks like
+<p class="tutorial-gray">
++bloodcloud +bulletcloud material=bloody.mat range=0.030000 count=40
+<em>// all I changed from the bullet cloud was: material so it looks like
 blood, range so its a bigger area, and count so it will be more dense.
-this will be used when a person gets hit by the bullet*
+this will be used when a person gets hit by the bullet</em>
+</p>
 
-\+bulletfleshhit \_gexplosion timer=0.001000 soundclass=exp\_bullet.snd
-creatething=+bloodcloud typeflags=0x0 *///for when a person is hit*
+<p class="tutorial-gray">
++bulletfleshhit _gexplosion timer=0.001000 soundclass=exp_bullet.snd creatething=+bloodcloud typeflags=0x0
+<em>// for when a person is hit</em>
+</p>
 
-\+bullethit \_gexplosion timer=0.001000 soundclass=exp\_bullet.snd
-creatething=+bulletcloud typeflags=0x0 *///for when the bullet hits
-something not living*
+<p class="tutorial-gray">
++bullethit _gexplosion timer=0.001000 soundclass=exp_bullet.snd
+creatething=+bulletcloud typeflags=0x0
+<em>// for when the bullet hits something not living</em>
+</p>
 
-\+bullet \_gweapon thingflags=0x20000001 light=0.400000
-model3d=bullet.3do size=0.001000 movesize=0.001000 soundclass=bry.snd
-maxrotvel=0.000000 vel=(0.000000/20.000000/0.000000) explode=+bullethit
-fleshhit=+bulletfleshhit damage=30.000000 mindamage=10.000000
-typeflags=0x20440d rate=15.000000
+<p class="tutorial-gray">
++bullet _gweapon thingflags=0x20000001 light=0.400000 model3d=bullet.3do size=0.001000 movesize=0.001000 soundclass=bry.snd maxrotvel=0.000000 vel=(0.000000/20.000000/0.000000) explode=+bullethit fleshhit=+bulletfleshhit damage=30.000000 mindamage=10.000000 typeflags=0x20440d rate=15.000000
+</p>
 
-*as you can see, i put the +bullethit under explode= and the
-+bulletfleshhit under the fleshhit= so it will do different things when
+*As you can see, I put the `+bullethit` under `explode=` and the
+`+bulletfleshhit` under the `fleshhit=` so it will do different things when
 you hit a person or a wall* :)
 
 Now you can experiment with all sorts of things. I hope that this helped
