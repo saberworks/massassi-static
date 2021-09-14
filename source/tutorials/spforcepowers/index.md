@@ -1,18 +1,12 @@
 ---
-title: 
-author: 
-email: 
+title: Single Player Force Powers
+author: Michael Chastant (MikeC)
+email: staff@massassi.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Goes through the process of adding Force powers to a single player level in JK
+date: 2000-01-28
+category: jk
 ---
-
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Single Player Force Powers Tutorial  
-
------
 
 Author: Michael Chastant (MikeC)  
   
@@ -29,8 +23,7 @@ your character.
 **2.** Open the startup cog in your favorite text editor. At the end of
 the cog you will see a section that reads:
 
-**
-
+```
 timer:
 
 // Force ranking
@@ -44,13 +37,16 @@ jkSyncForcePowers();
 Return;
 
 end
+```
 
 In this example it specifies a Jedi rank of 5 (Charge). Directly below
-the line that reads *SetInv(player, 14, 4\*50);* add lines saying
+the line that reads `SetInv(player, 14, 4\50);` add lines saying
 
+```
 SetInv(player, 21, 2.0);
 
 SetInvAvailable(player, 21, 1);
+```
 
 The first number in both lines is the bin number for the force power you
 want to add. The second number in the first line represents the number
@@ -64,6 +60,8 @@ force power is 4.
 
 Here is a list of the bin numbers and the force powers they represent.
 
+<div class="tutorial-table" markdown=1">
+
 |                  |    |                    |    |
 | ---------------- | -- | ------------------ | -- |
 | Force Jump       | 21 | Force Absorb       | 28 |
@@ -74,10 +72,16 @@ Here is a list of the bin numbers and the force powers they represent.
 | Force Persuasion | 26 | Force Destruction  | 33 |
 | Force Blinding   | 27 | Force Deadly Sight | 34 |
 
+</div>
+
 For Mysteries of the Sith some of the additional bin numbers are:
+
+<div class="tutorial-table" markdown=1">
 
 |                   |    |                       |    |
 | ----------------- | -- | --------------------- | -- |
 | Force Far Sight   | 35 | Force Push            | 38 |
 | Force Projection  | 36 | Force Chain-Lightning | 39 |
 | Force Saber Throw | 37 |                       |    |
+
+</div>

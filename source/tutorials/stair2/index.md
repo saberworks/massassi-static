@@ -1,22 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: "Stairs: Basic"
+author: Brian Lozier
+email: brian@massassi.net
 description: >
-
-date: 
+    Learn how to create very basic stairs.
+date: 1998-04-18
 original: tutor.htm
-category: 
+category: jk
 ---
 
-Author:**Basic Stairs**
-
-Author: [Brian Lozier](mailto:lozier@bigfoot.com)
-
-  
-
------
-
+Author: Brian Lozier
   
 We will work with the default sector.  
   

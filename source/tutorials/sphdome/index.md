@@ -1,23 +1,19 @@
 ---
-title: 
-author: 
-email: 
+title: Perfect Spheres And Domes
+author: Matt The Hutt
+email: matt_the_hutt@hotmail.com
 description: >
-
-date: 
+    Another way of making spheres and domes.
+date: 1999-11-17
 original: Tutorial.htm
-category: 
+category: jk
 ---
 
-Author:# Perfect Spheres and Domes
-
-by [Matt the Hutt](mailto:matt_the_hutt@hotmail.com)
-
------
+Author: Matt The Hutt
 
 The dome tutorials here are OK, but you have to play with it a little to
 get it just right. I was looking at the [Perfect Pipes
-tutorial](http://198.92.131.4/tutorials/pipes/perfectpipes.htm) today
+tutorial](/tutorials/perfect_pipes/) today
 and it just hit me that with a little modification it could be used to
 make perfect domes or spheres, with any number of segments.  
 I'll be making a sphere in this tutorial, but you can cleave it in half
@@ -28,7 +24,7 @@ up-and-down, even for that huge sphere in level 9. That's the numbers
 I'm going to use in this tutorial.  
 To start it, you create a circular shape. You can use FreeSector, or
 make it using the [perfect
-polygons](http://198.92.131.4/tutorials/polygon/tutor.htm) method.
+polygons](/tutorials/perfect_polygons/) method.
 Either way, make it have twice the number of points you want the sphere
 to have up-and-down.  
   

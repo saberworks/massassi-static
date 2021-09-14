@@ -17,14 +17,6 @@
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
 
-	new file:   source/tutorials/spforcepowers/index.md
-	new file:   source/tutorials/sphdome/index.md
-	new file:   source/tutorials/spiralstairs/index.md
-	new file:   source/tutorials/stair2/index.md
-	new file:   source/tutorials/stair3/index.md
-	new file:   source/tutorials/stairs/index.md
-	new file:   source/tutorials/switch/index.md
-	new file:   source/tutorials/template_reference/index.md
 	new file:   source/tutorials/templates/index.md
 	new file:   source/tutorials/texturefaq/index.md
 	new file:   source/tutorials/weapon_template/index.md

@@ -1,19 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Stairs (Making Staircases)
+author: Mark Jones
+email: pele975@hotmail.com
 description: >
-
-date: 
+    This tutorial will show you how to create smooth stairs.
+date: 1998-04-12
 original: stair.htm
-category: 
+category: jk
 ---
 
-Author:**Making Stair Cases**
+Author: Mark Jones
 
-**Author:** [**Mark Jones**](mailto:pele975@hotmail.com) **4/11/98**
-
-**Part 1 : Intro**
+## Part 1 : Intro
 
 So, you want some stairs? Good Decision\! Stairs add a professional
 touch that, unfortunately, not many custom levels released have. First
@@ -34,11 +32,7 @@ singleplayer level : Warzone Chapter 1. There are two stairways, one of
 them is a simple spiral one. Now , lets load up JED or FB and get to
 work\!
 
- 
-
- 
-
-**Part 2: Basic Stairway**
+## Part 2: Basic Stairway
 
 **Step One:**
 
@@ -52,11 +46,7 @@ vertex, and hit \[shift+s\]) and cleave it up two dots on the default
 grid. We are now set up to cleave the stairs in. Make sure you have this
 on your screen before proceeding:
 
- 
-
 ![](step1.gif)
-
- 
 
 **Step Two:**
 
@@ -74,8 +64,6 @@ sector. This is what it should look like now:
 
 ![](step2.gif)
 
- 
-
 Okay, we have cleaved up our what was once a one sector rectangle into a
 mess of sectors. Now it is time to delete all those extra sectors. So
 lets get to work. Delete every one of the rectangular sectors created
@@ -84,11 +72,7 @@ when you cleaved vertically.
 Presto\! Your first staircase. Texture it up and try it out in JK/MOTS.
 It is completely smooth\! No choppy effects when walking on it\!
 
- 
-
- 
-
-**Part 3: Advanced Stairs**
+## Part 3: Advanced Stairs
 
 Okay. You have the stairway concept mastered and you want to continue,
 eh? What we will cover here is how to create ‘floating’ stair ways (
@@ -97,16 +81,12 @@ Is the stairwell in Warzone 1 or the stairwell in Hutt’s Palace. In my
 opinion floating stairways look much better in some circumstances. Lets
 get to work.
 
-**Part one:**
-
 Load up Jed, and in the overhead view, cleave a line .4 units to the
 right of the left edge. Then switch to view 3 and align the grid with
 the bottom left vertex and cleave diagonally up 2 dots. With the rotated
 view, you should have this:
 
 ![](step4.gif)
-
-  
 
 **Method 1**
 
@@ -143,7 +123,4 @@ different sides of the stairs. :-)
 
 Take note that Kyle has plenty of room to walk under….
 
- 
-
-That is it for now with stairways, feel free to email me with questions
-, comments, critizicm, etc.. <pele975@hotmail.com>
+That is it for now with stairways!

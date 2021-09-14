@@ -1,13 +1,13 @@
 ---
-title: Basic Elevator Tutorial  
+title: Basic Elevators
 author: Brian Lozier
 email: brian@massassi.net
 description: >
-    Learn how to create simple elevators that move up or down when a player walks over them.
+    Learn how to create simple elevators that move up or down when a player 
+    walks over them.
 date: 1998-03-21
 category: jk
 ---
------
 
 Author: Brian Lozier
   

@@ -1,22 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: Switches
+author: Mangore Kiramin
+email: mangore_kiramin@geocities.com
 description: >
-
-date: 
+    This tutorial will show you add switches to almost any COG, such as doors, 
+    elevators, and traps.
+date: 1998-04-06
 original: tutor.htm
-category: 
+category: jk
 ---
 
-Author:**Switches**
-
-Author: [Mangore Kiramin](mailto:mangore_kiramin@geocities.com)
-
-  
-
------
-
+Author: Mangore Kiramin
   
 Switches play a very large part in Jedi Knight levels, and most good
 levels have some. They do various things: open doors, move elevators,
@@ -41,15 +35,16 @@ The texture shown above is 32x32 pixels.
   
   
 Here are the conversions from pixels to JKUs:  
-  
 
-|            |         |
-| ---------- | ------- |
+<div class="tutorial-table" markdown=1">
+
 | Pixels     | JKU     |
+| ---------- | ------- |
 | 32 pixels  | 0.1 JKU |
 | 64 pixels  | 0.2 JKU |
 | 128 pixels | 0.4 JKU |
 
+</div>
   
 As you will see. Most switches are 32x32 pixels, or 0.1 JKU. Once you
 find the dimensions of your switch texture in JKUs, you need to make a
@@ -114,12 +109,8 @@ your COG. (Or in the case of an elevator: the elevator's Thing \#)
 For more information on how to create doors and elevators, refer to the
 following tutorials:  
 
-  - [Basic Doors](http://www.jedinights.com/massassi/doors/tutor.htm)
-  - [Basic Elevators](http://www.jedinights.com/massassi/elev/tutor.htm)
+  - [Basic Doors](/tutorials/doors/)
+  - [Basic Elevators](/tutorials/elevators/)
 
   
-Note: For switched elevators, a good cog is 00\_elev\_switch.cog  
-  
-Send questions or comments to:  
-[Mangore Kiramin](mailto:mangore_kiramin@geocities.com)  
-mangore\_kiramin@geocities.com
+Note: For switched elevators, a good cog is `00_elev_switch.cog`  

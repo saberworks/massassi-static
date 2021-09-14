@@ -1,28 +1,21 @@
 ---
-title: 
-author: 
-email: 
+title: Spiral Stairs
+author: GMS_Slug
+email: gms_slug@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Learn how to create spiraling stairs.
+date: 1998-09-19
+category: jk
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Spiral Stairs  
+Author: GMS\_Slug
 
------
-
-Author: [GMS\_Slug & Brian
-Lozier](mailto:gms_slug@hotmail.com,lozier@bigfoot.com)  
-  
 Spiral stairs can look very nice in a level, and despite how it looks,
-their not very hard to make.  
+they're not very hard to make.  
   
 We'll be using the default sector. It should be noted that for clarity
 in the pictures, I'm using very tall stairs - you'll want to use a
-smaller grid step, like .03 for your stairs in an actual level.  
+smaller grid step, like .03, for your stairs in an actual level.  
   
 In top view, cleave the default sector into a dodecagon (12 sides).. If
 you don't want to mess with that, just make an octagon.. (dodecagon just

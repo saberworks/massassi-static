@@ -1,28 +1,23 @@
 ---
-title: 
-author: 
-email: 
+title: "Stairs: Intermediate"
+author: Brian Lozier
+email: brian@massassi.net
 description: >
-
-date: 
-original: tutor.htm
-category: 
+    Learn to make the stairs presented in the last couple of tutorials more 
+    effecient and better looking.
+date: 1998-11-12
+category: jk
 ---
 
-Author:Intermediate Stairs
+Author: Brian Lozier
 
------
-
-Author: [Brian Lozier](mailto:lozier@bigfoot.com)  
-  
 There are a few tutorials out there on the correct way to create stairs.
 For a more polished look, however, I suggest you try this tutorial. This
 technique will cut down on the amount of sectors, thus raising the
 framerate. The stairs also look more polished and realistic. Please read
 and understand the original [Stairs
-Tutorial](http://massassi.jedinights.com/stairs/stair.htm), or its
-little brother, [Basic
-Stairs](http://massassi.jedinights.com/stair2/tutor.htm).  
+Tutorial](/tutorials/stairs/), or its
+little brother, [Basic Stairs](/tutorials/stair2/).
   
 We will start with the default sector in Jed. Cleave (from top view) one
 side of it off for your stair case. I am using a .1 grid, and a .05 snap
@@ -105,8 +100,4 @@ better lighting and framerate.
   
 As always, if you have questions on this tutorial, or any other Jedi
 Knight/Sith related editing questions, feel free to use the [Massassi
-Editing Board](http://massassi.jedinights.com/msgboard).  
-  
-
-© Copyright 1998 [The Massassi Temple](http://massassi.jedinights.com/)
-and [Brian Lozier](mailto:lozier@bigfoot.com).
+Editing Board](https://forums.massassi.net/).  
