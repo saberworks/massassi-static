@@ -6,7 +6,7 @@ description: >
     Another basic doors tutorial - Worded differently and done slightly 
     differently, may be easier to understand.
 date: 1999-08-02
-original: index.shtml
+original: original.html
 category: jk
 ---
 

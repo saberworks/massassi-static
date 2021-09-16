@@ -8,7 +8,7 @@ course, set your own, but these are the ones used by LEC.
 For more information on .snd files and what the values do,
 please see the specs on www.darkjedi.com:
 
-http://www.darkjedi.com/JK_Specs/jkspecs.htm
+https://www.massassi.net/jkspecs/
 
 =================================
 Non-Character SND actions.

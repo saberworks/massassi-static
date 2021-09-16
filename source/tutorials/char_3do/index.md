@@ -1,9 +1,10 @@
 ---
-title: Additing Sctors to 3dos
+title: "Adding Sections/Sectors to 3dos"
 author: Darth DarKal
 email: jdarkal@hotmail.com
 description: >
-    Learn how to add custom pieces onto 3do's. This is useful for adding stuff like ponytails, shoulder pads, and other misc. addon pieces.
+    Learn how to add custom pieces onto 3dos. This is useful for adding stuff
+    like ponytails, shoulder pads, and other misc. addon pieces.
 date: 1999-03-02
 category: jk
 ---
