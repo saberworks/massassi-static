@@ -1,0 +1,59 @@
+
+<p><font size="4">Making Your Model Into a Bot</font></p>
+
+<p>Bot files allow your model to be used as an AI bot for multiplayer. 
+Personally, I chose to copy an existing file and rename key text parts 
+of it to my liking. You can find scripts within the directory /scripts/ 
+within the assets0.pk3 file, named kyle.bot or tavion.bot, etc.</p>
+
+<p>The file can be opened with Notepad, and should look something like this:</p>
+
+<blockquote><font face="Fixedsys" color="#999999"><p>{<br>
+name		"DarthVader"<br>
+model		darthvader<br>
+color1		0<br>
+personality	/botfiles/darthvader.jk<br>
+}</p></font></blockquote>
+
+<p><b>Explanation</b></p>
+
+<table border="0">
+ <tbody><tr>
+ 	<td>&nbsp;&nbsp;&nbsp;</td>
+ 	<td width="100" align="right"><font size="2" face="verdana,arial,helvetica">name -</font></td>
+	<td><font size="2" face="verdana,arial,helvetica">name shown within the game, this will be the model's name in the player list</font></td>
+ </tr>
+ <tr>
+ 	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="right"><font size="2" face="verdana,arial,helvetica">model -</font></td>
+	<td><font size="2" face="verdana,arial,helvetica">the model that the bot uses</font></td>
+ </tr>
+ <tr>
+  	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="right"><font size="2" face="verdana,arial,helvetica">color1 -</font></td>
+	<td><font size="2" face="verdana,arial,helvetica">the color used for the model's lightsaber on the bot</font></td>
+ </tr>
+ <tr>
+ 	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="right"><font size="2" face="verdana,arial,helvetica">personality -</font></td>
+	<td><font size="2" face="verdana,arial,helvetica">points towards the bot's behaviour scripts</font></td>
+ </tr>
+</tbody></table>
+
+<p>Save this file as a .Bot file, put it into a Scripts directory, then 
+pack the scripts directory straight into the zipped custom file!</p>
+
+<p><font size="4">Bot File Behavior Scripts (.JKB Files)</font></p>
+
+<p>Personally, I chose to copy an existing file and rename key text 
+parts of it to my liking. You can find bot behaviour scripts within the 
+directory /botfiles/ within the assets0.pk3 file. </p>
+
+<p>Here, you can adjust the bots capabilities, what Force powers it has,
+ what powers it uses most, how accurate it is, etc, as well as what it 
+says in the text taunts and comments upon joining, dying, etc. It's 
+pretty straightforward; I suggest taking a look at a few JKB files 
+within the assets0.pk3 file.</p>
+
+<p>Put the file in a folder "Botfiles" and place Botfiles into the zipped model file.</p>
+

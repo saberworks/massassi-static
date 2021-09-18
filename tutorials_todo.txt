@@ -5,7 +5,6 @@
 	new file:   source/tutorials/jk2_scaling/index.md
 	new file:   source/tutorials/jk2_skinning/index.md
 	new file:   source/tutorials/jo_arching/index.md
-	new file:   source/tutorials/jo_character_models/index.md
 	new file:   source/tutorials/jo_clipping/index.md
 	new file:   source/tutorials/jo_custom_shaders/index.md
 	new file:   source/tutorials/jo_elevator/index.md
@@ -16,5 +15,3 @@
 	new file:   source/tutorials/jo_spiralstairs/index.md
 	new file:   source/tutorials/jo_switchdoor/index.md
 	new file:   source/tutorials/jo_uv_mapping/index.md
-
-weapon/ (part 1 and part 2, need separate directories)
