@@ -170,10 +170,17 @@ def get_href(source_path, source_dir, ext):
 #   * it contains at least one var (like title:)
 #
 def should_process(source_path):
-    if has_supported_ext(source_path) and has_tags(source_path):
-        return True
+    should_process = False;
 
-    return False
+    try:
+        should_process = has_supported_ext(source_path) \
+            and has_tags(source_path)
+    except Exception as e:
+        print("Unable to check file because of errors: ", source_path, file=sys.stderr)
+        print("Error: ", e, file=sys.stderr)
+        sys.exit(1);
+
+    return should_process;
 
 
 #
@@ -300,7 +307,6 @@ def process_data(data_dirs):
             continue
 
         for entry in sorted(os.listdir(data_dir), key=str.casefold):
-
             path = data_dir + '/' + entry
 
             if not os.path.isfile(path):
