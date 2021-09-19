@@ -1,10 +1,13 @@
-	new file:   source/tutorials/jk2_bots/index.md
-	new file:   source/tutorials/jk2_corridors/index.md
-	new file:   source/tutorials/jk2_prep_for_release/index.md
-	new file:   source/tutorials/jk2_radiant_beginner/index.md
-	new file:   source/tutorials/jk2_scaling/index.md
-	new file:   source/tutorials/jk2_skinning/index.md
-	new file:   source/tutorials/jo_arching/index.md
+	
+
+
+
+
+
+
+
+
+
 	new file:   source/tutorials/jo_clipping/index.md
 	new file:   source/tutorials/jo_custom_shaders/index.md
 	new file:   source/tutorials/jo_elevator/index.md

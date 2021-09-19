@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Custom Skinning
+author: Michael Chang Gummelt
+email: mgummelt@ravensoft.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Explains how to make new multiplayer skins without replacing current ones.
+    Includes FAQ.
+date: 2002-04-22
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Custom Skinning  
-
------
-
-Author: [Michael Chang Gummelt](mailto:mgummelt@ravensoft.com)  
-  
+Author: Michael Chang Gummelt
 
 **Staff Note:** *The following is a copy of the Jedi Knight II Skinning
 Tutorial available with the official distribution of RavenSoft's JK2
@@ -234,9 +228,9 @@ no-one else can see it. Why?**
 > Now, they can get your model by either of two means:
 > 
 > By downloading it from a site like
-> [www.jediknighii.net](www.jediknighii.net),
-> [www.massassi.net](www.massassi.net) or
-> [www.jediknight2files.com](www.jediknight2files.com) and putting it in
+> www.jediknighii.net (DEFUNCT),
+> [www.massassi.net](https://www.massassi.net/) or
+> www.jediknight2files.com (DEFUNCT) and putting it in
 > their base dir...
 > 
 > OR
@@ -263,8 +257,8 @@ to your animations?**
 -----
 
 *Well, that's it (for now), if you have any more skinning questions,
-stop by the mod forums are [JediKnightII.net](www.jediknighii.net)
-and/or [Massassi.net](www.massassi.net) or, if you're totally stumped,
+stop by the mod forums are JediKnightII.net (DEFUNCT)
+and/or [Massassi.net](https://www.massassi.net) or, if you're totally stumped,
 e-mail me your question at <mgummelt@ravensoft.com>.*
 
 **Michael Chang Gummelt**  

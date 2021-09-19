@@ -1,25 +1,19 @@
 ---
-title: 
-author: 
-email: 
+title: JK2Radiant Beginners Tutorial
+author: Vincent Valentine
+email: whooz@cox.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    From downloading to your first room, this tutorial covers all the basics of
+    the JK2Radiant editing.
+date: 2002-05-02
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-JK2Radiant Beginners Tutorial  
-
------
-
-Author: [Vincent Valentine](mailto:whooz@cox.net)  
+Author: Vincent Valentine
   
 
 If you haven't already, download JK2 Radiant from
-[www.jediknightii.net](http://www.jediknightii.net/files/index.php?link=file&id=145)
-or [www.massassi.net](http://www.massassi.net/programs/). After you've
+[the programs section](/programs/). After you've
 downloaded it, open the file and run the executable file,
 JK2EditingTools.exe.
 

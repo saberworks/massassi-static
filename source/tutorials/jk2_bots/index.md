@@ -1,26 +1,20 @@
 ---
-title: 
-author: 
-email: 
+title: How To Make A Bot
+author: NakTawii Nuji
+email: GraalYo@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Lists the very basic steps taken in creating a new bot from an exisiting 
+    one using a text editor like Notepad.
+date: 2002-09-21
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml) How
-To Make A Bot  
-
------
-
-Author: [NakTawii Nuji](mailto:GraalYo@hotmail.com)  
-  
+Author: NakTawii Nuji
 
 This is the easy way to create a Bot. You don't need any program at all
 except Notepad.
 
-Bot Personality
+## Bot Personality
 
 You will need to copy the .jkb file from the base skin you made or from
 another model (editing the galak skin, for example). Open the file with
@@ -29,7 +23,7 @@ accompany nearly every line). Rename this file however you'd like. Go to
 your desktop, create a new folder called **botfiles**, and put the new
 .jkb file in there.
 
-Basic Bot Options
+## Basic Bot Options
 
 Create a new text document and call it \[the name you want\].bot (don't
 forget to change the extension from .txt to .bot). In the .bot write the
@@ -44,7 +38,7 @@ following:
  }
 ```
 
-Extended Bot Options (for Jedi Mod)
+## Extended Bot Options (for Jedi Mod)
 
 If you want your bot to have the Jedi Mod options you should write this
 instead:
@@ -68,7 +62,7 @@ instead:
  }
 ```
 
-Final Steps
+## Final Steps
 
 Create a folder called scripts and put the .bot file in there. Now
 create a new zip file, put your models folder, botfiles folder, and
@@ -79,7 +73,7 @@ the choose the bot (look for whatever you called it)
 
 Congratulations\! You built a bot\!
 
-Troubleshooting
+## Troubleshooting
 
 **The Bot don't looks like the skin I made.**  
 First make sure your skin is not in models/players/(something that
@@ -93,4 +87,3 @@ blue.
 Check every line in the personality (.jkb) file. Start from the basic
 options if and retrace your steps.
 
-If you have any other troubles e-mail me at: <GraalYo@hotmail.com>

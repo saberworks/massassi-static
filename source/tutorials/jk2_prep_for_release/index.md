@@ -1,44 +1,38 @@
 ---
-title: 
-author: 
-email: 
+title: Preparing Your Jedi Outcast Map for Release
+author: Pommy
+email: pommy@massassi.net
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Covers the key wrap-up points like creating a levelshot, the .arena file
+    and the .pk3 file. Download includes MS Word formatted doc.
+date: 2002-09-21
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Preparing Your Jedi Outcast Map for Release  
-
------
-
-Author: [Pommy](mailto:pommy@massassi.net)  
-  
+Author: Pommy
 
 This tutorial will guide you through readying your just-completed map
 for public release and/or submission to Massassi.
 
 **Sections:**
 
->   - [Adding the finishing touches to your map](#1)  
->     Adding your map name to the map loading screen
->     Creating a levelshot
->     Creating an .arena file
->   - [Pk3'ing your level up](#2)  
->     Creating the pk3
->     Knowing what files to add in your pk3
->   - [Sending it to Massassi](#3) (optional)  
->     Adding a readme
->     Adding screenshots
->     Making the zip file
+* [Adding the finishing touches to your map](#1)
+    * Adding your map name to the map loading screen
+    * Creating a levelshot
+    * Creating an .arena file
+* [Pk3'ing your level up](#2)  
+    * Creating the pk3
+    * Knowing what files to add in your pk3
+* [Sending it to Massassi](#3) (optional)  
+    * Adding a readme
+    * Adding screenshots
+    * Making the zip file
 
 -----
 
 <span id="1"></span>
 
-Adding the finishing touches to your map
+## Adding the finishing touches to your map
 
 When you have compiled and tested your map to your satisfaction, it is
 ready to make it professional and official. Be sure your map name has
@@ -99,7 +93,7 @@ Save the file as ffa\_sample.arena.
 
 <span id="2"></span>
 
-Pk3'ing your map up
+## Pk3'ing your map up
 
 Fire up your favorite Archive Manager (I prefer
 [WinZip](http://www.winzip.com)). Create a new zip file. Place your bsp
@@ -111,15 +105,15 @@ ffa\_sample.zip) and rename it ffa\_sample.pk3.
 
 <span id="3"></span>
 
-Sending it to Massassi (optional)
+## Sending it to Massassi (optional)
 
 If you would like to submit your level to the Massassi Temple
-([www.massassi.net](http://www.massassi.net)), or if you plan to
+([www.massassi.net](https://www.massassi.net)), or if you plan to
 distribute it in any way, you should zip your file and add a readme and
 screenshots. To zip your file, simply repeat the instructions with the
 pk3, except only add the pk3 to the zip and don't rename it. You will
 need a readme so your file is legal. A sample readme can be obtained
-[here](http://www.massassi.net/submit/sample_readme_jk2.txt), at the
+[here](https://www.massassi.net/submit/sample_readme_jk2.txt), at the
 Massassi Temple. Add your readme to your zip file. Next, you need
 screenshots. Start up your game and enter your level. Bring up the
 console and type bind f11 screenshot, as you did with your levelshot. Go
@@ -129,7 +123,7 @@ directory.
 
 Finally, if you are sending to Massassi, you will need to follow it's
 specific submission guidelines. These guidelines can be found at
-[www.massassi.net/submit](http://www.massassi.net/submit/).
+[https://www.massassi.net/submit](http://www.massassi.net/submit/).
 
 Well, if you've done all that, your map is ready to go. Good luck on
 distributing it, and congratulations\!

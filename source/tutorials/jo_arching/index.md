@@ -1,23 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Arches/Domes
+author: JM
+email: deyjaL@aol.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Edited chat transcript descibing the process for creating arch-type
+    architecture in JO.
+date: 2002-09-22
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Arches/Domes  
+Author: JM
 
------
-
-Author: [JM](mailto:deyjaL@aol.com)  
-  
-
-***Note:** the following is edited from a transcript of a tutorial
+**Note:** *the following is edited from a transcript of a tutorial
 session conducted on the \#coffestain channel via IRC.*
 
 **JM**: We are going to build a \[archy ceiling thing\].
@@ -99,8 +93,5 @@ clone, rotate, and make it a solid round room.
 everything, toss in a floor, add a player start, a light, compile and
 enjoy.
 
-<div data-align="center">
-
 ![](01.jpg)
 
-</div>
