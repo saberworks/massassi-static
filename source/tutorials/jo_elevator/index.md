@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Simple Elevator
+author: JM
+email: deyjaL@aol.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    A script implementation tutorial for creating lifts in your maps. Download
+    includes sample map.
+date: 2002-09-22
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Simple Elevator  
-
------
-
-Author: [JM](mailto:deyjaL@aol.com)  
-  
+Author: JM
 
 This tutorial will show you how to use my generic elevator script. It is
 not a scripting tutorial in itself, it is a script implementation

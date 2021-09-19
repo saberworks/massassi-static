@@ -1,31 +1,26 @@
 ---
-title: 
-author: 
-email: 
+title: "Single Player JO Maps, Part 2: Force Powers"
+author: Jepman
+email: jp_laliberte@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Explains what's necessary to custom configure the initial Force Power
+    settings for your hero in an SP map.
+date: 2002-12-10
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Single-Player JO Maps, Part 2: Force Powers  
-
------
-
-Author: [Jepman](mailto:jp_laliberte@hotmail.com)  
-  
+Author: Jepman
 
 Alright, I'm going to assume you have a level or something to test your
 character's new Force powers. It's not a terrible task to change Force
 powers, just follow this tutorial and I will take you on an easy ride
 through the wonders of Force power settings.
 
-  - **Tools needed:**  
-    GtkRadiant / JK2Radiant — Jedi Outcast map editor
-    BehavEd — Jedi Outcast Icarus Script Editor
-    Wordpad — Text Editor
+**Tools needed:**  
+
+* GtkRadiant / JK2Radiant — Jedi Outcast map editor
+* BehavEd — Jedi Outcast Icarus Script Editor
+* Wordpad — Text Editor
 
 I am also expecting that your Radiant editor and BehavEd are correctly
 setup. Radiant does most of it for you, but I believe you have to go set
@@ -155,5 +150,4 @@ type:
 
 Well this is it for Force Powers. Feel free to contact me if you need
 help getting any of this to work, or post a topic at the Massassi Forums
-in the [Jedi Outcast Editing
-Forum](http://forums.massassi.net/cgi-bin/forumdisplay.cgi?action=topics&forum=3.+Jedi+Outcast+Editing+Forum&number=17&DaysPrune=2&LastLogin=).
+in the [Forums](https://forums.massassi.net/).

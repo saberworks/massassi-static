@@ -1,21 +1,16 @@
 ---
-title: 
-author: 
-email: 
+title: "Single Player JO Maps, Part 1: General Stuff"
+author: Jepman
+email: jp_laliberte@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Covers some fundamental points for creating single player maps, such as how
+    to launch your SP map as a proper Mod, specifying what character model to
+    spawn your hero as, and controlling what gear they spawn with.
+date: 2002-12-10
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Single-Player JO Maps, Part 1 : General Stuff  
-
------
-
-Author: [Jepman](mailto:jp_laliberte@hotmail.com)  
-  
+Author: Jepman
 
 The tutorials below were too small to stand individually so they were
 grouped into one tutorial that covers the following basics.
@@ -24,15 +19,14 @@ grouped into one tutorial that covers the following basics.
 2.  Spawning your Single-Player hero with only a Bryar and Stun Baton
 3.  Changing the Single-Player hero's model
 
-<!-- end list -->
+**Tools needed:**
 
-  - **Tools needed:**  
-    GtkRadiant / JK2Radiant — Jedi Outcast map editor
-    Wordpad — Text Editor
+* GtkRadiant / JK2Radiant — Jedi Outcast map editor
+* Wordpad — Text Editor
 
 -----
 
-Running your map in Single-Player with New Game
+## Running your map in Single-Player with New Game
 
 *Thanks to AKPiggott for showing this*
 
@@ -70,7 +64,7 @@ your game\!). Click on your mod and click *Load Mod*.
 
 -----
 
-Spawning your Single-Player hero with only a Bryar and Stun Baton
+## Spawning your Single-Player hero with only a Bryar and Stun Baton
 
 It doesn't get much easier than this, but some people might not notice
 just how easy it is and search for a way to do this through scripts and
@@ -94,7 +88,7 @@ difficult, huh?
 
 -----
 
-Changing the Single-Player hero's model
+## Changing the Single-Player hero's model
 
 Unfortunately, right now there is no real professional way of changing
 the Single-Player model from Kyle to something else, so this is more of
@@ -148,5 +142,5 @@ can simply pack it all into one .pk3 file. Just make sure each file is
 stored in its respective folder.
 
 Feel free to contact me if you need help getting any of this to work, or
-post a topic at the Massassi Forums in the [Jedi Outcast Editing
-Forum](http://forums.massassi.net/cgi-bin/forumdisplay.cgi?action=topics&forum=3.+Jedi+Outcast+Editing+Forum&number=17&DaysPrune=2&LastLogin=).
+post a topic at the [Massassi Forums](https://forums.massassi.net/).
+
