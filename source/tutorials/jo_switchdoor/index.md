@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Doors (Switch Doors)
+author: JM 
+email: deyjaL@aol.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Teaches you about entity scripting, how to make those nice animated 
+    switches, and, of course, how to build a door powered by a switch!
+date: 2002-09-22
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Switch Doors  
-
------
-
-Author: [JM](mailto:deyjaL@aol.com)  
-  
+Author: JM
 
 This tutorial will teach you about entity scripting, how to make those
 nice animated switches, and, of course, how to build a door powered by a
@@ -76,9 +70,6 @@ them AFTER you linked the func\_static to the door and speaker. You will
 note that simply targeting something at the door will open it AND flip
 the switches\! It will even play the sound where the switches are.
 
-<div data-align="center">
-
 ![](01.jpg)  
 *In my little map, I have a door with TWO switches.*
 
-</div>

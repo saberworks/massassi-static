@@ -1,21 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: How to Create Curved Pipes 
+author: Stormtrooper
+email: jeditrooper87@hotmail.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    This tutorial shows how to make a pipe curve at a 90 degree angle using 
+    Radiant and some vertex moving.
+date: 2002-09-21
+original: JOpipecurve.html
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml) How
-to Create Curved Pipes  
+Author: Stormtrooper
 
------
-
-Author: [Stormtrooper](mailto:jeditrooper87@hotmail.com)  
-  
 
 I decided to make his tutorial because of all the recent questions about
 making curving pipes in the Jedi Outcast Editing Forum. I'm using
@@ -28,44 +24,44 @@ Now, onto the tutorial.
 
 Making a pipe curve is suprisingly easy. First, make a cubed brush.
 
-![](JOpipe1.jpg)
+![](JOpipe1.JPG)
 
 Now, with that brush selected, go to the curve option in the selection
 bar at the top and choose "cylinder," This will turn the selected brush
 into a tube.
 
-![](JOpipe2.jpg)
+![](JOpipe2.JPG)
 
 Now, we want to move the vertices around. To do this, select the center
 vertex in the far right row and move it up to where the top vertex is in
 that column.
 
-![](JOpipe3.jpg)
+![](JOpipe3.JPG)
 
 Now, do the same to the bottom vertex in that row.
 
-![](JOpipe4.jpg)
+![](JOpipe4.JPG)
 
 Now, the tricky part, we have to move the center vertex in the bottom
 row up and to the right so that it is straight with the center vertex
 and with the top-right vertex.
 
-![](JOpipe5.jpg)
+![](JOpipe5.JPG)
 
 Now, move the last vertex in the bottom row all the way to the right so
 that it's straight with the ones above it.
 
-![](JOpipe6.jpg)
+![](JOpipe6.JPG)
 
 Now the pipe looks a little strange. To fix that we move the far-left
 vertex in the center row down so that it's straight with the one to it's
 right and with the one above it, so it should now look like this.
 
-![](JOpipe7.jpg)
+![](JOpipe7.JPG)
 
 Now you can texture it if you haven't already done so.
 
-![](JOpipe8.jpg)
+![](JOpipe8.JPG)
 
 Now that you have it textured, build a large box around the pipe and
 hollow it out and put some textures on the wall if you want to.

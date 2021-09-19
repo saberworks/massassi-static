@@ -1,21 +1,15 @@
 ---
-title: 
-author: 
-email: 
+title: Creating Your First Room with GTKRadiant
+author: JM
+email: deyjaL@aol.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Describes the most essential of editing milestones, the first room. Based 
+    on GTKRadiant and written for people with a background in JED.
+date: 2002-09-02
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Creating Your First Room with GTKRadiant  
-
------
-
-Author: [JM](mailto:deyjaL@aol.com)  
-  
+Author: JM
 
 Every good editing site needs it. Yes, the infamous first room tutorial.
 I'm going to be quick and to the point.
@@ -43,12 +37,8 @@ never used JED, just ignore me.) First off, you just created a positive
 space; a 3do type object; not a sector. Sectors don't exist here. The
 player will walk ON this object, not IN it.
 
-<div data-align="center">
-
 ![](01.jpg)  
 *My brush*
-
-</div>
 
 Everything in the map must be enclosed; nothing can be exposed to the
 'void'. In JED this wasn't an issue, because there was no void. To make
@@ -59,15 +49,11 @@ select all four walls (Just hold shift and click on each of them) Now,
 press Ctrl+tab to switch to the first side view. Position the cursor
 above the highlighted brushes and drag upward to make the walls.
 
-<div data-align="center">
-
 ![](02.jpg)  
 *My walls*  
   
 ![](03.jpg)  
 *My walls after I made them bigger*
-
-</div>
 
 Only the ceiling left. Press ctrl+alt twice to get back to the top view,
 drag out your ceiling brush, switch to the side view, and adjust it
@@ -88,12 +74,8 @@ try it again. Remember; if your map file was 'myfirstmap.map', the bsp
 file is 'myfirstmap.bsp', and you should use '/devmap myfirstmap'. No
 .bsp\!
 
-<div data-align="center">
-
 ![](04.jpg)  
 *Not pretty, but it gets the job done*
-
-</div>
 
 Cheers,  
 JM

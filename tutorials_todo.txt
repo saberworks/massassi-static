@@ -8,10 +8,5 @@
 	new file:   source/tutorials/jo_clipping/index.md
 	new file:   source/tutorials/jo_custom_shaders/index.md
 	new file:   source/tutorials/jo_elevator/index.md
-	new file:   source/tutorials/jo_firstroom/index.md
-	new file:   source/tutorials/jo_pipecurve/index.md
 	new file:   source/tutorials/jo_sp_maps_basics_1/index.md
 	new file:   source/tutorials/jo_sp_maps_basics_2/index.md
-	new file:   source/tutorials/jo_spiralstairs/index.md
-	new file:   source/tutorials/jo_switchdoor/index.md
-	new file:   source/tutorials/jo_uv_mapping/index.md

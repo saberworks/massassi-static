@@ -1,23 +1,17 @@
 ---
-title: 
-author: 
-email: 
+title: Spiral Staircase
+author: JM
+email: deyjaL@aol.com
 description: >
-
-date: 
-original: index.shtml
-category: 
+    Edited chat transcript descibing the process for creating sprial staircases 
+    in JO.
+date: 2002-09-22
+category: jo
 ---
 
-Author:[![Printable Version](/images/printable.gif)](tutorial_print.shtml)
-Spiral Staircase  
+Author: JM
 
------
-
-Author: [JM](mailto:deyjaL@aol.com)  
-  
-
-***Note:** the following is edited from a transcript of a tutorial
+**Note:** *the following is edited from a transcript of a tutorial
 session conducted on the \#coffestain channel via IRC.*
 
 **JM**: We are going to make a spiral staircase.
@@ -88,8 +82,5 @@ nice sloping roof as well
 
 **JM**: And there.
 
-<div data-align="center">
 
 ![](01.jpg)
-
-</div>
