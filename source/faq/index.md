@@ -131,7 +131,7 @@ This is because the surface you are walking on is not flagged as
 "floor" - In JED, just click on the surface, press \[Enter\], and
 when the Item Editor pops up, click on the surface flags area, and
 check the "floor" box. If you have a lot of surfaces that have this
-problem, go to [the plugin page](https://www.massassi.net/jedplugs/index.htm)
+problem, go to [the plugin page](/jedplugs/)
 and get the Vinkel plugin. This plugin
 will search the level for surfaces that are less than 45 degrees and
 flag them as floor, leaving the other flags (metal, dirt, etc.) as
@@ -227,7 +227,7 @@ off of.
 This happens when you have a surface with some odd amounts of
 vertices, often caused by merging sectors of surfaces. If you want
 to get rid of these annoying vertices, get Vertex Assassin from the
-[plugins page](https://www.massassi.net/jedplugs/index.htm).
+[plugins page](/jedplugs/).
 
 ## How do I make a custom texture?
 Get an image editor, create a bmp, then use the program called

@@ -58,9 +58,8 @@ ZED is based on JED and provides fixes and new features.  It is strongly recomme
 **[JED v.951](jed/jed_beta951.zip)** by Code Alliance
 
 > The newest version of Jed, an excellent program designed for the creation and 
-> modification of Jedi Knight levels. [Plugins 
-> available](https://www.massassi.net/jedplugs/index.htm).  Note: Jed filenames 
-> always include the word "beta", this is normal.
+> modification of Jedi Knight levels. [Plugins available](/jedplugs/).  Note: 
+> Jed filenames always include the word "beta", this is normal.
 
 > Older versions (don't bother with these):
 
