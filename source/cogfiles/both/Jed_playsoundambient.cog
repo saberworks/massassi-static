@@ -1,0 +1,50 @@
+# Jedi Knight Cog Script
+#
+# jed_playsoundambient.cog
+#
+# Plays the same sound at up to 8 locations
+#
+# [CK]
+#
+# (C) 1998 Code Alliance
+
+flags=0x240             
+               
+symbols
+
+thing    soundPos0                        nolink
+thing    soundPos1                        nolink
+thing    soundPos2                        nolink
+thing    soundPos3                        nolink
+thing    soundPos4                        nolink
+thing    soundPos5                        nolink
+thing    soundPos6                        nolink
+thing    soundPos7                        nolink
+
+sound    wav0
+
+flex     minDist=-1
+flex     maxDist=-1
+flex     volume=1.0
+int      cnt                              local
+
+message  startup
+
+end
+
+#==================================================================================================
+
+code
+
+startup:
+
+   for(cnt = 0; cnt <= 8; cnt = cnt+1)
+   {
+      // flags indicate looping & ambient
+      if (soundPos0[cnt] >= 0) PlaySoundThing(wav0, soundPos0[cnt], volume, minDist, maxDist, 0x45);
+   }
+   
+   Return;
+
+end
+

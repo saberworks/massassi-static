@@ -1,0 +1,38 @@
+# string.cog
+# (c) Mark Jones 1998
+# 7/31
+# Activated by a bundle of messages
+# plays a UNI string
+# meant for SP
+
+symbols
+
+message entered
+message activated
+message crossed
+
+int string
+
+
+
+sector	sec
+
+surface	adjoin
+
+thing		thing
+
+int	used=0	local
+
+end
+code
+
+entered:
+activated:
+crossed:
+	if(used!=0) return;
+	used=1;
+	JKprintUNIstring(-1, string);
+	return;
+end
+
+	

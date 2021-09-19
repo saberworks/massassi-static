@@ -1,0 +1,60 @@
+# Jedi Knight Cog Script
+#
+# 00_gravswitch.cog
+#
+# This COG will change the gravity of the entire level when activated.
+# Has three settings: low, medium, and high. Each activation changes the
+# setting. Low gravity makes multiplayer games very...interesting. :P
+# Make the switch a thing - one of those consoles would be nice.
+# Also plays a sound when used. :-)
+# 
+# This file is not supported by LucasArts Entertainment Company
+# Scripted 1998 by Zero.
+
+symbols
+
+message     activated
+
+flex		number1	local
+
+thing		console
+
+sound		gravalarm
+
+end
+
+# ========================================================================================
+
+code
+
+activated:
+	number1 = GetGravity();
+
+	PlaySoundGlobal(gravalarm, 1.0, 0.0, 0x10000);
+
+	if(number1 == 1)
+	{
+		print("Gravity Level: normal");
+		SetGravity(4.0);
+		number1 == 4;
+		return;
+	}
+	if(number1 == 4)
+	{
+		print("Gravity Level: high");
+		SetGravity(7.0);
+		number1 == 7;
+		return;
+	}
+	if(number1 == 7)
+	{
+		print("Gravity Level: low");
+		SetGravity(1.0);
+		number1 == 1;
+		return;
+	}
+	
+	return;
+end
+
+

@@ -1,0 +1,53 @@
+# Jedi Knight Cog Script
+#
+# SectorText.COG
+#
+# When you Enter a Sector 1 to 3 Messages Will be Printed on the Screen
+# with a small pause between each line.
+#
+#
+#
+# (c) 2002 Viuda Maker
+#
+# ========================================================================================
+
+
+flags=0x240
+
+symbols
+
+message      entered                                                          
+message      startup                                                          
+int          bnosound=0                         local                         
+flex         dialoguelength=3.0                                               
+sector       triggersector                                                    
+int          player                             local                         
+flex         string0                                                          
+flex         string1                                                          
+flex         string2                                                          
+
+message                                                                       
+
+end                                                                           
+
+# ========================================================================================
+
+code
+startup:
+	bnosound=0;
+	return;
+
+# ........................................................................................
+
+entered:
+   player = GetSourceRef();
+   Sleep(2.0);                                                       
+   jkPrintUNIString(player, string0);
+   Sleep(1.5);                                                       
+   jkPrintUNIString(player, string1);
+   Sleep(1.5);                                                       
+   jkPrintUNIString(player, string2);
+   Sleep(2.0);
+   playsoundlocal(dialogue, 1, 0, 132);
+   Return;
+end

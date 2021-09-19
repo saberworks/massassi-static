@@ -1,0 +1,51 @@
+# Jedi Knight Missions Cog Script
+#
+# MPIMPLESPARKS.COG
+#
+# This script simply creates sparks at a random interval.
+#
+# [YB]
+#
+# Runs Server|Client for Multi-Player
+#
+# [Red]
+
+flags=0x40
+
+symbols
+
+template sparkTemplate=+sparks
+thing    sparkGhost
+
+flex     minimumDelay=0.5
+flex     maximumDelay=1.0
+
+sound    sparksound=00electrexplo3.wav
+
+message  startup
+message  timer
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   
+   SetTimer(minimumDelay + Rand() * (maximumDelay - minimumDelay));
+
+   Return;
+
+# ........................................................................................
+
+timer:
+
+   PlaySoundThing(sparksound, sparkGhost, 1, -1, -1, 0);
+   CreateThing(sparkTemplate, sparkGhost);
+   SetTimer(minimumDelay + Rand() * (maximumDelay - minimumDelay));
+
+   Return;
+
+end
+

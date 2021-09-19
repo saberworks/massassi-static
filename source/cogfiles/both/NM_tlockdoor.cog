@@ -1,0 +1,93 @@
+# Jedi Knight Cog Script
+#
+# NM_tlockdoor.cog
+#
+#
+#
+# 9/27/98 Joshua Knudsen
+
+symbols
+	message	activate
+	message	arrived
+
+	surface	switch		linkid=4
+	surface	switch1		linkid=5
+	surface	switch2		linkid=6
+	surface	lockswitch	linkid=3
+
+	thing		door0	linkid=1
+	thing		door1	linkid=2
+
+	int		speed=4
+
+	sound		click=thrmlpu2.wav
+	sound		locksound=lgclick1.wav
+	sound		accessdenied=trprout.wav
+	sound		trytheswitch=19cweightstart.wav
+
+	int		gotoframe=1			local
+	int		locked=0			local
+end
+
+## Code Section
+code
+
+activate:
+if (GetSenderID() < 3)
+	{
+	PlaySoundThing(trytheswitch, door0, 1.0, -1, -1, 0);
+	PlaySoundThing(trytheswitch, door1, 1.0, -1, -1, 0);
+	return;
+	}
+
+if (GetSenderID() > 3)
+	{
+		if (GetWallCel(switch) == 1) return;
+		if (locked == 1)
+			{
+				PlaySoundPos(accessdenied, SurfaceCenter(switch), 1.0, -1, -1, 0);
+				PlaySoundPos(accessdenied, SurfaceCenter(switch1), 1.0, -1, -1, 0);
+				PlaySoundPos(accessdenied, SurfaceCenter(switch2), 1.0, -1, -1, 0);
+				return;
+			}
+
+		PlaySoundPos(click, SurfaceCenter(switch), 1.0, -1, -1, 0);
+		PlaySoundPos(click, SurfaceCenter(switch1), 1.0, -1, -1, 0);
+		PlaySoundPos(click, SurfaceCenter(switch2), 1.0, -1, -1, 0);
+
+		SetWallCel(switch, 1);
+		SetWallCel(switch1, 1);
+		SetWallCel(switch2, 1);
+
+		MoveToFrame(door0, gotoframe, speed);
+		MoveToFrame(door1, gotoframe, speed);
+
+		return;
+	}
+
+if (GetSenderID() == 3)
+	{
+		if (GetWallCel(switch) == 1) return;
+
+		locked=1-locked;
+
+		SetWallCel(lockswitch, locked);
+
+		PlaySoundPos(locksound, SurfaceCenter(lockswitch), 1.0, -1, -1, 0);
+	}
+return;
+	
+
+arrived:
+if ((IsThingMoving(door0)) || (IsThingMoving(door1))) return;
+
+gotoframe = 1 - GetCurFrame(GetSenderRef());
+
+SetWallCel(switch, 0);
+SetWallCel(switch1, 0);
+SetWallCel(switch2, 0);
+
+return;
+
+end
+

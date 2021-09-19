@@ -1,0 +1,115 @@
+# Jedi Knight Cog Script
+#
+# TJC_trans.cog
+#
+# StarTrek type transporter.
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+
+surface      mother                             mask=0x448 
+surface	masterswitch                   
+surface      s1                                                               
+surface      s2                                                               
+surface      s3                                                               
+surface      s4                                                               
+surface      s5                                                               
+surface      s6                                                               
+surface      s7                                                               
+surface      s8                                                               
+
+sector       main                                                             
+sector       d1                                                               
+sector       d2                                                               
+sector       d3                                                               
+sector       d4                                                               
+sector       d5                                                               
+sector       d6                                                               
+sector       d7                                                               
+sector       d8                                                               
+
+thing        maint                                                            
+thing        d1t                                                              
+thing        d2t                                                              
+thing        d3t                                                              
+thing        d4t                                                              
+thing        d5t                                                              
+thing        d6t                                                              
+thing        d7t                                                              
+thing        d8t                                                              
+
+int          dest=-1                            local                         
+int          poss=1                             local                         
+int          lastswitch=-1                      local                         
+int          poss2=0                            local                         
+int          garbage                            local                         
+int          dummy                              local                         
+sound		electro
+sound		activatesnd                         
+
+message      entered                                                          
+message      activated                                                                                                             
+message      damaged                                                          
+
+                                                      
+end                                                                           
+
+# ========================================================================================
+
+code
+activated:
+	if (poss2 == 1) return;
+	if (GetSenderRef() == masterswitch){
+		poss = 0;
+		garbage = SetWallCel(mother, 1);
+		dummy = PlaySoundPos(activatesnd, GetSurfaceCenter(GetSenderRef()), 5, 1, 2, -1);
+		return; }
+	if (poss == 1) return;
+	if (GetSenderRef() == mother) return;
+	garbage = SetWallCel(GetSenderRef(), 1);
+		dest = GetSenderRef();
+		dummy = PlaySoundPos(activatesnd, GetSurfaceCenter(GetSenderRef()), 5, 1, 2, -1);
+		garbage = SetWallCel(lastswitch, 0);
+		call newmother;
+		return;
+
+entered:
+	if (poss == 1) return;
+	if (poss2 == 1) return;
+	CreateThing(telesparks, GetSourceRef());
+	AddDynamicTint(GetSourceRef(), 255/0/0);
+	if (GetSenderRef() == main){
+		if (dest == s1) TeleportThing(GetSourceRef(), d1t);
+		if (dest == s2) Teleportthing(GetSourceRef(), d2t);
+		if (dest == s3) Teleportthing(GetSourceRef(), d3t);
+		if (dest == s4) Teleportthing(GetSourceRef(), d4t);
+		if (dest == s5) Teleportthing(GetSourceRef(), d5t);
+		if (dest == s6) Teleportthing(GetSourceRef(), d6t);
+		if (dest == s7) Teleportthing(GetSourceRef(), d7t);
+		if (dest == s8) Teleportthing(GetSourceRef(), d8t);
+		return; }
+	Teleportthing(GetSourceRef(), maint);
+	return;
+
+damaged:
+	if (GetSenderRef() != mother) return;
+		garbage = SetWallCel(mother, 10);
+		dummy = PlaySoundPos(electro, GetSurfaceCenter(mother), 5, 10, 20, -1);
+		poss2 = 1;
+		return;
+
+newmother:
+	if (dest == s1) garbage = SetWallCel(mother, 2);
+	if (dest == s2) garbage = SetWallCel(mother, 3);
+	if (dest == s3) garbage = SetWallCel(mother, 4);
+	if (dest == s4) garbage = SetWallCel(mother, 5);
+	if (dest == s5) garbage = SetWallCel(mother, 6);
+	if (dest == s6) garbage = SetWallCel(mother, 7);
+	if (dest == s7) garbage = SetWallCel(mother, 8);
+	if (dest == s8) garbage = SetWallCel(mother, 9);
+	return;
+# ........................................................................................
+end
+
+

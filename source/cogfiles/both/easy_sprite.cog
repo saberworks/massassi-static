@@ -1,0 +1,51 @@
+# easy_sprite.cog
+#
+# Displays up to 10 Sprites (with support for animated sprites)
+#
+# By Dustino (dustino@hyperaction.net)
+# 5/24/2000
+
+flags=0x240
+
+symbols
+	message	startup
+	
+	thing		sprite0
+	thing		sprite1
+	thing		sprite2
+	thing		sprite3
+	thing		sprite4
+	thing		sprite5
+	thing		sprite6
+	thing		sprite7
+	thing		sprite8
+	thing		sprite9
+
+	template	spr
+
+	material	animmat		desc=animating_material
+	flex		fps=10		desc=playback_speed
+
+
+	int		sprite		local
+end
+
+code
+startup:
+
+	sprite=CreateThing(spr, sprite0);
+	sprite=CreateThing(spr, sprite1);
+	sprite=CreateThing(spr, sprite2);
+	sprite=CreateThing(spr, sprite3);
+	sprite=CreateThing(spr, sprite4);
+	sprite=CreateThing(spr, sprite5);
+	sprite=CreateThing(spr, sprite6);
+	sprite=CreateThing(spr, sprite7);
+	sprite=CreateThing(spr, sprite8);
+	sprite=CreateThing(spr, sprite9);
+
+	materialanim(animmat, fps, 1);
+
+	return;
+	
+end

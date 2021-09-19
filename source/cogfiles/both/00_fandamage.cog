@@ -1,0 +1,127 @@
+# Jedi Knight Cog Script
+#
+# 00_FANDAMAGE.COG
+#
+# Fan damages player if not disabled in M5 bottom arena.
+# Two switches allow to disable the fan for a few seconds and
+# access the 'secret' area below.
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+thing       ghost_fan                        nolink,desc=ghost_fan
+sector      fan_sc                           desc=fan_sc
+surface     switch1                          desc=switch1
+surface     switch2                          desc=switch2
+flex        fan_offtime=11.5                 desc=fan_off_time
+flex        damage_amount=125.0              desc=dmg_amount
+flex        damage_pulse=0.50                desc=dmg_pulse
+
+int         the_fan                          local
+int         the_fan_snd                      local
+int         fan_stopped=0                    local
+int         pulse_count=0                    local
+int         player                           local
+int         dummy                            local
+
+sound       fan_snd=BigFan01.wav             local
+sound       on_snd=set_hi2.wav               local
+sound       off_snd=lgclick1.wav             local
+
+message     startup
+message     activated
+message     timer
+message     pulse
+
+end
+
+# ========================================================================================
+
+code
+startup:
+   player = GetLocalPlayerThing();
+
+   // SERVER ONLY startup:
+   if(IsServer() || !IsMulti())
+   {
+      the_fan = ghost_fan;
+      the_fan_snd = PlaySoundThing(fan_snd, the_fan, 1.0, 10.0, 13.0, 0x041);
+      SetPulse(damage_pulse);
+   }
+
+   Return;
+
+# ........................................................................................
+
+activated:
+   if(fan_stopped == 1) Return;
+
+   StopSound(the_fan_snd, 0.5);
+   fan_stopped = 1;
+
+   dummy = SetWallCel(switch1, 1);
+   dummy = SetWallCel(switch2, 1);
+   dummy = PlaySoundPos(on_snd, SurfaceCenter(switch1), 0.8, 5.0, 10.0, 0);
+   dummy = PlaySoundPos(on_snd, SurfaceCenter(switch2), 0.8, 5.0, 10.0, 0);
+
+   SetThingRotVel(the_fan, '5.0 0.0 0.0');
+   SetTimerEx(0.1, 2, 0, 0);
+   SetTimerEx(0.2, 2, 0, 0);
+
+   SetTimerEx(fan_offtime, 1, 0, 0);
+   SetTimerEx(fan_offtime + 0.1, 2, 0, 0);
+   SetTimerEx(fan_offtime + 0.2, 2, 0, 0);
+
+   Return;
+
+# ........................................................................................
+
+timer:
+   if(GetSenderId() == 1)
+   {
+      dummy = SetWallCel(switch1, 0);
+      dummy = SetWallCel(switch2, 0);
+      dummy = PlaySoundPos(off_snd, SurfaceCenter(switch1), 0.8, 5.0, 10.0, 0);
+      dummy = PlaySoundPos(off_snd, SurfaceCenter(switch2), 0.8, 5.0, 10.0, 0);
+
+      SetThingRotVel(the_fan, '400.0 0.0 0.0');
+      the_fan_snd = PlaySoundThing(fan_snd, the_fan, 1.0, 10.0, 13.0, 0x041);
+
+      fan_stopped = 0;
+   }
+   else
+   if(GetSenderId() == 2)
+   {
+      SyncThingPos(the_fan);
+      SyncSurface(switch1);
+      SyncSurface(switch2);
+   }
+
+   Return;
+
+# ........................................................................................
+
+pulse:
+   if(fan_stopped == 1) Return;
+
+   player = FirstThingInSector(fan_sc);
+   while(player != -1)
+   {
+      // If we have a player (10)
+      if(GetThingType(player)==10)
+      {
+         // If he's not dead (this is to stop flooding with 4 or 5 corpses in the sector)
+         if(GetThingFlags(player) != 0x200)
+            dummy = DamageThing(player, damage_amount, 0x01, player);
+      }
+      player = NextThingInSector(player);
+   }
+
+   Return;
+
+end
+

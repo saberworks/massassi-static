@@ -1,0 +1,137 @@
+# Jedi Knight Cog Script
+#
+# 00_reactorthrust.cog
+#
+# Multiplayer sectorthrust trap.
+#
+# This script will control 2 sector thrust sectors thrusting in the same direction
+# and with the same velocity.  The thrusts activate with a switch.
+#
+# [IS/JS]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved		
+# ========================================================================================
+
+symbols
+
+message		startup	
+message		activate	
+message		arrived
+message		entered
+message		timer	
+
+int			currentThing		local
+int			i						local
+
+vector		playerVec			local
+vector		vec0					desc=thrust_direction
+
+float			thrustspeed=1.0	desc=thrust_speed
+float			doorspeed=2.0 		desc=speed of the doors
+float			sleeptime=2.0		desc=seconds that the doors pause
+
+thing			door0					linkid=2
+thing			door1					nolink
+thing			door2					nolink
+thing			door3					nolink
+
+surface		Switch				linkid=1
+
+sector		sector0	
+sector		sector1	
+
+thing			light0				nolink
+float			lspeed=4.0			desc=light_speed
+sound			wav0
+sound			wav1
+thing			thing0
+float			fadetime=4.0
+end
+
+# ========================================================================================
+
+code
+startup:
+	SetTimer(0.1);
+	channel=PlaySoundThing(wav0, thing0, 0.01, -1, -1, 1);
+	return;
+	
+# ........................................................................................
+
+activate:
+	if (GetSenderID() != 1) return;
+	if (GetWallCel(switch) == 1) return; 
+
+	SetWallCel(Switch, 1);
+	PlaySoundPos(wav1, SurfaceCenter(switch), 1, -1, -1, 0);
+	ChangeSoundVol(channel, 1.5, fadetime/2); 
+	ChangeSoundPitch(channel, 1, fadetime/2); 
+	MoveToFrame(door0, 1, doorspeed);
+	MoveToFrame(door1, 1, doorspeed);
+	MoveToFrame(door2, 1, doorspeed);
+	MoveToFrame(door3, 1, doorspeed);
+	SectorThrust(sector0, vec0, thrustspeed);
+	SectorThrust(sector1, vec0, thrustspeed);
+	MoveToFrame(light0, 1, lspeed);
+
+	// unattach all players in sectors
+	currentThing = FirstThingInSector(sector0);
+	while (currentThing != -1) {
+		call reactorpull;
+		currentThing = NextThingInSector(currentThing);
+	}
+	
+	currentThing = FirstThingInSector(sector1);
+	while (currentThing != -1) {
+		call reactorpull;
+		currentThing = NextThingInSector(currentThing);
+	}	
+	return;
+
+# ........................................................................................
+
+arrived:  
+	if (GetCurFrame(GetSenderRef()) == 0) {
+		SetWallCel(switch, 0);
+		PlaySoundPos(wav1, SurfaceCenter(switch), 1, -1, -1, 0);
+		SectorThrust(sector0, vec0, 0.0);
+		SectorThrust(sector1, vec0, 0.0);
+	} else {
+		MoveToFrame(door0, 0, doorspeed);
+		MoveToFrame(door1, 0, doorspeed);
+		MoveToFrame(door2, 0, doorspeed);
+		MoveToFrame(door3, 0, doorspeed);
+		MoveToFrame(light0, 0, lspeed);
+		ChangeSoundVol(channel, 0.1, fadetime); 
+		ChangeSoundPitch(channel, 0.1, fadetime); 
+	}
+	
+	return;
+
+# ........................................................................................
+
+timer:
+	ChangeSoundPitch(channel, 0.1, 0.1); 
+	return;
+		
+# ........................................................................................
+
+entered:
+	if (GetSenderId() !=0) return;
+	if (GetWallCel(switch) !=1) return;
+	currentThing = GetSourceRef();
+	// fall through
+	
+# ........................................................................................
+
+reactorpull:
+	if (GetThingType(currentThing) == 10) {
+		DetachThing(currentThing);
+		playerVec = GetThingVel(currentThing);
+		playerVec = VectorAdd(vec0, playerVec);
+		SetThingVel(currentThing, playerVec);
+	}
+	return;
+
+end
+ 

@@ -1,0 +1,38 @@
+# Jedi Knight Cog Script
+#
+# TJC_rotwalk.cog
+#
+# the ghost first frame should have a yaw of 360 to make it spin in continus circles.
+# lagg can cause the walkway to pause breifly at the end of each turn.
+# the walkways first frame should be its starting/ending pos
+# Mots version
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+sector		sec1
+thing		ghost
+thing        walkway                                                          
+sound        whoosh                                                           
+int          dummy                              local                         
+flex         time                                desc=speed                             
+message      startup                                                          
+message      arrived                                                          
+end                                                                           
+
+# ========================================================================================
+
+code
+arrived:
+	StopSound(dummy, 0);
+	Jumptoframe(walkway, 0, sec1);
+startup:
+	Attachthingtothingex(walkway, ghost, 0x8);
+	dummy = PlaySoundThing(whoosh, walkway,5,5,10,0x81);
+	 RotatePivot(ghost, 0, Time);
+	return;
+
+# ........................................................................................
+end
+
+

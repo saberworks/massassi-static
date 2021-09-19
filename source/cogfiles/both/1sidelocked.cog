@@ -1,0 +1,145 @@
+# Jedi Knight Cog Script
+#
+# 00_DOORLOCKED1SIDEALWAYS.COG based on 00_DOORLOCKED1SIDE.COG by LEC
+#
+# This script will handle a door that can be opened from
+# one side only.  However, enemys can open it from both sides. 
+#
+# You have to link in the sector into which the player
+# is when you want the door to open.
+#
+# [TT] jedi@mosweb.com
+#
+# 
+#
+#
+# This COG script is NOT supported by the LucasArts Entertainment Co.
+
+
+symbols
+
+message     startup     
+message     activated
+message     arrived     
+message     blocked     
+
+thing       door0                            linkid=0 mask=0x405
+thing       door1                            linkid=1 mask=0x405
+thing       door2                            linkid=2 mask=0x405
+thing       door3                            linkid=3 mask=0x405
+
+flex        movespeed=8.0
+flex        sleeptime=2.0
+flex        lightvalue=0.5
+sector      correctside
+
+sound       dialogue=mj61026.wav
+sound       wav0=lvrclik2.wav
+
+sector      doorsector                       local
+int         numdoors                         local
+int         doorstatus                       local
+int         movestatus                       local
+int         said_locked=0                    local
+
+thing       player 			     local
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   if (door0 >= 0) numdoors = numdoors + 1;
+   if (door1 >= 0) numdoors = numdoors + 1;
+   if (door2 >= 0) numdoors = numdoors + 1;
+   if (door3 >= 0) numdoors = numdoors + 1;
+
+   doorsector = getthingsector(door0);
+   sectoradjoins(doorsector, 0);
+   sectorlight(doorsector, lightvalue, 0.0);       // add some light to door sector
+   player = GetLocalPlayerThing();
+   return;
+
+# ........................................................................................
+
+activated:
+
+   if((GetThingSector(GetSourceRef()) == correctside) || (GetSourceRef() != player))
+   {
+      call checkstatus;
+      if (movestatus) return;
+      if (doorstatus == 0)
+      {              // all pieces are at frame 0
+         sectoradjoins(doorsector, 1);
+         call open_doors;
+         }
+   }
+   else
+   if (said_locked == 0)
+      {
+      playsoundlocal(dialogue, 1, 0, 132);
+      jkPrintUNIString(-1, 61026);
+      said_locked=1;
+      }
+      else
+      {
+      PlaySoundThing(wav0, door0, 1.0, -1, -1, 0);
+      }
+
+
+   return;
+
+# ........................................................................................
+
+arrived:
+   call checkstatus;
+   if (movestatus) return;
+   if (doorstatus == numdoors) {          // all pieces are at frame 1
+      sleep(sleeptime);
+      call close_doors;
+   } else if (doorstatus == 0) {          // all pieces are at frame 0
+      sectoradjoins(doorsector, 0);
+   }
+   return;
+
+# ........................................................................................
+
+blocked:
+   call open_doors;
+   return;
+
+# ........................................................................................
+
+open_doors:
+   movetoframe(door0, 1, movespeed);
+   if (door1 >= 0) movetoframe(door1, 1, movespeed);
+   if (door2 >= 0) movetoframe(door2, 1, movespeed);
+   if (door3 >= 0) movetoframe(door3, 1, movespeed);
+   return;
+
+
+close_doors:
+   movetoframe(door0, 0, movespeed);
+   if (door1 >= 0) movetoframe(door1, 0, movespeed);
+   if (door2 >= 0) movetoframe(door2, 0, movespeed);
+   if (door3 >= 0) movetoframe(door3, 0, movespeed);
+   return;
+
+checkstatus:
+   movestatus = ismoving(door0);
+   if (door1 >= 0) movestatus = movestatus + ismoving(door1);
+   if (door2 >= 0) movestatus = movestatus + ismoving(door2);
+   if (door3 >= 0) movestatus = movestatus + ismoving(door3);
+
+   doorstatus = getcurframe(door0);
+   if (door1 >= 0) doorstatus = doorstatus + getcurframe(door1);
+   if (door2 >= 0) doorstatus = doorstatus + getcurframe(door2);
+   if (door3 >= 0) doorstatus = doorstatus + getcurframe(door3);
+   return;
+
+
+end
+
+

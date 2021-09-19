@@ -1,0 +1,60 @@
+# Jedi Knight Cog Script
+#
+# 00_consolesounds.cog
+#
+# This COG will plays sounds when the thing 'console' is activated (i.e. the player hits SPACE next to it.)
+# Plays each sound and then starts back to the first one.
+#
+# This file is not made or supported by LEC.
+# Scripted 1998 by Zero.
+
+symbols
+
+message	activated
+message	startup
+
+thing		console
+sound		giggle=
+sound		barsound1=		
+sound		barsound2=		
+sound		barsound3=		
+sound		barsound4=
+sound		barsound5=
+sound		barsound6=
+sound		barsound7=
+sound		barsound8=
+sound		barsound9=
+sound		barsound10=
+flex		current=1
+
+end
+
+#----------------------------------------------------------------------------------------------
+
+code
+
+startup:
+	current=1;
+	giggle = barsound1;
+	return;
+
+activated:
+	PlaySoundGlobal(giggle, 10, 0.0, 0x10000);
+
+	current = current + 1;
+	if (current > 10) current = 1;
+	
+	if (current == 1) giggle = barsound1;
+	if (current == 2) giggle = barsound2;
+	if (current == 3) giggle = barsound3;
+	if (current == 4) giggle = barsound4;
+	if (current == 5) giggle = barsound5;
+	if (current == 6) giggle = barsound6;
+	if (current == 7) giggle = barsound7;
+	if (current == 8) giggle = barsound8;
+	if (current == 9) giggle = barsound9;
+	if (current == 10) giggle = barsound10;
+	
+	return;
+
+end

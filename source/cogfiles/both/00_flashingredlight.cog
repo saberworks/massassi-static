@@ -1,0 +1,74 @@
+# Jedi Knight Cog Script
+#
+# 00_FLASHINGREDLIGHT.COG
+#
+# Makes the extra light of the sectors in M5 secret
+# area pulse red.
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+
+symbols
+
+sector		flash00									desc=flash00
+sector		flash01									desc=flash00
+sector		flash02									desc=flash00
+sector		flash03									desc=flash00
+sector		flash04									desc=flash00
+sector		flash05									desc=flash00
+sector		flash06									desc=flash00
+sector		flash07									desc=flash00
+sector		flash08									desc=flash00
+sector		flash09									desc=flash00
+sector		flash10									desc=flash00
+sector		flash11									desc=flash00
+sector		flash12									desc=flash00
+sector		flash13									desc=flash00
+sector		flash14									desc=flash00
+sector		flash15									desc=flash00
+sector		flash16									desc=flash00
+sector		flash17									desc=flash00
+sector		flash18									desc=flash00
+sector		flash19									desc=flash00
+sector		flash20									desc=flash00
+sector		flash21									desc=flash00
+sector		flash22									desc=flash00
+sector		flash23									desc=flash00
+sector		flash24									desc=flash00
+sector		flash25									desc=flash00
+sector		flash26									desc=flash00
+sector		flash27									desc=flash00
+sector		flash28									desc=flash00
+sector		flash29									desc=flash00
+int			num_sectors=25							desc=num_sectors
+
+int			i=0										local
+flex			xlight=0.0								local
+
+message		startup
+message		pulse
+
+end				
+
+# ========================================================================================
+
+code
+
+startup:
+	SetPulse(0.75);
+
+	Return;
+
+# ........................................................................................
+
+pulse:
+	xlight = 1.0 - xlight;
+	for(i=0; i<num_sectors; i=i+1) SectorLight(flash00[i], xlight, 0.0);
+
+	Return;
+
+end
+

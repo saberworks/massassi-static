@@ -1,0 +1,357 @@
+# Jedi Knight Cog Script
+#
+# cameras.cog
+#
+# =====================================================================
+#
+# CONTROLS
+#
+# Use the A & D keys to cycle through cameras. X & C to zoom in or out.
+# Use the direction keys to point the camera.
+#
+# =====================================================================
+#
+# SPECIAL CAMERA TEMPLATE
+#
+# Use the following template for the cameras, or it won't work correctly.
+#
+#    # DESC: Sterrable Camera
+#    # BBOX: -.01 -.02 0 .01 0 0
+#    camera            none               orient=(0/0/0) type=cog collide=0 move=physics size=.05 movesize=.1 airdrag=.5 mass=.05 physflags=0xa00 maxvel=.5
+#
+# =====================================================================
+#
+# NAMED CAMERAS
+#
+# This cog can also print a UNI string instead of the camera numbers
+# (i.e. a description of what you're loking at). 
+# Each camera will print the string 'messagebase + activecam'.  So
+# if 'messagebase' is 400, 'camera' will print the string 'COG_00400',
+# 'camera4' wil print 'COG_00404', 'camera9' will print 'COG_00409', ect.
+#
+# If you don't want to fool with the UNI strings, leave messagebase at -1
+# and it will print "Camera x" like that standard camera cog.
+#
+# =====================================================================
+#
+# MISC
+#
+# Added handling for up to 4 viewpanels.
+# Changed it so that the player can't fire while using the cameras.
+#
+# =====================================================================
+#
+# Based on 00_multicam.cog from MOTS
+#
+# 4/1/99
+# Nightmare
+# knud@raex.com
+# =====================================================================
+
+flags=0x240
+
+symbols
+
+surface     console0
+surface     console1
+surface     console2
+surface     console3
+
+thing       camera                           nolink
+thing       camera1                          nolink
+thing       camera2                          nolink
+thing       camera3                          nolink
+thing       camera4                          nolink
+thing       camera5                          nolink
+thing       camera6                          nolink
+thing       camera7                          nolink
+thing       camera8                          nolink
+thing       camera9                          nolink
+
+thing       cam                              local
+
+int         numCameras
+int         messagebase=-1
+flex        minChangeRate=0.5
+
+int         player                           local
+int         active=0                         local
+int         activeCam=-1                     local
+int         old_camera                       local
+int         allowChangeCam=1                 local
+flex        zoom=1                           local
+flex        temp                             local
+int         canpointnow=0                    local
+int         canzoomnow=0                     local
+
+int         startHealth=0.0                  local
+vector      startPosition                    local
+vector      oldlookvec                       local
+vector      vec0                             local
+
+sound       SwitchOffSound=deactivate02.wav  local
+sound       camChangeSnd=beep2.wav           local
+
+message     startup
+message     activated
+message     playeraction
+message     pulse
+message     timer
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   player = GetLocalPlayerThing();
+   Return;
+
+# ........................................................................................
+
+activated:
+
+   // Do not allow to activate the camera with the scope on...
+   if(GetCurWeapon(player) == 13) Return;
+
+   if(active) Return;
+
+   active = 1;
+
+   SetActorFlags(player, 0x80800000);
+
+   StopThing(player);
+   SetActionCog(GetSelfCog(), 0x7FFFFFFF);
+
+   startHealth = GetThingHealth(player);
+   startPosition = GetThingPos(player);
+
+   SetPulse(0.5);
+
+   old_camera = GetCurrentCamera();
+   SetCurrentCamera(0);
+
+   activeCam = 0;
+   canpointnow = 1;
+   canzoomnow = 1;
+
+   call switch_cam;
+   Return;
+
+# ........................................................................................
+
+playeraction:
+   if (GetParam(0) == 0.0)             // Jump
+   {
+   ReturnEx(0.0);
+   if((zoom < 16) && (canzoomnow))
+      {
+      canzoomnow = 0;
+      zoom = zoom * 2;
+      SetCameraZoom(0, zoom, 150.0);
+      sleep(0.25);
+      canzoomnow = 1;
+      }
+   }
+   else
+   if (GetParam(0) == 1.0)             // Crouch
+   {
+   ReturnEx(0.0);
+   if((zoom > .5) && (canzoomnow))
+      {
+      canzoomnow = 0;
+      zoom = zoom / 2;
+      SetCameraZoom(0, zoom, 150.0);
+      sleep(0.25);
+      canzoomnow = 1;
+      }
+
+   }
+   else
+   if (GetParam(0) == 2.0)             // Activated
+   {
+      call stop_cam;
+      ReturnEx(0.0);
+   }
+   else
+   if (GetParam(0) == 3.0)             // Fire
+   {
+      ReturnEx(0.0);
+   }
+   else
+   if (GetParam(0) == 4.0)             // Strafe
+   {
+      if(GetParam(2) > 0)
+         call next_cam;
+      else
+         call prev_cam;
+
+      ReturnEx(0.0);
+   }
+   else
+   if (GetParam(0) == 5.0)             // Turn
+   {
+      if(canpointnow)
+      {
+         canpointnow = 0;
+         vec0 = GetThingLVecPYR(cam);
+         temp = VectorY(vec0) + (GetParam(2) / 100);
+         if(temp > 360) temp = temp - 360;
+         if(temp < 0) temp = temp + 360;
+         vec0 = VectorSet(VectorX(vec0), temp, VectorZ(vec0));
+         SetThingLookPYR(cam, vec0);
+         ReturnEx(0.0);
+         canpointnow = 1;
+      }
+   }
+   else
+   if (GetParam(0) == 6.0)             // Fwd / Bkwd Motion
+   {
+      if(canpointnow)
+      {
+         canpointnow = 0;
+         vec0 = GetThingLVecPYR(cam);
+         temp = VectorX(vec0) + (GetParam(2) * -1);
+         if(temp > 80) temp = 80;
+         if(temp < -80) temp = -80;
+         vec0 = VectorSet(temp, VectorY(vec0), VectorZ(vec0));
+         SetThingLookPYR(cam, vec0);
+         ReturnEx(0.0);
+         canpointnow = 1;
+      }
+   }
+   else
+   if (GetParam(0) == 14.0)         // Other Actions
+   {
+      if (GetParam(2) == 0.0)    // Cycle Camera
+      {
+         if (GetCurrentCamera() == 0)
+         {
+            // We're in first person mode.
+         }
+         else
+         {
+            // We're in third person mode.
+         }
+      }
+      ReturnEx(1.0);
+   }
+   else
+   {
+      ReturnEx(0.0);
+   }
+
+   Return;
+
+# ........................................................................................
+
+pulse:
+   SetPulse(0.5);
+
+   // check that the player didn't die
+   if(GetThingHealth(player) < 1)
+   {
+      call stop_cam;
+      Return;
+   }
+
+   // If he took damage to health stop the camera
+   if(GetThingHealth(player) < startHealth)
+   {
+      call stop_cam;
+      Return;
+   }
+
+   // If he changed position (blown by explosion, pushed, ...) stop the camera
+      if(!VectorEqual(startPosition, GetThingPos(player)))
+   {
+      call stop_cam;
+      Return;
+   }
+
+   Return;
+
+# ........................................................................................
+
+timer:
+   allowChangeCam = 1;
+   Return;
+
+# ........................................................................................
+
+next_cam:
+   if(!allowChangeCam) Return;
+
+   SetThingLookPYR(camera[activeCam], oldlookvec);
+   activeCam = activeCam + 1;
+   if(activeCam >= numCameras) activeCam = 0;
+   call switch_cam;
+   Return;
+
+prev_cam:
+   if(!allowChangeCam) Return;
+
+   SetThingLookPYR(camera[activeCam], oldlookvec);
+   activeCam = activeCam - 1;
+   if(activeCam < 0) activeCam = numCameras - 1;
+   call switch_cam;
+   Return;
+
+switch_cam:
+   Print(" ");
+   Print(" ");
+   Print(" ");
+   Print(" ");
+   Print(" ");
+   if(messagebase > -1) jkPrintUNIString(player, (messagebase + activeCam));
+   if(messagebase < 0)
+   {
+      jkStringClear();
+      jkStringConcatAsciiString("Camera ");
+      jkStringConcatInt(activeCam);
+      jkStringOutput(-1, -1);
+   }
+
+   dummy = PlaySoundLocal(camChangeSnd, 1.0, 0.0, 0);
+
+   cam = camera[activeCam];
+   SetCameraFocus(0, cam);
+   SetCameraZoom(0, 1, 150.0);
+   zoom = 1.0;
+   oldlookvec = GetThingLVecPYR(cam);
+   allowChangeCam = 0;
+   SetTimerEx(minChangeRate, 1, 0, 0);
+   Return;
+
+stop_cam:
+
+   SetCameraFocus(0, player);
+   SetCameraZoom(0, 1, 150.0);
+   SetCurrentCamera(old_camera);
+
+   SetThingLookPYR(cam, oldlookvec);
+
+   SetPulse(0);
+   active = 0;
+   canpointnow = 0;
+   canzoomnow = 0;
+
+   dummy = PlaySoundLocal(SwitchOffSound, 1.0, 0.0, 0);
+
+   // Turn off control capture.
+   SetActionCog(-1, 0);
+
+   ClearActorFlags(player, 0x80800000);
+
+   Print(" ");
+   Print(" ");
+   Print(" ");
+   Print(" ");
+   Print(" ");
+
+   Return;
+
+end
+
+

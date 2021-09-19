@@ -1,0 +1,66 @@
+# Jedi Knight Cog Script
+#
+# 00_ANTIGRAV.COG
+#
+# Shoot the player upwards in the big tubes in M5
+# Handles the 4 tubes in one script
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+
+symbols
+
+sector      antigrav1                        desc=anti_grav1
+sector      antigrav2                        desc=anti_grav2
+sector      antigrav3                        desc=anti_grav3
+sector      antigrav4                        desc=anti_grav4
+
+thing       player                           local
+
+message     startup
+message     entered
+
+end            
+
+# ========================================================================================
+
+code
+
+startup:
+
+   // This is the real thruster.
+   // The Z value of the vector decides of the thrust.
+   // Be careful, high values will smash the player in the
+   // ceiling of the room above, possibly killing him.
+   SetSectorThrust(antigrav1, '0.0 0.0 1.0' , 5.0);
+   SetSectorThrust(antigrav2, '0.0 0.0 1.0' , 5.0);
+   SetSectorThrust(antigrav3, '0.0 0.0 1.0' , 5.0);
+   SetSectorThrust(antigrav4, '0.0 0.0 1.0' , 5.0);
+
+   Return;
+
+# ........................................................................................
+
+entered:
+
+   // who is entering ?
+   player = GetSourceRef();
+   
+   // Give the player a little time to really enter the sector,
+   // else the back of the model will collide with the ceiling
+   // of the preceeding sector.
+   Sleep(0.5);
+   
+   // Detach the player from the ground, and give him
+   // a little push up so the SectorThrust will kick in
+   // (it won't while the player is attached to a surface).
+   DetachThing(player);
+   SetThingVel(player, '0.0 0.0 1.0');
+   
+   Return;
+
+end
+

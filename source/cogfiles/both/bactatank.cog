@@ -1,0 +1,65 @@
+# Jedi Knight Cog Script
+#
+# This script was made by Red (theensers@mindspring.com)
+#
+# Copyright (c) Red 1998
+#
+# 4/8/98 [Red] Cleaned up the Script, and added the ability to change the amount of mana added.
+#
+# Thanks a bunch Robert Huebner/Jeff Walters
+
+# ========================================================================================
+
+flags=0x40
+
+symbols
+
+thing       powerup                          local
+thing       player                           local
+int         bin=14                           local
+
+message		startup
+message		pulse
+
+sector		tank		      	# The Bacta Tank (sector).
+
+flex		healInterval=1.0		      # How often heath is added in seconds.
+flex		heal=5.0			      # How much health is added per pulse.
+
+thing		victim		local		# actors and players affected.
+int		type		local
+int		mana=25.0			      # How much mana is added per pulse.
+
+end
+
+# ========================================================================================
+
+code
+
+# ........................................................................................
+
+startup:
+	if(tank > -1) SetPulse(healInterval);
+	return;
+
+# ........................................................................................
+
+pulse:
+	victim = FirstThingInSector(tank);
+	while (victim != -1)
+	{
+		type = GetThingType(victim);
+		// If we have an actor (2) or a player (10)
+		if ((type==2) || (type==10))
+		// Heal and add Mana
+		{
+			HealThing(victim, heal);
+			ChangeInv(player, 14, mana);
+		}
+		victim = NextThingInSector(victim);
+	}
+	return;
+
+# ........................................................................................
+
+end

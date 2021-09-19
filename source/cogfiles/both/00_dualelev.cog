@@ -1,0 +1,75 @@
+# Jedi Knight Cog Script
+#
+# C3_DUALELEV.COG
+#
+# Dual Elevator Script for C3
+#
+# This will simply move an elevator between its two frames.
+# It was originally handling two elevators, hence the legacy name...
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+thing       elevator                         desc=elevator_object
+flex        speed=6.0                        desc=movement_speed
+flex        waittime=1.5                     desc=wait_time_at_stop
+
+message     startup
+message     pulse
+
+message     arrived
+message     timer
+message     blocked
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+
+   // SERVER ONLY startup:
+   if(IsServer() || !IsMulti())
+   {
+      SetPulse(1);
+   }
+
+   Return;
+
+# ........................................................................................
+
+pulse:
+   SetPulse(0);
+   MoveToFrame(elevator, 1, speed);
+   Return;
+
+# ........................................................................................
+
+arrived:
+   SetTimerEx(waittime, 1, 0, 0);
+
+   Return;
+
+# ........................................................................................
+
+timer:
+   if(GetCurFrame(elevator) == 1)
+      MoveToFrame(elevator, 0, speed);
+   else
+      MoveToFrame(elevator, 1, speed);
+   Return;
+
+# ........................................................................................
+
+blocked:
+   KillTimerEx(1);
+   MoveToFrame(elevator, 1 - GetGoalFrame(elevator), speed);
+   Return;
+
+end
+

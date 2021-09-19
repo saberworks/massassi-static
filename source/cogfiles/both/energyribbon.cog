@@ -1,0 +1,45 @@
+# Jedi Knight Cog Script
+#
+# Energyribbon.COG
+#
+# standard Lighting script with customizable sound, pulserate and template (not recommended
+# changing template), lighting goes in the direction of thing (supports 1 thing).
+#
+# (c) 2000 Sven Solo
+#
+# Originaly created for one of my levels
+
+symbols
+
+message startup
+message pulse
+
+thing ghost0
+
+flex pulserate=0.25
+
+int dummy                              local
+
+template ribbon=+force_lightning       
+
+sound    energy=forcepersuas02.wav
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+     SetPulse(pulserate);
+    return;
+
+Pulse:
+  dummy=CreateThing(ribbon, ghost0);
+  dummy=PlaySoundThing(energy, ghost0, 0.5, -1, -1, 0);
+# ........................................................................................
+
+end
+
+
+

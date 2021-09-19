@@ -1,0 +1,65 @@
+# Jedi Knight Cog Script
+#
+# boxing_camera.cog
+#
+# Toggles by activation
+# Due to the lack of the playeraction: message in JK I have to let the player be able to spin and look up/down. Sorry. 
+#
+# Calvin - 9/14/98
+# This Cog is not supported by LucasArts Entertainment Co.
+
+flags=0x240
+
+symbols
+message		activated
+message		startup
+
+sound		beep
+surface		surface	        	linkid=1
+thing		thing			linkid=1
+thing		camera
+thing		me			local
+int		inuse=0			local
+int		currentcamera		local
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+me=GetLocalPlayerThing();
+return;
+
+activated:
+if (GetSenderID()==1)
+	{
+	if (inuse==0)
+		{
+		// start the camera
+		inuse=1;
+		SetActorFlags(me, 0x840000);
+		StopThing(me);
+		// Fix our "don't work in external view" bug...
+		currentcamera=GetCurrentCamera();
+		SetCurrentCamera(0);
+		SetCameraFocus(0, camera);
+		PlaySoundLocal(beep, 1, 0, 132);
+		return;
+		}
+	if (inuse==1)	
+		{
+		// cleanup
+		inuse=0;
+		ClearActorFlags(me, 0x840000);
+		SetCameraFocus(0, me);
+		SetCurrentCamera(currentcamera);
+		return;
+		}	
+	}
+# ........................................................................................
+
+end
+
+

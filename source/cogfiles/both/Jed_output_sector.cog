@@ -1,0 +1,31 @@
+# Jedi Knight Cog Script
+#
+# Jed_Output_Sector.cog
+#
+# Generic Script that will print a message to a sector upon entrance. 
+# This message will only be printed the first time the player enters
+# [MJ]
+#
+# (C) 1998 Code Alliance
+
+flags=0x240
+symbols
+message 	entered
+sound           beep
+sector	        printsector
+int		status=0	local
+end
+
+code
+
+entered:
+If(status==1) Return;	
+
+  	playsoundlocal(beep, 1, 0, 132);
+	Print("Type Your Message Here.");		
+	status=1;
+
+	Return;
+
+end
+

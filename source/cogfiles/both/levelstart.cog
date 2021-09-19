@@ -1,0 +1,43 @@
+# Jedi Knight Cog Script
+#
+# LEVELSTART.COG
+#
+# Level Introduction Script. It shows 3 lines of text (from yer COGSTRINGS.UNI),
+# with a small pause between each line.
+#
+# [Red]
+#
+# (c) 1998 Skinners (Red)
+#
+# ========================================================================================
+
+
+flags=0x240
+
+symbols
+
+int         player                           local
+flex	      string0
+flex	      string1
+flex	      string2
+sound       dialogue
+
+message startup 
+
+end
+
+# ========================================================================================
+
+code
+startup:
+   player = GetSourceRef();
+   Sleep(2.0);                                                       
+   jkPrintUNIString(player, string0);
+   Sleep(1.5);                                                       
+   jkPrintUNIString(player, string1);
+   Sleep(1.5);                                                       
+   jkPrintUNIString(player, string2);
+   Sleep(2.0);
+   playsoundlocal(dialogue, 1, 0, 132);
+   Return;
+end

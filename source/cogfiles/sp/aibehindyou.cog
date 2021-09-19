@@ -1,0 +1,50 @@
+# Jedi Knight Cog Script
+#
+# AIBEHINDYOU!.COG
+#
+# After crossing an adjoin, a wav will play (optional)
+# and an enemy will "pop up" from behind you
+# at a ghost position.... 
+#
+# Note: Pyr is for the pitch,yaw,and roll position...xyz is for the location
+# that you want the thing to "pop up" at the X,Y,and Z axis. 
+# 
+# Written by JDKnite188@aol.com
+
+Symbols
+message    crossed
+surface    crosssurf
+sound      popwav
+flex       volume
+template   AITPL     
+sector     Popsect
+vector     xyz
+vector     pyr
+end
+
+# ========================================================================================
+
+code
+    
+  startup:
+          Setadjoinflags(crosssurf,0x12);
+          Return;
+        
+end
+
+# .................................................................................
+  
+  crossed:
+          Clearadjoinflags(crosssurf,0x12);
+          Setadjoinflags(crosssurf,0x6);
+          Playsoundlocal(popwav,volume,0,0x10000);
+          CreatethingatPosNR(AITPL,popsect,xyz,pyr);
+          Return;
+
+end
+
+# ........................................................................................
+
+end
+
+

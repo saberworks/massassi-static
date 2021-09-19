@@ -1,0 +1,169 @@
+# Jedi Knight Cog Script
+#
+# C3_FANSPUZZLE.COG
+#
+# This script handles the fans in C3 "Yel Well" layer
+#
+# Two functions are handled together here.
+#
+# First, a huge fan is blowing air horizontally.
+# If it is stopped -- this happens at random times -- a 'signal_sc'
+# sector will have its colormap changed from red to normal (shows a
+# green texture in this case). Anyway, if it is stopped the player
+# can jump in the well and access the entrance to the Gold flag room.
+# Else, the player who jumps in will be blown into the sewers.
+#
+# Second, two smaller fans are rotating at the bottom of the well.
+# They normally rotate slowly, generating a slow upwards air current
+# that will slow a fall in the well enough to avoid damage.
+# Now -- to defend his flag room -- a Gold player can control those
+# fans from a computer console in the control room just next to the well.
+# When the console is activated, the two smaller fans will generate a
+# much faster upwards air current, and the red player cannot go down.
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+sector      up1                              nolink,desc=up1
+sector      hz1                              nolink,desc=horiz1
+sector      hz2                              nolink,desc=horiz2
+sector      combo                            nolink,desc=combo
+thing       ghost_fan                        nolink,desc=ghost_fan
+thing       switch                           desc=switch
+sector      switch1                          nolink,desc=switch1
+sector      switch2                          nolink,desc=switch2
+sector      signal_sc                        nolink,desc=signal_sc
+sector      fans_sc                          nolink,desc=fans_sector
+flex        addlight=0.25                    desc=add_light
+flex        fan_offtime=5.0                  desc=fan_off_time
+flex        min_interval=6.0                 desc=min_interval
+flex        max_interval=15.0                desc=max_interval
+sector      red_colormap                     desc=red_colormap
+
+int         fan_is_on=1                      local
+int         fans_are_normal=1                local
+vector      upspeed                          local
+vector      hzspeed                          local
+flex        timer_delay=0                    local
+thing       the_fan                          local
+int         the_fan_snd                      local
+int         dummy                            local
+int         sourceref                        local
+int         player                           local
+
+int         msgbase=1000                     local
+
+template    fan_on_tpl=c3_fan0_moving        local
+sound       fan_snd=BigFan01.WAV             local
+sound       console_snd=set_hi2.wav          local
+
+message     startup
+message     activated
+message     timer
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   player = GetLocalPlayerThing();
+
+   // SERVER ONLY startup:
+   if(IsServer() || !IsMulti())
+   {
+      upspeed = '0.0 0.0 3.9';
+      hzspeed = '-8.0 0.0 0.0';
+      // the_fan = CreateThing(fan_on_tpl, ghost_fan);
+      the_fan = ghost_fan;
+      the_fan_snd = PlaySoundThing(fan_snd, the_fan, 1.0, 14.0, 18.0, 0x41);
+      call apply_thrusts;
+      SetTimer(min_interval + Rand() * (max_interval - min_interval));
+   }
+
+   Return;
+
+# ........................................................................................
+
+activated:
+   if(fans_are_normal == 1)
+   {
+      fans_are_normal = 0;
+      sourceref = GetSourceRef();
+      upspeed = '0.0 0.0 36.0';
+      SectorLight(fans_sc, addlight, 0.0);
+      SectorLight(switch1, 1.0, 0.0);
+      SectorLight(switch2, 1.0, 0.0);
+      dummy = PlaySoundThing(console_snd, switch, 0.8, 1.0, 2.0, 0);
+
+      // Print("Upwards thrust boosted...");
+      jkPrintUNIString(sourceref, msgbase + 83);
+
+      call apply_thrusts;
+
+      Sleep(20);
+
+      upspeed = '0.0 0.0 3.9';
+
+      // Print("Upwards thrust normal...");
+      jkPrintUNIString(sourceref, msgbase + 84);
+
+      SectorLight(switch1, 0.0, 0.0);
+      SectorLight(switch2, 0.0, 0.0);
+      SectorLight(fans_sc, 0.0, 0.0);
+
+      call apply_thrusts;
+
+      fans_are_normal = 1;
+   }
+
+   Return;
+
+# ........................................................................................
+
+timer:
+   if(fan_is_on == 1)
+   {
+      hzspeed = '0.0 0.0 0.0';
+      fan_is_on = 0;
+      SetThingRotVel(the_fan, '5.0 0.0 0.0');
+      StopSound(the_fan_snd, 0.5);
+      SetColorMap(signal_sc, 0);
+      timer_delay = fan_offtime;
+   }
+   else
+   {
+      hzspeed = '-8.0 0.0 0.0';
+      fan_is_on = 1;
+      SetThingRotVel(the_fan, '400.0 0.0 0.0');
+      the_fan_snd = PlaySoundThing(fan_snd, the_fan, 1.0, 14.0, 18.0, 0x41);
+
+      // Because LEIA saves the sub colormaps in any order, I have setup a
+      // red_colormap sector in which I'm SURE to find the colormap I need
+      SetColorMap(signal_sc, GetColorMap(red_colormap));
+      timer_delay = min_interval + Rand()* (max_interval - min_interval);
+   }
+
+   call apply_thrusts;
+
+   SetTimer(timer_delay);
+
+   Return;
+
+# ........................................................................................
+
+apply_thrusts:
+   SectorThrust(up1, upspeed, 1.0);
+   SectorThrust(hz1, hzspeed, 1.0);
+   SectorThrust(hz2, hzspeed, 1.0);
+   SectorThrust(combo, VectorAdd(upspeed, hzspeed), 1.0);
+
+   Return;
+
+end
+

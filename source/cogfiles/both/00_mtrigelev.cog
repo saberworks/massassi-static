@@ -1,0 +1,74 @@
+# Jedi Knight Cog Script
+#
+# 00_MTRIGELEV.COG
+#
+# Script for C1 Multiple Triggers Elevators
+#
+# Handles up to 4 trigger plates and up to 4 crossable adjoins
+# to trigger the lift movement to frame 1 at speed 'speed'.
+# The lift will remain there for 'delay' seconds, then go back to frame 0.
+# Note that entering the lift itself also triggers it.
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+thing       elevator                         desc=elev_thing
+flex        speed=8.0                        desc=speed
+flex        delay=3.0                        desc=delay
+
+surface     plate0                           desc=plate0
+surface     plate1                           desc=plate1
+surface     plate2                           desc=plate2
+surface     plate3                           desc=plate3
+
+surface     cross0                           desc=cross0
+surface     cross1                           desc=cross1
+surface     cross2                           desc=cross2
+surface     cross3                           desc=cross3
+
+message     entered
+message     crossed
+message     arrived
+message     timer
+message     blocked
+
+end
+
+# ========================================================================================
+
+code
+
+entered:
+crossed:
+   if(IsMoving(elevator) == 1) Return;
+   if(GetCurFrame(elevator) == 1) Return;
+   MoveToFrame(elevator, 1, speed);
+
+   Return;
+
+# ........................................................................................
+
+arrived:
+   if(GetCurFrame(elevator) == 1)
+      SetTimerEx(delay, 1, 0, 0);
+   Return;
+
+# ........................................................................................
+
+timer:
+   MoveToFrame(elevator, 0, speed);
+   Return;
+
+# ........................................................................................
+
+blocked:
+   KillTimerEx(1);
+   MoveToFrame(elevator, 1 - GetGoalFrame(elevator), speed);
+   Return;
+
+end
+

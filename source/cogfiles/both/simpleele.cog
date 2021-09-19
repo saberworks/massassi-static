@@ -1,0 +1,49 @@
+# Jedi Knight Cog Script
+#
+# simpleele.cog
+#
+# A Basic elevator Cog
+# This elevator will go up to frame one, sleep, then come back down to frame 0
+#when player enters elevator
+#
+#Scripted/modified by Red
+#
+#changes from the JED Tutor
+#
+#This file is was not made or supported by LucasArts Entertainment Company
+#
+symbols
+	message	entered
+
+message	arrived
+	message	timer
+
+	thing		elevator            linkid=1
+	float		start_wait=0.25
+	float		sleeptime=2.0
+	float		speed=4.0
+end
+
+## Code Section
+code
+entered:
+	if (IsThingMoving(elevator)) return;
+	if (GetCurFrame(elevator) != 0) return;
+	if (GetSenderId() != 1) return;
+
+	Sleep(start_wait);			// pause before moving up
+
+MoveToFrame(elevator, 1, speed);
+	return;
+
+arrived:
+	if (GetCurFrame(elevator) == 0) return;
+	SetTimer(sleeptime);
+	return;
+
+timer:	
+	MoveToFrame(elevator, 0, speed);
+	return;
+
+end
+

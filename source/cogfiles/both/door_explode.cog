@@ -1,0 +1,49 @@
+# Jedi Knight Cog Script
+# door_explode.COG
+# This file is not made or supported by LucusArts Entertainment Co.
+# by Michael Kyle
+# Makes a door explode when it receives damage.
+
+symbols
+
+message		damaged
+
+thing		door					mask=-1
+
+sound		explosionsound
+sound		explosionsound1
+
+thing		ghost0
+thing		ghost1
+thing		ghost2
+
+template	explosion_tpl=+grenade_exp 		local
+
+flex        	curdamage=0                 	local
+flex		damage
+
+end
+
+
+code
+  
+damaged:
+
+   curdamage=curdamage + GetParam(0);
+
+   if (curdamage<damage) Return;
+
+	DestroyThing(door);
+	playsoundpos(explosionsound, getthingpos(door), 1.0, -1, -1, 0);
+	sleep(0.05);
+	playsoundpos(explosionsound1, getthingpos(door), 1.0, -1, -1, 0);
+	CreateThing(explosion_tpl, ghost0);
+	Sleep(0.05);
+   	CreateThing(explosion_tpl, ghost1);
+   	Sleep(0.05);
+   	CreateThing(explosion_tpl, ghost2);
+
+	return;
+
+end
+

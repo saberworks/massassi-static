@@ -1,0 +1,58 @@
+# Jedi Knight Skinners Cog Script
+#
+# WATERFALL.COG
+#
+# This script simply creates sparks at a random interval.
+#
+# [YB]
+#
+# Runs Server|Client for Multi-Player
+# For up to 4 sparklers (ghosts), great for waterfalls (hence the name :-))
+#
+# [Red]
+
+flags=0x40
+
+symbols
+
+template sparkTemplate=+whitecloud
+thing    ghost1
+thing    ghost2
+thing    ghost3
+thing    ghost4
+
+flex     minimumDelay=0.5
+flex     maximumDelay=1.0
+
+sound    sparksound=00electrexplo3.wav
+
+message  startup
+message  timer
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   
+   SetTimer(minimumDelay + Rand() * (maximumDelay - minimumDelay));
+
+   Return;
+
+# ........................................................................................
+
+timer:
+
+   PlaySoundThing(sparksound, ghost1, 1, -1, -1, 0);
+   if (ghost1 != -1)CreateThing(sparkTemplate, ghost1);
+   if (ghost2 != -1)CreateThing(sparkTemplate, ghost2);
+   if (ghost3 != -1)CreateThing(sparkTemplate, ghost3);
+   if (ghost4 != -1)CreateThing(sparkTemplate, ghost4);
+   SetTimer(minimumDelay + Rand() * (maximumDelay - minimumDelay));
+
+   Return;
+
+end
+

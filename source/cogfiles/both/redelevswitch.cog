@@ -1,0 +1,90 @@
+# Jedi Knight Cog Script
+#
+# 00_elev_switch.cog
+#
+# This elevator will go up to frame one, sleep, then come back down to frame 0 when
+# entered from the bottom.  When entered from the top, it should stay at the bottom.
+# The button surface is a call switch you can put at the top to call the thing up there.
+# Elevator will react to "blocked" message.
+#
+# [DS/RD/IS/JS/RED]
+# Modified 11/13/96 DS  (added third adjoin)
+# Modified 12/14/96 by RKD (changed to new COG format)
+# Modified 4/6/97 by IS (Fixed bug with repeatedly hitting switch)
+# Modified 4/29/97 by RKD (changed to work with 00_sendmessage.cog -- see commented out line below)
+# Modified 4/30/97 by IS (Changed from sleep to timer)
+# Modified 8/19/97 by JS (added blocked message)
+# Modified 9/1/97 by SXC (took blocked message out)
+# Modified 7/29/98 by Red (2 buttons 2 sleeps)
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+# ========================================================================================
+
+symbols
+
+message  crossed
+message  activate
+message  arrived
+message  timer
+
+surface  lower_adjoin0  linkid=1
+surface  lower_adjoin1  linkid=1
+surface  lower_adjoin2  linkid=1
+surface  button1        linkid=1
+surface  button2        linkid=1
+
+thing    elevator       linkid=2
+
+flex     start_wait=0.25   desc=pause_before_moving_up
+flex     sleeptime=2.0
+flex     speed=4.0
+sound    wav0=Activate02.wav
+
+end
+
+# ========================================================================================
+
+code
+crossed:                // If player crosses adjoin(s)
+   Sleep(start_wait);            // pause before moving up
+   // fall through
+
+# ........................................................................................
+
+activate:                 // If player presses button
+   if (GetSenderId() != 1) return;  // message came from elevator
+   if (GetWallCel(button1) == 1) return;
+   if (GetWallCel(button2) == 1) return;
+   SetWallCel(button1, 1);
+   SetWallCel(button2, 1);
+   PlaySoundPos(wav0, SurfaceCenter(button1), 0.6, -1, -1, 0);
+   PlaySoundPos(wav0, SurfaceCenter(button2), 0.6, -1, -1, 0);
+   Sleep(start_wait);            // pause before moving up
+
+   MoveToFrame(elevator, 1, speed);
+   return;
+
+# ........................................................................................
+
+arrived:
+   if (GetCurFrame(elevator) == 0) {
+      SetWallCel(button1, 0);
+      SetWallCel(button2, 0);
+      PlaySoundPos(wav0, SurfaceCenter(button1), 0.6, -1, -1, 0);
+      PlaySoundPos(wav0, SurfaceCenter(button2), 0.6, -1, -1, 0);
+   } else {
+      // Set sleep time at top
+      SetTimer(sleeptime);
+   }
+   return;
+
+# ........................................................................................
+
+timer:
+   // Send elevator down
+   MoveToFrame(elevator, 0, speed);
+   return;
+
+end
+
+

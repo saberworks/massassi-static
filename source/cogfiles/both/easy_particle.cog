@@ -1,0 +1,57 @@
+# easy_particle.cog
+#
+# Displays up to 10 Particle Fields.
+#
+# By Dustino (dustino@hyperaction.net)
+# 7/18/2000
+
+flags=0x240
+
+symbols
+	message	startup
+	message timer
+	
+	thing		par0
+	thing		par1
+	thing		par2
+	thing		par3
+	thing		par4
+	thing		par5
+	thing		par6
+	thing		par7
+	thing		par8
+	thing		par9
+	
+	flex		par_length
+
+	template	par
+
+	int		particle	local
+end
+
+code
+startup:
+
+	SetTimer(0.1);
+
+	return;
+
+
+timer:
+
+	particle=CreateThing(par, par0);
+	particle=CreateThing(par, par1);
+	particle=CreateThing(par, par2);
+	particle=CreateThing(par, par3);
+	particle=CreateThing(par, par4);
+	particle=CreateThing(par, par5);
+	particle=CreateThing(par, par6);
+	particle=CreateThing(par, par7);
+	particle=CreateThing(par, par8);
+	particle=CreateThing(par, par9);
+
+	SetTimer(par_length);
+
+	return;
+	
+end

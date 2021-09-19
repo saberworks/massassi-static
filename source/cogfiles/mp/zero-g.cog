@@ -1,0 +1,43 @@
+# Jedi Knight Cog Script
+#
+# zero-g.COG
+#
+# Lets you fly around in Zero-G, BUT you can go down as well as up...functions the same as flymode in SP.
+#
+#Scripted By: Brakiss E-Mail: brakiss13@hotmail.com
+# 
+#Editor used: CogWriter 0.3 beta
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+flags=0x40
+
+symbols
+    sector    sector1
+    sector    sector2
+    sector    sector3
+    message   entered
+    message   exited
+    thing     player      local
+end                                                                           
+
+# ========================================================================================
+
+code
+entered:
+	player = GetSourceRef();   
+	ClearPhysicsFlags(player, 0x1);
+	SetPhysicsFlags(player, 0x2000);  
+		return;
+
+exited:
+	player = GetSourceRef();
+	ClearPhysicsFlags(player, 0x2000);     
+	SetPhysicsFlags(thing, 0x1);
+		return;
+	
+# ........................................................................................
+
+end
+
+

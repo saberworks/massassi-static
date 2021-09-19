@@ -1,0 +1,122 @@
+# oneway.cog
+# Adjoins that only one team can cross. This cog is run locally
+# this script will work for CTF, Infiltrate, or any other team based game
+# team should equal the team you want to pass through (1 = red, 2 = gold)
+# (c) 1998 Mark Jones
+# 6/1/98
+
+flags=0x240
+symbols
+
+message	touched
+message	startup
+message	timer
+message 	crossed
+
+
+int	team=-1
+int	pteam		local
+int   damaging=1	local
+
+int		player	local
+
+surface	adjoin0	mask=0x400
+surface	adjoin1	mask=0x400
+surface	adjoin2	mask=0x408
+surface	adjoin3	mask=0x408
+surface	adjoin4	mask=0x408
+surface	adjoin5	mask=0x408
+surface	surf			local
+
+float       dmgintv=0.25
+float		maxDamage=10.0
+float		minDamage=5.0
+
+
+end
+
+code
+
+startup:
+
+	player=GetLocalPlayerThing();
+									 //magsealed
+	SetSurfaceFlags(adjoin0,16384);                
+	SetSurfaceFlags(adjoin1,16384);
+	SetSurfaceFlags(adjoin2,16384);
+	SetSurfaceFlags(adjoin3,16384);
+	SetSurfaceFlags(adjoin4,16384);
+	SetSurfaceFlags(adjoin5,16384);
+									//translucent
+	ClearAdjoinFlags(adjoin0,2);			
+	ClearAdjoinFlags(adjoin1,2);
+	ClearAdjoinFlags(adjoin2,2);
+	ClearAdjoinFlags(adjoin3,2);
+	ClearAdjoinFlags(adjoin4,2);
+	ClearAdjoinFlags(adjoin5,2);
+									//nonadjoined
+	SetFaceGeoMode(adjoin0,4);				
+	SetFaceGeoMode(adjoin1,4);			
+	SetFaceGeoMode(adjoin2,4);
+	SetFaceGeoMode(adjoin3,4);
+	SetFaceGeoMode(adjoin4,4);
+	SetFaceGeoMode(adjoin5,4);
+
+
+
+Return;
+
+touched:
+
+	If(GetThingType(GetSourceRef())!= 10) Return;
+	If(GetSourceRef()!=player) Return;
+
+	If(GetPlayerTeam(player)==team)
+   {
+	
+	surf = GetSenderRef();
+	ClearSurfaceFlags(surf,16384);
+	SetAdjoinFlags(surf,2);
+	SetTimerEx(3, 9898, 0, 0); 
+	Return;
+
+	
+   }
+
+	else
+	If(GetPlayerTeam(player)!=team)
+   {
+
+	damage = (Rand() * (maxDamage - minDamage)) + minDamage;
+	DamageThing(player, damage, 0x2, victim);
+	SetTimerEx(dmgintv, 9797, 0, 0); 
+	Return;
+
+   }
+Return;
+
+timer:
+// 9797 = damage count
+// 9898 = adjoin return
+
+
+	If(GetSenderId()==9797)
+   {
+
+	damaging=1;
+	return;
+
+   }
+
+	If(GetSenderId()==9898)
+   {
+
+	SetSurfaceFlags(surf,16384);
+	ClearAdjoinFlags(surf,2);
+	return;
+
+   }
+
+Return;
+end
+

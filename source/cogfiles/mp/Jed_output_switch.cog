@@ -1,0 +1,50 @@
+# Jedi Knight Cog Script
+#
+# Jed_output_player.cog
+#
+# Generic Script that will output a string with the players name in it.
+# Activated by activating a switch 
+# 
+# [MJ]
+#
+# (C) 1998 Code Alliance
+
+
+symbols
+message 	activated
+message	timer
+sound       beep
+surface	printswitch
+flex		unistring0
+flex		unistring1
+int		status=0	local
+int		player	local
+flex		delay=5.0			desc=timer_delay
+
+end
+
+code
+
+activated:
+	
+  	playsoundpos(beep, SurfaceCenter(printswitch), 1, -1, -1, 0);
+
+	If(status==1) Return;
+	status=1;
+
+	jkStringClear();
+	jkStringConcatUNIString(unistring0);
+	jkStringConcatSpace();
+	jkStringConcatPlayerName(player);
+	jkStringConcatSpace();
+	jkStringConcatUNIString(unistring1);
+	jkStringOutput(-3, -1);
+	SetTimer(delay);
+	Return;
+
+timer:
+
+	status=0;
+
+end
+

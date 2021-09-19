@@ -1,0 +1,43 @@
+# Jedi Knight Cog Script
+#
+# S1L1_ENDLEVEL.COG
+#
+# [IS]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+# ========================================================================================
+
+symbols
+message        startup
+message			timer
+
+material tip_mat=saberblue0.mat        
+material side_mat=saberblue1.mat       
+
+template tpl_wall=+ssparks_wall          local
+template tpl_blood=+ssparks_blood        local
+template tpl_saber=+ssparks_saber        local
+
+int            player                        local
+end
+
+# ========================================================================================
+
+code
+
+startup:
+		// Wait for the dust to settle a bit.
+	SetTimer(0.5);
+	Return;
+
+timer:
+	// This is Luke -- turn the saber blue
+	jkSetSaberInfo(GetLocalPlayerThing(), side_mat, tip_mat, 0.003, 0.001, 0.120, tpl_wall, tpl_blood, tpl_saber);
+
+   Return;
+
+# ........................................................................................
+
+end
+
+

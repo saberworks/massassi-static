@@ -1,0 +1,49 @@
+# Jedi Knight Cog Script
+#
+# TJC_shootdoor.cog
+#
+# Script for a door controlled by two shootable switches.
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+surface      switch                             mask=0x448                    
+surface      switch2                            mask=0x448                    
+thing        door                                                             
+flex         speed                                                            
+message      damaged                                                          
+message      timer   
+sector		doorsector                                                         
+int          garbage                            local                         
+int          activeono=0                        local                         
+int          which                              local
+message	startup                         
+end                                                                           
+
+# ========================================================================================
+
+code
+startup:
+	SetSectorAdjoins(doorsector, 0);
+damaged:
+	if (activeono == 1) return;
+	if (GetSenderRef() == door) return;
+	garbage = SetWallCel(GetSenderRef(), 1);
+	which = GetSenderRef();
+	SetSectorAdjoins(doorsector, 1);
+	MoveToFrame(door, 1, speed);
+	WaitForStop(door);
+	SetTimer(delay);
+	return;
+
+timer:
+	MoveToFrame(door, 0, speed);
+	WaitForStop(door);
+	SetSectorAdjoins(doorsector, 0);
+	garbage = SetWallCel(which, 0);
+	activeono = 0;
+	return;
+# ........................................................................................
+end
+
+

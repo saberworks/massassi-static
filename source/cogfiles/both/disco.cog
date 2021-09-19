@@ -1,0 +1,75 @@
+#disco.cog
+#(c) Mark Jones 1998
+#7/30
+# Flash RGBs in a sector on and off
+
+
+flags=0x240
+symbols
+
+message startup
+message pulse
+
+flex	pulserate=0.1
+vector startRGB	local
+vector nextRGB
+int flag=-1	local
+int numsec local
+int index local
+
+sector	sec0
+sector	sec1
+sector	sec2
+sector	sec3
+sector	sec4
+sector	sec5
+sector	sec6
+sector	sec7
+sector	sec8
+sector	sec9
+
+end
+
+code
+
+startup:
+
+	if(sec0>=0) numsec = numsec + 1;
+	if(sec1>=0) numsec = numsec + 1;
+	if(sec2>=0) numsec = numsec + 1;
+	if(sec3>=0) numsec = numsec + 1;
+	if(sec4>=0) numsec = numsec + 1;
+	if(sec5>=0) numsec = numsec + 1;
+	if(sec6>=0) numsec = numsec + 1;
+	if(sec7>=0) numsec = numsec + 1;
+	if(sec8>=0) numsec = numsec + 1;
+	if(sec9>=0) numsec = numsec + 1;
+	flag=1;
+	SetPulse(pulserate);
+	startRGB = GetSectorTint(sec0);
+	return;
+
+pulse:
+	
+	if(flag==1) {
+	
+		for(index=0; index<numsec; index=index+1) {
+	
+	SetSectorTint(sec0[index], nextRGB);
+			}
+		flag=0;
+		return;
+	}
+	
+	else if (flag==0) {
+	
+		for(index=0; index<numsec; index=index+1) {
+	
+	SetSectorTint(sec0[index], startRGB);
+			}
+		flag=1;
+		return;
+	}
+
+	return;
+end

@@ -1,0 +1,146 @@
+# Jedi Knight Cog Script
+#
+# riverthrust.cog
+#
+# A cog to make rivers
+# (See EvanC's tutorial on rivers for more info)
+#
+# This cog will handle sector thrust and surface sliding in one cog.
+# It keeps the amounts of cogs to a minimum.
+# WARNING! A lot of values, may cause lag in multiplayer.
+#
+# It is not betatested, so if you find bugs, please report them to me.
+#
+# Thanks to SteelPheoniX_1 for his slide-cog (inspiration is important)
+# and EvanC for his river cog that didn't work in my level and then
+# inspired me to make a river cog for myself. :p
+#
+# [GTG] (ow_lord_gandalv@hotmail.com)
+#
+# LEC has no responsibillity for what this cog may do to your family, dog, computer,
+# Jedi Knight game, sound speakers, printer, piano, TV, Playstation or
+# anything like that. Neither am I.
+#
+# (God, I hate to say that!)
+
+// Symbols section
+
+symbols
+
+message		startup	
+
+vector		vector0		desc=thrust_direction
+sector		sector0	
+float		speed0=1.0	desc=thrust_speed
+surface         surface0
+surface         surface1
+
+vector          vector1         desc=thrust_direction
+sector		sector1	
+float		speed1=1.0	desc=thrust_speed
+surface         surface2
+surface         surface3
+
+vector          vector2         desc=thrust_direction
+sector		sector2
+float		speed2=1.0	desc=thrust_speed
+surface         surface4
+surface         surface5
+
+vector		vector3		desc=thrust_direction
+sector		sector3	
+float		speed3=1.0	desc=thrust_speed
+surface         surface6
+surface         surface7
+
+vector          vector4         desc=thrust_direction
+sector		sector4
+float		speed4=1.0	desc=thrust_speed
+surface         surface8
+surface         surface9
+
+vector          vector5         desc=thrust_direction
+sector		sector5
+float		speed5=1.0	desc=thrust_speed
+surface         surface10
+surface         surface11
+
+vector          vector6         desc=thrust_direction
+sector		sector6
+float		speed6=1.0	desc=thrust_speed
+surface         surface12
+surface         surface13
+
+vector		vector7		desc=thrust_direction
+sector          sector7
+float		speed7=1.0	desc=thrust_speed
+surface         surface14
+surface         surface15
+
+vector          vector8         desc=thrust_direction
+sector          sector8
+float		speed8=1.0	desc=thrust_speed
+surface         surface16
+surface         surface17
+
+vector          vector9         desc=thrust_direction
+sector          sector9
+float           speed9=1.0      desc=thrust_speed
+surface         surface18
+surface         surface19
+
+
+end
+
+
+// Code section
+
+code
+
+//-----------------------------------------------------------------------------
+
+startup:
+	if (sector0 >= 0) SectorThrust(sector0, vector0, speed0);
+	if (surface0 >= 0)SlideWall(surface0, vector0, speed0);
+        if (surface1 >= 0)SlideWall(surface1, vector0, speed0);
+        
+        if (sector1 >= 0) SectorThrust(sector1, vector1, speed1);
+        if (surface2 >= 0)SlideWall(surface2, vector1, speed1);	
+        if (surface3 >= 0)SlideWall(surface3, vector1, speed1);
+
+        if (sector2 >= 0) SectorThrust(sector2, vector2, speed2);
+	if (surface4 >= 0)SlideWall(surface4, vector2, speed2);	
+        if (surface5 >= 0)SlideWall(surface5, vector2, speed2);
+
+        if (sector3 >= 0) SectorThrust(sector3, vector3, speed3);
+	if (surface6 >= 0)SlideWall(surface6, vector3, speed3);	
+        if (surface7 >= 0)SlideWall(surface7, vector3, speed3);
+
+        if (sector4 >= 0) SectorThrust(sector4, vector4, speed4);
+	if (surface8 >= 0)SlideWall(surface8, vector4, speed4);	
+        if (surface9 >= 0)SlideWall(surface9, vector4, speed4);
+        
+        if (sector5 >= 0) SectorThrust(sector5, vector5, speed5);
+	if (surface10 >= 0)SlideWall(surface10, vector5, speed5);	
+        if (surface11 >= 0)SlideWall(surface11, vector5, speed5);
+
+        if (sector6 >= 0) SectorThrust(sector6, vector6, speed6);
+        if (surface12 >= 0)SlideWall(surface12, vector6, speed6);	
+        if (surface13 >= 0)SlideWall(surface13, vector6, speed6);
+
+        if (sector7 >= 0) SectorThrust(sector7, vector7, speed7);
+        if (surface14 >= 0)SlideWall(surface14, vector7, speed7);	
+        if (surface15 >= 0)SlideWall(surface15, vector7, speed7);
+
+        if (sector8 >= 0) SectorThrust(sector8, vector8, speed8);
+        if (surface16 >= 0)SlideWall(surface16, vector7, speed7);	
+        if (surface17 >= 0)SlideWall(surface17, vector7, speed7);
+
+        if (sector9 >= 0) SectorThrust(sector9, vector9, speed9);
+	if (surface18 >= 0)SlideWall(surface18, vector9, speed9);	
+        if (surface19 >= 0)SlideWall(surface19, vector9, speed9);
+
+
+
+        return;
+end

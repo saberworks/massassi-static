@@ -1,0 +1,44 @@
+# Jedi Knight Cog Script
+#
+# startmsg.cog
+#
+# Displays a startup string with the players name in it.
+#
+#
+# (C) 1998 Tazz
+#
+# The msgbase int is there to allow use of this cog in multiple levels.
+# Example: Say for Canyon Oasis you chose a msgbase of 4000.  Then the
+# msgbase + 1 would be equal to "COG_04001" in your cogstrings.uni. To
+# use this cog on another level, simply change the message base for
+# each according level.  I recommend something over 1000, going up by
+# 1000's.
+
+flags=0x240
+
+symbols
+
+message  startup
+
+int  msgbase
+int  player  local
+end
+
+
+#======================================================================
+code
+
+startup:
+//First line of text
+jkStringClear();
+jkStringConcatUNIString(msgbase + 1);
+jkStringConcatSpace();
+jkStringConcatPlayerName(player);
+jkStringConcatSpace();
+jkStringConcatUNIString(msgbase + 2);
+jkStringOutput(player, -1);
+//Second Line
+jkPrintUNIString(player, msgbase + 3);
+Return;
+
+end

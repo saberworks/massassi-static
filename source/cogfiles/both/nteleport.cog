@@ -1,0 +1,45 @@
+# teleport.cog
+#
+# Teleports the player to a ghost position upon entry into a sector 
+#
+# Nightmare (6/16/98)
+#============================================================================
+flags=0x240
+
+symbols
+message entered
+message startup        
+
+sector	telechamber
+
+thing	gotospot
+                                
+int 	player  		                local
+int     dummy                                   local
+
+sound   telesound=ForceThrow01.WAV
+
+template	sparks=+telesparks
+
+end
+
+#============================================================================
+
+code
+entered:
+	player=GetLocalPlayerThing();
+	StopThing(player);	
+
+	dummy = CreateThing(sparks, player);
+        
+        dummy = PlaySoundLocal(telesound, 1.0, 0, 0);
+        
+        TeleportThing(player, gotospot);
+
+	dummy = CreateThing(sparks, player);
+
+	return;
+end
+
+
+ 

@@ -1,0 +1,38 @@
+#
+# Shield Replenishing Cog
+# By FantomJedi@AOL.com
+#
+
+symbols
+
+sector	     powerup
+sound	     uppower
+int         player                           local
+message     startup
+message     entered
+
+end
+
+#           :þ
+
+code
+
+#           :þ
+
+startup:
+player = GetLocalPlayerThing();
+   SetInv(player, 60, 100); 
+
+return;
+
+#           :þ
+
+entered:
+   // Secret already visited
+   if (powerup = getcursector()) 
+ChangeInv(player, 60, 200.0);
+  PlaySoundLocal(uppower, 2, 0, 0x0);
+
+Return;
+
+end

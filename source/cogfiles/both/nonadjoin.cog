@@ -1,0 +1,42 @@
+# Jedi Knight Cog Script
+# 
+# A simple door Cog - made to get rid of the nasty adjoin "Hell spots" problem.
+#      Intended to be used exactly like the original 00_door.cog.
+# Allows more freedom to placing door frames. 
+# The door should have "NUMFRAMES" and 2 "FRAMES" 
+# 
+# [ Hemlos@gate.net | http://www.gate.net/~hemlos ]
+# 
+# This file was not made or supported by LucasArts Entertainment Company
+
+symbols
+	message	activated
+	message	arrived
+	message	timer
+
+	thing		door	linkid=1
+	float		start_wait=0.25
+	float		sleeptime=2.0
+	float		speed=4.0
+end
+
+## Code Section
+code
+activated:
+	if (IsThingMoving(door)) return;
+	if (GetCurFrame(door) != 0) return;
+	Sleep(start_wait);	
+	MoveToFrame(door, 1, speed);
+	return;
+
+arrived:
+	if (GetCurFrame(door) == 0) return;
+	SetTimer(sleeptime);
+	return;
+timer:	
+	MoveToFrame(door, 0, speed);
+	return;
+
+end
+
+

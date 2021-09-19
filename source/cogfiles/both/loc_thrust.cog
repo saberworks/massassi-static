@@ -1,0 +1,70 @@
+#loc_thrust.cog
+#(c) Mark Jones 1998
+#8/3
+#Simple thrust which handles multiple vectors/sectors
+# you must align the sector with it's corresponding vector
+# this allows multiple vectors in the same script.
+
+flags=0x240
+
+symbols
+
+sector sec0
+sector sec1
+sector sec2
+sector sec3
+sector sec4
+sector sec5
+sector sec6
+sector sec7
+sector sec8
+sector sec9
+sector sec10
+sector sec11
+
+vector vec0
+vector vec1
+vector vec2
+vector vec3
+vector vec4
+vector vec5
+vector vec6
+vector vec7
+vector vec8
+vector vec9
+vector vec10
+vector vec11
+
+message startup
+
+flex speed=2.0
+
+int	index=0 	local
+int numsecs=0	local
+
+end
+
+code
+
+startup:
+
+	if(sec0>=0) numsecs = numsecs + 1;
+	if(sec1>=0) numsecs = numsecs + 1;
+	if(sec2>=0) numsecs = numsecs + 1;
+	if(sec3>=0) numsecs = numsecs + 1;
+	if(sec4>=0) numsecs = numsecs + 1;
+	if(sec5>=0) numsecs = numsecs + 1;
+	if(sec6>=0) numsecs = numsecs + 1;
+	if(sec7>=0) numsecs = numsecs + 1;
+	if(sec8>=0) numsecs = numsecs + 1;
+	if(sec9>=0) numsecs = numsecs + 1;
+	if(sec10>=0) numsecs = numsecs + 1;
+	if(sec11>=0) numsecs = numsecs + 1;
+
+	For(index=0; index>numsecs; index = index + 1) {
+
+	SetSectorThrust(sec0[index], vec0[index], speed);
+	}
+	return;
+end
+

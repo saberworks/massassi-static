@@ -1,0 +1,60 @@
+# Jedi Knight Cog Script
+#
+# 00_CAMERA.COG
+#
+# This script will briefly show the effect of using the
+# forcefield console to the player...
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+flags=0x240
+
+symbols
+
+thing       console                          desc=console
+thing       camera                           desc=camera_ghost
+flex        delay=1.5                        desc=delay
+
+int         old_camera                       local
+int         player                           local
+int         active=0                         local
+
+message     activated
+message     timer
+
+end
+
+# ========================================================================================
+
+code
+
+activated:
+   if(active) Return;
+   active = 1;
+
+   player = GetSourceRef();
+
+   if(player == GetLocalPlayerThing())
+   {
+      SetActorFlags(player, 0xa00000);
+      old_camera = GetCurrentCamera();
+      SetCurrentCamera(0);
+      SetCameraFocus(0, camera);
+   }
+
+   SetTimer(delay);
+
+   Return;
+
+timer:
+   ClearActorFlags(player, 0xa00000);
+   SetCameraFocus(0, player);
+   SetCurrentCamera(old_camera);
+   active = 0;
+
+   Return;
+
+end
+

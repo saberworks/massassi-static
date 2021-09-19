@@ -1,0 +1,141 @@
+# clock.cog
+#
+# Displays a digital clock on the wall
+# The five surfaces must be set to numbers.mat
+# If the clock surfaces are damaged or activated, the cog will print a string with the time.
+#
+# Feel free to add handling for consoles, switches, viewscreens, ect. that trigger the string.
+# Just add them to the symbols section, use a line similar to "thing  console0  mask=0x408"
+# 
+# 5/25/98	original code written
+# 10/11/98	modified to print string upon an activated or damaged message
+#
+# Nightmare, knud@raex.com
+# This cog is not produced or supported by LEC
+
+symbols
+	message	startup
+	message	activated
+	message	damaged
+	message	pulse
+	
+	surface	s1	mask=0x408	// the one's place for seconds
+	surface	s10	mask=0x408	// the ten's place for seconds
+	surface	m1	mask=0x408	// the one's place for minutes
+	surface	m10	mask=0x408	// the ten's place for minutes
+	surface	h	mask=0x408	// the hours
+
+	int		seconds1=0 		local
+	int		seconds10=0		local
+	int		min1=0			local
+	int		min10=0			local
+	int		hr=0			local
+	int		dummy			local
+	int		working			local
+
+	sound		ticktock=lvrclik2.wav
+end
+
+code
+startup:
+	setpulse(1);
+	return;
+
+pulse:
+	PlaySoundPos(ticktock, SurfaceCenter(m1), 1.0, -1, -1, 0 );	
+	sec1=sec1+1;
+
+	if (sec1 == 10)
+		{
+		sec1=0;
+		sec10=sec10+1;
+		}
+
+	SetWallCel(s1,sec1);
+
+	if (sec10 == 6)
+
+		{
+		sec10=0;
+		min1=min1+1;
+		}
+
+	SetWallCel(s10,sec10);
+
+		if (min1 == 10)
+		{
+		min1=0;
+		min10=min10+1;
+		}
+
+	SetWallCel(m1,min1);
+
+	if (min10 == 6)
+		{
+		min10=0;
+		hr=hr+1;
+
+		working=1;	
+		jkStringClear(); 
+		jkStringConcatInt(hr);
+		if(hr==1)
+			{
+			jkStringConcatAsciiString(" hour has passed");
+			}
+		if(hr>1)
+			{
+			jkStringConcatAsciiString(" hours have passed");
+			}
+		jkStringOutput(-3, -1);
+		working=0;
+		}
+
+	SetWallCel(m10,min10);
+
+	if (hr == 10)
+	{
+
+	hr=0;
+	
+	working=1;
+	jkStringClear(); 
+	jkStringConcatAsciiString("The clock has turned back to zero");
+	jkStringOutput(-3, -1);
+	working=0;
+	}
+
+	SetWallCel(h,hr);
+
+	return;
+
+damaged:
+	
+	call timestring;
+	return;
+
+activated:
+	
+	call timestring;
+	return;
+
+timestring:
+	if(working==1) return;
+
+	working=1;
+
+	jkStringClear(); 
+	jkStringConcatAsciiString("The time is ");
+	jkStringConcatInt(hr);
+	jkStringConcatAsciiString(":");
+	jkStringConcatInt(min10);
+	jkStringConcatInt(min1);
+	jkStringConcatAsciiString(":");
+	jkStringConcatInt(sec10);
+	jkStringConcatInt(sec1);
+	jkStringOutput(-3, -1);
+
+	working=0;
+
+	return;
+	
+end

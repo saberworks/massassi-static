@@ -1,0 +1,48 @@
+# Jedi Knight Cog Script
+#
+# trigspeak.COG
+#
+# Plays a sound when ever a "surface" or "thing" is "activated".  Also plays another sound 
+# (comment) the first time.
+#
+# Example:  You assign it to a fake "door" that is really just a surface textured with a 
+# door texture.  You then assign a clicking sound to doornoise= and a voice line like 
+# "Locked!" to comment=.  
+#
+# The first time the player tries to open the door, then hear...  "Clunk" <pause> "Locked!"
+# and after that they get just the "Clunk".
+# 
+# [TT] jedi@mosweb.com
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+
+ surface	doorsurf
+ thing	trigthing
+ sound	doornoise=*.wav
+ sound	comment=*.wav
+
+ int       	saidthat = 0 		local
+
+ message    activated      
+
+end                                                                           
+
+# ========================================================================================
+
+code
+
+# ........................................................................................
+activated:
+
+PlaySoundLocal(doornoise, 1,  0, 0x4);
+if (saidthat) return;
+saidthat = 1;
+Sleep(GetSoundLen(doornoise+1));
+PlaySoundLocal(comment, 1,  0, 0x4);
+return;
+
+end
+
+
+

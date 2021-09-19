@@ -1,0 +1,137 @@
+# Jedi Knight Cog Script
+#
+# TJC_forcefield.cog
+#
+# generic switching forcefield. 
+# set geomodeff to 3 if the mat for the forcefield is single color, 4 if it is texture. 
+# Setting it wrong will crash the game!
+#
+# This cog not suported by LEC
+
+
+symbols
+
+message      touched                                                          
+message      damaged                                                          
+message      timer                                                            
+message      activated                                                        
+                                                   
+surface      switch0                                                          
+surface      surf0                              mask=0x408                    
+surface      surf1                              mask=0x408                    
+                  
+int          victim=-1                          local                         
+int          player=-1                          local                         
+int          damaging=1                         local                         
+int          active=0                           local                         
+int          dummy                              local                         
+int          dummy1                             local                         
+int          garbage                            local                         
+int          geomodeff                                                        
+int          activeono=0                        local                         
+                    
+flex         maxDamage=10.0                                                   
+flex         minDamage=5.0                                                    
+flex         interval=0.25                                                    
+flex         minLight=0.2                                                     
+flex         maxLight=1.0                                                     
+flex         period=0.5                                                       
+
+sound        wav0=ForceFieldHum01.wav           local                         
+sound        wav1=ForceFieldHit01.wav           local                         
+sound        starwav=forcefieldon01.wav         local                         
+sound        stopwav=forcefieldoff01.wav        local                         
+sound        activate=activate02.wav            local                         
+                                  
+template     sparks=+heavysmoke                 local                         
+
+end                                                                           
+
+# ========================================================================================
+
+code
+# ........................................................................................
+
+touched:
+	if (GetSenderRef() == switch0) Return;
+   	if (active == 0)return;
+	if (damaging == 0) return;
+	 	victim = GetSourceRef();
+   		damage = (Rand() * (maxDamage - minDamage)) + minDamage;
+   		DamageThing(victim, damage, 0x2, victim);    // self-inflicted damage
+
+   		PlaySoundPos(wav1, GetSurfaceCenter(surf0), 0.5, 1, 10, 0);
+   		if(!IsMulti()) CreateThing(sparks, victim);
+   		damaging=0;
+   		SetTimer(interval);
+return;
+
+# ........................................................................................
+
+damaged:
+	if(active == 0)return;   
+	if(GetParam(1) == 1)
+   	{
+      		player=GetThingParent(GetSourceRef());
+      		if(GetThingType(player) != 10) Return;
+
+      		damage = (Rand()*(maxdamage - mindamage)) + mindamage;
+     		DamageThing(player, damage, 0x01, player);
+   	}
+return;
+
+# ........................................................................................
+
+timer:
+   	damaging = 1;
+   	return;
+
+activated:
+	if (activeono == 1) return;
+	activeono = 1;
+	if (GetSenderRef() != switch0) Return;
+	garbage = PlaySoundPos(activate, GetSurfaceCenter(switch0), 1.5, 10, -1, 0);
+	if (active == 1){
+	active = 0;
+		garbage = SetWallCel(switch0, 1);
+		SetFaceGeoMode(surf0, 0x0);
+		ClearSurfaceFlags(surf0, 0x4000);	
+    		SetFaceGeoMode(surf1, 0x0);
+		ClearSurfaceFlags(surf1, 0x4000);	
+    		SetAdjoinFlags(surf1, 2);
+		SetAdjoinFlags(surf0, 2);
+
+		garbage = PlaySoundPos(stopwav, GetSurfaceCenter(surf0), 1.5, 10, -1, 0);	
+		StopSurfaceAnim(surf0);
+		StopSurfaceAnim(surf1);
+		StopSound(dummy, 0);
+		StopSound(dummy1, 0);
+		sleep(2);
+		garbage = SetWallCel(switch0, 0);
+		activeono = 0;
+		return;
+	}
+	if (active == 0){
+		done = 1;
+		garbage = SetWallCel(switch0, 1);
+		active = 1;
+		SetFaceGeoMode(surf0,0x4);
+		SetSurfaceFlags(surf0,geomodeff);	
+   		ClearAdjoinFlags(surf0, 2);
+		SetFaceGeoMode(surf1,0x4);
+		SetSurfaceFlags(surf1,geomodeff);	
+    		ClearAdjoinFlags(surf1, 2);
+	
+		garbage = PlaySoundPos(starwav, GetSurfaceCenter(surf0), 1.5, 10, -1, 0);	
+		SurfaceLightAnim(surf0, minLight, maxLight, period);
+		SurfaceLightAnim(surf1, minLight, maxLight, period);
+   		dummy = PlaySoundPos(wav0, GetSurfaceCenter(surf0), 0.75, 8, 15, 1);
+		dummy1 = PlaySoundPos(wav0, GetSurfaceCenter(surf1), 0.75, 8, 15, 1);
+		sleep(2);
+		garbage = SetWallCel(switch0, 0);
+		activeono = 0;
+		return;
+	}
+return;
+end
+

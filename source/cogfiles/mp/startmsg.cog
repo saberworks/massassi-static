@@ -1,0 +1,18 @@
+# startmsg.cog
+#
+# Script posted by CogKing/Actual script posting by Tazz
+# Used with permission
+
+flags=0x240
+symbols
+message startup 
+end
+#--------------
+code
+startup:
+   Sleep(2.0);                                                       
+   Print("Welcome to Station E327.  Feel free to frag around.");    
+   Sleep(2.0);                                                       
+   Print("This was made by Tazz.  tazztazz@hotmail.com");     
+   Return;
+end

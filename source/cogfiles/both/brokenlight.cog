@@ -1,0 +1,56 @@
+##########################################################################################
+# Jedi Knight Cog Script                                                                 #
+#                                                                                        #
+# brokenlight.cog                                                                        #
+#                                                                                        #
+#                                                                                        #
+# This cog will make a light thing flicker, to put it in your level, creat a thing       #
+# where you want the flickering light.                                                   #
+#                                                                                        #
+# [EL3CTRO - 15/04/2001]                                                                 #
+#                                                                                        #
+##########################################################################################
+flags=0x240
+
+symbols
+
+message       startup
+message       timer
+thing         light
+
+end
+
+#((/\/\/\/\(()===========================================================================-
+
+code
+
+startup:
+
+   SetTimer(rand());
+   return;
+
+#((/\/\/\/\(()===========================================================================-
+
+   timer:
+
+   if(On)
+   {
+      SetThingLight(light, 1, 0);
+      SetTimer(rand());
+   }
+   else
+   {
+      SetThingLight(light, 0, 0);
+      SetTimer(rand());
+   }
+
+   On = 1 - On;
+
+   return;
+
+#((/\/\/\/\(()===========================================================================-
+
+end
+
+
+

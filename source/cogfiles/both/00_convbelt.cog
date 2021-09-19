@@ -1,0 +1,40 @@
+# Jedi Knight Cog Script
+#
+# 00_CONVBELT.COG
+#
+# Simple conveyor belt for M5 secret area
+# Each COG can handle up to 4 conveyer belts
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+surface		conveyor1								desc=conv_su1
+surface		conveyor2								desc=conv_su2
+surface		conveyor3								desc=conv_su3
+surface		conveyor4								desc=conv_su4
+vector		direction								desc=conv_dir
+flex			speed=6.0								desc=conv_speed
+
+int			dummy										local
+
+message		startup
+
+end				
+
+# ========================================================================================
+
+code
+startup:
+	dummy = SlideWall(conveyor1, direction, speed);
+	dummy = SlideWall(conveyor2, direction, speed);
+	dummy = SlideWall(conveyor3, direction, speed);
+	dummy = SlideWall(conveyor4, direction, speed);
+
+	Return;
+
+end
+

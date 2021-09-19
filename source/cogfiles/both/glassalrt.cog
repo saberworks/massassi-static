@@ -1,0 +1,92 @@
+# Jedi Knight Cog Script
+#
+# GLASSALRT.COG
+#
+# Breaking glass cog,that when glass breaks,starts alert...
+# 
+#
+# Note: the template used is shard00, NOT shard0 !
+#
+# [Cave_Demon]
+#
+# This cog is NOT supported by LucasArts
+
+symbols
+surface		glass			mask=0x448	desc=glass
+surface		glass2			mask=0x448	desc=glass_adjoin
+int		spawnpoints=2				desc=spawn_points
+int		density=5				desc=density
+thing         alert=-1
+
+vector		surface_center				local
+int		surface_sector				local
+int		surface_vertices			local
+vector		vertex					local
+vector		where					local
+int		i					local
+int		j					local
+int		k					local
+int		a_shard					local
+int		dummy					local
+
+template	shard_tpl=shard00			local
+sound		glass_break=GlassBreak1.WAV      	local
+sound		alarm=scalarm.wav
+
+message		damaged
+end
+
+code
+damaged:
+        // Add 10 cm along the normal to solve some rounding error or non planar face...
+        surface_center = VectorAdd(SurfaceCenter(GetSenderRef()), VectorScale(GetSurfaceNormal(GetSenderRef()), 0.01));
+	surface_sector = GetSurfaceSector(GetSenderRef());
+	surface_vertices = GetNumSurfaceVertices(GetSenderRef());
+        
+        dummy = PlaySoundPos(glass_break, surface_center, 1.0, 10.0, 20.0, 0);
+	 PlaySoundThing(alarm,alert,15,15,20,0x1001);
+
+
+        // First spawn 'density' shards with random velocities at the center of the face.
+	for(k=0; k<density; k=k+1)
+	{
+	 a_shard = CreateThingAtPos(shard_tpl, 
+				    surface_sector,
+				    surface_center,
+				    '0.0 0.0 0.0');         
+	 SetThingVel(a_shard, VectorSet( 1.4*(Rand()-0.5), 1.4*(Rand()-0.5), 1.4*(Rand()-0.5) + 0.75 ));
+         SetThingRotVel(a_shard, VectorSet(500*(Rand()-0.5), 500*(Rand()-0.5), 500*(Rand()-0.5) ));
+	}
+
+        // Then spawn 'density' shards with random velocities at 'spawnpoints' points
+        // between the center of the face and the face's vertices.
+
+	for(i=0; i<surface_vertices; i=i+1)
+	{
+	 vertex = GetSurfaceVertexPos(glass, i);
+	 for(j=1; j<=spawnpoints; j=j+1)
+	 {
+	  where = VectorAdd(surface_center, 
+			    VectorScale(VectorSub(surface_center, vertex), j/(spawnpoints+1))
+			   );
+	  for(k=0; k<density; k=k+1)
+	  {
+	   a_shard = CreateThingAtPos(shard_tpl, 
+				      surface_sector,
+				      where,
+				      '0.0 0.0 0.0');
+	   SetThingVel(a_shard, VectorSet( 1.4*(Rand()-0.5), 1.4*(Rand()-0.5), 1.4*(Rand()-0.5) + 0.75 ));
+           SetThingRotVel(a_shard, VectorSet(500*(Rand()-0.5), 500*(Rand()-0.5), 500*(Rand()-0.5) ));
+	  }
+	 }
+	}
+
+	SetFaceGeoMode(glass, 0);		// GEOMETRY_NONE
+	SetFaceGeoMode(glass2, 0);
+	SetAdjoinFlags(glass, 2);		// Set ADJOIN_MOVE  (allow passage)
+	SetAdjoinFlags(glass2, 2);
+
+	Return;
+end
+
+

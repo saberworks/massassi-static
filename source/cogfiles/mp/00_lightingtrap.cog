@@ -1,0 +1,51 @@
+# Jedi Knight Cog Script
+#
+# Generic Lightning Trap Cog
+#
+# Generates Lighting From a ghost position
+#
+# [SXC]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+symbols
+   message  startup
+   message  entered
+   message  exited
+   message  activate
+   message  pulse
+
+   thing    ghostposition
+   sector   zapsector
+
+   template lightning=+force_lightning
+
+   int      pulserate=0.5
+   int      dummy          local
+end
+
+# Code Section
+
+code
+
+entered:
+   if (GetSenderRef() == zapsector)
+      {
+         SetPulse(pulserate);
+      }
+   else return;
+
+exited:
+   if (GetSenderRef() == zapsector)
+      {
+         SetPulse(0);
+      }
+   else return;
+
+pulse:
+   dummy = CreateThing(lightning, ghostposition);
+   return;
+
+end
+
+

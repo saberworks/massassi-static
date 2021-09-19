@@ -1,0 +1,66 @@
+# randon_respawn.cog
+#
+# Moves an item around so it's not always in the same place.
+# Makes big powerup like CR's harder to get.
+# 
+# 11/12/98 Nightmare
+
+
+symbols
+	message	startup
+	message	timer
+
+	
+	thing		pos0		// ghosts where
+	thing		pos1		// the item can
+	thing		pos2		// respawn
+	thing		pos3
+	thing		pos4
+	thing		pos5
+	thing		pos6
+	thing		pos7
+	thing		pos8
+	thing		pos9
+
+	thing		powerup			local
+
+	int		numpos=10	
+	int		min_delay=30		// the min delay for moving the powerup
+	int		range_delay=30		// the range of time after the min to move
+	#					// the powerup, defaults will move the powerup
+	#					// every 30 sec to 1 min
+
+	template	item			// the template for the powerup
+
+	template	particles=+whitecloud	local
+
+	int		newpos			local
+	int		dummy			local
+
+end
+
+code
+
+startup:
+
+	newpos = rand() * numpos;			// select a random ghost location
+	powerup=CreateThing(item, pos0[newpos]);	// create a powerup there
+	dummy=CreateThing(particles, powerup);		// make some nifty particles to announce it's arrival
+
+	SetTimer((min_delay) + (rand() * range_delay));	// set the timer for
+							// when to move it
+	return;
+
+timer:
+
+	DestroyThing(powerup);				// destroy the previous powerup
+
+	newpos = rand() * numpos;			// create a new one
+	powerup=CreateThing(item, pos0[newpos]);
+	dummy=CreateThing(particles, powerup);
+
+	SetTimer((min_delay) + (rand() * range_delay));	// set a timer to move it again
+
+	return;
+	
+end

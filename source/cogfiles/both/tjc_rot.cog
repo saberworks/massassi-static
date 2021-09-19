@@ -1,0 +1,34 @@
+# Jedi Knight Cog Script
+#
+# TJC_rotwalk.cog
+#
+# Generic spinning walk cog. the walkway's first frame should have a yaw of 360 to make it spin in continus circles.
+# lagg can cause the walkway to pause breifly at the end of each turn.
+#
+# JK version
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+thing        walkway                                                          
+sound        whoosh                                                           
+int          dummy                              local                         
+flex         time                                desc=speed                             
+message      startup                                                          
+message      arrived                                                          
+end                                                                           
+
+# ========================================================================================
+
+code
+arrived:
+	StopSound(dummy, 0);
+startup:
+	dummy = PlaySoundThing(whoosh, walkway,5,5,10,0x81);
+	 RotatePivot(walkway, 0, Time);
+	return;
+
+# ........................................................................................
+end
+
+

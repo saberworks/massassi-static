@@ -1,0 +1,75 @@
+# Jedi Knight Cog Script
+#
+# 00_AUTODOOR.COG
+#
+# Automatic door cog
+# This is a normal simple door that is also triggered by stepping on up to 4
+# pressure plates on both sides. This quickens the pace in deathmatch because
+# the player must not reach for the USE key...
+#
+# If 'delay' = -1.0 then door stays open
+#
+# [YB]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+
+symbols
+
+thing       door                             desc=door_object
+surface     plate0                           desc=plate0
+surface     plate1                           desc=plate1
+surface     plate2                           desc=plate2
+surface     plate3                           desc=plate3
+flex        movespeed=3.5                    desc=movespeed_of_door
+flex        delay=3.0                        desc=delay_before_close
+
+int         doorsector=-1                    local
+
+message     startup
+message     activated
+message     entered
+message     timer
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   doorsector = GetThingSector(door);
+   SectorAdjoins(doorsector, 0);
+
+   Return;
+
+# ........................................................................................
+
+entered:
+activated:
+   if(IsMoving(door)) Return;
+   if(GetCurFrame(door) == 1) Return;
+
+   SectorAdjoins(doorsector, 1);
+   // SetTimerEx(0.2, 1, 0, 0);
+   // SetTimerEx(0.4, 1, 0, 0);
+
+   MoveToFrame(door, 1, movespeed);
+   WaitForStop(door);
+
+   if(delay == -1.0) Return;
+   Sleep(delay);
+
+   MoveToFrame(door, 0, movespeed);
+   WaitForStop(door);
+   SectorAdjoins(doorsector, 0);
+
+   Return;
+
+# ........................................................................................
+
+timer:
+   SectorAdjoins(doorsector, 1);
+   Return;
+
+end

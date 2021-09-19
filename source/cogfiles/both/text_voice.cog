@@ -1,0 +1,52 @@
+# Jedi Knight Cog Script
+#
+# TEXT_AND_VOICE.COG
+#
+# [LH]
+# When Kyle crosses and adjoin, text is printed at the top of the screen, and a sound is played.
+# 
+# (C) 1998 Lee Howett
+#
+# This Cog was created by Lee Howett, who is in no way affiliated with LucasArts, and LucasArts does not support
+# this Cog.
+# How to use this Cog:
+# 1. Put this cog in your project directory and load it into the Used Cogs window in Jed
+# 2. Edit the text that is displayed in the Code section as needed, and edit the sound that is played in the
+# symbols section as needed.
+# 3. Fill in the blanks in the Used Cogs window in Jed
+# 4. Right now when Kyle walks through the adjoin, he will say "Why can't I get a break?", and it
+# will also be displayed at the top of the screen.
+
+symbols
+
+message	crossed
+
+sound		voice=kk60008.wav
+
+surface	adjoin01=-1
+
+thing		player
+
+flex		vol=2.0
+flex		mindist=2.0
+flex		maxdist=2.0
+
+end
+# ========================================================================================
+
+code
+
+crossed:
+
+	PlaySoundThing(voice, player, vol, mindist, maxdist, 0x80);
+
+	Print("Didn't I just leave this party?");
+
+	return;
+
+# ........................................................................................
+
+end
+
+
+

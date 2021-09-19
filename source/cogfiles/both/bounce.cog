@@ -1,0 +1,34 @@
+# JEDI KNIGHT COG SCRIPT
+# [GuNbOy]
+# Bounce pads
+#
+# Extra note: the force variable needs to be set at 
+# about 500 for any effect.
+#
+flags=0x240
+
+symbols
+message entered
+
+thing player		local
+
+sound boing
+
+int xvec=1
+int yvec=1	
+int zvec=1
+
+int force=1
+
+surface	bouncepad	linkid=1
+end
+
+code
+entered:
+if(GetSenderID()==1) {
+player = GetSourceRef();
+DetachThing(player);
+PlaySoundThing(boing, player, 1, -1, -1, 0x40);
+ApplyForce(player, VectorScale(VectorNorm(VectorSet(xvec, yvec, zvec)), force)); }
+return;
+end

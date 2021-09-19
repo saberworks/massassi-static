@@ -1,0 +1,82 @@
+# Jedi Knight Cog Script
+#
+# Generic actor headset-type view camera. it looks funky when they move. :)	
+#
+# This cog is not supported by LEC
+
+symbols
+
+thing        camera                             desc=trooper                  mask=0x405
+                 
+flex         delaya=1.5                         desc=delaynormal              
+flex         delayb=.1                          desc=Delayiftrooperdead       
+                
+surface      switch0                                                          
+                       
+int          old_camera                         local                         
+int          player                             local                         
+int          active=0                           local                         
+int          poss                               local                         
+int          troopnum                           desc=trooper_number           
+int          garbage                            local                         
+int          dummy                              local                         
+
+sound        activatesnd=activate01.wav         local                         
+                                    
+message      activated                                                        
+message      timer                                                            
+message      startup                                                          
+message      killed                                                           
+end                                                                           
+
+# ========================================================================================
+
+code
+
+//========================================================================================
+startup:
+	//sets poss to 0 as a failsafe
+	poss = 0;
+	player = GetLocalPlayerThing();
+	return;
+//========================================================================================
+killed:
+	//sets poss to 1 if the trooper is killed
+	if(GetSenderRef()==camera)
+	{poss = 1;}
+	return;
+
+
+//========================================================================================
+activated:
+       if(active == 1) Return;
+	active = 1;
+	old_camera = GetCurrentCamera(0);
+	garbage = SetWallCel(switch0, 1);
+	dummy = PlaySoundPosPlaySoundPos(activatesnd, GetSurfaceCenter(switch0), 5, 1, 2, -1);
+	//if poss=1, don't change the camera.
+	if(poss==1){ SetTimer(delayb); }
+	Else
+	{
+	
+       active = 1;
+	 
+			SetActorFlags(player, 0xa00000);
+       SetCurrentCamera(0);
+       SetCameraFocus(0, camera);
+	SetTimer(delaya);
+   }
+
+       
+	return;
+//========================================================================================
+timer:
+   	ClearActorFlags(player, 0xa00000);
+  	SetCameraFocus(0, player);
+   	SetCurrentCamera(old_camera);
+   	active = 0;
+   	SetWallCel(switch0, 0);
+   	Return;
+//========================================================================================
+end
+

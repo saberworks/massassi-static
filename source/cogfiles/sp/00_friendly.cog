@@ -1,0 +1,72 @@
+# Jedi Knight COG Script
+#
+# 00_friendly.cog
+#
+# Actor designated by 'friendly' will assist the player once touched.
+# Passive_ai is the actor's AI when not attacking.
+# Angry_ai is the actor's AI when battling an enemy.
+# I'd suggest pednarsh.ai or something of the sort for passive_ai and then
+# use one of the actor's original AI files for it's angry_ai.
+#
+# Example: for a friendly stormtrooper, set the passive_ai to pednarsh.ai and
+# the angry_ai to stdefault.ai.
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved     
+# Scripted 1998 by Zero. Email at: zero@downeast.net
+
+symbols
+
+message	startup
+message	touched
+message	killed
+message	pulse
+
+thing		friendly		mask=0x408
+thing		player		local
+thing		enemy			local
+
+ai		passive_ai
+ai		angry_ai
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+	player = GetLocalPlayerThing();
+	AISetClass(friendly, passive_ai);
+	return;
+
+touched:
+	if(GetSourceRef() != player) return;
+
+	SetPulse(1.0);
+	return;
+
+killed:
+	SetPulse(0.0);
+	return;
+
+pulse:
+	enemy = FirstThingInView(friendly, 170, 12, 0x4);
+	
+	player = GetLocalPlayerThing();
+
+	if((enemy == friendly) || (enemy == player) || (!enemy))
+	{
+		AISetClass(friendly, passive_ai);
+		return;
+	}
+
+	AISetClass(friendly, angry_ai);		
+	AISetFireTarget(friendly, enemy);
+	AISetMoveThing(friendly, GetThingPos(enemy));
+	AISetLookPos(friendly, GetThingPos(enemy));
+	AISetMode(friendly, 0x202);
+	AIClearMode(friendly, 0x1000);
+
+	return;
+
+end	

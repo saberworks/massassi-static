@@ -1,0 +1,28 @@
+# particlestream.cog
+#
+# Creates a particle stream from a ghost position.
+#
+# based on 00_particlesystem by LEC
+#
+# 5/15/98 Joshua Knudsen
+
+
+symbols
+	message	startup
+	message	pulse
+	
+	thing		streampos
+	template	stream=+upenergyhi
+	int		dummy		local
+end
+
+code
+startup:
+	setpulse(0.25);
+	return;
+
+pulse:
+	dummy=CreateThing(stream, streampos);
+	return;
+	
+end

@@ -1,0 +1,60 @@
+# Randomly teleports you to different locations where a "ghost" is.
+#
+# By Davin (jhandley@ipa.net) 
+#
+# ====================================
+symbols
+
+surface	         switch		
+
+thing            player 		        local
+
+thing            ghost1 	
+thing            ghost2
+thing            ghost3
+thing            ghost4
+
+template	sparks=+telesparks		local
+
+sound		teleportsnd=ForceThrow01.WAV	local
+
+flex            rval                            local
+
+message activated
+
+end
+
+#########################
+
+code
+
+activated:
+
+AddDynamicTint(GetSourceRef(), 0.0, 0.75, 0.0);
+StopThing(GetSourceRef());
+dummy = CreateThingAtPos(sparks, GetThingSector(GetSourceRef()), GetThingPos(GetSourceRef()), '0 0 0');
+
+rval = Rand();
+   if (rval < 0.25)
+   {
+    TeleportThing(GetSourceRef(), ghost1);
+
+   }
+   else if (rval <0.50)
+   {
+    TeleportThing(GetSourceRef(), ghost2);
+   }
+   else if (rval <0.75)
+   {
+    TeleportThing(GetSourceRef(), ghost3);
+   }
+   else if (rval <1.00)
+   {
+    TeleportThing(GetSourceRef(), ghost4);
+   }
+
+dummy = CreateThingAtPos(sparks, GetThingSector(GetSourceRef()), GetThingPos(GetSourceRef()), '0 0 0');
+dummy = PlaySoundThing(teleportsnd, GetSourceRef(), 1.0, -1, -1, 0x80);
+
+return;
+end

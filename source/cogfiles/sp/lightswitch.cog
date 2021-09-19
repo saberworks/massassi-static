@@ -1,0 +1,45 @@
+# Jedi Knight Cog Script
+#
+# 
+#  
+# [EH_AceCSF]
+#
+# This COG is NOT supported by LucasArts Entertainment Company
+
+symbols
+	message		startup
+	message		activated
+
+	thing			Light0		nolink
+	thing			Light1		nolink
+	surface		swith0		linkid=0
+	surface		swith1		linkid=0
+        int             startlight=1.0
+        int             on=0 local
+end
+
+code
+startup:
+	SetThingLight(Light0, 0.0, 0.0);
+	SetThingLight(Light1, 0.0, 0.0);
+	return;
+
+activated:
+if ((GetSenderID() == 0) && (on == 1))
+{
+	SetThingLight(Light0, 0.0, 0.0);
+	SetThingLight(Light1, 0.0, 0.0);
+	on=0;
+}
+else
+{
+	SetThingLight(Light0, startlight, 0.0);
+	SetThingLight(Light1, startlight, 0.0);
+	on=1;
+}
+	return;
+end
+
+
+
+

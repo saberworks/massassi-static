@@ -1,0 +1,146 @@
+# ANT_CUTSCENE_1.COG
+#
+# Jedi Knight/Mysteries of the Sith
+#
+# This COG file plays a *simple* MotS cutscene:
+#
+# When the player activates a thing (name: Console)
+# a sound will play (name: playsnd) and the
+# camera (name: cam) will step through 4 frames
+# then switch back to the player's internal view.
+# Each time text is displayed, a sound will play
+# (name: NotifySnd) to get the player's attention.
+#
+# Things to do:
+# 1. Create a room with a "console" thing in the middle
+# 2. Create a "ghost" object that points at the console-
+#    this will be the camera
+# 3. Create 4 frames for the camera - 0 to 3, which
+#    are at points round the console, but which
+#    *point at the player* (change the roll/pitch/yaw)
+# 4. Add this COG using the "placed cogs" window (in JED)
+# 5. Set the values for the COG - the Thing numbers of
+#    the console and the camera you added in
+# 6. Don't forget to set the flags value to "0x400448"
+#    for the camera thing. This is VERY important
+#    otherwise the camera WILL NOT MOVE!!!
+# 7. Save your level (check for errors first) and then
+#    GOO/GOB it and run it!
+# 8. Marvel at the wonders of your cutscene!
+#
+# (9: goto Massassi and get ANT_CUTSCENE_2.COG which
+#  will be a more complicated custscene tutorial!)
+#
+# This should be used as a base to create your own
+# cutscenes or for giving you ideas, etc.
+#
+# See the cutscenes tutorial at the Massassi Temple:
+# http://massassi.jedinights.com/
+# and there's plenty of other great stuff there too!
+#
+# This COG by Antony Espindola
+# http://www.Horrible.Demon.co.uk/
+#
+# Please give credit if you use it or find it useful.
+# Distribute this COG with the FULL header!
+#
+symbols
+
+message		activated
+
+thing		console	
+thing		cam
+flex		speed=2.0
+flex		wait=5.0
+sound       	playsnd=Accomplish1.wav
+
+int		done=0				local
+sound           NotifySnd=beep1.wav		local
+int		Player				local
+int		check				local
+
+end
+
+code
+
+activated:
+
+// make sure it hasn't been done already
+// "done" will be 1 if it has.
+if (done ==0)
+	{
+	// we need to check that it was the "console"
+	// thing that got activated - this is safe code!
+	check = GetSenderRef();
+	if (check == console)
+		{
+		// get the "handle" of the player
+		Player = GetLocalPlayerThing();
+
+		// freeze Kyle so he can't move
+		SetActorFlags(Player, 0xa00000);
+		// "stop" kyle as he may be moving already
+		StopThing(Player);
+
+		// switch to the internal focus of our camera
+		SetCameraFocus(0, cam);
+		SetCurrentCamera(0);
+
+		// wait a bit for things to settle...
+		Sleep(2.0);
+
+		// play our major sound
+		PlaySoundLocal(PlaySnd, 1, 0, 132);
+
+		// now let's do some text...
+		Print("Come in Control ... this is Kyle Katarn ...");
+
+		// now we tell our camera to move to the frames...
+		// NB: this will "buffer" the commands to the game engine
+		// and it will not move to the next frame UNTIL it has
+		// finished from the frame before
+		MoveToFrame(cam, 1, speed);
+	        MoveToFrame(cam, 2, speed);
+	        MoveToFrame(cam, 3, speed);
+
+		// the camera is moving as the frame "requests"
+		// have been buffered - we can now carry on our scene	
+		Sleep(3.5);
+		PlaySoundLocal(NotifySnd, 1, 0, 132);
+		Print(">> What is your order Sir? <<");
+		Sleep(3.5);
+		PlaySoundLocal(NotifySnd, 1, 0, 132);
+		Print("I'll have a Big Mac please...");
+		Sleep(3.5);
+		PlaySoundLocal(NotifySnd, 1, 0, 132);
+		Print(">> Certainly Sir. Please move to the next window. <<");
+		Sleep(3.5);
+		PlaySoundLocal(NotifySnd, 1, 0, 132);
+		Print("Mmmm. I like big Macs.");
+
+		// this is our "wait period"
+		// we may need to increase the value if the cutscene
+		// is either too short, or decrease if it's too long
+		Sleep(wait);
+
+		// do some tricky stuff...
+		if (jkGetSaberCam() == 1)
+		CycleCamera();
+		DestroyThing(cam);
+
+		// unfreeze Kyle
+		ClearActorFlags(Player, 0xa00000);
+
+		done =1;
+		}
+	}
+else
+	{
+	// cutscene has been played -
+	// do something else!
+	PlaySoundLocal(NotifySnd, 1, 0, 132);
+	Print("I couldn't eat another Big Mac!");
+	}
+return;
+
+end

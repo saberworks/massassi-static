@@ -1,0 +1,86 @@
+# telepots you to where a "ghost" is.
+#
+# By Thomas 
+#
+# ====================================
+symbols
+
+surface	switch
+
+sector	telachamber
+		
+thing	ghost1
+
+int 	player			local
+int      flag=0                   local
+int	dummy			local
+
+template	sparks=+telesparks		local
+
+sound		telesound=ForceThrow01.WAV	local
+sound		butnsound=beep1.wav	local
+
+message	startup
+message activated
+message	pulse
+message	entered
+message	exited
+
+end
+
+#########################
+code
+
+startup:
+   SetWallCel(switch, 0);
+   return;
+
+entered:
+   if (flag == 1)
+      {
+        SetPulse(0.1);
+      }
+	return;
+
+activated:
+
+   if (GetWallCel(switch) == 1)
+      {
+         PlaySoundPos(butnsound, SurfaceCenter(switch), 1, -1, -1, 0);
+         SetWallCel(switch, 0);
+         flag = 0;
+      }
+   else if (GetWallCel(switch) == 0)
+      {
+         PlaySoundPos(butnsound, SurfaceCenter(switch), 1, -1, -1, 0);
+         SetWallCel(switch, 1);
+         flag = 1;
+         SetPulse(0);
+      }
+   return;
+
+exited:
+   if (GetSenderRef() == telachamber)
+      {
+      SetPulse(0);
+      StopSound(telesound, 0.1);
+      }
+   return;
+
+pulse:
+   if (ghost1 >= 0)
+	player=GetLocalPlayerThing();
+
+	StopThing(player);
+	
+	dummy = CreateThing(sparks, player);
+        
+	dummy = PlaySoundLocal(telesound, 1.0, 0, 0);
+        
+	TeleportThing(player, ghost1);
+
+	dummy = CreateThing(sparks, player);
+   return;
+
+end
+

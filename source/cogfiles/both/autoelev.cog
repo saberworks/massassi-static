@@ -1,0 +1,55 @@
+
+# Jedi Knight Cog Script
+#
+# auto_elev.cog
+#
+# A Basic elevator Cog
+# This elevator will go up to frame one, sleep, then come back down to frame 0 when
+# entered from the bottom.  When entered from the top, it should stay at the bottom.
+#
+# 4/6/97		Added checks for moving elevator so it wouldn't get stuck in an endless loop
+# 8/12/97	Added blocked handler
+# 8/28/97	Removed blocked handler
+#
+# [IS]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+symbols
+	message	entered
+	message	arrived
+	message	timer
+
+	
+
+	thing		elevator	linkid=1
+
+
+	float		start_wait=0.25
+	float		sleeptime=2.0
+	float		speed=4.0
+end
+
+## Code Section
+code
+entered:
+	if (IsThingMoving(elevator)) return;
+	if (GetCurFrame(elevator) != 0) return;
+	if (GetSenderId() != 1) return;   //
+
+	Sleep(start_wait);			// pause before moving up
+
+	MoveToFrame(elevator, 1, speed);
+	return;
+
+arrived:
+	if (GetCurFrame(elevator) == 0) return;
+	SetTimer(sleeptime);
+	return;
+
+timer:	
+	MoveToFrame(elevator, 0, speed);
+	return;
+
+end
+

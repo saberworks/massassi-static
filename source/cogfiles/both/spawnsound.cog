@@ -1,0 +1,30 @@
+# Jedi Knight Cog Script
+#
+# Spawnsound.COG
+#
+# Plays a sound when player (re)spawns
+# 
+#
+# 10/6/2000 (c) Sven Solo
+
+symbols
+
+message     newplayer
+
+sound       wav=
+
+int         dummy     local
+
+end
+
+# ========================================================================================
+
+code       
+   newplayer:
+       Dummy=PlaySoundLocal(wav, 1.0, 0, 0);           
+       
+   return;
+
+end
+
+

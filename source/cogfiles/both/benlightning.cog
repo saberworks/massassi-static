@@ -1,0 +1,69 @@
+# Jedi Knight Cog Script
+#
+# Lightning for my electric chair 3do
+#
+# Generates Lighting From a ghost position
+#
+# Torture.cog   modified by Ben.K
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+
+symbols
+   message  startup
+   message  damaged
+   message  activate
+   message  killed
+   surface  wall0
+   thing    ghost0
+   thing    ghost1
+   thing    ghost2
+   thing    switch0	
+   
+   int      fireChannel0                     local
+   int      fireChannel1                     local
+   int      fireChannel2                     local
+   int      flag=0                           local
+   int      dummy                            local
+   flex		autoAimXFOV=60							local
+   flex     autoAimZFOV=60                   local
+   template lightning=+force_lightning       local
+   sound    fireSound=LTSaberHit05.wav       local
+   sound    butnsound=Activate04.wav         local
+end
+
+# Code Section
+
+code
+
+
+//-------------------------------------------------------------------------------------------------
+startup:
+	
+	sleep(0.2);
+	setadjoinflags(wall0, 2);
+	return;
+
+
+activate:
+		ChangeInv (player, 14, -10);
+           	PlaySoundPos(butnsound, SurfaceCenter(switch0), 1, -1, -1, 0);
+             	fireChannel0 = PlaySoundThing(fireSound, ghost0, 1.0, -1, -1, 0x00);
+	       	dummy = FireProjectile(ghost0, lightning, fireSound, 24, '0 0 0', '0 0 0', 1.0, 0x60, autoAimXFOV, autoaimZFOV);
+		fireChannel1 = PlaySoundThing(fireSound, ghost1, 1.0, -1, -1, 0x00);
+	       	dummy = FireProjectile(ghost1, lightning, fireSound, 24, '0 0 0', '0 0 0', 1.0, 0x60, autoAimXFOV, autoaimZFOV);
+	       	return;
+
+damaged:
+	setadjoinflags(wall0,0);
+	sleep(0.1);
+	setadjoinflags(wall0,2);
+	return;  
+
+killed:
+	
+	SetInv (player, 14, 0);
+	return;
+
+end
+
+ 

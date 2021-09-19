@@ -1,0 +1,66 @@
+# Jedi Knight Cog Script
+#
+# healwarning.cog
+#
+# Heals player upon entering sector. Text appears from Cogstrings.uni file, and warning sounds upon entering sector
+#
+# 1998 Tazz
+# LEC doesn't support this file yadda yadda yadda
+
+flags=0x40
+
+symbols
+
+
+sector      warningsc                        desc=warn_sect
+
+
+flex        healspeed=3.0                    desc=heal_speed
+
+
+int         player                           local
+int         dummy                            local
+
+
+sound       snd=00alarmloop01.wav            local
+
+
+message     startup
+message     pulse
+
+end            
+
+# ========================================================================================
+
+code
+
+startup:
+   
+	SetPulse(1.0);
+
+	Return;
+
+# ........................................................................................
+
+pulse:
+	player = FirstThingInSector(warningsc);
+	while(player != -1)
+   	{
+        if(GetThingType(player)==10)
+      	{
+	jkPrintUNIString(-1, 1001);                 //Displays warning message
+        if (GetThingHealth(GetLocalPlayerThing()) <= 0) return;
+        {
+	HealThing(player, healspeed);
+        dummy = PlaySoundThing(snd, player, 1.0, -1, -1, 0);
+        }
+      	}
+      	player = NextThingInSector(player);
+	}
+
+	Return;
+
+end
+
+
+

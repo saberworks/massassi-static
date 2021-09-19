@@ -1,0 +1,45 @@
+# sun.cog
+# 
+# Blind the player as he looks at the sun.
+#
+# [GuNbOy + SM]
+#
+#
+# directions: place a thing named "ghost" anywhere in your level that you would like the effect to take place;
+# make a new template with the easy template creator in jed called +timed_ghost and give it the following properties:
+# orient=(0/0/0) type=ghost move=path timer=0.01
+#
+# test level and enjoy!
+#================================================================================
+#
+symbols
+message      startup                                                          
+message      pulse                                                            
+thing        sun                                                              
+thing        player                             local                         
+thing        ghostthing                         local                         
+template     gtemp=+timed_ghost                 local                         
+vector       sunlook                            local                         
+vector       lvec                               local                         
+flex         dot                                local                         
+int          handle=-1                          local                         
+end                                                                           
+#================================================================================#
+code
+#---------------------------------------------------------------------
+startup:
+	player=GetLocalPlayerThing();
+	SetPulse(0.01);Return;
+#---------------------------------------------------------------------
+pulse:
+	FreeColorEffect(handle);
+	if(!IsThingVisible(sun)) Return;
+	ghostthing=FireProjectile(player, gtemp, -1, -1, '0 0 0', '0 0 0', 0, 0, 0, 0);
+	lvec=GetThingLVec(ghostthing);
+	sunlook=VectorNorm(VectorSub(GetThingPos(sun), GetThingPos(player)));
+	dot=VectorDot(sunlook, lvec);
+	handle=NewColorEffect(0, 0, 0, 0, 0, 0, 255*dot, 255*dot, 240*dot, dot/2);
+	AddDynamicTint(player, dot/2, dot/2, dot/2);
+Return;
+#---------------------------------------------------------------------
+end

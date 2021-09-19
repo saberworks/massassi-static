@@ -1,0 +1,165 @@
+# Jedi Knight Cog Script by Chris Swan
+#
+# Easyfog.COG
+#
+# New fog cog. Will create realistic, reliable fog in any colour with
+# colour mixing for tinged fog. Visibility can be chnged and the
+# effect can even be turned on\ off by entering\ exiting sectors.
+#  
+# No 3d card required, no new textures, just one cog and a bit of easy 
+# lighting work in the level. See instructions for more details.
+#
+# Version 3.1
+#
+# Instructions-
+#
+# 1. Change the extra light of the sectors you want fog to be in to
+# 0.05. Don't light them up much with lights either, unless you want 
+# some less foggy areas.
+#  
+# 2. Add this cog to your level and fill in the parameters:
+#
+# Mainfog integers are the RGB values for the main fog.
+#
+# Tinge flexes are the tints for the RGB values (they must all be 
+# below 1 like sector tints) of the fog's tinge colour. 
+# This can be mixed with the above to achieve all kinds of colours.
+#
+# Start integer is whether the effect is on at startup. 0=no, 1=yes.
+#
+# Sectors on 1-15 and off 1-15 are the sectors you enter to turn the
+# effect on and off.
+#
+# Visibility flex controls the thickness of the fog. 0 gives almost
+# zero visibility. 2 is a good value for general fog. Any number can
+# be put here.
+#
+# The default values for these parameters will give a basic grey fog 
+# effect that is on at startup and has a visibility of 2. 
+#
+# History-											        
+#
+# v1.0: First version. Flat but reliable grey fog only.
+#
+# v2.0: Added coloured fog and density support.
+#
+# v3.0: Changed concept to allow thickening fog in the distance.
+#
+# v3.1: Added on\off stuff. Template dependant.
+#
+# v3.2: Fixed template dependance by getting SetThingLight verb to
+# work properly. First released version.
+#
+# What's Next?-
+#
+# The next version should hopefully allow random fog effects that 
+# change as the level progresses and more on\ off conditions (eg.
+# when adjoins are crossed, when an object is taken etc.). Eventually
+# I want to make a complete random weather cog which will randomize
+# the creation of thunder, lightning, fog, rain, snow and wind.
+#
+# Contacting Me-
+#
+# Mail me at chrisswan@theswanfamily.freeserve.co.uk with questions and feedback.
+# Visit my site at http://www.theswanfamily.freeserve.co.uk.
+#
+# My Stuff-
+#
+# Download my levels The New Empire and Home's Call from The Admiral's
+# Command Chamber.
+#
+# http://www.commandchamber.net
+#
+# Look out for The New Empire Part 2 (coming soon).
+#
+# Legal Stuff-
+#
+# This Cog is Not supported by LucasArts Entertainment Co
+
+symbols
+
+message  startup
+message  entered
+sector   on1             linkid=1
+sector   on2		linkid=1		
+sector   on3		linkid=1	
+sector   on4		linkid=1
+sector   on5		linkid=1
+sector   on6		linkid=1
+sector   on7		linkid=1
+sector   on8		linkid=1
+sector   on9		linkid=1
+sector   on10		linkid=1
+sector   on11		linkid=1
+sector   on12		linkid=1
+sector   on13		linkid=1
+sector   on14		linkid=1
+sector   on15		linkid=1
+sector   off1		linkid=2
+sector   off2		linkid=2
+sector   off3		linkid=2
+sector   off4		linkid=2
+sector   off5		linkid=2
+sector   off6		linkid=2
+sector   off7		linkid=2
+sector   off8		linkid=2
+sector   off9		linkid=2
+sector   off10		linkid=2
+sector   off11		linkid=2
+sector   off12		linkid=2
+sector   off13		linkid=2
+sector   off14		linkid=2
+sector   off15		linkid=2
+int      player             local
+int      mainfogr=130
+int      mainfogg=130
+int      mainfogb=130
+flex     tinger=0.35
+flex     tingeg=0.35
+flex     tingeb=0.35
+int      start=1
+int      on=0          local
+int      foghandle     local
+flex     visibility=2  
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+
+player = GetLocalPlayerThing();
+if(start==1)
+{
+on=1;
+foghandle=newColorEffect(0, 0, 0,  0, 0, 0,  mainfogr, mainfogg, mainfogb,  1.0);
+AddDynamicAdd(player,tinger,tingeg,tingeb);
+SetThingLight(player,visibility,0.0);
+}
+return;
+
+entered:
+
+if(GetSenderId() == 1 && on==0)
+{
+on=1;
+foghandle=newColorEffect(0, 0, 0,  0, 0, 0,  mainfogr, mainfogg, mainfogb,  1.0);
+AddDynamicAdd(player,tinger,tingeg,tingeb);
+SetThingLight(player,visibility,0.0);
+}
+else if(GetSenderId() == 2 && on==1)
+{
+on=0;
+FreeColorEffect(foghandle);
+AddDynamicAdd(player,0,0,0);
+SetThingLight(player,0,0.0);
+}
+return;
+  
+# ........................................................................................
+
+end
+
+

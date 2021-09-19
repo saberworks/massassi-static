@@ -1,0 +1,38 @@
+# 7/22
+# (c) 1998 Mark Jones
+# TrapDoor for infiltrate addon map
+# when activated by a thing, move to frame, sleep, and come back. no sector adjoin junk
+
+symbols
+
+message activated
+
+message timer
+
+thing  console
+
+thing door
+
+flex sleep
+
+int	active=0	local
+
+end
+
+code
+
+activated:
+
+	If(GetSenderRef()!=console) return;
+	If(active!=0) return;
+	active=1;
+	MoveToFrame(door, 1, speed);
+	SetTimer(sleep);
+	return;
+
+timer:
+	MoveToFrame(door, 0, speed);
+	active=0;
+	return;
+	end
+	

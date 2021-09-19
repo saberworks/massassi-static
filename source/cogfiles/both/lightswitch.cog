@@ -1,0 +1,121 @@
+# Jedi Knight Cog Script
+#
+# Adjusts Sector extralight on activation of a switch
+#
+# 11/20/98 Nightmare
+# ========================================================================================
+
+symbols
+
+message     startup
+message     activated
+
+sound       poweroff=activate04.wav
+sound       poweron=activate01.wav
+
+surface     switch
+
+flex        onlight=.75
+flex        offlight=0
+
+int         power			local
+
+sector      sector00
+sector      sector01
+sector      sector02
+sector      sector03
+sector      sector04
+sector      sector05
+sector      sector06
+sector      sector07
+sector      sector08
+sector      sector09
+sector      sector10
+sector      sector11
+sector      sector12
+sector      sector13
+sector      sector14
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   SetWallCel(switch,0);                     // set the switch to the on position
+
+   power=1;
+
+		SetSectorLight(sector00, onlight, 0);	// set all sector light
+		SetSectorLight(sector01, onlight, 0);	// values to "on"
+		SetSectorLight(sector02, onlight, 0);
+		SetSectorLight(sector03, onlight, 0);
+		SetSectorLight(sector04, onlight, 0);
+		SetSectorLight(sector05, onlight, 0);
+		SetSectorLight(sector06, onlight, 0);
+		SetSectorLight(sector07, onlight, 0);
+		SetSectorLight(sector08, onlight, 0);
+		SetSectorLight(sector09, onlight, 0);
+		SetSectorLight(sector10, onlight, 0);
+		SetSectorLight(sector11, onlight, 0);
+		SetSectorLight(sector12, onlight, 0);
+		SetSectorLight(sector13, onlight, 0);
+		SetSectorLight(sector14, onlight, 0);
+
+   return;
+
+activated:
+	if(power == 0)
+		{	
+		SetWallCel(switch,0);	// do effects
+		PlaySoundPos(poweron, SurfaceCenter(switch), 1.0, -1, -1, 0);
+
+		SetSectorLight(sector00, onlight, 0);	// set all sector light
+		SetSectorLight(sector01, onlight, 0);	// values to "on"
+		SetSectorLight(sector02, onlight, 0);
+		SetSectorLight(sector03, onlight, 0);
+		SetSectorLight(sector04, onlight, 0);
+		SetSectorLight(sector05, onlight, 0);
+		SetSectorLight(sector06, onlight, 0);
+		SetSectorLight(sector07, onlight, 0);
+		SetSectorLight(sector08, onlight, 0);
+		SetSectorLight(sector09, onlight, 0);
+		SetSectorLight(sector10, onlight, 0);
+		SetSectorLight(sector11, onlight, 0);
+		SetSectorLight(sector12, onlight, 0);
+		SetSectorLight(sector13, onlight, 0);
+		SetSectorLight(sector14, onlight, 0);
+		
+		power = 1;
+		return;
+		}
+
+	if(power == 1)
+		{
+		SetWallCel(switch,1);                     // do effects
+		PlaySoundPos(poweroff, SurfaceCenter(switch), 1.0, -1, -1, 0);
+
+		SetSectorLight(sector00, offlight, 0);	// set all sector lights to
+		SetSectorLight(sector01, offlight, 0);	// the "off" value
+		SetSectorLight(sector02, offlight, 0);
+		SetSectorLight(sector03, offlight, 0);
+		SetSectorLight(sector04, offlight, 0);
+		SetSectorLight(sector05, offlight, 0);
+		SetSectorLight(sector06, offlight, 0);
+		SetSectorLight(sector07, offlight, 0);
+		SetSectorLight(sector08, offlight, 0);
+		SetSectorLight(sector09, offlight, 0);
+		SetSectorLight(sector10, offlight, 0);
+		SetSectorLight(sector11, offlight, 0);
+		SetSectorLight(sector12, offlight, 0);
+		SetSectorLight(sector13, offlight, 0);
+		SetSectorLight(sector14, offlight, 0);
+		
+		power = 0;
+		return;
+		}
+
+   return;
+
+end

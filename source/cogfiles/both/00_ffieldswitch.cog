@@ -1,0 +1,159 @@
+# Jedi Knight Cog Script
+#
+# 00_FFieldSwitch.cog
+#
+# This script operates a forcefield surface that damages
+# the player.
+# It also sets this surface to be nomove and translucent.
+#
+# [SC]
+#
+# 8/8/97 - YB - Fixed sleep() problem by using timers.
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+# ========================================================================================
+
+symbols
+
+message     startup
+message     damaged
+message     activated
+message     touched
+message     timer
+
+sound       poweroff=activate04.wav         local
+sound       poweron=activate01.wav          local
+sound       hitsurf=ForceFieldHit01.wav     local
+
+surface     switch                          linkid=1
+surface     switch1                         linkid=1
+surface     damsurf                         linkid=3   mask=0x448
+surface     damsurf2                        linkid=3   mask=0x448
+
+flex        maxdamage=10.0
+flex        mindamage=5.0
+flex        damage=0.0                      local
+flex        interval=0.25                   local
+
+int         damaging=1                      local
+int         garbage=0                       local
+int         garbage2=0                      local
+
+thing       victim                          local
+
+template    sparks=+heavysmoke              local
+
+end
+
+# ========================================================================================
+
+code
+
+startup:
+   SetWallCel(switch,0);                     //on
+   ClearAdjoinFlags(damsurf,2);              //no move
+   ClearAdjoinFlags(damsurf2,2);
+   SetFaceGeoMode(damsurf,0);                //translucent
+   SetFaceGeoMode(damsurf2,0);
+   SetSurfaceFlags(damsurf,16384);           //magsealed
+   SetSurfaceFlags(damsurf2,16384);
+   SurfaceLightAnim(damsurf, 0.4, 1.0, 0.5); // animate surface
+   SurfaceLightAnim(damsurf2, 0.4, 1.0, 0.5);
+   return;
+
+# ........................................................................................
+
+activated:
+   if ((GetWallCel(switch) == 0) && (GetSenderId() == 1))
+   {
+      PlaySoundPos(poweroff, SurfaceCenter(switch), 1.0, -1, -1, 0 );
+      PlaySoundPos(poweroff, SurfaceCenter(switch1), 1.0, -1, -1, 0);
+      SetWallCel(switch,1);
+      SetWallCel(switch1,1);                 //off
+      SetAdjoinFlags(damsurf,2);             //move
+      SetAdjoinFlags(damsurf2,2);
+   }
+   else if ((GetWallCel(switch) == 1) && (GetSenderId() == 1))
+   {
+      PlaySoundPos(poweron, SurfaceCenter(switch), 1.0, -1, -1, 0 );
+      PlaySoundPos(poweron, SurfaceCenter(switch1), 1.0, -1, -1, 0);
+      SetWallCel(switch,0);
+      SetWallCel(switch1,0);                 //on
+      ClearAdjoinFlags(damsurf,2);           //no move
+      ClearAdjoinFlags(damsurf2,2);
+   }
+   return;
+
+# ........................................................................................
+
+touched:
+   if ((GetSenderID() == 3) && (damaging == 1))
+   {
+      PlaySoundPos(hitsurf, SurfaceCenter(damsurf), 1.0, -1, -1, 0 );
+      victim = GetSourceRef();
+      damage = (Rand()*(maxdamage - mindamage))+mindamage;
+      DamageThing(victim,damage,0x2,victim);
+      if(!IsMulti()) CreateThing(sparks, GetSourceRef());
+      damaging=0;
+      SetTimerEx(interval, 1, 0, 0);
+   }
+   else return;
+
+# ........................................................................................
+
+damaged:
+   victim = GetThingParent(GetSourceRef());
+
+   if((GetParam(1) == 1) && (GetThingType(victim) == 10))
+   {
+      damage = (Rand()*(maxdamage - mindamage))+mindamage;
+      DamageThing(victim, damage, 0x1, victim);
+      if(!IsMulti()) CreateThing(sparks, GetSourceRef());
+      PlaySoundPos(hitsurf, SurfaceCenter(damsurf), 1.0, -1, -1, 0 );
+      SetFaceGeoMode(damsurf,3);
+      SetFaceGeoMode(damsurf2,3);
+      KillTimerEx(2);
+      SetTimerEx(0.5, 2, 0, 0);
+   }
+   else
+   {
+      PlaySoundPos(hitsurf, SurfaceCenter(damsurf), 1.0, -1, -1, 0 );
+      SetFaceGeoMode(damsurf,3);
+      SetFaceGeoMode(damsurf2,3);
+      KillTimerEx(2);
+      SetTimerEx(0.5, 2, 0, 0);
+   }
+
+   return;
+
+# ........................................................................................
+
+timer:
+   if(GetSenderId() == 1)
+   {
+      damaging=1;
+   }
+
+   if(GetSenderId() == 2)
+   {
+      SetFaceGeoMode(damsurf,0);
+      SetFaceGeoMode(damsurf2,0);
+   }
+
+   return;
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

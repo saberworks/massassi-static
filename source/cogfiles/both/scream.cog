@@ -1,0 +1,47 @@
+# Jedi Knight Cog Script
+# 00_PlayAmbient.cog
+# Plays a sound at a one or more locations
+# Local so not just the host hears it.
+#
+# 
+flags=0x240
+symbols
+	message	timer
+	message	startup
+
+	thing		soundPos0		nolink
+	thing		soundPos1		nolink
+	thing		soundPos2		nolink
+	thing		soundPos3		nolink
+	thing		soundPos4		nolink
+	thing		soundPos5		nolink
+	thing		soundPos6		nolink
+	thing		soundPos7		nolink
+
+	sound		wav0
+
+	float		minDist=-1
+	float		maxDist=-1
+	float		volume=1.0
+	int		cnt			local
+end
+
+code
+
+#==================================================================================================
+
+startup:
+	settimer(0.5);
+	return;
+
+#==================================================================================================
+
+timer:
+	for (cnt = 0; cnt <= 7; cnt = cnt+1) {
+		// flags indicate looping & ambient
+		if (soundPos0[cnt] >= 0) PlaySoundThing(wav0, soundPos0[cnt], volume, minDist, maxDist, 0x045);
+	}
+	return;
+
+end
+

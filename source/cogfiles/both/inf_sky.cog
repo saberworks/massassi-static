@@ -1,0 +1,25 @@
+# Jedi Knight Cog Script
+#jb_sky.cog
+#
+# I think that the two different sky flags in JED
+# mean ceiling and horizon sky, after looking at a ctf cog
+# Raptor [JiB]
+
+flags=0x240
+
+symbols
+
+message     startup
+
+end
+
+
+code
+
+startup: 
+   SlideHorizonSky(4, 2);
+   SlideCeilingSky(5, 3);
+   Return;
+
+end
+

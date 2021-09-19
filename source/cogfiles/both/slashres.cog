@@ -1,0 +1,70 @@
+#
+# Jedi Knight Missions Cog Script
+#
+# MDM04_SLASHGRATE.COG
+#
+# [JM] added some fail safes, because in mp games, the surface may be able to be slashed twice before adjoin flags set, cause of lag.
+#
+# [TT]
+#
+# (C) 1997 LucasArts Entertainment Co. All Rights Reserved
+#
+
+symbols
+
+message      damaged                                                          
+message      pulse                                                            
+
+surface      grate                              mask=0x440                    
+surface      grateback                          mask=0x440                    
+sound        cutsound=LtSaberHit12.wav          local                         
+
+int          type                               local                         
+int          time=0                             local                         
+int          iscut=0                            local                         
+
+flex         length=60.0                                                      
+
+end                                                                           
+
+
+code
+
+damaged:
+	type = GetParam(1);
+	if((type == 16) || (type == 4))
+	{
+      		if (iscut == 1) return;
+		PlaySoundPos(cutsound, SurfaceCenter(grate), 1, -1, -1, 0);
+		setwallcel(grate,1);
+		setwallcel(grateback,1);
+		setadjoinflags(grate,2);
+		setadjoinflags(grateback,2);
+		setpulse(1.0);
+		iscut = 1;
+	}
+	return;
+
+pulse:
+	If(time<length)
+		{
+		time=time+1;		
+		}
+	else
+	If(time>=length)
+		{
+		if (iscut == 0) return;
+		setwallcel(grate, 0);
+		setwallcel(grateback, 0);
+		clearadjoinflags(grate, 2);
+		clearadjoinflags(grateback, 2);
+		setpulse(0);
+		time=0;
+		iscut = 0;
+		}
+	return;
+
+
+
+end
+

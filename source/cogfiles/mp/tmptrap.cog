@@ -1,0 +1,70 @@
+# Jedi Knight Skinners Cog Script
+#
+# This script was made by Red (theensers@mindspring.com)
+#
+# Drop/Fire any templates (i.e. TDs, Mines, etc.) at the flick of a switch -up to 4 at a time.
+# Cool Beans!
+#
+# ========================================================================================
+
+symbols
+
+surface	switch			desc=switch
+
+template	proj_tpl=+seqchrg
+thing		tdg1			nolink,desc=tdg1
+thing		tdg2			nolink,desc=tdg2
+thing		tdg3			nolink,desc=tdg3
+thing		tdg4			nolink,desc=tdg4
+
+int		rounds=2		desc=rounds
+
+flex		rate=0.1		desc=rate
+flex		delay=3.0	desc=delay
+
+int		firing=0		local
+int		cur_round=0	local
+int		dummy			local
+
+sound		on_snd=set_hi2.wav	local
+sound		off_snd=lgclick1.wav	local
+
+message		activated
+
+end
+
+# ========================================================================================
+
+code
+
+activated:
+	if(firing == 1) Return;
+
+	firing = 1;
+	dummy = SetWallCel(switch, 1);
+	dummy = PlaySoundPos(on_snd, SurfaceCenter(switch), 1.0, 5.0, 10.0, 0);
+	
+
+	cur_round = 0;
+	while(cur_round < rounds)
+	{
+	 dummy = CreateThing(proj_tpl, tdg1);
+	 Sleep(rate);
+	 dummy = CreateThing(proj_tpl, tdg2);
+	 Sleep(rate);
+	 dummy = CreateThing(proj_tpl, tdg3);
+	 Sleep(rate);
+	 dummy = CreateThing(proj_tpl, tdg4);
+	 Sleep(rate);
+
+	 cur_round = cur_round + 1;
+	}
+
+	Sleep(delay);
+	dummy = SetWallCel(switch, 0);
+	dummy = PlaySoundPos(off_snd, SurfaceCenter(switch), 1.0, 5.0, 10.0, 0);
+	firing = 0;
+	Return;
+
+end
+

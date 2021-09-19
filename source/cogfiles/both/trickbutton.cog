@@ -1,0 +1,35 @@
+# startmsg.cog
+#
+# Script by Tazz
+# 
+# Displays a sound and a message when activated, does nothing else.  Used just to trick people.  
+# It was in a room with lots of switches, so I thought I'd make a 'fake' one.
+
+flags=0x240
+symbols
+
+
+message 	activated 
+
+thing     	switch                        linkid=1
+sound           sndon=false.wav        	      local
+sound           sndoff=false.wav              local
+
+int		dummy			local
+
+sound           wav0=i00bo05z.wav	local 			      
+
+end
+
+#.............................................................................................
+
+code
+activated:
+   
+   dummy = PlaySoundThing(wav0, console, 1.0, 5.0, 10.0, 0);
+   Sleep(0.5);
+   Print("Ha Ha!  I bet you thought this button did something!");    
+   Sleep(2.0);                                                       
+   Print("Sorry, try another button.");     
+   Return;
+end
