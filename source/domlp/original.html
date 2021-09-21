@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Death of Massassi Level Pack</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
+
+<body>
+
+<script>
+// Thanks 
+// http://stackoverflow.com/questions/18483241/random-div-order-on-page-load
+// For the div randomization code.
+$(document).ready(function() {
+    var cards = $(".levelContainer");
+
+    for(var i = 0; i < cards.length; i++){
+        var target = Math.floor(Math.random() * cards.length -1) + 1;
+        var target2 = Math.floor(Math.random() * cards.length -1) +1;
+        cards.eq(target).before(cards.eq(target2));
+    }
+});
+</script>
+
+<div id="container">
+    <div id="header">
+        <h1>Death of Massassi Level Pack</h1>
+    </div>
+
+    <div id="content">
+        <h1>Foreword</h1>
+        <p>Although the Death of Massassi has been greatly exaggerated, <a href="https://forums.massassi.net/vb3/showthread.php?67495-Massassi-Level-Pack-The-Epilogue" target="_top">this level contest</a> has resulted in some of the best fan-created levels ever.  I would like to thank CoolMatty for his stewardship of the site over the years and for creating the contest that helped spawn these levels.  I think I can speak for everyone here at Massassi when I say thanks for all your hard work and dedication to this site and the community.</p>
+
+        <p class="author">&mdash; Brian</p>
+
+        <p>Click on the title of each level to get the download page.</p>
+
+        <p>Without further ado, and in no particular order, we present the submissions for the <em>Death of Massassi Level Pack</em>:</p>
+
+        <div class="levelContainer">
+            <h2><a href="/levels/files/3131.shtml">Dash's Place - Dash_rendar</a></h2>
+            <p>Come have a drink.  This is a sprawling multiplayer level set in a city.</p>
+            <div class="screenshots">
+                <a href="/levels/files/screenshots/3131_1.jpg"><img src="/levels/files/screenshots/3131_1.jpg" /></a>
+                <a href="/levels/files/screenshots/3131_2.jpg"><img src="/levels/files/screenshots/3131_2.jpg" /></a>
+            </div>
+            <br clear="both" />
+        </div>
+
+        <div class="levelContainer">
+            <h2><a href="/levels/files/3132.shtml">Magrucko Daines and the Vertical City - Goit</a></h2>
+            <p>An Imperial Defector has requested a rendezvous with Magrucko Daines at the 'Vertical City' of Nar Shaddaa.</p>
+            <div class="screenshots">
+                <a href="/levels/files/screenshots/3132_1.jpg"><img src="/levels/files/screenshots/3132_1.jpg" /></a>
+                <a href="/levels/files/screenshots/3132_2.jpg"><img src="/levels/files/screenshots/3132_2.jpg" /></a>
+            </div>
+            <br clear="both" />
+        </div>
+
+        <div class="levelContainer">
+            <h2><a href="/levels/files/3133.shtml">Take-Off: Destiny of Alderaan - FastGamerr</a></h2>
+            <p>Make your way to the Moldy Crow to escape Alderaan before its destruction.</p>
+            <div class="screenshots">
+                <a href="/levels/files/screenshots/3133_1.jpg"><img src="/levels/files/screenshots/3133_1.jpg" /></a>
+                <a href="/levels/files/screenshots/3133_2.jpg"><img src="/levels/files/screenshots/3133_2.jpg" /></a>
+            </div>
+            <br clear="both" />
+        </div>
+
+        <div class="levelContainer">
+            <h2><a href="/levels/files/3134.shtml">TODOA 2- Duel at Belga Jer - Nikumubeki</a></h2>
+            <p>Only one fortress remains in the way of total Imperial control over the planet of Belga Jer. Home to a senile Jedi fugitive known as Yerkov, his capability for Battle Meditation still poses a threat to Imperial forces on the planet. Put an end to his pathetic existence.</p>
+            <div class="screenshots">
+                <a href="/levels/files/screenshots/3134_1.jpg"><img src="/levels/files/screenshots/3134_1.jpg" /></a>
+                <a href="/levels/files/screenshots/3134_2.jpg"><img src="/levels/files/screenshots/3134_2.jpg" /></a>
+            </div>
+            <br clear="both" />
+        </div>
+
+        <div class="levelContainer">
+            <h2><a href="/levels/files/3135.shtml">Life of Grismath - Josh Stickler (Grismath) and Daniel Wilkes (Thrawn[numbarz])</a></h2>
+            <p>In 1997, we learned that we're not alone in the galaxy; this discovery changed the course of history and thrust humanity onto the galactic stage. And what a weird galaxy it is. After a variety of adventures, Grismath left Earth many years ago and has been roaming the galaxy. Now 68 years old, he must come to terms with his own mortality and think about his legacy.</p>
+            <div class="screenshots">
+                <a href="/levels/files/screenshots/3135_1.jpg"><img src="/levels/files/screenshots/3135_1.jpg" /></a>
+                <a href="/levels/files/screenshots/3135_2.jpg"><img src="/levels/files/screenshots/3135_2.jpg" /></a>
+            </div>
+            <br clear="both" />
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

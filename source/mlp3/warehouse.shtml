@@ -1,0 +1,18 @@
+<html><head><title>The Massassi Temple Level Pack 3: Warehouse</title>
+<style>
+<!--  A:hover {color: #A6BA45}  -->
+</style>
+</head>
+
+<body bgcolor="#000000"  text="#FFFFFF" link="#52A54E" alink="#ffffff" vlink="#52A54E">
+<center>
+<font face="Verdana, Arial, sans-serif" size="5">The Massassi Temple Level Pack 3: Warehouse
+<hr noshade width="500">
+<img src="warehouse_1.jpg" width="350" height="262"> <img src="warehouse_2.jpg" width="350" height="262">
+<br>
+<img src="warehouse_3.jpg" width="350" height="262"> <img src="warehouse_4.jpg" width="350" height="262">
+</font><font face="Verdana, Arial, sans-serif">
+</center>
+<!--#include virtual="../ssi/copyright.ssi" -->
+</body>
+</html>

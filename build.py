@@ -82,8 +82,11 @@ data_dirs = {
         'dir': base_data_dir + '/md3',
         'group_by': 'type',
     },
-    'mlp1': { 'dir': base_data_dir + '/mlp1' },
-    'mlp2': { 'dir': base_data_dir + '/mlp2' },
+    'ctfpack': { 'dir': base_data_dir + '/ctfpack' },
+    'mlp1':    { 'dir': base_data_dir + '/mlp1'    },
+    'mlp2':    { 'dir': base_data_dir + '/mlp2'    },
+    'mlp3':    { 'dir': base_data_dir + '/mlp3'    },
+    'mlp4':    { 'dir': base_data_dir + '/mlp4'    },
 }
 
 

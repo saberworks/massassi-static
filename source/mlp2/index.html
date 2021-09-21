@@ -5,9 +5,9 @@ original: original.html
 
 
 <p><strong><a href="mlp2.zip">Download The Massassi Temple Level
-Pack 2</a></strong>, featuring the 6 following levels.</p>
+Pack 2</a></strong>, featuring the following 6 levels.</p>
 
-{% for level in data['mlp2'] %}
+{% for level in data['mlp2']|sort(attribute="title") %}
   <h2>{{ level.title }}</h2>
   <p>By: {{ level.author }}</p>
   <blockquote>
