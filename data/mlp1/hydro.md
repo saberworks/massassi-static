@@ -11,5 +11,4 @@ screenshots:
     - hydro2.jpg
     - hydro3.jpg
     - hydro4.jpg
-page: hydro.html
 ---

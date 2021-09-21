@@ -11,5 +11,4 @@ screenshots:
     - azul2.jpg
     - azul3.jpg
     - azul4.jpg
-page: azul.html
 ---

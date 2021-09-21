@@ -11,5 +11,4 @@ screenshots:
     - tlagoon2.jpg
     - tlagoon3.jpg
     - tlagoon4.jpg
-page: tlagoon.html
 ---

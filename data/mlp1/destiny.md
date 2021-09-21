@@ -11,5 +11,4 @@ screenshots:
     - destiny2.jpg
     - destiny3.jpg
     - destiny4.jpg
-page: destiny.html
 ---

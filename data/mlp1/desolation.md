@@ -11,5 +11,4 @@ screenshots:
     - desolation2.jpg
     - desolation3.jpg
     - desolation4.jpg
-page: desolation.html
 ---

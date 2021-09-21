@@ -11,5 +11,4 @@ screenshots:
     - plaza2.jpg
     - plaza3.jpg
     - plaza4.jpg
-page: plaza.html
 ---

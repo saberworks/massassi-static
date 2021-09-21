@@ -11,5 +11,4 @@ screenshots:
     - wayrest2.jpg
     - wayrest3.jpg
     - wayrest4.jpg
-page: wayrest.html
 ---
