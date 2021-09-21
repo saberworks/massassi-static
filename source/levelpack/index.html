@@ -1,0 +1,21 @@
+---
+title: "Massassi Level Pack #1"
+original: original.html
+---
+
+
+<p><strong><a href="masspack.zip">Download The Massassi Temple Level
+Pack</a></strong>, featuring the 7 following levels.</p>
+
+{% for level in data['mlp1'] %}
+  <h2>{{ level.title }}</h2>
+  <p>By: {{ level.author }}</p>
+  <blockquote>
+    {{ level.description }}<br><br>
+
+    <a href="{{ level.screenshots[0] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[0] }}" width=250></a>
+    <a href="{{ level.screenshots[1] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[1] }}" width=250></a>
+    <a href="{{ level.screenshots[2] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[2] }}" width=250></a>
+    <a href="{{ level.screenshots[3] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[3] }}" width=250></a>
+  </blockquote>
+{% endfor %}
