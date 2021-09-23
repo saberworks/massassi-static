@@ -4,6 +4,11 @@ title: "Dark Forces II: Jedi Knight Information &amp; Cheats"
 
 [TOC]
 
+## Quick Hits
+
+* [How to get Jedi Knight running on Linux](jk_on_linux.html)
+* [How to install/run custom levels/mods](howto.html)
+
 ## Introduction
 
 (All this was written in the late 90s so please read with a grain of 
@@ -58,7 +63,7 @@ teach people how to make their own addons. From there, we decided
 to give users a place to release their maps, but that's
 [another story](/about/).  Anyway, if you would like to make
 your own levels or mods, be sure to read over our [Basics](/basics/) section,
-and then take a look at the [tutorials](/tutorials.php).
+and then take a look at the [tutorials](/tutorials.html).
 
 ## Cheat codes
 
@@ -99,11 +104,10 @@ overview.
 
 Cheat codes are one type of console command, but there are many others that can 
 help you out.  You can see the rest of the console commands in the [JK 
-Specs](https://www.massassi.net/jkspecs/).
+Specs](/jkspecs/).
 
 ## Command Line Switches
 
 Command line switches allow you to turn on certain features of the game 
 (advanced display options, etc) by typing it in at the dos prompt. Find the 
-command line switches in the [JK Specs](https://www.massassi.net/jkspecs/).
-
+command line switches in the [JK Specs](/jkspecs/).
