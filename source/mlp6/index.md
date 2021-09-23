@@ -22,9 +22,8 @@ In the interest of file size, I've not bothered to pack all these into a
 single zip. You may find each level individually by clicking on their
 title.
 
-# First Place
 
-## [The Lost Mercenary](/levels/files/3125.shtml)
+## First Place: [The Lost Mercenary](/levels/files/3125.shtml)
 
 By Elmo
 
@@ -70,9 +69,7 @@ rave reviews by our judges. Here is some of the things they had to say:
 > *— Reid*
 
 
-# Second Place
-
-## [The Fall of JuzSoft 2](/levels/files/3129.shtml)
+## Second Place: [The Fall of JuzSoft 2](/levels/files/3129.shtml)
 
 By Grismath
 
@@ -120,9 +117,7 @@ spit-shine to make first place. Here's some of what the judges thought:
 > *— Reid*
 
 
-# Third Place
-
-## [ATST Factory](/levels/files/3124.shtml)
+## Third Place: [ATST Factory](/levels/files/3124.shtml)
 
 By Darth\_Alran
 

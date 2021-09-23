@@ -23,7 +23,8 @@ outer_template = 'outer.html'
 # copied directly
 extensions = ['md', 'html', 'shtml', 'htm']
 
-# directories containing "collections"
+# directories containing "collections"; see the 'process_collections' function
+# below for more info
 #
 # relative to `source` directory
 collections = {
@@ -67,22 +68,12 @@ base_data_dir = './data'
 #           ]
 #
 data_dirs = {
-    '3do': {
-        'dir': base_data_dir + '/3do',
-        'group_by': 'type',
-    },
-    'mat': {
-        'dir': base_data_dir + '/mat',
-        'group_by': 'category',
-    },
-    'mat_categories': {
-        'dir': base_data_dir + '/mat_categories',
-    },
-    'md3': {
-        'dir': base_data_dir + '/md3',
-        'group_by': 'type',
-    },
+    'mat_categories': { 'dir': base_data_dir + '/mat_categories' },
+    '3do':     { 'dir': base_data_dir + '/3do', 'group_by': 'type'     },
+    'mat':     { 'dir': base_data_dir + '/mat', 'group_by': 'category' },
+    'md3':     { 'dir': base_data_dir + '/md3', 'group_by': 'type'     },
     'ctfpack': { 'dir': base_data_dir + '/ctfpack' },
+    'jkarena': { 'dir': base_data_dir + '/jkarena' },
     'mlp1':    { 'dir': base_data_dir + '/mlp1'    },
     'mlp2':    { 'dir': base_data_dir + '/mlp2'    },
     'mlp3':    { 'dir': base_data_dir + '/mlp3'    },
@@ -326,8 +317,6 @@ def process_data(data_dirs):
                 data[key][template_vars[group_by]].append(template_vars)
             else:
                 data[key].append(template_vars)
-
-    # pprint.pprint(data)
 
     return data
 

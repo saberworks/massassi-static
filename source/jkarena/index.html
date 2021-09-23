@@ -1,0 +1,20 @@
+---
+title: "Jedi Knight Arena Level Pack"
+---
+
+<p class="note">Note: The original JK Arena web site, which includes more information,
+  including instructions on creating your own JK Arena levels, is curently down.
+  I'm working to bring it back, but in the meantime, you can download the original
+  level pack here. <em>-- Brian</em></p>
+  
+<p><strong><a href="/levels/files/2907.shtml">Download Jedi Knight Arena Level
+  Pack</a></strong>, featuring the following 10 levels.</p>
+
+{% for level in data['jkarena']|sort(attribute="title") %}
+  <h2>{{ level.title }}</h2>
+  <p>By: {{ level.author }}</p>
+  <blockquote>
+    <a href="{{ level.screenshots[0] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[0] }}" width=250></a>
+    <a href="{{ level.screenshots[1] }}"><img class="sotd-list-thumbnail" src="{{ level.screenshots[1] }}" width=250></a>
+  </blockquote>
+{% endfor %}
