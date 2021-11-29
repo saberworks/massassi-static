@@ -1,0 +1,774 @@
+<HTML>
+<HEAD>
+  <STYLE>
+  <!--
+        A:link 	{text-decoration: none; color: #52A54E; }
+        A:visited {text-decoration: none; color: #52A54E; }
+        A:active  {text-decoration: none; color: #FFFFFF; }
+        A:hover   {text-decoration: underline; color: #A6BA45}
+  -->
+</STYLE>
+  <TITLE>The Massassi Temple: Old News</TITLE>
+<BODY BGCOLOR="black" TEXT="white" LINK="52A54E" VLINK=52A54E>
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Saturday, December 11, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Advanced Lighting
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Well, he stunned ya with his gosh darn purty pictures over on the showcase forum, and now he's willing to share his secret with all of you.. Jon has given us a great little <a href="http://www.massassi.net/tutorials/advancedlighting/advanced.htm">tutorial</a> showing how to make coronas and beams of light casting from lamps or windows, or whatever else you can imagine.. The tutorial is easy to understand if you have a good grasp of JK editing, and if you don't, well, you should be focusing on something else anyway.. Big thanks to Jon for his work..
+<br>
+[<a href="http://198.92.131.5/files/jk_and_mots/tutorials/advancedlighting.zip">download</a>]
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK MOD: Buster Sword Beta
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/buster.shtml">
+Buster Sword Beta</a>
+<br>
+<b>Author:</b>
+<a href="mailto:jmull86@usa.net">SRA_JunkieJedi</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">This patch is Cloud's Buster Sword from Final Fantasy VII.  It is still in 
+its beta version, so there are a few bugs, but none that affect gameplay.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Massassi, A Christmas Story
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Here's a chance for all you artists out there to design us a graphic (See how clever I am? I make it out to seem like your manual labor is a reward of some sort!). In the spirit of the holiday, Massassi is looking for a seasonal logo.. It doesn't necessarily have to do with xmas, although I imagine due to the large percentage of christians on the planet, most of them probably will.. It should be the same dimensions as our current one (384x154 - no, I <i>don't</i> know why the dimensions are such strange numbers), and fit with massassi's color scheme (not too hard, considering we use the xmas colors green & red all year round).. Send all the submissions to <a href="mailto:staff@massassi.net">staff@massassi.net</a>, by the 15th.. 
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+21 Dark Forces Reviews @ TACC
+</strong><small>- <a href="mailto:thrawn@jedinights.com">Ryan</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Not exactly JK, but I know a lot of you still have/play Dark Forces, so I figured I'd post this. Anyway, I recently finished upgrading all 21 of the Dark Forces reviews at the <a href="http://www.commandchamber.net" target="_top">Command Chamber</a>. Mainly, this means that the review pages have been updated to the new design, any errors have been fixed, and the level text files are avilable for viewing. Additionally, I'm working on taking new screenshots for all the DF levels (since the old ones were too small or poor quality). Everything should be completely done within a few days, so feel free to browse the review sections:<br><a href="http://www.commandchamber.net/reviews_df/df.shtml">DF Reviews</a> | <a href="http://www.commandchamber.net/reviews_jk/jk.shtml">JK Reviews</a> | <a href="http://www.commandchamber.net/reviews_mots/mots.shtml">MotS Reviews</a>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Millennium Poll
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Our hosted Cog site, <a href="http://millennium.massassi.net/" target="_top">Millennium</a>, is running a poll - please go tell Hideki to concentrate on JK!<br><br>
+Also, they've re-opened their <a href="http://millennium.massassi.net/documents/cogs/cogs_customcog.html" target="_top">custom cog</a> feature, so if you need help with a cog, go ask 'em.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Puppet Jedi 0.61
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+A new version of Puppet Jedi has been released over at <a href="http://www.darkjedi.com/" target="_top">The Code Alliance (Darkjedi.com)</a>.  Here's the description:
+<blockquote><font color="gray">
+I know this is rather soon, but this update fixes that annoying display problem users know all too well! It seems that the hints on the toolbar buttons were causing it, so I've removed them. Now that this major bug has been fixed, I doubt there will be any more releases of Puppet Jedi in future.
+</font></blockquote>
+You can download it by visiting them... We will have a local download as soon as Kiramin gets off his...
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Want to Work in the Gaming Industry?
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Since this place started out soley as a place for editors, and that remains one of our main focuses, I figured some people would be interested in this, even if it's not directly related to JK.  <a href="http://www.gamasutra.com/" target="_top">Gamasutra</a>, a site dedicated to game developers, has just posted an article entitled <a href="http://www.gamasutra.com/features/19991202/scheib_01.htm" target="_top">Approaching Internships in the Game Industry</a>.  It's a great article written by a guy who was interned at Electronic Arts last summer.<br><br>
+I'm telling you, if you really love editing games, get into a computer science, architecture, or art program at a decent college and start applying for these things.  How do you think people get in? It's not magic, it's just hard work.  A lot of bigger companies have internship programs, Lucasarts, Activision and EA all have 'em.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+TPM TC Screens
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.jedinights.com/" target="_top">Jedi Nights</a> announced 7 new screenshots from the TPM TC.  Go there to check them out, but <a href="http://www.geocities.com/Area51/Station/9396/images/theedy.jpg">here's a taste</a>.
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Reviews @ Tosche Station
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.jedinights.com/" target="_top">Jedi Nights</a> announced that <a href="http://tosche.jedinights.com/" target="_top">Tosche Station</a> has posted 3 new reviews... Sky Dive 2, Full Force Oasis, and First Arena.  Thanks JN, you guys rock.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Shadar Logoth: Wheel of Time
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+After announcing our network Indy site (see below), I clicked over to <a href="http://www.shadarlogoth.com/" target="_top">Shadar Logoth</a> where Tom 'Magi' Smallwood has been keeping up the shop.  The site is quickly becoming the premier Wheel of Time site on the 'net.  They've just posted a strategy guide, news regarding a Wheel of Time chat, and some fixes for various WoTEd (Wheel of Time level editor) fixes.  Shadar Logoth has been mentioned numerous times in news updates over on <a href="http://www.wheeloftime.com/" target="_top">WheelofTime.com</a>, the official Wheel of Time site.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Indiana Jones and the Infernal Machine
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Just a quick note about our rocking network site, <a href="http://www.infernalmachine.net/" target="_top">Indy's Inferno</a>.  They've posted a huge list of recent reviews and a link to a pretty good walkthrough and strategy guide.
+</span></font></dd></dl>
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Friday, December 10, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New MotS Multiplayer Level: Extreme Vertigo
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/vertigo.shtml">
+Extreme Vertigo</a>
+<br>
+<b>Author:</b>
+<a href="mailto:winged_cat@ns.sympatico.ca">Omega</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/vertigo1.gif">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/vertigo2.gif">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A small Bespin DM level with low gravity for 2-3 players. It has various platforms, and two sector thrusts to get ahead of your enemies. Be
+careful around the edges, and don't look down...</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Volcanic Base
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/volbase.shtml">
+Volcanic Base</a>
+<br>
+<b>Author:</b>
+<a href="mailto:iamamoogle@yahoo.com">Anthony DeBoer</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/volbase1.gif">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/volbase2.gif">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A small base set near a volcano.  Has a couple secret places and a very well-guarded armory.
+Set up for 4 players.  Consists of a main room with 3 rooms branching off. Can also explore outside in a couple caves and a pool of water.  There is a room with pits of lava made for saber battling also.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Updates at The Mordor Temple
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Here's the latest at <a href="http://mordor.wwnation.com/" target="_top">The Mordor 
+Temple</a>, courtesy of <a href="mailto:gandalf@wwnation.com">Gandalf</a>:
+
+<blockquote><font color="gray">
+<a href="http://mordor.wwnation.com/" target="_top">The Mordor 
+Temple</a> has recently got its
+<a href="http://mordor.wwnation.com/cgi-bin/finger/finger.cgi" target="_top">Finger Server</a> 
+up and running. If you would like a .plan service 
+account please 
+<a href="mailto:gandalf@wwnation.com">email me</a> to 
+request an account. In other news, The Mordor Temple 
+also recently passed 29K, and a new poll 
+topic has been added asking, <i>"What port do you use to play most of 
+your games?"</i> I have also just added a Screen of the 
+Day, which will be updated nearly every day if possible, 
+so I would head on over and check these updates out.</font></blockquote>
+
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+6000 Block Review @ Tosche Station
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://tosche.jedinights.com/" target="_top">Tosche Station</a> has posted a <a href="http://tosche.jedinights.com/jkmp/6000block.htm" target="_top">review of 6000 Block</a>, a level I released a couple of months back.
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Forums
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Just wanted to let everyone know (if you don't already) that The Massassi Temple is home to some of the most active forums in the Jedi Knight community.  Stop in, post some messages, whatever: <a href="http://forums.massassi.net/" target="_top">http://forums.massassi.net/</a>.
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Thursday, December 9, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Hate Industries: Bio Lab
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/bio.shtml">
+Hate Industries: Bio Lab</a>
+<br>
+<b>Author:</b>
+<a href="mailto:JasterMereel7@yahoo.com">Jaster Mereel</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bio.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bio2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">This is a small multiplayer level set indoors. It is vaguely based on The Ministry of Love from George Orwell's <i>1984</i>. This is my first level.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Hangar Base 9/7
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/hbsra97.shtml">
+Hangar Base 9/7</a>
+<br>
+<b>Author:</b>
+<a href="mailto:sra_ragnarok@hotmail.com">[SRA] Ragnarök</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/hbsra97_01.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/hbsra97_02.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A gun level with magnetized walls. Should be fun with 2-32 players...</font>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review @ Spaceport
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://spaceport.jedinights.com/" target="_top">The Spaceport</a> reviews <a href="http://spaceport.jedinights.com/reviews/riron.shtml" target="_top">Iron Oxide</a>.  Thanks <a href="http://mordor.wwnation.com/" target="_top">Mordor Temple</a>.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Tosche Station
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Wow, they're all over the news lately, eh?  <a href="http://tosche.jedinights.com/" target="_top">Tosche Station</a> has moved to a new subdomain over at <a href="http://www.jedinights.com/" target="_top">Jedi Nights</a>.  You can now check them out at: <a href="http://tosche.jedinights.com/" target="_top">http://tosche.jedinights.com/</a>.<br><br>
+They've also posted 3 new reviews.  The Temple, Bespin Plaza, and is Charlie's Begged for Saber Duel.<br><br>
+Finally, they also just posted a new <a href="http://tosche.jedinights.com/jkmp/colospreview.htm" target="_top">preview of The Coliseum</a>, an upcoming level by R|Talon (lighting by Takimoto).
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Wednesday, December 8, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review at the Command Chamber
+</strong><small>- <a href="mailto:thrawn@jedinights.com">Ryan</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.commandchamber.net" target="_top">The Admiral's Command Chamber</a> has posted a new review of the Mysteries of the Sith level "Birth of a Mercenary" by Anthony Piggott. Also, feel free to drop by the site's <a href="http://forums.commandchamber.net" target="_top">forums</a> to join in the discussions there.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Infinite Machine: New Legends
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Here is some background on <a href="http://www.infinite-machine.com/" target="_top">Infinite Machine</a> before we get started.  A bunch of people worked at Lucasarts for quite a while, producing high quality games like Dark Forces and Jedi Knight.  Soon after JK was released however, there was a mass-exodus from LEC.  That is to say, a ton of people left.  You already know that some of them (Ray Gresko, Rob Huebner) created <a href="http://www.nihilistic.com/" target="_top">Nihilistic Software</a>, which is now working on Vampire: The Masquerade - Redemption.<br><br>
+Another group, headed by none other than Justin Chin himself, started <a href="http://www.infinite-machine.com/" target="_top">Infinite Machine</a>.  At the time (back in January), they announced that they had licensed Epic's Unreal engine. They did not, however, announce what game they were working on, or any other information.<BR><BR>
+<i>It has begun...</i><br><BR>
+<a href="http://www.avault.com/" target="_top">Avault</a> today scored some <i>killer</i> <a href="http://www.avault.com/news/displaynews.asp?story=1281999-11052" target="_top">info</a> on IM's ultra-secret project.  What is it?
+<blockquote><font color="gray">
+As an intense but enlightened 3D action game, Lucas Arts’ Jedi Knight was one of the first titles to emphasize plot and character along with its light saber slinging action in 1997. In late 2000, gamers will be marching across an immense futuristic China created at the hand of Jedi Knight’s tranquil designer, Justin Chin, who uttered magnificent things in a quiet voice during an exclusive Adrenaline Vault interview regarding his new title. Articulating the upcoming third-person action game, titled New Legends: Sun Soo’s Vengeance, from his California office, Chin mentioned all the right ingredients, including a strong narrative, powerful character development, taut action, all wrapped up in the confident visuals of Epic Games’ Unreal engine. 
+</font></blockquote>
+Sounds pretty cool, hit this <a href="http://www.avault.com/news/displaynews.asp?story=1281999-11052" target="_top">Avault news page</a> for the full story.<br><br>
+Now for my inevitable opinion... While I applaud Justin Chin for the story-driven game, and the use of the Unreal Engine (Wheel of Time, based on the same engine, has the most spectacular level design I've ever seen), I have to wonder whether gamers will swallow this "futuristic China" scenerio.  <i>"The plot opens with the army of General Kunn ambushing Soo, his brother Tao and their father Yen Soo in the Capitol City.</i>  Most action/adventure games that do well are either A) Very straight-forward without too much of a plot (IE: Quake), B) Easy to swallow storyline without too many obscure cultural influences, or C) Based on a popular license that people are already familiar with.  Games based on strange themes such as this often don't do well.  For example: Kingpin, Heretic II, Shogo MAD, Sin, Blood, etc.  I sincerely hope IM can pull it off and make this one a hit.  With games like DF and JK behind them, I think they can.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Level Search Update
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+If you read down you will see we added a search to the levels section.  Well, I checked out the logs for what was being searched on.  The first one was <i>jedi hell</i>, which turned up 91 matches... not very useful.  So, I remedied the situation by adding an option to search for <b>all terms</b> or <b>any term</b> - this should allow you to narrow down your search better.  After the change, I searched for <i>jedi hell</i> and got only one match (the only level page which had "jedi" and "hell" both).  I also added notes for BFP and Spork, which aren't found on our server...
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review @ Tosche Station
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://tosche.cjb.net/" target="_top">Tosche Station</a> has just released a new review of <i>Theft at Nar Shaddaa</i>, an MP co-op level by Nebula.  They've also been adding screenshots to all their levels.
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review @ Spaceport
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://spaceport.jedinights.com/" target="_top">The Spaceport</a> has just posted a new review of <i>Birth of a Mercenary: Chapter 1</i>, a MotS SP level by Anthony Piggott.  They gave it a glowing review, so if you're looking for a good SP level, check it out.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Levels Section Search
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+If you hit the <a href="http://www.massassi.net/levels/">levels section</a> you will notice that I have added a search box to it.  This will search <i>only</i> the levels section.  It seems to work pretty good.  I did a search on "Centrifuge" and got both the Centrifuge level info page as well as another one that said "this level was inspired by Slug's recently released Centrifuge" - pretty cool.  If you have any problems with it, please let me know.
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Speaking Of...
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Speaking of the levels section, I am working on a way to sort the levels alphabetically.  Unfortunately, it takes quite a bit of re-writing on the script.  Rest assured, though, I'm working on it.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Canyon Stream Preview at JK Depot
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<A HREF="mailto:dragonfly@massassi.net">Dragonfly</A> sent word that the <A HREF="http://depot.massassi.net/">JK Depot</A> has its newest preview up, of <A HREF="mailto:juztyn@massassi.net">Juztyn</A>'s <A HREF="http://depot.massassi.net/pre/pre_canyon.html">Canyon Stream</A>.  It looks <I>very</I> good, definitely worth checking out.
+</span></font></dd></dl>
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Tuesday, December 7, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Client/Server Tutorial
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:dragons_bane@hotmail.com">Obsidian</a> just sent in a great new tutorial on <a href="http://www.massassi.net/tutorials/clientserver/clientserver.html">client/server cogs</a>.  The tutorial calls for a good understanding of cog, so don't say I didn't warn ya.. If you have any questions, feel free to ask on our message boards, where Obsidian often lurks..
+<br>
+[<a href="http://198.92.131.5/files/jk_and_mots/tutorials/clientserver.zip">download</a>]
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: JMRk
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/jmrk.shtml">
+JMRk</a>
+<br>
+<b>Author:</b>
+<a href="mailto:Spy_Dog1@yahoo.com">StS_Prosect</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">This is a small multiplayer level set in a mountainon, on a remote and abandoned planet. It consists of several rooms and a small pond of water. There is a landing pad up from the pool that is designed for saber dueling. Guns are also suplied for your gaming pleasure. This level is intended for 2-4 players. Being so small, this level should provide for some fast and furious gameplay.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Imperial military base
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/impmilbase.shtml">
+Imperial military base</a>
+<br>
+<b>Author:</b>
+<a href="mailto:Dark_Flexor@hotmail.com">Dark_Flexor</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">Medium sized level with traps, secrets and sniperspots, good for no force or full force, includes all weapons.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Predator's Training Ground
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/tp_training.shtml">
+Predator's Training Ground</a>
+<br>
+<b>Author:</b>
+<a href="mailto:honoredhunter@hotmail.com">Chris Beaver</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">A small MP level of a training facility hidden in a 
+forest-type world.  It is my first good level, and is pretty good in the 
+absence of fancy cogs and scripts.  Done with JkEdit v. 2.50; suitable for 2 
+to 4 players.  The main training rooms offer lots of stuff to hide behind, 
+and make for both furious or strategic gameplay.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New MotS Multiplayer Level: The Senator's Mansion
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/senatemansion.shtml">
+The Senator's Mansion</a>
+<br>
+<b>Author:</b>
+<a href="mailto:beswick@cnmnetwork.com">Moonraker</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">The level is good for both gun and saber battles. It is a fairly big
+level and has all weapons except the carbonite gun. This level is best
+played with a grappling hook or a jetpack to get too the higher places
+of the level.I also recomend using Manowars3 on it. This is my first
+level and I hope you enjoy it.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Exclusive At Monolithic Illusions
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Got this from <a href="mailto:ukenuke@jps.net">UkeNuke</a>, pre-HTMLized and everything..
+<blockquote><font color="gray">
+<a href="http://www.monolith3d.com/" target="_top">Monolithic Illusions</a> has scored an exclusive screenshot from The Phantom Menace Total Conversion, for the Jedi Knight engine. You can pick up the shot over <a href="http://www.monolith3d.com/mi_exclusives/tpmtc_1.htm" target="_top">HERE</a>.</font></blockquote>
+Thanks for the heads up Uke..
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Millennium Grand Re-Opening
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://millennium.massassi.net/" target="_top">Millennium</a>, our hosted cog site, had closed down for a bit, but now they're up and running again.  You can check them out at their new subdomain (all of our hosted sites should have one soon): <a href="http://millennium.massassi.net/" target="_top">http://millennium.massassi.net/</a>.<br><br>
+So what's in store for the opening?  Hideki has revamped all of his pages, including the tutorials.  Here's a list of what he's got up right now.
+<blockquote><font color="gray">
+<b>Modification Tutorials</b>
+<ul type="square">
+<li>How to create a Lightstaff</li>
+<li>How to make projectiles appear in multi player games</li>
+<li>How to create new hotkeys for custom items</li>
+<li>How to give enemies secondary fire shots</b></li>
+<li>How to give effects on projectiles. (Stunning, blinding...)</li>
+</ul>
+<b>Cog Tutorials</b>
+<ul type="square">
+<li>Explains the use of &quot;For&quot; and &quot;While&quot;</li>
+<li>Tells in what format the JK flags are written in</li>
+</ul>
+</font></blockquote>
+I'm very glad to see Hideki up and running again.  Be sure also to check out the rest of Millennium as well, he's got some great resources.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Screenshot of the Day
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+I have gone back and added <i>Previous / Next</i> links on all the previous screens.  This way, you can browse them all.  We will have a complete list soon, but until then, you can just click the links at the bottom of each screen.<br><br>
+I'm very encouraged by the number of screens getting posted over on our Showcase forum.  Everyone keep up the good work, I can't wait to play some of these levels and mods!
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review @ Spaceport
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://spaceport.jedinights.com/" target="_top">The Spaceport</a> has just posted a <a href="http://spaceport.jedinights.com/reviews/rsquare.shtml" target="_top">review of Town Square</a>, a level by NorthChaos.  If you'll notice, this level is our level of the week.  Do they agree with us? Go check out the review to find out...
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Review @ Gareth's Review Depot
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://garethsdepot.iwarp.com/" target="_top">Gareth's Review Depot</a> has posted a <a href="http://garethsdepot.iwarp.com/tsl.html" target="_top">review of The Search for Leia</a>.
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Monday, December 6, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+DCM #51
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+You know it. You love it. You <i>crave</i> it. It's <a href="http://www.jediknight.net/3do/download/51.gif" target="_top">another installment</a> of Al MacDonald's hilarious comic strip <a href="http://www.jediknight.net/3do/diary.htm" target="_top">Diary of a Crazed Mimbanite</a>. Props to <a href="mailto:marek@igateway.net">Marek</a> for sending in the news flash.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: First Arena
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/fa.shtml">
+First Arena</a>
+<br>
+<b>Author:</b>
+<a href="mailto:centauri@zeus.polsl.gliwice.pl">Ortheza</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/fa1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/fa2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A level based around a saber platform that bobs up and down in a pool of water.  Smaller level made for 3 people that should prove to be a fun
+one, since you'll be in the water as much as the platform and surrounding rock area!</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Bespin Plaza
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/bespinplaza.shtml">
+Bespin Plaza</a>
+<br>
+<b>Author:</b>
+<a href="mailto:iamthewally@hotmail.com">Simeon Blimke</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bespinplaza1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bespinplaza2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">This is a level set on an entire floor of one of the many skyscrapers that cover the plaza of the Bespin mining station. The level is primarily circular in shape with rooms and hallways, forming a mid-size deathmatch level.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Charlie's Begged For Saber Duel
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/jcsaber.shtml">
+Charlie's Begged For Saber Duel</a>
+<br>
+<b>Author:</b>
+<a href="mailto:Max36412@aol.com">Master John</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/jcsaber01.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/jcsbaer02.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A large hangar area with a few ships flying around, and a cog that replenishes 1% of your health every 2 seconds. Meant to be a fast-paced saber duel.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Bossk's Revenge Review @ TACC
+</strong><small>- <a href="mailto:thrawn@jedinights.com">Ryan</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.commandchamber.net" target="_top">The Admiral's Command Chamber</a> has posted a new review of the MotS single player level "Bossk's Revenge" by co-authors Sir Gerry and Lou Graziani. Additionally, reviews of "Birth of a Mercenary" and "Vader vs. Obi-Wan SE" are just around the corner, so be sure to visit the <a href="http://www.commandchamber.net" target="_top">site</a> to check out the new content.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Tosche Station
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+I just wanted to link to <a href="http://tosche.cjb.net/" target="_top">Tosche Station</a>, which is turning out to be an excellent review site (just post screenshots and it will be perfect!).  They have recently taken over <a href="http://www.jedinights.com/jedi/" target="_top">JEDi Reviews</a>, which is hosted by <a href="http://www.jedinights.com/">Jedi Nights</a>.
+</span></font></dd></dl>
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Sunday, December 5, 1999</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Indy Walkthrough
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+One of our network sites, <a href="http://www.infernalmachine.net/" target="_top">Indy's Inferno</a>, has news about a full walkthrough of the recently released <i>Indiana Jones and the Infernal Machine</i>.  They keep up with all the latest Indy news (even though it's not editable, I must admit that it is a pretty fun game), so be sure to check there if you're into it.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+JkEdit 3.02/2.62/1.62
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Just got word from Ole Thomasen that the new versions of JkEdit are out.. Here's what the man had to say..
+<blockquote><font color="gray">
+There is a new version of JkEdit 3.02/2.62/1.62 available at
+<a href="http://www.magicforce.com" target="_top">http://www.magicforce.com</a>.
+<br><br>
+This new version of JkEdit contain some new features:
+<ul>
+<li>Improved Create Dome command (for creating semi circular sectors)
+</ul>
+The new version also contains a few bug fixes:
+<ul>
+<li>Sometimes a freeze (lockup) could happened upon rendering
+<li>Sometimes a crash could happen pressing the Undo button
+<li>The Create Rectangle command now works with four selected nodes
+<li>The fist would not always work on walls
+</ul></font></blockquote>
+Sounds great, glad to see he's still working as diligently as ever..
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Full Force Oasis
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/fullforceoasis.shtml">
+Full Force Oasis</a>
+<br>
+<b>Author:</b>
+<a href="mailto:aero96@hotmail.com">KINDRED_Aero_X</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">This is simply another one of those edited Canyon Oasis Levels, but this time is full of force and some revives and stuff.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Imperial Asteriod Base
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/impastbase.shtml">
+Imperial Asteriod Base</a>
+<br>
+<b>Author:</b>
+<a href="mailto:bran_johnson@hotmail.com">u2canBcool</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">You have landed on a supposedly abandoned Imperial asteriod base, but, when 
+you start poking around, TIEs start buzzing around!  Your mission is to 
+SURVIVE!!!</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Chatting it up at JK Centre
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:paul.molx@cwcom.net">Paul</a> over at <a href="http://www.jedikc.com" target="_top">JK Centre</a> sends in this site update:
+
+<blockquote><font color="gray">I've added a new <a href="http://www.jedikc.com/chat.html" target="_top">Chat room</a> which, unlike typical text-based chat like everywhere else, allows you to talk to other people using your computer's built-in microphone. Now you can really <i><b>talk</b></i> to other Jedi Knighters!</font></blockquote>
+
+A word of warning: this voice-based chat runs like molasses on slower machines, and at the time there wasn't anyone in the room to test this with, so I can't vouch for the audio quality you'll get. That said, have fun.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+BattleStats.Com Week of War: It's a blast!
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Hi everyone, I just wanted to mention how much <B><I>fun</I></B> I and all of <A HREF="http://www.knightsofpride.org/" TARGET="_top">KOP</A> is having playing in the <a href="http://www.battlestats.com/games/jk/war/info/?wow025" target="_top">Week of War</a> on <a href="http://www.battlestats.com/" target="_top">BattleStats.Com</a>.  The competition is fierce but very fun.  We are in a heated battle for first place at the moment.<BR><BR>If you haven't signed up to play in it, you just missed your chance unfortunately.  But be <I>sure</I> to play in the WoW next month!  There will be one every month, so do <I>not</I> miss them!
+</span></font></dd></dl>
+
+
+</body></html>

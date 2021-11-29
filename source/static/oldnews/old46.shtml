@@ -1,0 +1,561 @@
+<HTML>
+<HEAD>
+<STYLE>
+<!--
+A:link 	{text-decoration: none; color: #52A54E; }
+A:visited {text-decoration: none; color: #52A54E; }
+A:active  {text-decoration: none; color: #FFFFFF; }
+A:hover   {text-decoration: underline; color: #A6BA45}
+-->
+</STYLE>
+<TITLE>The Massassi Temple: Old News</TITLE>
+<BODY BGCOLOR="black" TEXT="white" LINK="52A54E" VLINK=52A54E>
+
+<!-- Ad Code -->
+<!--#exec cgi="/cgi-bin/ads/massassi_ads.cgi" -->
+<!-- End Ad Code -->
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Saturday, February 5, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Tutorial: Making Your Own Pong Levels
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+There was a lot of hullabaloo earlier in the week when Mike "LikWid" Watson released his <a href="/levels/jkpong.shtml">Jedi Knight Pong modification</a>, where he was cool enough to include info for other authors on how to make their own levels. Well, he's taken that generous gesture a step further and submitted <a href="/tutorials/pong/">a tutorial</a> here at Massassi. Included with the step-by-step instructions is an updated .zip file with all the essential COG scripts, templates, etc. you'll need to get going down the Pong Arena path. Mad props to LikWid for sending in <a href="/tutorials/pong/">his tutorial</a>.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>New JK/MotS 3do: ap_bench.zip</strong><small>- <a href="mailto:staff@massassi.net">Staff</a></small></span></font></dt><dd><font color="white" size="2" face="verdana"><span style="font-family: verdana"><b>Download:</b> <a href="http://198.92.131.5/files/jk_and_mots/3do/ap_bench.zip">ap_bench.zip</a><br><b>Author:</b> <a href="mailto:blujay@massassi.net">KOP_blujay</a><br><b>View:</b> <a href="cgi-bin/screenshot.cgi?3dos/screenshots/ap_bench.jpg">Screenshot</a><br><b>Description:</b> <font color="gray">A bench, wood with upholstered seat.  Perfectly scaled to fit Kyle.  Well
+textured.  Uses dflt.cmp colormap and default JK textures.  Note that Kyle is not
+included as part of the 3do, he\'s just there in the screenshot.</font></span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Jedi Hideout Updates
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<A HREF="mailto:vindicare@talk21.com">Vindicare</A> sent this in:<blockquote><font color="gray"><A HREF="http://jedihideout.8m.com/" TARGET="_top">The Jedi Hideout</A> updated today with mods including my new Catachan Jungle Fighter, an N1 Starfighter 3do and DFA Guns.</font></blockquote>
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Friday, February 4, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Etc.
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+I'm very pleased so far with the results of the MPG!  We will be adding new required files every weekend, so keep a look out!  I will be working on some enhancements to the system in the near future.<br><Br>
+<ul>
+<li>Addons IP Board - So you can host a game with whatever addon level/mod you want.
+<li>Un-registration - If you want to unregister, you will be able to do it yourself (if you want to un-register now, just send me an email).
+<li>Enhancements on the current release of both ReconDroid and our IP board so you can get info on games before you join. If you don't know, ReconDroid is a program that will ping the IP addresses on the IP Board, get the current number of players, your average ping, and list the addon level that is being played.  Watch for this soon.
+</ul><br>
+On to other things...
+<br><br>
+As you have probably noticed, our server has been a bit slow lately.  On top of that, about 1/3 of the people I surveyed often can't get to our subdomains (http://something.massassi.net).  Our tech support guys have been looking into this problem, but no resolution has yet been found.  I suspect its server load (during peak times, we overload our memory), but I can't be sure.<br><br>
+Anyway, this weekend I'm going to purchase a computer and install Linux on it.  I'm going to learn all the software necessary to administer a killer web server - and as soon as that's finished, The Massassi Temple will be purchasing a killer new box to serve our network.  I'm estimating that the new server will be up and running in about two months.
+<br><br>
+Does that mean you have to deal with these problems for two months!?  No!  I am working with UGO to take the forums off this server, which will basically leave this bad-boy w/out a load (the forums use the most CPU time and RAM).  I am also working to get some more RAM added to the server.  No exact dates on the above two items, but I am working as fast as I can.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Chronicles, Issue One!
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+The first edition of Chronicles, the JL-hosted E-Zine, is out! I'm personally excited because E-Zines are superb reads, and because I'm a columnist for Chronicles (Plug!). Here's the official press release.
+<blockquote><font color="gray"><a href="http://www.jedilegacy.net" target="_top">Jedi Legacy</a> is proud to announce the opening of <a href="http://www.jedilegacy.net/chronicles/" target="_top">Chronicles</a>, a brand new monthly e-zine for the gaming community.  Chronicles is run by Arby, the former editor-in-chief of the well-received Darkness Falls.  Dedicated to a motto of "Inane, Insane, and Possibly Informative," the first issue of Chronicles is filled with great new content, including a secret look at a hidden underground gaming community, a preview of <i>Soldier of Fortune</i>, the first review of <i>Asheron's Call</i> to take into account the people playing the game, a feature on hardware shopping, columns from several personalities in the gaming community, and underground info from everybody's favorite conspiracy theorists, the Tinfoil Hat.</font></blockquote>
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Thursday, February 03, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Natalie Portman Wallpaper
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<A HREF="mailto:shiny@gamepl.com">KOP_Shiny</A> sends word that <A HREF="http://www.gamepl.com/" TARGET="_top">GamePlanet</A> has posted their <A HREF="http://www.gamepl.com/natalie/nat7.jpg" TARGET="_top">7.0 Natalie Portman wallpaper</A>.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Levels
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Well, as you can see, I just posted a bunch of levels that have been building up in my inbox.. I still have some more to do, I'll post 'em tomorrow.. Sorry about the delay, I've just been, well, lazy.. If yours hasn't been posted yet, just hang on until tomorrow, and see..
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Hovertrain
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/xynhovertrain.shtml">
+Hovertrain</a>
+<br>
+<b>Author:</b>
+<a href="mailto:baggel@xs4all.nl">Xyn-Jian and Gambit</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/xynhovertrain1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/xynhovertrain2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">A high speed hovertrain ride between the buildings of Coruscant.
+This level is designed for 2-6 players, mixed sabers/guns.
+Whatch out for low bridges!</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: The Jedi Lords of Coruscant
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/blackjlc.shtml">
+The Jedi Lords of Coruscant</a>
+<br>
+<b>Author:</b>
+<a href="mailto:daldrich@home.com">JLC_BlackKnight</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/blackjlc1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/blackjlc2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">This is a fairly big Multiplayer level. It has all skills in it. Sabers, Guns, Force, And Balance areas. This was my first level I have ever made and I think it is a very good one for a beginner level builder. I have more experience now and making different things in my other levels. There are many secrets in this level I hope you find them all. So please enjoy and any questions about this level please contact me at my zone name, JLC_BlackKnight. Thank You and have Fun!!!!</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Morthe Level Pack
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/morthelp.shtml">
+Morthe Level Pack</a>
+<br>
+<b>Author:</b>
+<a href="mailto:daniel@adaptanet.com.br ">RA_Morthe_HaP</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">2 cool levels: Mining Deep Cave and Facility 2-122982 dont expect much of the levels cause they r my first 2 levels... =)</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Abandoned Lab
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/ba34.shtml">
+Abandoned Lab</a>
+<br>
+<b>Author:</b>
+<a href="mailto:jedik160@aol.com">Rogue Leader</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">Abandoned Lab is a small deathmatch MP level. It has both a 
+sabers and a guns version. Force is suggested, since there are certain areas 
+that you cannot get to without it. The guns version has 1 of every weapon. 
+The level should be good for 2-4 players.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Bespin : The Quarantine Zone
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/bqz.shtml">
+Bespin : The Quarantine Zone</a>
+<br>
+<b>Author:</b>
+<a href="mailto:thedownward_spiral@yahoo.com">LoC_Spiral</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bqz1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/bqz2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">Bespin Mining Station crashes on an alien
+planet. The level is a combination of Bespin Mining
+Station, Battle Ground Jedi, and strange caverns.
+2-4 players. </font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: The JK Museum
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/elymuseum.shtml">
+The JK Museum</a>
+<br>
+<b>Author:</b>
+<a href="mailto:elyas2k@hotmail.com">Elyas Machera</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">A level depicting the history of the Jedi Knight Kyle Katarn and 
+the...colorful characters he's met on his journeys.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: DarkMatch
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/elydarkmatch.shtml">
+DarkMatch</a>
+<br>
+<b>Author:</b>
+<a href="mailto:elyas2k@hotmail.com">Elyas Machera</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/elydarkmatch1.gif">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/elydarkmatch2.gif">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">The first level I tested lighting with.  It's based on the Unreal game 
+concept; a level completely enshrouded in the dark.  There are several 
+sniping spots, though the gameplay flows very smoothly.  I highly recommend 
+you try it with sabers and no Force Seeing.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Duel of the Fates
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/darthjdof.shtml">
+Duel of the Fates</a>
+<br>
+<b>Author:</b>
+<a href="mailto:JamesonRH85@cs.com">Darth J</a>
+<br>
+<b>Screenshots:</b>
+No Screenshots
+<br>
+<b>Description:</b>
+<font color="gray">This is a relatively undetailed Multiplayer level that is based on the 
+ending Saber fight in EP1: The Phantom Menace.  This is a level inteded for 
+2-4 players.  This level should be OK.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Nightmare's Sewer
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/nights_sewer.shtml">
+Nightmare's Sewer</a>
+<br>
+<b>Author:</b>
+<a href="mailto:knud@raex.com">Nightmare</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/nights_sewer1.gif">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/nights_sewer2.gif">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">The title says it all - this is a sewer.  Featuring my steerable,
+zoomable cameras, underwater passages, high walkways, decent framerates,
+and a carefully planned layout that provides good gameplay.  Note that I
+also bumped up the power of the Thermal Detonators and Mines, so that
+they hurt a little more.  There are plenty of smaller weapons around,
+but none of the bigger stuff.</font>
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Screenshots & Interview @ TACC
+</strong><small>- <a href="mailto:thrawn@jedinights.com">Ryan</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.commandchamber.net" target="_top">The Admiral's Command Chamber</a> has updated with some new screenshots for one of the featured levels, as well as a new interview. Level reviews are on the way, so be sure to visit the site frequently.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Hosted Site At OD34
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Over at <a href="http://www.outpostd34.com" target="_top">Outpost D-34</a> there's a new hosted site - Xwing: Legacy.. The site is devoted mainly to the editing of Xwing Vs TIE Fighter and Xwing Alliance. Lots of cool stuff, so if you own either game, head over there and check 'em out..
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Wednesday, February 2, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Spawn TC Updates
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:vindicare@talk21.com">Vindicare</a> says that the <A HREF="http://spawntc-news.8m.com/" TARGET="_top">Spawn TC News site</A> has been updated with a screenshot of Psycho Zero's latest saber.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Tutorial: Making Detailed MATs
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:pedhead@worldnet.att.net">Pedhead</a> sent us <a href="/tutorials/mats_detailed/">a great tutorial</a> that talks about making sweet-looking MATs from scratch for your JK levels. After reading this thing (and you'll kick yourself at just how simple it is) there will be no excuse for <i>not</i> including custom MATs in your work. *cough*<i>levelcontest</i>*cough* Many thanks to Pedhead for sending in his tutorial!
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Tuesday, February 1, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>New JK/MotS 3do: markpillar.zip</strong><small>- <a href="mailto:staff@massassi.net">Staff</a></small></span></font></dt><dd><font color="white" size="2" face="verdana"><span style="font-family: verdana"><b>Download:</b> <a href="http://198.92.131.5/files/jk_and_mots/3do/markpillar.zip">markpillar.zip</a><br><b>Author:</b> <a href="mailto:mark728@cobweb.net">mark728</a><br><b>View:</b> <a href="cgi-bin/screenshot.cgi?3dos/screenshots/markpillar.jpg">Screenshot</a><br><b>Description:</b> <font color="gray">This is a pillar 3do I made, but never used, so I figured I'd release it. It uses 06baron.cmp.</font></span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+JK Screensaver Project Hits Phase II
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+This came in today from Mike Starr:
+
+<blockquote><font color="gray">The Jedi Knight Screensaver Project is going very well so far, and it is now time to start auditions for the next phase.  The screensaver also supports music (MIDI format) to accompany the screensaver.  Break out your keyboards 
+and try your hand at a Star Wars medley for the project.  If it's just a variety of Star Wars tunes strung together with short pauses between them, 
+that's good too, but don't just send me a bunch of separate songs because I can't make them into one song.  Also, the longer the music the better.  It 
+should take a long time for the song to repeat.<br>
+<br>
+On a side note, although I have gotten several pics so far, I haven't seen anything from many of you who I remember getting files from.  Remember, if you sent your pic(s) before I announced the re-opening of the project, I don't have it.<br>
+<br>
+As always, submissions may be sent to <a href="mailto:JKScreensaver@hotmail.com">JKScreensaver@hotmail.com</a>.</font></blockquote>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>New JK/MotS 3do: ap_mwch1.zip</strong><small>- <a href="mailto:staff@massassi.net">Staff</a></small></span></font></dt><dd><font color="white" size="2" face="verdana"><span style="font-family: verdana"><b>Download:</b> <a href="http://198.92.131.5/files/jk_and_mots/3do/ap_mwch1.zip">ap_mwch1.zip</a><br><b>Author:</b> <a href="mailto:blujay@massassi.net">KOP_blujay</a><br><b>View:</b> <a href="cgi-bin/screenshot.cgi?3dos/screenshots/ap_mwch1.jpg">Screenshot</a><br><b>Description:</b> <font color="gray">A modern-day wood chair.  Would look good in any office, restaurant, house, etc. setting.  Detailed legs and armrests, well-textured, and perfectly scaled to fit Kyle (see screenshot).  Uses standard mats and the dflt.cmp colormap.  Version 2 chops the legs down to size so that Kyle\'s feet touch the floor, and completely re-textures it to look 100 percent better.  Note that Kyle is not included with the chair 3do, that\'s just Kyle placed in the chair in the screenshot.</font></span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Jedi Knight Pong
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+I just uploaded LikWid's JK Pong and I just have to mention it.  I was his main beta tester and I must say it's one of the most creative and most fun JK mods there is.  It's all in one GOB that goes in your Episode directory, so no worrying about running JK with a batch file or Patch Commander.  It has a scoring system that adds the difference between your and your opponent's score to your score in JK after the match so that you can have little tournaments by playing several matches, and after so many matches the player with the most points wins the tournament.  And it's simply a lot of fun.  Each of the five levels requires a certain technique.  And included is a "for authors" file that explains how to make your own Pong levels.  I strongly encourage you to download it and try it out with a friend.  You can play for hours.  And I hope that people will start making their own Pong levels too.  Ok, I'm stepping off my rant box now.&nbsp;&nbsp;<B>(c;</B>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New JK Multiplayer Level: Jedi Knight Pong 1.0
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<b>File:</b>
+<a href="http://198.92.131.4/levels/jkpong.shtml">
+Jedi Knight Pong 1.0</a>
+<br>
+<b>Author:</b>
+<a href="mailto:jwatson@kent.edu">LikWid</a>
+<br>
+<b>Screenshots:</b>
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/jkpong1.jpg">Screenshot 1</a>,
+<a href="http://198.92.131.4/cgi-bin/screenshot.cgi?levels/screenshots/jkpong2.jpg">Screenshot 2</a>
+<br>
+<b>Description:</b>
+<font color="gray">Remember Pong from your video game days?  This is Pong for Jedi Knight!  Compete with one or more players in five challenging levels, each requiring its own set of skills.  Have mini-tournaments with your friends.  Definitely one of the most unique mods for Jedi Knight, completely contained in one GOB file that simply goes in your Episode directory.  Includes information for authors on how to make your own Pong levels.</font>
+</span></font></dd></dl>
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Artwork
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.wattosjunkyard.com/" target="_top">Watto's Junkyard</a> has just posted a TON of new Star Wars artwork.  Included in this update includes an <a href="http://198.92.131.7/fanart/pedhead/" target="_top">image of Darth Maul</a> by Pedhead (the author of the Jedi High School level) and some absolutely stunning <a href="http://198.92.131.7/fanart/glenn_jones/" target="_top">black and white Episode 1 images</a> by Glen Jones.  Here's a small sample (click for the rest of his work).
+<p align="center"><a href="http://198.92.131.7/fanart/glenn_jones/" target="_top"><img src="http://198.92.131.7/fanart/glenn_jones/quiglennart3_sm.jpg" height="150" width="108" alt="Click for More"></a></p>
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Monday, January 31, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+New Tutorial: Creating Internal Gun Models
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:soulfly_tribe99@hotmail.com">Z@NARDI</a> sent in <a href="/tutorials/gunmodels/">a tutorial</a> that walks you through the process of creating an internal gun model for JK. A 3DO model is even included for you to work with, along with all kinds of contact info in case you get stuck along the way. Isn't that nice of him? Thanks to Z@NARDI for submitting the tutorial.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+TACC Screenshot Contest
+</strong><small>- <a href="mailto:thrawn@jedinights.com">Ryan</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+I'm pleased to announce that the <a href="http://www.commandchamber.net" target="_top">Command Chamber</a>'s first screenshot contest will be starting on February 1, 2000. The contest will last a total of 10 days, and all entries must be received by end of day February 10, 2000 to be elegible. There are a total of 100 screenshots, and the person who correctly identifies the most will be declared the winner. We have decided that for this first contest, all screenshots will be from Jedi Knight only. The reason for this decision was to give more of our visitors the ability to compete. For any other information, feel free to visit the <a href="http://www.commandchamber.net" target="_top">site</a>.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Quick Addition
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+The screens of Obi Wan that I pointed out yesterday are exclusive screens from the <a href="http://obiwan.jedicore.net" target="_top">Obi Wan Network</a>. I didn't know it at the time, so just making sure credit is given where credit is due.
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Derra IV Help
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="http://www.commandchamber.net/" target="_top">The Admiral's Command Chamber</a> has posted a walkthrough of Ryan's recently released level, Imperial Siege on Derra IV.
+</span></font></dd></dl>
+
+
+<TABLE border="1" cellspacing="0" cellpadding="3" width="100%">
+<TR><TD bgcolor="008040" background="cellbg.gif"><CENTER>
+<FONT face="verdana" color="white" size="3"><B>Sunday, January 30, 2000</B></FONT>
+</CENTER></TD></TR></TABLE>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Obi Wan Screens - Wow
+</strong><small>- <a href="mailto:slug@massassi.net">Slug</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Check out this <a href="http://198.92.131.6/html/Forum1/HTML/003278.html" target="_top">thread</a> showing new shots from LEC's next FPS, Obi Wan. Lookin' great, though I shudder in terror thinking about the machine it's going to take to run that thing..
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+MPG Plug
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Well, I just gotta post this.&nbsp;&nbsp;<B>(c;</B>&nbsp;&nbsp;I just got out of a great MPG game of Morpheus with 7 players.  I sent out the IP over ICQ and the game filled up within a few minutes.  So if you aren't yet signed up with <A HREF="http://www.massassi.net/mpg/" TARGET="_top">MPG</A>, go sign up now!  And get hosting!  There are 31 MPGers on ICQ now but the no one is sending out any game notices.  C'mon people!&nbsp;&nbsp;<B>(c;</B
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Jedi Hideout News
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:vindicare@talk21.com">Vindicare</a> also sent in this news:<blockquote><font color="gray">Over the last few months the <A HREF="http://jedihideout.8m.com/" TARGET="_top">Jedi Hideout</A> has been taken over and turned into a mods only site. It is updated regularly and now contains about 80 mods. Today's updates include the Swarm Missile Laucher and Sephiroth SP and MP skins.</font></blockquote>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Spawn TC News Site
+</strong><small>- <a href="mailto:blujay@massassi.net">blujay</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+<a href="mailto:vindicare@talk21.com">Vindicare</a> sent in this news:<blockquote><font color="gray">The Spawn TC has just lauched a new site called <A HREF="http://spawntc-news.8m.com" TARGET="_top">Spawn TC News and Progress</A>. It is updated regularly and keeps followers of the Spawn TC up to date with news and progress from the TC.</font></blockquote>
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+MPG News
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Wow, I can't stop announcing stuff about the MPG for some reason.  There are actually two things.  First, they've posted news about their new <a href="http://www.massassi.net/mpg/logos.shtml" target="_top">button page</a> which has 3 images you can use if you feel like linking to the MPG.  Second, I wanted to mention that if you registered during the BETA period (when I announced it on the message board), you must re-register!  The old database was completely purged and we started anew yesterday.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Single Player Force Powers Tutorial Added
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+This was added earlier in the week but not announced: MikeC sent in <a href="/tutorials/spforcepowers/">a tutorial</a> that shows you the straightforward process of adding Force Powers to single player levels in JK. Many thanks for contributing, MikeC!<br><br>
+While you're checking out this latest tutorial you might notice there's now an option to view a printable version of it. This is part of an ongoing project of mine to revamp the tutorials. If you've authored any of the tutorials we've got that needs special attention, please <a href="mailto:kedri@massassi.net?subject=Tutorial Section Comments">let me know</a>. Thanks.
+</span></font></dd></dl>
+
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+.MAT Packs Added
+</strong><small>- <a href="mailto:kedri@massassi.net">Kedri</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+If you've been hanging out at the <a href="http://198.92.131.6/forumdisplay.cgi?action=topics&forum=4.+Showcase&number=5&DaysPrune=2&LastLogin=" target="_top">Showcase Forum</a> you've no doubt seen <a href="mailto:dahoss_2@yahoo.com">The Big Head's</a> latest contribution to JK editing, a series of photorealistic .MAT's converted to the JK palette using default.cmp. I'm happy to say you can now find 'em in our <a href="mats/">Mats Section</a>. Here's the lineup: 
+<blockquote><font color="gray">
+<li><b><a href="/mats/natural/woodmats.zip">Wood Pack</a></b><br>
+29 photorealistic woodgrain patterns
+<li><b><a href="/mats/constructed/brickmats.zip">Brick Pack</a></b><br>
+17 photorealistic brick and tile patterns
+<li><b><a href="/mats/natural/gwspack.zip">Nature Pack</a></b><br>
+23 photorealistic grass, water and sky patterns</font></blockquote>
+Many thanks to <a href="mailto:dahoss_2@yahoo.com">The Big Head</a> for sending us the stuff. 
+</span></font></dd></dl>
+
+
+<dl><dt><font color="red" face="verdana"><span style="font-family: verdana"><strong>
+Watto's Junkyard: Artwork, SW DVD, and More
+</strong><small>- <a href="mailto:brian@massassi.net">Brian</a></small></span></font></dt>
+
+<dd><font color="white" size="2" face="verdana"><span style="font-family: verdana">
+Just a note to inform the Massassi visitors of all the stuff happening over at our network Star Wars fan site, <a href="http://www.wattosjunkyard.com/" target="_top">Watto's Junkyard</a>.  First off, Kiramin has posted a ton of killer artwork.  We've also got some news about a campaign to get Episode 1 on DVD.
+</span></font></dd></dl>
+</body></html>

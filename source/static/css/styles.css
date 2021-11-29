@@ -1,0 +1,775 @@
+:root {
+    --link-color: #52A54E;
+    --link-hover-color: #A6BA45;
+    --link-visited-color: #52A54E;
+    --link-active-color: #52A54E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.1rem;
+    font-family: helvetica, arial, sans-serif;
+    background-color: #000000;
+    color: silver;
+    min-height: 100%;
+    background-image: url("/static/images/bground.gif");
+    background-repeat: repeat-y;
+}
+
+li {
+    margin-left: 10px;
+}
+
+a:link    { text-decoration: none;      color: var(--link-color); }
+a:visited { text-decoration: none;      color: var(--link-visited-color); }
+a:active  { text-decoration: none;      color: var(--link-active-color); }
+a:hover   { text-decoration: underline; color: var(--link-hover-color); }
+
+#layout-grid {
+    display: grid;
+    grid-template-columns: 130px auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
+/**
+ * Hide page nav altogether when printing.
+ *
+ * Also turn off the grid, just let the content / footer divs print
+ * one after the other.
+ */
+@media print {
+    body {
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+    }
+
+    #page-nav {
+        display: none;
+    }
+
+    #layout-grid {
+        display: block;
+        width: 100%;
+    }
+
+    p {
+        page-break-inside: avoid;
+    }
+
+    p.note {
+        display: none;
+    }
+}
+
+/* Hide Hamburger */
+#page-nav label, #hamburger {
+    display: none;
+}
+
+#menu {
+    padding-left: 8px;
+    padding-top: 8px;
+    min-height: 100%;
+}
+
+#menu h1 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+#menu li {
+    margin-left: 5px;
+}
+
+#content {
+    margin: 10px;
+    max-width: 120ch;
+}
+
+#content h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #808080;
+}
+
+#content h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 1.25em;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 75%;  /* or 100px */
+    background-image: linear-gradient(to right, #808080, #000000);
+}
+
+#content p {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#content blockquote {
+    margin-left: 40px;
+}
+
+#content blockquote.submission-example {
+    margin-left: 20px;
+    font-family: monospace;
+}
+
+.chat-table td {
+    padding: 10px;
+}
+
+.cheat-table td {
+    padding: 5px;
+}
+
+#content kbd {
+    font-size: 110%;
+}
+
+#user-block {
+    text-align: right;
+}
+
+#footer {
+    grid-column-start: 2;
+    margin-bottom: 1em;
+    max-width: 100ch;
+}
+
+#footer p {
+    color: #333333;
+    padding-left: 1em;
+}
+
+#footer p#copyright {
+    margin-top: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#footer p#disclaimer {
+    text-align: left;
+    font-size: .8em;
+}
+
+p#last-updated {
+    font-size: .8em;
+    text-align: center;
+}
+
+div#logo {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 100%;
+}
+
+#features-grid div#feature-recent-levels {
+}
+
+#features-grid div#feature-in-house {
+}
+
+#features-grid div#feature-hosted-sites {
+}
+
+#features-grid div#feature-sotd {
+}
+
+#features-grid div#feature-button {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+#features-grid div#feature-lotw {
+}
+
+.feature-title {
+    display: block;
+    font-weight: bold;
+    background: url("https://www.massassi.net/cellbg.gif");
+    margin-bottom: 2px;
+    text-align: center;
+    padding-top: 4px;
+    color: silver;
+}
+
+.feature-title-small {
+    font-weight: bold;
+    padding: 2px;
+    color: silver;
+}
+
+#feature-lotw {
+    text-align: right;
+}
+
+.sotdimage {
+    float: left;
+    border: 1px solid #52A54E;
+}
+
+.lotwimage {
+    float: right;
+    border: 1px solid #52A54E;
+}
+
+p#testimonial {
+    display: block;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h1.news-date {
+    border: 1px solid gray !important;
+    background: url("https://www.massassi.net/cellbg.gif") repeat-x;
+    background-size: auto 100%;
+    padding: 5px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25em;
+    color: silver;
+}
+
+.news-block {
+    margin: 10px 0px 20px 0px;
+}
+
+span.news-author {
+    font-weight: normal;
+    font-size: .75em;
+    color: gray;
+}
+
+.news-headline {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.news-body {
+    padding-left: 50px;
+}
+
+.news-level-description {
+    color: gray;
+}
+
+.news-level-screenshot {
+    border: 1px solid #52A54E;
+    margin: 10px 0px;
+}
+
+.news-oldnews {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.news-oldnewstable {
+    margin-left: 1em;
+}
+
+.news-oldnewstable td {
+    padding: 5px 1em 5px 1em;
+
+}
+.news-oldnewstable th {
+    background-color: #004000;
+    padding: 5px;
+}
+
+.news-oldnewstable tr:nth-child(odd) {
+    background-color: #001800;
+}
+
+.caption {
+    padding: 0px 5px;
+    overflow: auto;
+}
+
+/*
+ * Tutorials
+ */
+
+.tutorial-list-item {
+    padding: 7px;
+    border-bottom: 1px solid #333333;
+}
+
+.tutorial-author {
+    font-weight: normal;
+    color: gray;
+}
+
+.tutorial-date {
+    font-weight: normal;
+    font-size: .85em;
+    color: gray;
+}
+
+div.tutorial-table table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+div.tutorial-table td {
+    padding: 10px;
+}
+
+div.tutorial-table table,
+div.tutorial-table th,
+div.tutorial-table td {
+    border: 1px solid #000000;
+}
+
+div.tutorial-table tr:nth-child(odd) {
+    background-color: #101010;
+}
+
+div.tutorial-table th {
+    font-size: 1em;
+    background-color: #202020;
+    padding: 10px;
+}
+
+div.no-headers th {
+    display: none;
+}
+
+div.tutorial-table-bordered td,
+div.tutorial-table-bordered th,
+div.tutorial-table-bordered table {
+    border: 1px solid #333333;
+    margin-bottom: 10px;
+}
+
+.tutorial-blue {
+    color: deepskyblue;
+}
+
+.tutorial-red {
+    color: red;
+}
+
+.tutorial-orange {
+    color: orange;
+}
+
+.tutorial-gray {
+    color: gray;
+}
+
+.note {
+    border: 1px solid #333333;
+    margin: 1em;
+    padding: 1em;
+}
+
+code.old {
+    color: #808080;
+    margin-left: 20px;
+    display: block;
+}
+
+pre {
+    font-size: .75em;
+}
+
+code {
+    color: #808080;
+    font-size: 1em;
+}
+
+div.mat-category-list {
+    column-count: 3;
+}
+
+p.mat-category {
+    break-inside: avoid;
+}
+
+p.mat-category > a {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/** SCREENSHOT OF THE DAY LIST **/
+
+.sotd-grid-container {
+    display: grid;
+    grid-template-columns: 400px auto;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+img.sotd-list-thumbnail {
+    border: 1px solid var(--link-color);
+}
+
+img.sotd-list-thumbnail:hover {
+    border: 1px solid var(--link-hover-color);
+}
+
+p.sotd-list-description {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.pagination-container {
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pagination-container a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 3px;
+    background: #1b1b1b;
+    border: 1px solid var(--link-color);
+}
+
+.pagination-container a:hover {
+    border: 1px solid var(--link-hover-color);
+}
+
+.pagination-container span {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+}
+
+.paging-prev-links {
+    margin-right: auto;
+}
+
+.paging-current {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paging-next-links {
+    margin-left: auto;
+}
+
+/** LEVEL CATEGORY LIST **/
+
+.level-category-grid-container {
+    display: grid;
+    grid-template-columns: minmax(250px, 36ch) 4ch;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.level-category-grid-title {
+    border: 1px solid red;
+}
+
+.level-category-grid-count {
+    text-align: right;
+}
+
+.level-category-grid-total {
+    padding-top: 1em;
+}
+
+/** LEVELS LIST **/
+
+.level-list-grid-container {
+    display: grid;
+    grid-template-columns: 400px auto 20ch;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.no-screenshot-available {
+    width: 400px;
+    height: 200px;
+    border: 1px solid var(--link-color);
+    text-align: center;
+    line-height: 200px;
+    font-family: monospace;
+}
+
+.no-screenshot-available:hover {
+    border: 1px solid var(--link-hover-color);
+}
+
+.mute {
+    color: gray;
+}
+
+.level-good {
+    color: lawngreen;
+}
+.level-ok {
+    color: steelblue;
+}
+.level-bad {
+    color: coral;
+}
+
+/** LEVEL DISPLAY **/
+
+p.crumb {
+    padding: 5px;
+    margin: 0;
+    padding-top: 7px;
+    background-color: #003000;
+}
+
+.level-info-top-container {
+    display: grid;
+    grid-template-columns: minmax(800px, auto) auto;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.level-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: .5em;
+    column-gap: 1em;
+}
+
+.massassi_button {
+    margin-top: 10px;
+}
+
+.level-screenshots {
+
+}
+
+.level-screenshots img {
+    border: 1px solid var(--link-color);
+}
+
+.level-screenshots img:hover {
+    border: 1px solid var(--link-hover-color);
+}
+
+.level-comment-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: .5em;
+    column-gap: 1px;
+    margin: 10px;
+}
+
+.level-comment-container > div:nth-child(4n+5),
+.level-comment-container > div:nth-child(4n+6) {
+    background-color: #003000;
+}
+
+.level-comment-container .header {
+    background-color: #004100;
+    padding: 5px;
+}
+
+.level-comment-author {
+    padding: 2px 2em 2px 2px;
+}
+
+.level-comment {
+    padding-bottom: 1em;
+    padding-left: 2px;
+}
+
+.small {
+    font-size: 80%;
+    margin-top: 1px;
+    padding-top: 0px;
+}
+
+.rule {
+    border-top: 1px solid #808080;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.level-search-result {
+    margin: 1em;
+}
+
+.level-search-result a {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.level-search-result-description {
+    margin-left: 1em;
+}
+
+/** DJANGO FORM CRAP **/
+
+.form-container {
+    margin: 10px;
+    width: 500px;
+    clear: both;
+    /* border: 1px solid blue; */
+}
+
+.form-container label {
+    margin-top: 5px;
+    color: silver;
+    font-weight: bold;
+}
+
+.form-container input, textarea, select {
+    width: 100%;
+    clear: both;
+    border: 1px solid darkgray;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: block;
+    background-color: #1b1b1b;
+    color: lightgray;
+    border-radius: 5px;
+}
+
+.form-container-inline input {
+    border: 1px solid darkgray;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #1b1b1b;
+    color: lightgray;
+    border-radius: 5px;
+}
+
+/*
+ * This is outside .form-container because level rating form embedded on level
+ * info page doesn't use .form-container (it makes the page too wide)
+ */
+select {
+    border: 1px solid darkgray;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #1b1b1b;
+    color: lightgray;
+    border-radius: 2px;
+    width: 6ch;
+}
+
+.form-container .field-error {
+    color: orange;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+.form-container button[type=submit] {
+    cursor: pointer;
+    color: #fff;
+    background: #333333;
+    border: 1px solid #4D4D4D;
+    border-radius: 5px;
+    padding: .67em;
+}
+
+.form-container button[type=submit]:active {
+    transform: translateY(1px);
+}
+
+.form-container button[type=submit]:hover {
+    border-color: darkgray;
+}
+
+
+/* for buttons not in a .form-container, render them smaller */
+button[type=submit] {
+    cursor: pointer;
+    color: #fff;
+    background: #333333;
+    border: 1px solid #4D4D4D;
+    border-radius: 2px;
+    padding: .4em;
+}
+
+button[type=submit]:active {
+    transform: translateY(1px);
+}
+
+button[type=submit]:hover {
+    border-color: darkgray;
+}
+
+/** DJANGO MESSAGES **/
+
+.error {
+    padding: 10px;
+    background-color: darkred;
+    width: 80ch;
+    border-radius: 5px;
+}
+
+.success {
+    padding: 10px;
+    background-color: darkgreen;
+    width: 80ch;
+    border-radius: 5px;
+}
