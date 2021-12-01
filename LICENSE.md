@@ -31,7 +31,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ----
 
-For all html/tutorial/article/md files in this repo that were written by me (Brian E. Lozier) the following Creative Commons (CC BY-SA 4.0) license applies:
+For all html/tutorial/article/md files in this repo that were written by me
+(Brian E. Lozier) the following Creative Commons (CC BY-SA 4.0) license
+applies:
 
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 
