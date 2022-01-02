@@ -4,6 +4,10 @@ title: "How to get Jedi Knight: Dark Forces II running under Linux/Wine"
 
 [TOC]
 
+## Steam Note
+
+If you have Steam on Linux, you can install and use JK.  After you run the install in Steam, you need to right click the game, click Properties, click Compatibility on the left, check the "Force the use of a specific Steam Play compatibility tool" and then select "Proton 5.0-10". When I did that, the single player worked, same as running it under vanilla wine. But the multiplayer is broken completely.
+
 ## Prerequisites
 
 * have a working Linux install; I'm using Ubuntu 20.04 (but this also worked
@@ -24,15 +28,49 @@ In my case, I ripped ISOs from the two JK CDs and I'm using those.  The filename
 
 ## Install Wine
 
+Note: the default `wine` package you get if you install `wine` is the 64-bit package.  For JK, it's easier to get things running if you just install `wine32`.  This works fine even on a 64-bit system.
+
 In a terminal, run:
 
 ```
-    sudo apt install wine64
+    sudo apt install wine32
 ```
 
-Once it's finished, you can run winecfg to test the application.  Feel free to poke around in the options and then close it when you're done.
+Run `winecfg` and on the default screen (Applications), at the bottom, next wo Windows Version, select Windows XP.  This makes the installer run better.  With the default (Windows 7) selected, the windows appear huge and it doesn't quite work right.  Click Apply then OK.
 
 ![](winecfg.png)
+
+## Install winetricks (optional)
+
+This is optional.  If you want any hope of getting multiplayer working, you need this.  If you just want to play single-player, you can skip it.
+
+First you need to install some prerequisites:
+
+```
+    sudo apt install cabextract
+```
+
+`winetricks` is an open source program that allows easy install of components (such as vc++ redistributables, directx, etc.).  Follow the instructions here for installation:
+
+[https://github.com/Winetricks/winetricks](https://github.com/Winetricks/winetricks)
+
+Please note that the winetricks package in Ubuntu 20.04 is out of date severely enough that it simply does not work.  Install from the github repository.
+
+### Install directplay
+
+Run `winetricks`.  You will be asked what you want to do.  First select "Select the default wineprefix" and then click OK.
+
+![](wt_default_prefix.png)
+
+On the next screen, choose to "Install a Windows DLL or component" and click OK.
+
+![](wt_component.png)
+
+Scroll down and fine `directplay`; select it and click OK.
+
+![](wt_directplay.png)
+
+When it's done, it will drop you back to the main screen.  Just click the X to close the program.
 
 ## Mount the first disk ISO.
 
@@ -118,7 +156,12 @@ Everything works for me.  Important things to set up once the game is launched:
 
 ## Launching the game
 
-After you exit the game, you can launch it again by finding the Jedi Knight entry in your "start" menu.
+After you exit the game, you can launch it again by finding the Jedi Knight entry in your "start" menu.  If you can't find it in your start menu, by default everything is installed in `.wine/drive_c`, so you can launch it like this:
+
+```
+    cd .wine/drive_c/Program\ Files/LucasArts/Jedi\ Knight/
+    wine jk.exe
+```
 
 ## What about the CD music?
 
@@ -136,3 +179,8 @@ Unmount the first ISO, and then mount the second one using a similar command.
 ```
 
 Then alt-tab back into the game.
+
+## Multiplayer?
+
+If you installed `directplay` via `winetricks` you should be able to load the multiplayer screen and host a game.  You can walk around in the multiplayer levels by yourself.  To get other people to join or to join someone else's game, you will probably need to configure/open some ports on your router.  I haven't gotten to that point yet.
+
