@@ -699,16 +699,6 @@ p.crumb {
     border-radius: 5px;
 }
 
-.form-container-inline input {
-    border: 1px solid darkgray;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #1b1b1b;
-    color: lightgray;
-    border-radius: 5px;
-}
-
 /*
  * This is outside .form-container because level rating form embedded on level
  * info page doesn't use .form-container (it makes the page too wide)
@@ -723,6 +713,30 @@ select {
     border-radius: 2px;
     width: 6ch;
 }
+
+.form-container-inline input {
+    border: 1px solid darkgray;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #1b1b1b;
+    color: lightgray;
+    border-radius: 5px;
+    display: inline;
+}
+
+.form-container-inline select {
+    border: 1px solid darkgray;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #1b1b1b;
+    color: lightgray;
+    border-radius: 5px;
+    display: inline;
+    width: 16ch;
+}
+
 
 .form-container .field-error {
     color: orange;
@@ -788,4 +802,21 @@ button[type=submit]:hover {
     background-color: darkgreen;
     width: 80ch;
     border-radius: 5px;
+}
+
+.form-container-inline button[type=submit] {
+    cursor: pointer;
+    color: #fff;
+    background: #333333;
+    border: 1px solid #4D4D4D;
+    border-radius: 5px;
+    padding: .4em;
+}
+
+.form-container-inline button[type=submit]:active {
+    transform: translateY(1px);
+}
+
+.form-container-inline button[type=submit]:hover {
+    border-color: darkgray;
 }
