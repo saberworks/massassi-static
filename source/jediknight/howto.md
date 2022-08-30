@@ -1,9 +1,9 @@
 ---
 title: How To Install Jedi Knight Levels and Mods
-author: Jipe, Tallgeese
+author: Jipe, Tallgeese, Brian
 email: nrl1@anet-chi.com, rob_jacoby@hotmail.com
 ---
-Authors: Jipe & Tallgeese
+Authors: Jipe, Tallgeese, and Brian
 
 So, you've just downloaded a level or mod, and you want to
 load it up right away, but you have no idea what to do? Never fear,
@@ -12,7 +12,13 @@ the way, let's get down to business: describing in-depth how to install
 user-made levels, skins, weapons, patches, and whatever else you can
 think of.
 
-All files you download from the Levels/Mods section of Massassi will be
+*2022 Update:* Please give Max Manager a try! This program is available in
+the [/programs/](/programs/) section.  It's a modern mod launcher/manager that
+works on Windows 10+.
+
+Older instructions follow...
+
+Most files you download from the Levels/Mods section of Massassi will be
 ZIP files, with a .zip extension. They can be opened easily with
 [WinZip](http://www.winzip.com/), which is shareware - you can try it
 out for free, then if you like it, pay $20 to the makers. After

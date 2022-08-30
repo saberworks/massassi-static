@@ -2,13 +2,8 @@
 title: Editing Programs
 ---
 
-**Update 2021** If JK Hub is still down, and if you can't find what you're 
-looking for here, please ask on the forums, probably someone has a copy.
-
-**Update 2016:** If you can't find what you're looking for here, or if
-there are broken links, try the [tools
-section](http://jkhub.net/library/tools.php) of [JK
-Hub](http://jkhub.net/).
+*2022 Update:* If you can't find the program you're looking for, please ask
+on the [forums](https://forums.massassi.net/) or in the [chat/disord](/chat/).
 
 Below you will find a fine selection of programs to help you edit
 various aspects of Jedi Knight and Mysteries of the Sith. (NOTE: Almost
@@ -17,35 +12,15 @@ they share the same file formats).
 
 [TOC]
 
-## Jedi Outcast
-
-**[JK2 Editing Tools](https://www.massassi.net/files/editors/JK2EditingTools.zip)** by [Raven Software](http://www.ravensoftware.com/)
-
-> Suite of editing tools for Jedi Outcast. Includes:
-> 
-> - JK2Radiant - the map editor
-> - MD3View - model viewer for .md3 format models
-> - ModView - model viewer for .glm (Ghoul2) format model
-> - ShaderEd2 - the shader editor/viewer
-> - sof2map - the map compiler, you will not be using this directly, JK2Radiant 
->   uses this
-
-**[JK2 Editing Tools Update](https://www.massassi.net/files/editors/JK2EditingTools2.exe)** by [Raven Software](http://www.ravensoftware.com/)
-
-> A secondary pack of editing tools for Jedi Outcast. Included in this release:
-> 
-> - BehavEd.exe - the editor we used to create Icarus scripts
-> - EffectsEd.exe - the editor we used to create EFX files
-> - IBIZE.exe - the Icarus script compiler
-> - roq.exe - tool to compile images into a RoQ video
-> - ShaderEd2 - the shader editor/viewer
-> 
-> Also included are tutorials on creating bots for MP, creating bot waypoints and 
-> creating models for JK2, guides to SOF2JK2 Vertigons and SOF2JK2 Weather, the 
-> ICARUS manual, and more. Additionally, this download includes the source and 
-> compiling code for the game.
 
 ## Jedi Knight / Mysteries of the Sith
+
+### Max Manager
+
+Max Manager is a launcher / manager for Jedi Knight and MotS mods.  It's a
+modern tool designed to work with Windows 10+.
+
+**[Max Manager 1.0.1](mod/Max Manager 1.0.1.7z)** by Shred
 
 ### ZED (newest level editor)
 
@@ -220,3 +195,30 @@ ZED is based on JED and provides fixes and new features.  It is strongly recomme
 > 
 > May require a dll pack. Same instructioins as ClassCreator apply. See above.
 
+## Jedi Outcast
+
+**[JK2 Editing Tools](https://www.massassi.net/files/editors/JK2EditingTools.zip)** by [Raven Software](http://www.ravensoftware.com/)
+
+> Suite of editing tools for Jedi Outcast. Includes:
+> 
+> - JK2Radiant - the map editor
+> - MD3View - model viewer for .md3 format models
+> - ModView - model viewer for .glm (Ghoul2) format model
+> - ShaderEd2 - the shader editor/viewer
+> - sof2map - the map compiler, you will not be using this directly, JK2Radiant 
+>   uses this
+
+**[JK2 Editing Tools Update](https://www.massassi.net/files/editors/JK2EditingTools2.exe)** by [Raven Software](http://www.ravensoftware.com/)
+
+> A secondary pack of editing tools for Jedi Outcast. Included in this release:
+> 
+> - BehavEd.exe - the editor we used to create Icarus scripts
+> - EffectsEd.exe - the editor we used to create EFX files
+> - IBIZE.exe - the Icarus script compiler
+> - roq.exe - tool to compile images into a RoQ video
+> - ShaderEd2 - the shader editor/viewer
+> 
+> Also included are tutorials on creating bots for MP, creating bot waypoints and 
+> creating models for JK2, guides to SOF2JK2 Vertigons and SOF2JK2 Weather, the 
+> ICARUS manual, and more. Additionally, this download includes the source and 
+> compiling code for the game.
