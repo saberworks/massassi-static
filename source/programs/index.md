@@ -17,10 +17,16 @@ they share the same file formats).
 
 ### Max Manager
 
-Max Manager is a launcher / manager for Jedi Knight and MotS mods.  It's a
-modern tool designed to work with Windows 10+.
+Max Manager, by **Shred**, is a launcher / manager for Jedi Knight and MotS
+mods.  It's a modern tool designed to work with Windows 10+.
 
-**[Max Manager 1.0.1](mod/Max Manager 1.0.1.7z)** by Shred
+Most users should choose the 64-bit version but Linux/Wine users who chose
+a 32-bit installation can use the 32-bit version.
+
+* **[Max Manager 1.0.1 64 bit](mod/Max Manager 1.0.1.7z)** (preferred!)
+* **[Max Manager 1.0.1 32 bit](mod/Max Manager 1.0.1 32bit.7z)**
+
+    [![](mod/MaxManager_thumb.JPG)](mod/MaxManager.JPG)
 
 ### ZED (newest level editor)
 
