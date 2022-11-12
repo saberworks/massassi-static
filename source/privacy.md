@@ -10,9 +10,8 @@ count visitors to the site.  This privacy-respecting counter script is
 provided by <a href="https://www.goatcounter.com/">Goat Counter</a>, an open
 source analytics project.
 
-If you prefer not to be counted, you have a few options:
+If you prefer not to be counted, you have a couple options:
 
-* Enable your browsers "Do Not Track" functionality.
 * Use an ad blocker, most of which should block the counter by default.
 * Manually block the counter script: <code>gc.zgo.at/count.js</code>
 
