@@ -11,7 +11,8 @@
             {% endblock %} - The Massassi Temple
         </title>
 
-        <meta name="description" content="{{ description }}">
+        <meta name="description" content="{% block description %}{% if description %}{{ description }}{% endif %}{% endblock %}">
+
         <link rel="shortcut icon" href="/static/favicon.ico">
     </head>
 
