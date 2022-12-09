@@ -15,7 +15,7 @@ body {
 }
 
 #features-grid {
-    display: grid;
+    display: none;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-row-gap: 10px;
