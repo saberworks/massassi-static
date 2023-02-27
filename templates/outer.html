@@ -6,9 +6,7 @@
         <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="/static/css/smallstyles.css">
 
         <title>
-            {% block title %}
-                {% if title %}{{title}}{% else %}WAT!?{% endif %}
-            {% endblock %} - The Massassi Temple
+            {% block title %}{% if title %}{{title}}{% else %}WAT!?{% endif %}{% endblock %} - The Massassi Temple
         </title>
 
         <meta name="description" content="{% block description %}{% if description %}{{ description }}{% endif %}{% endblock %}">
