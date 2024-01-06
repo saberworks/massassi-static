@@ -1,4 +1,5 @@
 output/
 env/
+venv/
 .idea
 .vscode
