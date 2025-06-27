@@ -179,6 +179,16 @@ ZED is based on JED and provides fixes and new features.  This project lived on 
 
 # MAT / CMP / BM
 
+<div class="even" markdown=1>
+
+**[cmptint](matcmp/cmptint.zip)** by Edward
+
+> This little Java program allows you to change the Tint of a CMP as is seen with CTF levels. Works with any CMP and can be tinted to any spectrum of the rainbow (or whatever the original CMP contains).
+
+> Note: this program requires java.  Please read the included usage instructions.
+
+</div>
+
 <div class="odd" markdown=1>
 
 **[JKPaint v0.8](matcmp/JKPaint08.zip)** by Craig "UGG" Urquhart
